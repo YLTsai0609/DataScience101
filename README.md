@@ -1,4 +1,4 @@
-[Latax_Ref](Latax_Ref.md)
+# Notes
 
 [P-Value](Pvalue.md)
 
@@ -9,3 +9,7 @@
 [DNN Introduction](https://github.com/YLTsai0609/HandOn_ML/blob/master/tensorflow_1_8_0/DNN_Intro.md)
 
 [CNN Introduction](https://github.com/YLTsai0609/HandOn_ML/blob/master/tensorflow_1_8_0/CNN_intro.md)
+
+# Resource
+[Data Science and Robots by Brandon Rohrer](https://brohrer.mcknote.com/zh-Hant/)
+[Latax_Ref](Latax_Ref.md)
