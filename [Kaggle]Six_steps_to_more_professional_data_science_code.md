@@ -9,7 +9,7 @@
 讓你的程式碼可以被重複使用，讓你不用再重寫，做事情能夠更有效率
 我們可以透過6個方式來達成
 1. 模組化(Modular) 把程式碼寫成function，讓他們可以被重複使用
-2. 正確性(Correct) 要是正確的Code
+2. 正確性(Correct) 要是正確的Code(加入一些錯誤檢查!)
 3. 可讀性(Readable) 要讓人一目瞭然看懂程式碼，包含3個月後的你自己
 4. 明確風格(Stylish) 程式碼維持良好的風格(像是PEP8 for python)
 5. 通用性(Versatile) 解決那些會重複出現的任務，寫成function
@@ -33,7 +33,13 @@ cleaned_df = (
 cleaned_df
 
 ```
+19, 10, 13 
+[`from pandas.core.base import PandasObject` 解決function -> method 情況](https://stackoverflow.com/questions/43504068/create-my-own-method-for-dataframes-python)
 
+##### 延伸閱讀
+[使用class直接覆寫pd.DataFrame類別](https://stackoverflow.com/questions/43504068/create-my-own-method-for-dataframes-python)
+
+[使用裝飾器](https://medium.com/@mgarod/dynamically-add-a-method-to-a-class-in-python-c49204b85bd6)
 #### Correct 
 為什麼這也要談? 一定要寫正確的才對啊！ 事實上我想說的是，如果可以加一些邊界條件的確認，或是簡單的test-case，這會讓你更好對function做debug，例如加入`assert`
 ```
