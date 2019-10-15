@@ -39,7 +39,7 @@ H = 0
 
 * 很明顯的，針對題目2，使用策略1是一個壞的選擇，因為需要猜題的次數增加了，從 1.75 變成了2，因此，我們使用非真實分布的策略去消除系統的不確定性時，所需要付出的努力大小，就必須使用Cross-Entropy來衡量
 我們有真實分布 $ p_k $，非真實分布 $ q_k $
-所需要猜球的次數為 $ C.E. = $\sum_{k}^{N} p_k log_{2} \frac{1}{q_k}$
+所需要猜球的次數為 $$ C.E. = \sum_{k}^{N} p_k log_{2} \frac{1}{q_k}$$
 在此例中 C.E = 2，比最優策略 1.75來的大
 
 **因此，Cross-Entropy越低，這個次優策略就越好**
@@ -50,7 +50,9 @@ $ CE_{min} = H$ -->   $ p_k = q_k $
 ### 次佳策略與最佳策略之間的差異?
 * 我們如何衡量不同策略之間的差異? 我們定義相對熵(Relative Entropy，也稱作KL Divergence)
 * 對於次佳策略以及最佳策略之間的差異、或是兩個取值為正的函數或是機率分佈之間的差異
-$KL (p || q) = H(p, q) - H(p) = $\sum_{k}^{N} p_k log_{2} \frac{1}{q_k} - $\sum_{k}^{N} p_k log_{2} \frac{1}{p_k} = $\sum_{k}^{N} p_k log_{2} \frac{p_k}{q_k}$
+$$
+KL (p || q) = H(p, q) - H(p)= \sum_{k}^{N} p_k log_{2} \frac{1}{q_k} - \sum_{k}^{N} p_k log_{2} \frac{1}{p_k}= \sum_{k}^{N} p_k log_{2} \frac{p_k}{q_k}
+$$
 所以將策略1用於題目2，所產生的相對熵為 2 - 1.75 = 0.25
 * 相對熵這樣的概念事實上並不符合距離的定義，因為 $ KL(p || q) != KL(q || p) $ 
 ## 要點 : 
@@ -86,18 +88,18 @@ Q2 真實分佈 $(1/2, 1/4, 1/8, 1/8)$
 
 * 此時衡量消除系統不確定性所需要的努力，使用Cross-Entropy
 
-* $ CE_min = Shannon-Entropy H, p_k = q_k $
+* $ CE_{min} = ShannonEntropy H, p_k = q_k $
 
 * **這也就是為什麼在機器學習的分類算法中，我們總是最小化C.E，因為C.E越低，就證明由算法產生的策略最接近最佳策略，也間接證明算法所算出來的非真實分布越接近真實分布**
 
 6. 次佳策略與最佳策略的差異衡量(KL-Divergence, Relative-entropy)
-* $KL (p || q) = H(p, q) - H(p) = \sum_{k}^{N} p_k log_{2} \frac{1}{q_k} - \sum_{k}^{N} p_k log_{2} \frac{1}{p_k} = \sum_{k}^{N} p_k log_{2} \frac{p_k}{q_k}$
+* $$KL (p || q) = H(p, q) - H(p) = \sum_{k}^{N} p_k log_{2} \frac{1}{q_k} - \sum_{k}^{N} p_k log_{2} \frac{1}{p_k} = \sum_{k}^{N} p_k log_{2} \frac{p_k}{q_k}$$
 * $ KL (p || q) >= 0 , when KL(p || q) = 0 -> p = q$
 * Relative Entropy不具有交換性 $ KL (q || p) $ 
   因此用距離來比擬Relative Entropy是比較不恰當的，更精準的說法是衡量一個分部相比另一個分部的訊息損失(information lost)，事實上，只要反過來說，也可以說是information gain(但和決策數中的定義不同，原因在於分之後樣本數變得不同)
 * 可以從Bayes Thinking的觀點來看Relative Entropy，我們從鮮豔機率分佈q到後驗機率分佈p所帶來的訊息增益
 * 在ML中我們為什麼最小化C.E而非KL-Divengence ? 
-* 事實上是一樣的，最小化C.E的過程就是在最小化KL-Divengence，在給定groud-truth的情況下，$ H(p) $ 為 constant，並且我們可以從數學上證明， $ max likelihood <-> min C.E <-> min K.L.(p || q) $
+* 事實上是一樣的，最小化C.E的過程就是在最小化KL-Divengence，在給定groud-truth的情況下，$ H(p) $ 為 constant，並且我們可以從數學上證明， $ max likelihood$ <-> $min C.E$ <-> $min K.L.(p || q) $
 
 7. 條件熵 (Conditional Entropy) 
 * 可延伸出information-gain
