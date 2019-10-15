@@ -99,9 +99,12 @@ Q2 真實分佈 $(1/2, 1/4, 1/8, 1/8)$
   因此用距離來比擬Relative Entropy是比較不恰當的，更精準的說法是衡量一個分部相比另一個分部的訊息損失(information lost)，事實上，只要反過來說，也可以說是information gain(但和決策數中的定義不同，原因在於分之後樣本數變得不同)
 * 可以從Bayes Thinking的觀點來看Relative Entropy，我們從鮮豔機率分佈q到後驗機率分佈p所帶來的訊息增益
 * 在ML中我們為什麼最小化C.E而非KL-Divengence ? 
-* 事實上是一樣的，最小化C.E的過程就是在最小化KL-Divengence，在給定groud-truth的情況下，$ H(p) $ 為 constant，並且我們可以從數學上證明， $ max likelihood$ <-> $min C.E$ <-> $min K.L.(p || q) $
+* 事實上是一樣的，最小化C.E的過程就是在最小化KL-Divengence，在給定groud-truth的情況下，$ H(p) $ 為 constant，並且我們可以從數學上證明 : 
+$$
+   max likelihood <-> min C.E <-> min K.L.(p || q) 
+$$
 
-7. 條件熵 (Conditional Entropy) 
+1. 條件熵 (Conditional Entropy) 
 * 可延伸出information-gain
 TODO 
 [Condnional Entropy](https://blog.csdn.net/qq_40587575/article/details/80219080)
