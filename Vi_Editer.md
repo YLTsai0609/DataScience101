@@ -17,6 +17,14 @@
   * [鳥哥Linux私房菜](http://linux.vbird.org/linux_basic/0310vi.php)
   * 鳥歌裡面蠻多指令都不work的，可以參見[大家來學vim](http://www.study-area.org/tips/vim/index.html)
   * [高見龍也分享了一些](https://kaochenlong.com/2011/12/28/vim-tips/)
+* 左移一個字
+* 左選一個字
+* 左移到句首
+* 全選到句首
+* 右移一個字
+* 右選一個字
+* 右移到句尾
+* 全選到句尾
 * 複製 y
 * 複製該列n個詞 y {數字} w
 * 複製多行 {數字} yy 成功時，下方會顯示 `x lines yanked`
