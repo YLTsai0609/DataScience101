@@ -37,3 +37,4 @@
 * 執行外部指令 例如 : !ls
 * 顯示行號 `set nu` <--> `set nonu`
 * 觀看Options `set`
+* 搜尋 ?YourKeyword 搜尋到之後按enter進入，使用n來找尋下一個
