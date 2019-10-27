@@ -3,7 +3,9 @@
 ## Statistics
 [P-Value](Pvalue.md)
 
-[How_Bayyesian_inference_works](How_Bayyesian_inference_works.md)
+[How_Bayyesian_inference_works](How_Bayesian_inference_works.md)
+
+[Bayesian_Hyperparameter_tuning][Bayesian_Hyperparameter_tuning.md]
 
 ## Information Theory
 [ShannonEntroy_to_KL_divergence](ShannonEntroy_to_KL_divergence.md)
