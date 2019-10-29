@@ -87,25 +87,114 @@ def linear_regression(X, y):
 
 # 慢, 跟linear regression比起來, 真, 慢
 with pm.Model() as linear_model_500:
-    # pick our prior distribution of our parameters
     # Intercept
-    intercept = pm.Normal('Intercept', mu=0, sd=10)
+    intercept = pm.Normal('Intercept', mu = 0, sd = 10)
     
-    # Slope
+    # Slope 
     slope = pm.Normal('slope', mu = 0, sd = 10)
     
-    # Stand devairation
+    # Standard deviation
     sigma = pm.HalfNormal('sigma', sd = 10)
     
-    # Edstimate of mean
+    # Estimate of mean
     mean = intercept + slope * X.loc[0:499, 'Duration']
     
     # Observed values
     Y_obs = pm.Normal('Y_obs', mu = mean, sd = sigma, observed = y.values[0:500])
     
-    # Sampler 
+    # Sampler
     step = pm.NUTS()
-    
+
     # Posterior distribution
-    linear_model_500 = pm.sample(1000, step)
+    linear_trace_500 = pm.sample(1000, step)
+
+
+# all the model result
+with pm.Model() as linear_model:
+    # Intercept
+    intercept = pm.Normal('Intercept', mu = 0, sd = 10)
     
+    # Slope 
+    slope = pm.Normal('slope', mu = 0, sd = 10)
+    
+    # Standard deviation
+    sigma = pm.HalfNormal('sigma', sd = 10)
+    
+    # Estimate of mean
+    mean = intercept + slope * X.loc[:, 'Duration']
+    
+    # Observed values
+    Y_obs = pm.Normal('Y_obs', mu = mean, sd = sigma, observed = y.values)
+    
+    # Sampler
+    step = pm.NUTS()
+
+    # Posterior distribution
+    linear_trace = pm.sample(1000, step)
+
+# ## Bayesian Model result
+# * Bayesian Model provide more opportunities for interpretation than OLS because it provides a posterior distribution. 
+# * We can use the distribution to find the most likely single value as well as the rntire range of likely values for our model parameters
+# * pyMC3 has many built tools for viz
+
+print(dir(linear_trace), type(linear_trace))
+
+# 兩個顏色的意思?
+pm.traceplot(linear_trace, figsize = (12, 12))
+
+# HPD ?
+pm.plot_posterior(linear_trace, figsize = (12, 10),kind='hist', textsize=20);
+
+
+pm.forestplot(linear_trace);
+
+# # Prediction of Response Sampled from the Posterior
+
+plt.figure(figsize = (8, 8))
+pm.plot_posterior_predictive_glm(linear_trace, samples = 100, eval=np.linspace(2, 30, 100), linewidth = 1, 
+                                 color = 'red', alpha = 0.8, label = 'Bayesian Posterior Fits',
+                                lm = lambda x, sample: sample['Intercept'] + sample['slope'] * x);
+plt.scatter(X['Duration'], y.values, s = 12, alpha = 0.8, c = 'blue', label = 'Observations')
+# plt.plot(X['Duration'], by_hand_coefs[0] + X['Duration'] * by_hand_coefs[1], 'k--', label = 'OLS Fit', linewidth = 1.4)
+plt.title('Posterior Predictions with all Observations', size = 20); plt.xlabel('Duration (min)', size = 18);
+plt.ylabel('Calories', size = 18);
+plt.legend(prop={'size': 16});
+
+
+pm.summary(linear_trace)
+
+plt.figure(figsize = (8, 8))
+pm.plot_posterior_predictive_glm(linear_trace_500, samples = 100, eval=np.linspace(2, 30, 100), linewidth = 1, 
+                                 color = 'red', alpha = 0.8, label = 'Bayesian Posterior Fits',
+                                lm = lambda x, sample: sample['Intercept'] + sample['slope'] * x);
+plt.scatter(X['Duration'][:500], y.values[:500], s = 12, alpha = 0.8, c = 'blue', label = 'Observations')
+# plt.plot(X['Duration'], by_hand_coefs[0] + X['Duration'] * by_hand_coefs[1], 'k--', label = 'OLS Fit', linewidth = 1.4)
+plt.title('Posterior Predictions with Limited Observations', size = 20); plt.xlabel('Duration (min)', size = 18);
+plt.ylabel('Calories', size = 18);
+plt.legend(prop={'size': 16});
+
+
+pm.summary(linear_trace_500)
+
+
+# # Specific prediction for one datapoint
+
+# will be a array, which is a probability distribution
+bayes_prediction = linear_trace['Intercept'] + linear_trace['slope'] * 15.5
+
+
+
+
+plt.figure(figsize = (8, 8))
+plt.style.use('fivethirtyeight')
+sns.kdeplot(bayes_prediction, label = 'Bayes Posterior Prediction')
+# plt.vlines(x = by_hand_coefs[0] + by_hand_coefs[1] * 15.5, 
+#            ymin = 0, ymax = 2.5, 
+#            label = 'OLS Prediction',
+#           colors = 'red', linestyles='--')
+plt.legend();
+plt.xlabel('Calories Burned', size = 18), plt.ylabel('Probability Density', size = 18);
+plt.title('Posterior Prediction for 15.5 Minutes', size = 20);
+
+
+
