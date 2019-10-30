@@ -1,4 +1,7 @@
 # Key Concept
+贝叶斯优化: 一种更好的超参数调优方式 | 知乎 重點節錄
+* [講者 - tobe Vote : 758](https://zhuanlan.zhihu.com/p/29779000)
+
 * 我們知道GridSearch是你給定的所有參數點(hyperparameter space)都跑一次，然後取最大的，這顯然有些參數不用搜尋
 * Bayesian optimization就是利用先前所算過超參數以及model score，建立一個先驗機率分佈(prior)
   * 建立先驗機率分佈的方式採用的是高斯過程(Gaussian Process, GP)[1]

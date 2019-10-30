@@ -5,10 +5,13 @@
 
 [How_Bayyesian_inference_works](How_Bayesian_inference_works.md)
 
-[Bayesian_Hyperparameter_tuning][Bayesian_Hyperparameter_tuning.md]
+[Bayesian_Hyperparameter_tuning](Bayesian_Hyperparameter_tuning.md)
 
 ## Information Theory
 [ShannonEntroy_to_KL_divergence](ShannonEntroy_to_KL_divergence.md)
+
+## NLP
+[KeyWord_Extrcaction_TFIDF_RAKE_Garph_TextRank]
 
 ## DevOps
 [Kaggle_Six_steps_to_more_professional_data_science_code]([Kaggle]Six_steps_to_more_professional_data_science_code.md)
