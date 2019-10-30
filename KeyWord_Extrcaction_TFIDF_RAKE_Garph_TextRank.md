@@ -49,9 +49,10 @@ $$
 WS(拿鐵) = (1-d) + d*相鄰結點分數
 $$
 $$
-d~~~ smoothing parameter
+d~~~ smoothing~~parameter
 $$
 d越小，相鄰節點的影響越小
+
 <img src = '/images/keywordExtraction_9.png'></img>
 * 先考慮紅茶，紅茶與3個關鍵字相連，其中一個是拿鐵，因此乘上1/3，再乘上$WS(紅茶)$，實際上就是 $ WS(紅茶) \frac{1}{Degree(紅茶)}$
 <img src = '/images/keywordExtraction_10.png'></img>
