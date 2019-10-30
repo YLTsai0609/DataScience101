@@ -1,7 +1,6 @@
 # Introduction 
 * 關鍵字萃取不只有TFIDF, 還有RAKE以及TextRank，以下會介紹關鍵字共現、圖模型、RAKE、以及TextRank
-* TODO 使用時機
-NLP task pipeline
+* NLP task pipeline
 <img src = '/images/keywordExtraction_1.png'></img>
 # 基本觀念
 * Bag of Word / One Hot Encoding
@@ -9,7 +8,11 @@ NLP task pipeline
 <img src = '/images/keywordExtraction_2.png'></img>
 <img src = '/images/keywordExtraction_3.png'></img>
 # TFIDF 
+<img src = '/images/keywordExtraction_13.png'></img>
+<img src = '/images/keywordExtraction_14.png'></img>
 ### TFIDF 使用情境
+* 詞彙數量超多時，TFIDF好理解，運算速度快
+* [缺點] : 只從詞頻角度來抽取訊息，其餘兩者還考慮的共現的情況
 # 共現
 <img src = '/images/keywordExtraction_4.png'></img>
 * 我們可以看到對角線的部分就是個關鍵字出總共出現在幾個文本中
@@ -61,3 +64,11 @@ d越小，相鄰節點的影響越小
 <img src = '/images/keywordExtraction_12.png'></img>
 ### TextRank 使用情境
 * 我們可以看到，"愛"有最高的weighted score，這是因為"愛"常常是連接主詞和受詞之間的橋樑，使得"愛"的分數較高，TextRank被用來找出辭彙語詞彙之間的橋樑作為一種關鍵字萃取方式
+* [缺點] 需要計算圖以及遞回，要算比較久
+
+# 總結 
+* 以上關鍵字抽取的方法，都可以視為一種無監督的萃取方式，如果場景中有標籤，使用監督式的方法會準確及有效很多
+* TFIDF基本上會是很強的baseline，TextRank的抽取關鍵字類型和TFIDF有較大的差異，需要實際使用感受看看
+* 關於Topic Modeling，有一大缺點在於抽取的關鍵詞一班過於廣泛，導致很多時候無法較好的反應文章主題
+# Other Reference
+[「关键词」提取都有哪些方案？ 知乎 贊同 257](https://www.zhihu.com/question/21104071/answer/121576297)
