@@ -11,12 +11,16 @@
 [ShannonEntroy_to_KL_divergence](ShannonEntroy_to_KL_divergence.md)
 
 ## NLP
-[KeyWord_Extrcaction_TFIDF_RAKE_Garph_TextRank]
+[KeyWord_Extrcaction_TFIDF_RAKE_Garph_TextRank](KeyWord_Extrcaction_TFIDF_RAKE_Garph_TextRank.md)
 
 ## DevOps
 [Kaggle_Six_steps_to_more_professional_data_science_code]([Kaggle]Six_steps_to_more_professional_data_science_code.md)
 
 [Kaggle_Making_an_app_from_your_modeling_code]([Kaggle]Making_an_app_from_your_modeling_code.md)
+
+[Bash Commend](bash.md)
+
+[Vi and Vim](Vi_Editer.md)
 
 ## Deep Learning
 [PaperReading_Hints](PaperReading_Hints.md)
@@ -26,7 +30,6 @@
 [CNN Introduction](https://github.com/YLTsai0609/HandOn_ML/blob/master/tensorflow_1_8_0/CNN_intro.md)
 
 ## Others
-[Vi and Vim](Vi_Editer.md)
 
 
 
