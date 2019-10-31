@@ -35,12 +35,15 @@ IPv4規劃時就擔心IP會不足，而且為了應付某些企業內部的網�
 ### 所以主機的IP是如何設定的?
 
   * 直接手動設定(static) 所謂的固定ip : 你可以直接向你的網管詢問可用的ip相關參數，然後直接編輯設定檔(或使用某些軟體功能來設定你的網路)。常見於校園網路環境、或是自架封閉區網、或是像ISP申請固定ip的連線環境
+  <br>
   * 撥接取得 : 向你的ISP註冊，取得帳號密碼後，直接撥接到ISP，你的ISP或透過他自己的設定，讓你的作業系統取得正確的網路參數。此時你**不用手動編輯與設定相關的網路參數**。目前台灣的ADSL，光纖到大樓、光纖到府，大部分都是使用撥接方式。為了因應客戶需求，某些ISP也提供很多不同的IP分配機制。包含hinet, seednet等都有提供ADSL撥接後取得固定ip的方式，詳情可以向自己的ISP洽詢XD。
+  <br>
   * 自動取得網路參數(DHCP - Dynamic Host Configguration Protocol) 所謂浮動ip : 在區域網路內會有一部主機負責管理所有電腦的網路參數，**你的網路啟動時，就會主動向伺服器要求IP參數**，若取得網路相關參數後，你的儲機就能夠自行設定好所有伺服器給你的網路參數。最常使用於企業內部、IP分享器後端、校園網路與宿舍環境、纜線寬頻等連線方式。
-<BR>
+<br>
 * [鳥哥一下 - 第二章、網路基礎概念 2.3.3 IP的種類與取得方式](http://linux.vbird.org/linux_server/0110network_basic.php#tcpip_network_type)
 * [Google關鍵字 - terminal 設定固定ip](https://blog.toright.com/posts/6293/ubuntu-18-04-%E9%80%8F%E9%81%8E-netplan-%E8%A8%AD%E5%AE%9A%E7%B6%B2%E8%B7%AF%E5%8D%A1-ip.html)
-* 總結 : 
+<br>
+### 總結 : 
   > 只有公共IP和私有IP，固定IP及浮動IP指的是取得方式，手一揮，假的
 
 # Permission
