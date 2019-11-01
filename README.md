@@ -22,6 +22,8 @@
 
 [Vi and Vim](Vi_Editer.md)
 
+[FaceNet_install](FaceNet_install.md)
+
 ## Deep Learning
 [PaperReading_Hints](PaperReading_Hints.md)
 
