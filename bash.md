@@ -63,7 +63,9 @@ IPv4規劃時就擔心IP會不足，而且為了應付某些企業內部的網�
 |`dd`|備份磁碟、樹莓派microSD|可以調整寫入速度|
 |`gzip`|壓縮、解壓縮||
 |`zip` `unzip`|壓縮、解壓縮||
-|`tar`|壓縮、解壓縮||
+|`tar`|打包、解包| 打包/解包 實際上並沒有壓縮，檔名是.tar 即打包解包, 檔名是tar.gz 表示有壓縮|
+|`tar xvf filePath -C dirpath`|解包, 解壓縮(加z)||
+
 
 # Shell script
 ## 動機
