@@ -121,6 +121,7 @@ echo "Done"
 |tocuh|叫一個檔案，或是創建一個檔案||
 
 # 快捷鍵
+**GNU bash，版本 4.4.23(1)-release (x86_64-apple-darwin16.7.0)**
 
 |命令|說明|
 |---|---|
