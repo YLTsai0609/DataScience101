@@ -25,7 +25,19 @@ Object Detection Techniques | Kaggle 重點節錄
 * 缺點 : 或多或少減緩了Viola-Jones Algorithm, 2001的問題，但扔然是一種hardcode的方式，一但noise變大，或是背景東西一多，就分不好了
 ##  Deep Learning Era begins(2012)
 1. CNN
-2. R-CNN
+  * 自從 Kriszhevsky 使用CNN搭建的ImageNet開始，CNN就開始變成標配
+  <img src = 'images/object_dection_3.png'></img>
+  <img src = 'images/object_dection_4.png'></img>
+  * 而不論在單體辨識上，或是多物體辨識上，CNN都能夠有很好的表現
+  <img src = 'images/object_dection_5.png'></img>
+2. R-CNN(Regions with CNN)
+   * CNN都用相同的，小的窗口對原圖進行過濾(相似度測量)，現在先對原圖取出很多Region，在針對這些Region breakdown，進去做CNN
+   * 這樣的做法稱作為 `Selective Search`
+   * 這樣的做法，針對一張圖片中有很多需要辨識的物體，能夠做到更好的segmentation
+   * 可想而知的，這樣鐵定計算量更大，但也更為準確
+   > 原文 : R-CNN creates bouding boxes, or region proposals, using a process called Selective Search.
+   At a high level, Selective Search looks at the image through windows of different sizes, and for each size tries to group together adjacent pixels by texture, color, or intensity to identify objects.
    * 一些更新版本 R-CNN, Fast R-Cnn, Faster R-CNN, Mask R-CNN
+   * 同樣想要做物件辨識，YOLO採用了另一個完全不同的approach，他不訓練分類器!
 3. YOLO
    * YoLO v1, v2, v3 

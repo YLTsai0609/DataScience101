@@ -1,6 +1,10 @@
 # bash
 > 紀錄工作中常用到的一些bash指令，以及使用場景
 > 查看當前bash版本 `help`
+* [TODO] 週一問問題
+* 為啥我的shell script沒辦法續行?
+* 有沒有快捷鍵可以前選一個字? (已經查過網路了，可是不work)
+* 怎麼看目前terminal的一些short cut
 
 # NetWork
 |命令|使用場景|備註|

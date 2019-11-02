@@ -1,5 +1,5 @@
 # Tableau Note
-* 講者 : 台灣之星資深資料科學家 
+* 講者 : 台灣之星資深資料科學家 Kevin
 * 聯絡 : 
 * 信箱 :
 # Tableau vs Excel vs PowerBI
