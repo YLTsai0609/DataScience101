@@ -31,6 +31,8 @@
 
 [CNN Introduction](https://github.com/YLTsai0609/HandOn_ML/blob/master/tensorflow_1_8_0/CNN_intro.md)
 
+[Object Detection History (SVM, HOG, SlidingWindow CNN, R-CNN, YOLO)]([Kaggle]object_detection_histroy.md)
+
 ## Others
 
 
