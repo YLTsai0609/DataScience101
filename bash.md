@@ -55,6 +55,19 @@ IPv4規劃時就擔心IP會不足，而且為了應付某些企業內部的網�
 
   > 只有公共IP和私有IP，固定IP及浮動IP指的是取得方式，手一揮，假的
 
+### 即時串流相關協定
+* 動機 : 在樹莓派上利用TPU做Edge Computing，將結果及影片即時串流回主機Server，原本使用base64將 video image 壓縮成base64字串，在Client端再用based64 decode，但這個方法扔然會延遲。
+* 概念 : 回想一下我們對影片的上傳下載，由於多媒體檔案通常都比較大，所需要的儲存容量也大，由於網路頻寬的限制，下載多媒體檔案都需要花費數分鐘甚至數小時，所以如果是這種下載方法來傳送多媒體檔案的延遲會非常大
+* 串流(Streamming)的概念，只將開始部分存入記憶體，資料流隨時傳送隨時播放，只會在開始時有一些延遲，中間過程通常都會非常順暢，下列為網路串流發展的一些歷史 : 
+ 
+|協定|解釋|
+|---|----|
+|RTP(Real-time Transport Protocol) 即時傳輸協議|串流協定剛開始發展的協定之一|
+|RTMP：即時傳輸訊息協議(Real Time Messaging Protocol)|被Flash用於物件, 影片, 音訊傳輸, 這個協定建立在TCP或是HTTP之上，由於被包裹在TCP裏頭，實作出來畫質還可以，但延遲時間有2秒左右，對於Realtime的要求來說還是較長。|
+|RTSP：即時串流協議(Real Time Streaming Protocol)|除了控制聲音或是影像外，還可以允許同時多個串流需求控制，並且可以自己選擇要用TCP或是UPD來進行串流內容，在這個Protocol中可以傳送播放、錄製、暫停等等控制協定、蠻像遙控錄影機的。|
+* 上述中的RTSP也是我們採用的協定，[其Wiki在這裡](https://zh.wikipedia.org/wiki/%E5%8D%B3%E6%99%82%E4%B8%B2%E6%B5%81%E5%8D%94%E5%AE%9A)
+* 套件實作 GStreamer, based on C，可以使用樹莓派硬體進行H.264編碼，串流品質優
+
 # Permission
 
 |命令|使用場景|備註|
@@ -103,6 +116,55 @@ echo "Done"
 # 環境變數/路徑 PATH
 
 # pipe
+* pipe是幹嘛的? bash命令執行的時候會有輸出資料出現，如果你要的資料需要經過幾道手續之後才會得到我們要的格式
+  就要透過pipe來設定了，管令命令用的是 **|** 這個界定符號，另外，管線命令與 **連續下達命令**是不一樣的，下面會說明，不過我們先來舉個例子
+> 我們想要知道 /etc/ 底下有多少檔案，那麼可以利用 ls / etc 來查閱，不過，因為 /etc底下的檔案太多，導致於一口氣就將螢幕塞滿了，不知道前面輸出的內容是啥，我們可以透過less指令來協助
+`ls -al /etc | less`
+這樣我們就能夠翻頁來查找剛剛吐出來的訊息了，同樣的道理，你也可以使用 `ls -al /etc | head -n 5`
+### pipe做了什麼?
+其實這個管線命令，**僅能處理經由前面一個指令傳來得正確資訊，也就是 standard output，對於 standard error並沒有直接處理的能力**
+
+<img src = './images/bash_pipe_1.png'></img>
+
+* 在每個管線後面接的第一個資料必定是**命令**才行，例如 `less` `more` `head` `tail` 等都是可以接受 standrar input，至於`ls`, `cp`, `mv`就不是管線命令了，因為後面這3個命令並不會接受 stdin的資料
+* 管線命令僅會處理 standard output，對於 standard error output 會予以忽略
+* 管線命令必須要能夠接受來自前一個指令的資料成為 standard input 繼續處理才行。
+
+### 擷取命令 cut, grep
+* cut : 切
+`cut -d '分隔字元' -f fields <--- 用於有特定分隔字元`
+`cut -c '字元區間' <--- 用於排列整齊的訊息`
+```
+E.g 1 將PATH取出，第5個路徑
+echo ${PATH} <--- 叫出路徑
+echo ${PATH} | cut -d ':' -f 5 <---  叫出路徑，然後切出第5個
+E.g 2 將 export 輸出的訊息，取得第 12 字元以後的所有字串
+export | cut -c 12-
+```
+cut這樣的功能在看log的時候特別實用
+* grep : 剛剛的 cut 是將一行訊息當中，取出某部分我們想要的，而 grep 則是分析一行訊息， 若當中有我們所需要的資訊，就將該行拿出來～簡單的語法是這樣的：
+
+```
+grep -[acinv] [--color=auto] '搜尋字串' filename
+-a ：將 binary 檔案以 text 檔案的方式搜尋資料
+-c ：計算找到 '搜尋字串' 的次數
+-i ：忽略大小寫的不同，所以大小寫視為相同
+-n ：順便輸出行號
+-v ：反向選擇，亦即顯示出沒有 '搜尋字串' 內容的那一行！
+--color=auto ：可以將找到的關鍵字部分加上顏色的顯示喔！
+
+E.g 1 : 將last當中，有出現root就取出來
+last | grep 'root'
+E.g 2 : pip list中，有tensorflow就取出來
+pip list | grep 'tensorflow'
+E.g 3 將last中，"沒有" root的取出來
+last | grep -v 'root'
+E.g 4 在last中，只要有root就取出，而且只取取第1欄
+last | grep 'root' | cut -d '' -f1
+E.g 5 取出 tec/man_db/conf 內含有MANPATH得那幾行
+grep --corlor=auto 'MANPATH' /etc/man_db.conf
+```
+`grep`是個非常好用的命令，基本上就是一行的if-else, 用在正規表達式裡面更是一絕，值得學習
 
 # Job Control 工作控制
 
