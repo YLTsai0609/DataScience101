@@ -2,7 +2,6 @@
 > 紀錄工作中常用到的一些bash指令，以及使用場景
 > 查看當前bash版本 `help`
 * [TODO] 週一問問題
-* 為啥我的shell script沒辦法續行?
 * 有沒有快捷鍵可以前選一個字? (已經查過網路了，可是不work)
 * 怎麼看目前terminal的一些short cut
 
@@ -176,7 +175,7 @@ grep --corlor=auto 'MANPATH' /etc/man_db.conf
 |`kill`|根據Job ID 把程式殺掉||
 |`wait`|等待某Job跑完，或是並行處理完||
 
-# profiling 看一下
+# file profiling  
 |命令|使用場景|備註|
 |---|-------|---|
 |cat|檔案不大，覺得vi很難操作，複製程式碼時|cat會看整個檔案|
@@ -185,6 +184,19 @@ grep --corlor=auto 'MANPATH' /etc/man_db.conf
 |tail|看個後面幾行，意思一下，跟dataframe.head()一樣||
 |echo|叫一段文字、或是叫一個檔案、叫環境變數|怎麼叫環境變數? echo $PATH|
 |tocuh|叫一個檔案，或是創建一個檔案||
+
+# System profiling
+|命令|使用場景|備註|
+|---|-------|---|
+|top|最簡易版的工作管理員，可以看CPU，跟thread還有ProcessID|10秒更新，都黑白，可以用htop|
+|htop|豐富版，支援filter，自動提示，排序，比較美等等|Mac :brew install htop-osx|
+|df - h|Dsik Free，顯示磁碟空間資訊||
+|uname -a|顯示系統核心資訊||
+|w|顯示上線使用者清單|可以在Server現在有誰連，有沒有怪人這樣|
+|whoami|顯示目前使用者名稱||
+|free|顯示記憶體與Swap區的用量||
+
+[htop使用](https://blog.gtwang.org/linux/linux-htop-interactive-process-viewer-tutorial/)
 
 # 快捷鍵
 **GNU bash，版本 4.4.23(1)-release (x86_64-apple-darwin16.7.0)**

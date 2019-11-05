@@ -22,6 +22,8 @@
 
 [Vi and Vim](Vi_Editer.md)
 
+[Serialization_Encoding_Bytes_ByteArray](Serialization_Encoding_Bytes_ByteArray.md)
+
 [FaceNet_install](FaceNet_install.md)
 
 ## Deep Learning
