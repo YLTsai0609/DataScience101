@@ -115,6 +115,7 @@ echo "Done"
 # 環境變數/路徑 PATH
 
 # pipe
+* [鳥哥 第十章 10.6 管線命令, 6-1, 6-2](http://linux.vbird.org/linux_basic/0320bash.php)
 * pipe是幹嘛的? bash命令執行的時候會有輸出資料出現，如果你要的資料需要經過幾道手續之後才會得到我們要的格式
   就要透過pipe來設定了，管令命令用的是 **|** 這個界定符號，另外，管線命令與 **連續下達命令**是不一樣的，下面會說明，不過我們先來舉個例子
 > 我們想要知道 /etc/ 底下有多少檔案，那麼可以利用 ls / etc 來查閱，不過，因為 /etc底下的檔案太多，導致於一口氣就將螢幕塞滿了，不知道前面輸出的內容是啥，我們可以透過less指令來協助
@@ -164,6 +165,53 @@ E.g 5 取出 tec/man_db/conf 內含有MANPATH得那幾行
 grep --corlor=auto 'MANPATH' /etc/man_db.conf
 ```
 `grep`是個非常好用的命令，基本上就是一行的if-else, 用在正規表達式裡面更是一絕，值得學習
+
+# 資料流重定向
+* [鳥哥 第十章 10.5 資料流重定向](http://linux.vbird.org/linux_basic/0320bash.php)
+* 什麼是資料流重定向? : 把資料傳導到其他地方去，也就是不從顯示在terminal, 可以傳到檔案裡面, 或是印表機, 等等
+
+<img src = './images/bash_dataflow_redirection_1.png'></img>
+
+## stdout, stderr
+* 如上圖，我們執行一個指令時，這個指令會由檔案讀入資料，處理後，輸出到螢幕上，分別為**標準輸出(STDOUT)**，以及**標準錯誤輸出(STDERR)**
+我們能不能透過某些機制將這兩股資料分開呢? 當然可以，這就是所謂資重定向
+
+
+|概念|用法|
+|---|----|
+|標準輸入 (stdin )|代號 0, 使用 < 或是 <<|
+|標準輸出 (stdout)| 代號 1, 使用 > 或是 >>|
+|標準錯誤輸出(stderr)|代號 2, 使用 2> 或是 2>>|
+
+例如 : `ls > test.txt`
+資料就會盡到`test.txt`
+* 注意 : 如果系統原本沒有該檔案，會新開出來寫，但是如果已經存在，就會覆寫
+* 這時候要使用累加， `>>`
+* 將正確資料與錯誤訊息分流 `ls ~/Desktop/aaa 1>> correct.txt 2>> error_log.txt`
+* 黑洞裝置 : /dev/null 可以吃掉任何東西 `find /home -name .bashrc 2> /dev/null`
+
+## stdin 
+* <, << 將原本需要由鍵盤輸入的資料，改由檔案內容來取代
+`echo 'ls ~/Desktop' > showDesktop.txt`
+
+需要stdin, stdout, stderr的場景
+1. 螢幕輸出訊息很重要，我們需要將它存下來時
+2. 背景執行中的城市，不希望他干擾螢幕正常輸出結果時
+3. 系統例行命令希望可以存下來時(例如crontab)
+4. 一些執行命令可能已知錯誤訊息，想以 2>/dev/null丟掉時
+5. 錯誤訊息和鄭瘸訊息需要分別輸出時
+
+## 命令執行的判斷依據 : ; && ||
+
+|指令|舉例|說明|
+|----|--|----|
+|cmd1; cmd2; cmd3|sync; sync; shotdown -h now|先執行兩次sync同步寫入磁碟，然後關機，輸出的commend有前後依賴關係時|
+|cmd1 && cmd2|ls /tmp/abbc && touch /tmp/abc/hehe| ls指令執行完畢而且正確執行($?=0)，則開始執行cm2，cmd1執行完畢且為錯誤($?!=0)，則cmd2不執行|
+|cmd1 || cmd2|ls /tmp/abbc && touch /tmp/abc/hehe| 和上面一個反過來|
+
+linux命令是由左至右的，所以`&&`和`||`的位置不要放反喔!
+
+
 
 # Job Control 工作控制
 
