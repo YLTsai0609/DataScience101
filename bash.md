@@ -54,6 +54,9 @@ IPv4規劃時就擔心IP會不足，而且為了應付某些企業內部的網�
 
   > 只有公共IP和私有IP，固定IP及浮動IP指的是取得方式，手一揮，假的
 
+### More about SSH
+pass
+
 ### 即時串流相關協定
 * 動機 : 在樹莓派上利用TPU做Edge Computing，將結果及影片即時串流回主機Server，原本使用base64將 video image 壓縮成base64字串，在Client端再用based64 decode，但這個方法扔然會延遲。
 * 概念 : 回想一下我們對影片的上傳下載，由於多媒體檔案通常都比較大，所需要的儲存容量也大，由於網路頻寬的限制，下載多媒體檔案都需要花費數分鐘甚至數小時，所以如果是這種下載方法來傳送多媒體檔案的延遲會非常大
@@ -112,7 +115,42 @@ echo "Done"
 
 [鳥哥一下 - 第12章、學習 Shell Scripts](http://linux.vbird.org/linux_basic/0340bashshell-scripts.php#script_why)
 
-# 環境變數/路徑 PATH
+# 變數
+* 動機 : 每次都被，環境變數/路徑 PATH搞得很煩，要來好好了解一下變數，進而提供可操作性
+* 概念 : 當輸入`mail`這個指令時，如果你是root, 則會執行 `var/spool/mail/root`，當你是vbird，則會執行 `/var/spool/mail/vbird`
+  如此一來，一個變數，通吃所有user，不用把執行路徑寫死，這樣的概念用在所有可被呼叫的指令中，像是`ls`, `cat`, ...等所有指令
+  同樣的道理，不只可以用在系統預設上，進行開發時，也可以利用bash的變數，來處理每台電腦都不一樣的路徑問題!
+
+* 變數取用 `echo $HOME` or `echo${HOME}`
+* 變數賦值 
+```
+[dmtsai@study ~]$ echo ${myname}
+       <==這裡並沒有任何資料～因為這個變數尚未被設定！是空的！
+[dmtsai@study ~]$ myname=VBird
+[dmtsai@study ~]$ echo ${myname}
+VBird  <==出現了！因為這個變數已經被設定了！
+```
+* 變數給值規則
+1. 有些shell中echo空的變數會是空的，有些則會噴error，要注意
+2. 不能有空白字元 myname = VBird 會噴錯
+3. 變數名稱只能是英文字母和數字，但**開頭不能是數字**，例如`2nyname=VBird`會噴錯
+4. 變數內容需要空白字元，可以使用`"`或是`'`
+   * **雙引號內的特殊字元，可以保有原本特性**，例如 `var="lang is $LANG"` -> `echo ${var}` 可以得到  lang is zh_TW.UTF-8
+   * **單引號內的特殊字元，則僅為純文字**，例如 `var="lang is $LANG"` -> `echo ${var}` 可以得到  lang is $LANG
+5. 可用跳脫字元`\`將特殊符號變成一般字元，例如 `myname=VBird\ Tsai` 
+6. 一串指令中需要藉由其他指令提供的資訊，除了使用`$`還可以使用反向單引號，例如 `version=$(uname -r)` -> `echo $version` 可以得到 3.10.0-229.el7.x86_64
+7. 如果想要累加變數(擴增變數內容)，可以這樣子，以PATH舉例 : `PATH=${PATH}:/home/bin`，再一個例子 : `version=${version}MacAir`
+8. 若該變數需要在其他子程序執行，則需要`exoport`來使變數變成環境變數，例如 : `export PATH`
+9. 通常大寫字元為系統預設變數，自行設定變數可以使用小寫，方便判斷(純粹依照使用者興趣)
+10. 取消變數的方法 : `unset`，例如 `unset myname`
+11. 遇到設定變數榮需要`'`，用雙引號包起來 : `name="VBird's name"`
+12. 將自訂變數用在路徑上
+```
+d=pandas_101
+echo ${d} # for check the variable
+cd ~/Desktop/${d} # worked!
+```
+[TBD 環境變數](http://linux.vbird.org/linux_basic/0320bash.php#variable)
 
 # pipe
 * [鳥哥 第十章 10.6 管線命令, 6-1, 6-2](http://linux.vbird.org/linux_basic/0320bash.php)
