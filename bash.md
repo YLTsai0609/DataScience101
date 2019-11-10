@@ -16,6 +16,7 @@
 |`ssh userName@ip adress`|經由ssh連線到主機端，但主機端需要是一個ssh server，或是有給予ssh金鑰|mac需要打開"允許遠端登入" "系統偏好設定" --> "共享" --> "遠端登入"|
 
 * [鳥哥一下 : [第11章、遠端連線伺服器 SSH/XDMCP/VNC/RDP]](http://linux.vbird.org/linux_server/0310telnetssh.php#scp)
+* [scp 簡明使用守則](http://note.drx.tw/2008/03/ubuntuscp-part1.html)
 
 
 ## 觀念
@@ -150,7 +151,104 @@ d=pandas_101
 echo ${d} # for check the variable
 cd ~/Desktop/${d} # worked!
 ```
-[TBD 環境變數](http://linux.vbird.org/linux_basic/0320bash.php#variable)
+
+## 環境變數
+變數當中，被linux系統預設能夠使用的，稱為環境變數，可以幫助我們完成**家目錄變換**，**提示字元顯示**，**執行檔搜尋的路徑**等等
+* `env` 列出目前shell環境下的所有環境變數以及變數內容
+
+|變數|值|
+|---|--|
+|HOSTNAME|study.centos.vbird|
+|TERM|xterm|
+|SHELL|/bin/bash|
+|USER|dmtsai|
+|HITSIZE|1000 指的是系統會記錄過去的1000個命令|
+|PATH|執行黨的搜尋路徑，就是我們所謂的環境變數，目錄和目錄之間用冒號分隔，由於檔案的巡雲是依序由PATH目錄來查詢，所以目錄的順序也很重要喔|
+|HOME|/Users/yltsai 也就是家目錄|
+|LANG|語系資料，對我們來說通常是zh_TW.UTF-8或是 zh_TW.Big5|
+|_|/usr/bin/env 上一次使用的指令的最後一個參數|
+
+* `set` 列出所有變數，包含環境變數與自訂變數
+例如我們自己設的變數
+
+* 不論是否為環境變數，只要跟我們目前這個shell操作介面有關的變數，通常會被設成大寫
+
+* 重要的 shell 變數
+  * PS1(數字的1)，這個東西就是命令提示字元，每次按下[Enter]執行某個指令後，最後要再次出現提示字元時，就會主動讀取這個變數值，可以man bash查詢一下PS1的相關說明
+  * 錢字號 關於本shell的PID，錢字號本身也是個變數，這個東東代表的是**目前這個shell的執行緒代號**
+  * 可以透過 `$$`來顯示PID號碼
+  * ? (關於上個執行指令的回傳值)，沒錯，問號也是一個特殊變數，這個變數指的是**上一個執行的指令所回傳的值**，上面這句話的重點是**上一個指令**和**回傳值**兩個地方，當指令執行成功時，指令代碼會回傳0，如果執行過程發生錯誤，會回傳錯誤代碼，一般來說就是非0的值
+  ```
+  echo $SHELL
+  echo $? -> 0 # 沒問題，所以顯示0
+  12name=VBird
+  echo $? -> 127 # 因為有問題，回傳錯誤代碼
+  echo $? -> 0 # 因為上一個指令 echo $?是正確指令，所以回傳0
+  ```
+* `export` 自訂變數轉成環境變數
+  自訂變數與環境變數的差異在在於**該變數是否會被子程序繼續引用**
+  <img src='/images/bash_variable_1.png'></img>
+  * 我們在原本的bash底下執行另一個bash，那原本的bash就會睡著(父程序)，我們開啟的另一個bash則稱為子程序
+  * **子程序僅會繼承父程序的環境變數，子程序不會繼承父成數的自訂變數!**
+  * export可以將變數輸出，讓父程序可以使用!
+
+# 變數鍵盤讀取、陣列和宣告 : read, array, declare
+* `read`, `declare`, `typeset`, `array`
+pass
+
+# 檔案系統及程序的限制關係 
+* `ulimit` : 限制Server上每個user的記憶體配額
+pass
+
+# 變數內容的刪除、取代和替換
+pass
+
+# 命令別名設定 : alias, unalias
+* 動機 : 常常使用 `ls-al | more` 來看檔案，可是每次都要打這麼多字，覺得很煩
+* `alias lm='ls -al | more'`，會立刻多出一個可執行的指令`lm`
+* alias的定義與變數定義規則幾乎相同，所以要輸入指令時要以純文字，因此要加單引號，如果加雙引號，後面內容會是變數名稱喔
+* 取代原本的rm `alias rm='rm -i'`，因為總會有手殘誤刪的時候
+* 怎麼查現在有哪些alias? `alias`
+```
+alias
+
+alias egrep='egrep --color'
+alias fgrep='fgrep --color'
+alias grep='grep --color'
+alias ls='ls -F --show-control-chars --color=auto'
+# 可以看到我們透過alias來設定一些顯示的顏色
+```
+
+# history 
+歷史命令
+透過history指令一次查看所有下過的命令
+* 寫入時間 : 關掉terminal時，因此多個bash會有無法查到命令的情況
+* 無法記錄時間 : 雖然history是按照時序紀錄，但是無法紀錄時間，或是修改 ~/.bash_logout來進行修改config
+  
+# 萬用字元與特殊符號
+
+|符號|意義|備註|
+|---|----|---|
+|*|代表0個到無窮多個|從regax抄來的|
+|?|代表一定有一個|從regax抄來的|
+|[]|代表一定有一個在[]裡面，例如[abcd]代表一定有一在字元，可能是a,b,c,d任何一個|從regax抄來的|
+|[-]|連續字元, 例如[0-9], [A-Z]|從regax抄來的|
+|[^]|反向選擇，[^abc]找一個字元，非abc|從regax抄來的|
+|#|註解符號，用在script中||
+|\|跳脫符號，將特殊字元或萬用字元還原成一般字元||
+|**|**|管線符號||
+|;|連續下達指令 : 連續性命令，和管線符號並不相同||
+|~|家目錄||
+|$|取用變數的前置字元||
+|&|將指令變成背景工作||
+|!|not||
+|>, >>|資料流重定向, 取代, 累加||
+|<, <<|資料流重定向||
+|''|單引號，不具有變數置換的功能，內容變成純文字||
+|""|具有變數置換的功能，可保留相關功能||
+|``|等同於$()，表示先做裡面的命令||
+|()|子shell的起始和結束，先做的意思||
+|{}|命令區塊的組合||
 
 # pipe
 * [鳥哥 第十章 10.6 管線命令, 6-1, 6-2](http://linux.vbird.org/linux_basic/0320bash.php)
