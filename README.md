@@ -7,6 +7,8 @@
 
 [Bayesian_Hyperparameter_tuning](Bayesian_Hyperparameter_tuning.md)
 
+[All_about_the_distribution](All_about_the_distribution.md)
+
 ## Information Theory
 [ShannonEntroy_to_KL_divergence](ShannonEntroy_to_KL_divergence.md)
 
