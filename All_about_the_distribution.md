@@ -25,6 +25,18 @@ $$
    * 參數: $n, p, k$
    * Binomial distribution is distribution considered prior probaility by specifying the number to be picked in advance.
 
-4. MultiBinomial distribution (discrete), [code](demo/categorical.py)
+4. Multi-Bernoulli distribution (discrete), [code](demo/categorical.py)
+   * a.k.a categorical distribution
    * 白努力分佈的多重版本，這裡舉例有3個類別
-   * TBD ... https://github.com/YLTsai0609/distribution-is-all-you-need
+   * 一個隨機變數$X$，有0.7的機率指向到A事件，0.2的機率指向到B事件，0.1的機率指向到C事件
+<img src ='/images/distribution_4.png'></img>
+
+5. Multinomial distribution
+   * 關係和Bernoulli <--> Bonominal 一樣, a.k.a 多項分佈
+   * 熱力學有用到，可以找一下公式
+   * n個**獨立**的A/B/C試驗中成功次數的離散機率分佈
+   * [TODO](https://baike.baidu.com/item/%E5%A4%9A%E9%A1%B9%E5%88%86%E5%B8%83)
+   * 就是多次的Bernoulli試驗，有成功機率$p$，有試驗數$n$，因此就有mean, variance, 形成一個distribution
+
+
+* [Getting Start](http://itchen.class.kmu.edu.tw/kmu/book/Pro&Sta/stat-ch7.pdf)
