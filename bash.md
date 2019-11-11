@@ -113,8 +113,37 @@ wait
 
 echo "Done"
 ```
+## 執行方式 
+
+|執行方式|效果|
+|-------|---|
+|sh xxxx.sh|該script會用一個新的bash環境來執行script中的指令，換句話說，裡面的變數並不會回傳到父程序中|
+|source|在父程序中執行|
+
+## 條件判斷
+當你的條件很多時，就不會想用&&或是||了，會太多東西
+1. if...then
+```
+read -p "Please input (Y/N):" yn
+
+if ["${yn}"=="Y"]||["${yn}"=="y"]
+  echo "OK, continue"
+  exit 0
+fi
+
+if ["${yn}"=="N"]||["${yn}"=="n"]
+  echo "Oh, interrupt"
+  exit 0
+fi
+
+echo "I don't know what your choice is" && exit 0
+```
+2. 多重條件
+
 
 [鳥哥一下 - 第12章、學習 Shell Scripts](http://linux.vbird.org/linux_basic/0340bashshell-scripts.php#script_why)
+
+
 
 # 變數
 * 動機 : 每次都被，環境變數/路徑 PATH搞得很煩，要來好好了解一下變數，進而提供可操作性
