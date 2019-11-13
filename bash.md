@@ -11,6 +11,7 @@
 |`ifconfig`|查自己的這台的ip||
 |`ipython` `import socket` `socket.gethostbyname('deviceName')`|從A主機經由同網域的連線查詢B主機的ip|ipython要pytho3.5以上才支援|
 |`ping` ip adress|從A主機經由同網域的連線查詢B主機目前的連接狀況及速度(time out, or speed xx/ms)|ping = 戳，測自己網速可以搭配內部迴圈網路 127.0.0.1|
+|`nmap` IP/DNS|查詢子網域內所有ip以及DNS，有ip, 如果該機台有ssh, 就能夠進入 掃描範例 : `nmap 192.169.0.*` 掃描此之下所有子網域, `nmap www.hinet.net` 透過DNS。掃描需要一段時間|`nmap`需要安裝，mac透過`brew`, ubuntu透過`apt`，DNS全名為Domain Name System|
 |`scp userName@ip adress:filePath MyfilePath`|已知主機filePath，從主機抓檔案/資料夾到本地端||
 |`scp MyfilePath userName@ip adress:filePath`|把本地端的檔案copy到主機端的目錄|
 |`ssh userName@ip adress`|經由ssh連線到主機端，但主機端需要是一個ssh server，或是有給予ssh金鑰|mac需要打開"允許遠端登入" "系統偏好設定" --> "共享" --> "遠端登入"|
