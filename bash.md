@@ -464,17 +464,26 @@ linux命令是由左至右的，所以`&&`和`||`的位置不要放反喔!
 
 |命令|使用場景|備註|
 |---|-------|---|
+|locate|找檔案|幾分鐘，幾個小時前的會找不到，located會找到很多，會搜尋整個檔案系統，搜尋的db一天更新一次|
+|whereis|找二進位檔，回傳兩個結果，二進位檔以及操作手冊位置|不會回傳所有帶有關鍵字的檔案，不會很雜，但是重點是要知道你要找的是二進位檔|
+|which|一樣找二進位檔，只是會在PATH variable中尋找||
+|find|最萬用的進階搜尋|如果不知道搜尋根目錄的話，會挺慢的，要等一會|
+
+`find search root -type f/d -name xxx.sh`, 支援萬用字元和正則表達式
 
 
 
-# 新增移除軟體
+# 軟體管理
 
 |OS|中介軟體(下載軟體用的軟體)|備註|
+|--|----------------------|---|
 |macOS|brew, flnk||
-|Ubuntu, Debian||
+|Ubuntu, Debian|apt, dpkg||
+|All|wget||
 
 * [fink mimic `apt`, `apt-get` on macOS](https://blog.csdn.net/camlot_/article/details/47424671)
 * brew based on ruby(macOS自帶)
+* apt(advance package tool) for debian-based linux kernel
 
 # 快捷鍵
 **GNU bash，版本 4.4.23(1)-release (x86_64-apple-darwin16.7.0)**
