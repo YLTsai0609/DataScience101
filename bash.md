@@ -46,6 +46,7 @@ IPv4規劃時就擔心IP會不足，而且為了應付某些企業內部的網�
 
   * 自動取得網路參數(DHCP - Dynamic Host Configguration Protocol) 所謂浮動ip : 在區域網路內會有一部主機負責管理所有電腦的網路參數，**你的網路啟動時，就會主動向伺服器要求IP參數**，若取得網路相關參數後，你的儲機就能夠自行設定好所有伺服器給你的網路參數。最常使用於企業內部、IP分享器後端、校園網路與宿舍環境、纜線寬頻等連線方式。
 
+
 * [鳥哥一下 - 第二章、網路基礎概念 2.3.3 IP的種類與取得方式](http://linux.vbird.org/linux_server/0110network_basic.php#tcpip_network_type)
 
 * [terminal 設定固定ip](https://blog.toright.com/posts/6293/ubuntu-18-04-%E9%80%8F%E9%81%8E-netplan-%E8%A8%AD%E5%AE%9A%E7%B6%B2%E8%B7%AF%E5%8D%A1-ip.html)
@@ -55,6 +56,24 @@ IPv4規劃時就擔心IP會不足，而且為了應付某些企業內部的網�
 ### 總結 : 
 
   > 只有公共IP和私有IP，固定IP及浮動IP指的是取得方式，手一揮，假的
+
+## ifconfig
+* (InterFace config) 提供檢測以及網路介面卡進行互動的指令
+
+|名詞|解釋|備註|
+|----|---|---|
+|eth0|偵測到的介面名稱(Ethernet0的縮寫)|如果系統中有更多乙太網路介面，則會一一列出|
+|EthernetHWaddr : `00:0c:29:ba:....`|網路介面卡位置，稱為MAC(media access control address)|
+|inet addr|當前分配給網卡的IP位置(可能是固定IP或是浮動IP)|
+|Bcast|broadcast address，廣播位置，用來發送給所有位於子網路內機台訊息的ip位置||
+|Mask|網路遮罩，決定哪一部分是屬於網路或是主機||
+|lo|loopback adress, localhost|連接到本地系統，測試用|
+|wlan0|**無線網路介面卡**裝置||
+|LAN|Local Area Network 區域網路||
+
+## iwconfig
+* (Interface wireless config) 無線網卡的相關config
+* Ubuntu上面有，但mac尚有編譯問題，沒辦法安裝
 
 ### More about SSH
 pass
