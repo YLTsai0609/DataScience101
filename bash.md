@@ -57,7 +57,7 @@ IPv4規劃時就擔心IP會不足，而且為了應付某些企業內部的網�
 
   > 只有公共IP和私有IP，固定IP及浮動IP指的是取得方式，手一揮，假的
 
-## ifconfig
+## ifconfig/ipconfig
 * (InterFace config) 提供檢測以及網路介面卡進行互動的指令
 
 |名詞|解釋|備註|
@@ -71,9 +71,37 @@ IPv4規劃時就擔心IP會不足，而且為了應付某些企業內部的網�
 |wlan0|**無線網路介面卡**裝置||
 |LAN|Local Area Network 區域網路||
 
+* ipconfig是windows上的ifconfig
+
 ## iwconfig
 * (Interface wireless config) 無線網卡的相關config
 * Ubuntu上面有，但mac尚有編譯問題，沒辦法安裝
+
+* ifconfig的潛能
+* 修改本機IP位置(暫時的，永久修改要google)，變更網路遮罩，變更廣播位置，竄改MAC位置
+* DHCP (Dynamic Host Configguration Protocol)能夠透過這個協定和基地台溝通，修正發送下來的IP，但在mac中需要google一下是用什麼指令，然後brew安裝它
+
+## 操控DNS
+* DNS : IP <--> www.google.com(人類看得懂的網域名稱)
+* Hacker能夠從其中竊取許多關於入侵目標的重要資訊
+* `dig`能夠搜尋有關目標域名的DNS資訊
+* 改變DNS Server
+  * 相關檔案在Unix-like的系統之下被放在/etc/resolv.conf的domain以及nameserver
+  * 透過修改donmain以及nameserver就能夠自訂跳板服務([VPN - Virtual Private Network](https://zh.wikipedia.org/wiki/%E8%99%9B%E6%93%AC%E7%A7%81%E4%BA%BA%E7%B6%B2%E8%B7%AF))
+* 自定義IP位置
+* 相關檔案在Unix-like的系統之下被放在/etc/hosts
+* 可以自訂一個IP，然後後面接一個DNS，該主機連線到該IP時就會被重定向到指定DNS，可以透過狹持TCP連線引導至惡意網站
+
+## nmap
+nmap <type of scan> <target IP> <optionally, target port>
+* nmap 掃描自己區網內所有連網裝置IP,Port, 及開啟的服務
+  * 先透過ifconfig, 如果屬於一個區網(LAN)，則取前三碼，例如192.168.0
+  * nmap 192.168.0.* > scanlist.txt
+* 可以搭配**封包監聽**，**封包攔截**，如果有人正在傳送密碼而且是明碼，就可以截取到密碼。
+* 不局限於區網，只要有IP就可以實作任何的掃描
+  * `echo Enter the starting IP adress`
+  * `read FirstIP`
+  * `nmap ${FirstIP}-${LastOctIP}...`
 
 ### More about SSH
 pass
@@ -430,6 +458,23 @@ linux命令是由左至右的，所以`&&`和`||`的位置不要放反喔!
 |free|顯示記憶體與Swap區的用量||
 
 [htop使用](https://blog.gtwang.org/linux/linux-htop-interactive-process-viewer-tutorial/)
+
+* 什麼是`swap` : 硬體加速，當記憶體滿載時，會從硬碟中借一些容量拿充當記憶體，常用的話，很傷記憶體
+# 檔案查找
+
+|命令|使用場景|備註|
+|---|-------|---|
+
+
+
+# 新增移除軟體
+
+|OS|中介軟體(下載軟體用的軟體)|備註|
+|macOS|brew, flnk||
+|Ubuntu, Debian||
+
+* [fink mimic `apt`, `apt-get` on macOS](https://blog.csdn.net/camlot_/article/details/47424671)
+* brew based on ruby(macOS自帶)
 
 # 快捷鍵
 **GNU bash，版本 4.4.23(1)-release (x86_64-apple-darwin16.7.0)**
