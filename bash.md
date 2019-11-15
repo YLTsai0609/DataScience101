@@ -15,6 +15,7 @@
 |`scp userName@ip adress:filePath MyfilePath`|已知主機filePath，從主機抓檔案/資料夾到本地端||
 |`scp MyfilePath userName@ip adress:filePath`|把本地端的檔案copy到主機端的目錄|
 |`ssh userName@ip adress`|經由ssh連線到主機端，但主機端需要是一個ssh server，或是有給予ssh金鑰|mac需要打開"允許遠端登入" "系統偏好設定" --> "共享" --> "遠端登入"|
+|`curl ifconfig.me`|查詢目前該機台的外部IP，多個機台可能是一樣的外部IP|
 
 * [鳥哥一下 : [第11章、遠端連線伺服器 SSH/XDMCP/VNC/RDP]](http://linux.vbird.org/linux_server/0310telnetssh.php#scp)
 * [scp 簡明使用守則](http://note.drx.tw/2008/03/ubuntuscp-part1.html)
@@ -479,7 +480,8 @@ linux命令是由左至右的，所以`&&`和`||`的位置不要放反喔!
 |--|----------------------|---|
 |macOS|brew, flnk||
 |Ubuntu, Debian|apt, dpkg||
-|All|wget||
+|?|curl|curl有Library的版本，程式可以利用curl當作HTTP Client使用，支援比較多網路協定，支援的作業系統比wget多|
+|?|wget|最方便的一點，wget可以遞迴下載檔案，把子資料夾跟子子資料夾都下載，wget較為直覺|
 
 * [fink mimic `apt`, `apt-get` on macOS](https://blog.csdn.net/camlot_/article/details/47424671)
 * brew based on ruby(macOS自帶)
