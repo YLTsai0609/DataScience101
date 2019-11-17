@@ -31,7 +31,7 @@
 * 先驗分配這裡取 Dirichlet distribution，這裡事實上可以針對我們對文字資料的了解選用符合的先驗分佈，例如exponential distribution。
 * [TODO 為什麼先驗使用Dirichlet?]
   * 猜測 : 這個分佈在數學上能夠變成任何其他常見的分佈，可塑型強
-* 然後就跑Bayesian, MCMC
+* 然後就跑Bayesian, 這裡是採用Gibbs sampling的方式，而非MCMC的sampling方式，scikit-learn的Model中也有多個變種，論文是2011, 2013年
 
 # Result
 * 就是兩個分佈的參數分佈，進入DataViz
