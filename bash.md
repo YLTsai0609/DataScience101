@@ -473,7 +473,6 @@ linux命令是由左至右的，所以`&&`和`||`的位置不要放反喔!
 `find search root -type f/d -name xxx.sh`, 支援萬用字元和正則表達式
 
 
-
 # 軟體管理
 
 |OS|中介軟體(下載軟體用的軟體)|備註|
@@ -486,6 +485,12 @@ linux命令是由左至右的，所以`&&`和`||`的位置不要放反喔!
 * [fink mimic `apt`, `apt-get` on macOS](https://blog.csdn.net/camlot_/article/details/47424671)
 * brew based on ruby(macOS自帶)
 * apt(advance package tool) for debian-based linux kernel
+
+
+# 檔案系統
+
+<img src = './images/bash_file.png'></img>
+* Mac也長得很相似
 
 # 快捷鍵
 **GNU bash，版本 4.4.23(1)-release (x86_64-apple-darwin16.7.0)**

@@ -1,0 +1,23 @@
+/
+├── Applications 
+├── Library
+├── Network
+├── System
+├── Users
+├── Volumes
+├── bin
+├── cores
+├── dev
+├── etc -> private/etc
+├── home
+├── installer.failurerequests
+├── net
+├── opt
+├── private
+├── sbin
+├── sw
+├── tmp -> private/tmp
+├── usr
+└── var -> private/var
+
+19 directories, 1 file

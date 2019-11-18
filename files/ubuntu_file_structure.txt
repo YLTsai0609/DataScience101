@@ -1,0 +1,30 @@
+/
+├── bin 一般使用者可以操作的指令，裡面的`/sbin`則是放系統管理員可以操作的指令, bash, cat, cp, mv...
+├── boot 開機相關檔案
+├── cdrom 
+├── dev `device`裝置檔案，包含滑鼠，鍵盤
+├── etc 放置系統檔案
+├── home 主要市一般帳戶的家目錄，`/root`為系統管理者家目錄
+├── initrd.img -> boot/initrd.img-5.0.0-36-generic
+├── initrd.img.old -> boot/initrd.img-5.0.0-35-generic
+├── lib 系統函式庫
+├── lib64 系統函式庫，64位元
+├── lost+found
+├── media 放置隨插即用的裝置慣用目錄
+├── mnt 管理員/使用者手動掛上的目錄
+├── opt `optinal`，第三方廠商放置軟體處
+├── proc 將記憶體內的資料做成檔案類型
+├── root
+├── run 系統進行服務軟體運作管理處
+├── sbin系統管理員可操作指令
+├── snap 
+├── srv `service` 放置開發的服務(service)，例如 : 網站服務`www`等
+├── swapfile
+├── sys 與`proc`類似，但主要針對硬體相關參數
+├── tmp `temporary`，放置一些變數或紀錄檔
+├── usr 全名為`unix software resource`，放置系統相關軟體，服務，不是user的縮寫!!!
+├── var `variable`，放置一些變數或是紀錄檔
+├── vmlinuz -> boot/vmlinuz-5.0.0-36-generic
+└── vmlinuz.old -> boot/vmlinuz-5.0.0-35-generic
+
+22 directories, 5 files
