@@ -404,6 +404,7 @@ grep --corlor=auto 'MANPATH' /etc/man_db.conf
 * 將正確資料與錯誤訊息分流 `ls ~/Desktop/aaa 1>> correct.txt 2>> error_log.txt`
 * 黑洞裝置 : /dev/null 可以吃掉任何東西 `find /home -name .bashrc 2> /dev/null`
 
+* 紀錄所有termial stdout到log檔案，寫一個bash script，每次開機就在背景執行
 ## stdin 
 * <, << 將原本需要由鍵盤輸入的資料，改由檔案內容來取代
 `echo 'ls ~/Desktop' > showDesktop.txt`
@@ -449,7 +450,7 @@ linux命令是由左至右的，所以`&&`和`||`的位置不要放反喔!
 
 # System profiling
 |命令|使用場景|備註|
-|---|-------|---|
+|---|-------|---|****
 |top|最簡易版的工作管理員，可以看CPU，跟thread還有ProcessID|10秒更新，都黑白，可以用htop|
 |htop|豐富版，支援filter，自動提示，排序，比較美等等|Mac :brew install htop-osx|
 |df - h|Dsik Free，顯示磁碟空間資訊||
@@ -491,6 +492,25 @@ linux命令是由左至右的，所以`&&`和`||`的位置不要放反喔!
 
 <img src = './images/bash_file.png'></img>
 * Mac也長得很相似
+
+## GRUB
+GRUB是諸多linux發行版採用的開機管理程式(bootloader)
+雖然Ubuntu 9.10以後的版本開始採用 GRUB 2，但是追求穩定的人往往還是使用GRUB
+
+## kernel管理
+
+使用`ukuu`工具，能夠輕易管理及安裝Kernel
+
+匯入外部鏡像
+`sudo add-apt-repository -y ppa:teejee2008/ppa
+`
+更新鏡像源
+`sudo apt-get update`
+
+安裝ukuu
+`sudo apt-get install ukuu`
+
+[reference](https://peterli.website/%E5%A6%82%E4%BD%95%E5%9C%A8ubuntu-18-04%E4%B8%8A%E9%9D%A2%E5%AE%89%E8%A3%9D%E8%88%87%E7%AE%A1%E7%90%86kernel/)
 
 # 快捷鍵
 **GNU bash，版本 4.4.23(1)-release (x86_64-apple-darwin16.7.0)**
