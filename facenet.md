@@ -89,3 +89,20 @@ semi-hard negtives
 
 # Network Architecture
 L2 normolization (batch?)
+
+
+
+# Source Code 功能解析
+[FaceNet源码解读：史上最全的FaceNet源码使用方法和讲解（一）（附预训练模型下载](https://blog.csdn.net/u013044310/article/details/79556099)
+
+1. `campare.py` 直接比對兩個人臉經過神經網路映射後的L2距離
+2. `align\align_dataset_mtcnn` 使用mtcnn模型對人臉資料進行preprocessing，切邊到只剩人臉，且降低pixel，通常會設定為160
+3. `train_tripletloss.py` 重新訓練自己的網路模型
+   * `train_softmax.py` 作者對論文所做出的延伸，除了使用facenet裡提到的`train_tripletloss.py`來訓練，還實現了softmax，**在樣本數很小的情況下，用softmax會更容易收斂**，但是當訓練集中人臉個數超過約莫10萬時，最後一層的softmax輸出數量會變得非常大，該時候使用`train_tripletloss.py`能夠有更好的效果
+4. `validate_on_lfw.py`驗證率FAR, 曲線下面積 AUC 等誤差率 EER 等性能指標
+5. `classifier.py` 從一個已經訓練好的facenet模型，在街上一個    SVM分類器，進而分類每個人
+
+## Minor file
+1. `cluster.py` 使用mtcnn進行人臉檢測，對齊以及裁切，進行embedding，最後output使用L2距離進行聚類
+2. `predict.py` 使用mtcnn進行人臉檢測，對齊以及裁切，進行embedding，進行人臉識別(需要訓練好的svm模型)
+3. `export_embeddings.py` 輸出embedding array
