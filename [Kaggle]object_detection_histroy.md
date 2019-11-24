@@ -80,8 +80,7 @@
     * NMS可以把重疊的bounding box按照計算取出一個，消除其他的，接著我們就會有乾淨的bounding box
   * 接下來就可以根據剩餘bounding box來訓練有什麼物件了
   <img src = 'images/object_dection_8.png'></img>
-### How to learn a bounding box?
-
+# How to learn a bounding box?
 <img src = 'images/object_dection_9.png'></img>
 
 首先假設深度學習還沒用於目標檢測, 我們還不知道那麼多目標檢測算法
@@ -99,4 +98,6 @@
 1. 訓練階段, 在訓練階段中, 如果物體中心落在這個cell, 那麼就給這個cell打上物品的label，label包含5個dimension $(x, y, w, h, class~of~object)$。也就是說我們是通過這種方式來設置label, 換言之, 我們在訓練階段, 就教會cell要預測圖像中的哪個物體
 2. 測試階段 因為你在訓練階段已經教會了cell去預測中心落在該cell中的物體, 那麼cell自然也會這麼做
   
-
+Resource 2 : 
+Structure Learning from 李宏毅
+https://mmchiou.gitbooks.io/ai_challenge_taiwan_2018-private/structured-learning/structuredlearning-li-hong-yi-jiao-shou/structuredlearning-li-hong-yi-jiao-shou-ding-zheng-ban-v3.html
