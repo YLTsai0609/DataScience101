@@ -7,7 +7,7 @@
 [TODO] https://read01.com/7K2am8.html#.Xcw5gpIzZE4
 
 2. Bernoulli distribtuion(discrete), [code](demo/bernoulli.py)
-   * 成功是1, 失敗是0，成功機率為p
+   * 成功是1, 失敗是0，成功機率為$p$
    * [Wiki](https://zh.wikipedia.org/wiki/%E4%BC%AF%E5%8A%AA%E5%88%A9%E5%88%86%E5%B8%83)
 <img src ='/images/distribution_2.png'></img>
    * 白努力分佈不考慮先驗機率(prior probability $P(x)$)，如果我們最大化可能性(likelihood)，我們非常容易overfitting
@@ -15,6 +15,7 @@
 
 <br>
 3. Binomial distribution(discrete), [code](/demo/binomial.py)
+   
    * n個**獨立**的是/非試驗中成功次數的離散機率分佈
    * 就是多次的Bernoulli試驗，有成功機率$p$，有試驗數$n$，因此就有mean, variance, 形成一個distribution
 <img src ='/images/distribution_3.png'></img>
