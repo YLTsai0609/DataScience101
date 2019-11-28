@@ -119,7 +119,10 @@ $$
 寫成矩陣形式 
 
 $$
-\hat{x}_{k} = F_{k}\hat{x}_{k-1} + {\frac{\Delta t^{2}}{2} \brack{\Delta t}} = F_{k}\hat{x}_{k-1} + B_{k}u_{k}
+\hat{x}_{k} = F_{k}\hat{x}_{k-1} + {\frac{\Delta t^{2}}{2} \brack{\Delta t}}a = F_{k}\hat{x}_{k-1} + B_{k}u_{k}
+$$
+$$
+{\frac{\Delta t^{2}}{2} \brack{\Delta t}} = B_{k}, a = u_{k}  
 $$
 此加速度$a$在文章中被稱之為外部因素是因為，
 在動力學系統中，加速度$a$通常都是由操縱者調整了油門或是馬達，是根據
@@ -244,6 +247,40 @@ $$where~~0 \leq k \leq 1$$
 新的varaicne同樣會存在一個修正量，而這個修正量是$k$乘上原本的variance，這個k看起來具有明確的定義，我們把它稱作為**kalman gain(卡曼增益)**，並且可以注意到的地方是，vairance變小了，這正是我們想要的結果，透過上一刻$k-1$的資訊，讓我們當前時刻$k$的預測更貼近物體真實的狀態
 
 ##### 來吧寫成矩陣形式
+在多維度的高斯分佈中
+$$
+K = \Sigma_{0}(\Sigma_{0} + \Sigma_{1})^{-1}
+$$
+$$
+\mu' = \mu + K(\mu_{1} - \mu_{0})
+$$
+$$
+\Sigma' = \Sigma_{0} - K\Sigma_{0}
+$$
+矩陣K即為kalman gain (卡曼增益)
+
+
+##### Put it all together
+截至目前為至，我們有第$k-1$時刻矩陣$(\mu_{0}, \Sigma_{0}) = (H_{k-1}\hat{x}_{k-1}, H_{k-1}P_{k-1}H^{T}_{k-1})$預測的分佈
+以及第$k$時刻透過sensor讀取到的讀數$(\mu_{1}, \Sigma_{1}) = (z_{k}, R_{k})$
+將兩式帶入上述推倒
+
+卡曼增益 : 
+$$
+K = H_{k-1}P_{k-1}H^{T}_{k-1}(H_{k-1}P_{k-1}H^{T}_{k-1} + R_{k})^{-1}
+$$
+
+時刻$k$之狀態以及Covarance Matrix
+$$
+\hat{x}_{k}' = \hat{x}_k + K(z^{k} + H_{k-1}\hat{x}_{k-1})
+$$
+$$
+P_{k}' = P_{k}-K'H_{k}P_{k}
+$$
+
+<img src='/images/kalman_14.jpg'></img>
+
+
 #### Tuning
 
 
