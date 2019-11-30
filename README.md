@@ -9,6 +9,8 @@
 
 [All_about_the_distribution](All_about_the_distribution.md)
 
+[Bayesian_analysis_python](https://github.com/YLTsai0609/bayesian_analysis_python)
+
 ## Information Theory
 [ShannonEntroy_to_KL_divergence](ShannonEntroy_to_KL_divergence.md)
 
