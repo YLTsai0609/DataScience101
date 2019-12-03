@@ -512,6 +512,15 @@ GRUB是諸多linux發行版採用的開機管理程式(bootloader)
 
 [reference](https://peterli.website/%E5%A6%82%E4%BD%95%E5%9C%A8ubuntu-18-04%E4%B8%8A%E9%9D%A2%E5%AE%89%E8%A3%9D%E8%88%87%E7%AE%A1%E7%90%86kernel/)
 
+# CPU, GPU, Memory
+
+|命令|說明|
+|---|---|
+|lscpu|查看機台CPU狀態, 包含核心數, 執行緒數, 快取等|
+|nvidia-smi|顯示當前GPU所有基礎資訊|
+more about GPU info 
+https://www.itread01.com/content/1541720962.html
+
 # 快捷鍵
 **GNU bash，版本 4.4.23(1)-release (x86_64-apple-darwin16.7.0)**
 
