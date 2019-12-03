@@ -1,4 +1,4 @@
-# Image Tracking
+# Object Tracking
 ## Naive approach
 對於單點$(x,y)$來說，每個timestamp產生一個$(x,y)$，如此一來形成一個array，也可以說是函數$$C_{k}~~where~~k=1,2,3,...t$$
 若
