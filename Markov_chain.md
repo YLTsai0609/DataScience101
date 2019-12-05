@@ -10,6 +10,7 @@
 * 正規隨機矩陣(regular stochastic matrix)
 * fix point (方陣固定點)
 * statinary distribution(穩定分配)
+* [穩定分配 to Metropolis Hasting](http://cpmarkchang.logdown.com/posts/737249-pgm-metropolis-hasting)
 * absornig Markov chain (吸收馬可夫鏈)
 * fundamental matrix of markov chain(馬可夫鍊的基本矩陣)
 * 吸收馬可夫鍊的應用
