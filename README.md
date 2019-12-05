@@ -11,6 +11,8 @@
 
 [Bayesian_analysis_python](https://github.com/YLTsai0609/bayesian_analysis_python)
 
+[Markov chain](Markov_chain.md)
+
 ## Information Theory
 [ShannonEntroy_to_KL_divergence](ShannonEntroy_to_KL_divergence.md)
 
