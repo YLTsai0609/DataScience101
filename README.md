@@ -30,6 +30,14 @@
 
 [Multiple_object_tracking_tmp]()
 
+## Deep Learning
+[PaperReading_Hints](PaperReading_Hints.md)
+
+[DNN Introduction](https://github.com/YLTsai0609/HandOn_ML/blob/master/tensorflow_1_8_0/DNN_Intro.md)
+
+[CNN Introduction](https://github.com/YLTsai0609/HandOn_ML/blob/master/tensorflow_1_8_0/CNN_intro.md)
+
+
 ## Geospatial Analysis
 [Kaggle Learn All Mash Up](https://github.com/YLTsai0609/Geospatial_Analysis.git)
 
@@ -46,14 +54,7 @@
 
 [FaceNet_install](FaceNet_install.md)
 
-## Deep Learning
-[PaperReading_Hints](PaperReading_Hints.md)
-
-[DNN Introduction](https://github.com/YLTsai0609/HandOn_ML/blob/master/tensorflow_1_8_0/DNN_Intro.md)
-
-[CNN Introduction](https://github.com/YLTsai0609/HandOn_ML/blob/master/tensorflow_1_8_0/CNN_intro.md)
-
-
+[SpeedUp Strategy](SpeedUp_Strategy.md)
 
 ## Others
 
