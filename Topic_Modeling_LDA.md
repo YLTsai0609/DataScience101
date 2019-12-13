@@ -37,3 +37,8 @@
 * 就是兩個分佈的參數分佈，進入DataViz
 * LDA的DataViz要說的事情稍微複雜
 # DataViz
+* Bar-plot 各Topic中有的LDA score
+* bubble plot, LDA-viz
+  * bubble plot 右邊扔然有bar-plot, 左邊則是Reduction的axis, 透過壓縮算法來計算各主兼之間的距離
+
+# Evaluation
