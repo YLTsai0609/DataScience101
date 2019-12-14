@@ -1,7 +1,9 @@
 # facenet
-* matirial
+
 [DeepFace: Closing the gap to human-level performance in face verification 2014]()
+
 [FaceNet: A Unified Embedding for Face Recognition and Clustering 2015]()
+
 [人臉辨識(Face recognition) 解析與實作](https://medium.com/life-is-fantistic/%E4%BA%BA%E8%87%89%E8%BE%A8%E8%AD%98-face-recognition-cffcec53a544)
 
 # Concept
@@ -96,7 +98,8 @@ L2 normolization (batch?)
 [FaceNet源码解读：史上最全的FaceNet源码使用方法和讲解（一）（附预训练模型下载](https://blog.csdn.net/u013044310/article/details/79556099)
 
 1. `campare.py` 直接比對兩個人臉經過神經網路映射後的L2距離
-2. `align\align_dataset_mtcnn` 使用mtcnn模型對人臉資料進行preprocessing，切邊到只剩人臉，且降低pixel，通常會設定為160
+2. `align\align_dataset_mtcnn` 使用mtcnn模型對人臉資料進行preprocessing
+切邊到只剩人臉，且降低pixel，通常會設定為160
 3. `train_tripletloss.py` 重新訓練自己的網路模型
    * `train_softmax.py` 作者對論文所做出的延伸，除了使用facenet裡提到的`train_tripletloss.py`來訓練，還實現了softmax，**在樣本數很小的情況下，用softmax會更容易收斂**，但是當訓練集中人臉個數超過約莫10萬時，最後一層的softmax輸出數量會變得非常大，該時候使用`train_tripletloss.py`能夠有更好的效果
 4. `validate_on_lfw.py`驗證率FAR, 曲線下面積 AUC 等誤差率 EER 等性能指標
