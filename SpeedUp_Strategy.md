@@ -3,6 +3,7 @@
 1. Numbda : JIT(Just in time)推論輸入變數型態，快速進行編譯
    * TextBook : O'reilly : 高效能Python  
    * TextBook : 圖靈 : Python高性能(第二版)
+   * [Numnda基本上拿來什麼時候用? for迴圈時，預編譯帶來的速度提升通常都可以是十倍到百倍](https://zhuanlan.zhihu.com/p/27152060)
 2. Cupy : 把numpy數組拿進GPU來算，讓numpy加速700倍
    * [農場介紹文](https://kknews.cc/zh-tw/code/gma66z9.html)
    * [官方文件](https://docs-cupy.chainer.org/en/stable/#)
