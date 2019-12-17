@@ -29,8 +29,33 @@ Deep SORT怎麼處理資料連問題呢? SORT使用了匈牙利算法來進行�
 
 接著將上述指標合成一個指標來進行評估，寫一個psudo code來發論文XD
 
-多目標追蹤的3種門派
+# 多目標追蹤的3種門派
 [Ref 2](https://zhuanlan.zhihu.com/p/77111218)
+
+實際應用中，工程落地所遵循的原則是**能夠在保證實現功能的情況下，以最快的速度實現，先出一版，後期在不斷迭代優化**。所以定方案是最重要的，**前期調研工作做得好，對後續部署會激為方便，少走很多彎路**
+目標檢測已經產生出很多優秀的算法(基於神經網路，傳統CV檢測)
+1. 單階段式(SSD/YOLO)
+2. 兩階段式(FasterRCNN)
+在工程上都有被應用，哪種框架熟練就用哪種框架
+多目標追蹤的核心則在於**目標檢測**與**數據關聯**，即在每一幀進行目標檢測，再利用檢測的結果來進行目標跟蹤，後面這步驟一般稱為數據關聯，數據關聯更多依賴於手工提取特徵 : **(外觀特徵、運動特徵、形狀特徵)**
+下面以多目標跟蹤算法總結歸為3類
+
+## 卡曼濾波 + 匈牙利，KM匹配的後端追蹤優化算法
+1. 代表論文有SORT, DEEP-SORT
+2. 這類算法特典在於**實時性**，帶依賴於檢測算法效果要好，特徵區分要好，輸出最終結果的好壞依賴於較強的檢測算法
+
+## 基於多線程的單目標追蹤器以及多目標追蹤算法
+1. 代表性算法有KCF, LEDS
+   1. **KCF** : High-Speed Tracking with Kernelized Correlation Filters TPAMI 2015
+   2. **EDS** : Robust Estimation of Similarity Transformation for Visual Object Tracking AAAI 2019
+2. 特點在於跟蹤效果很好，因為每一類物體都單獨分配了一個追蹤器，但該算法對目標尺度變化要求較大，參數調試需要合理，且該算法極度消耗CPU資源，實時性不高
+
+## 基於深度學習端到端的多目標跟蹤算法
+1. 代表性算法 SST
+   1. **DAN** : Deep Affinity Network for Multiple Object Tracking TPAMI 2019
+   2. **MCSA** : Multi-Object Tracking with Miltiple Cues and Switcher-Aware Classification CVPR 2019
+2. 現階段 end-to-end的算法還不多，大多處於實驗室刷榜階段
+
 
 # Hungarian Algorithm + kalman filter framework
 [多目标跟踪：SORT和Deep SORT
