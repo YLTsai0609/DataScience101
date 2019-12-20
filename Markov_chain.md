@@ -167,8 +167,19 @@ $$
 可以把$X$只有兩個值的機率分佈，推廣到多個值，在$X = {a_{1}, a_{2},...,a_{n}}$中的任意兩個值都能夠建立這樣的Markov chain，在這些Markov chain中來回行走，最後達到平衡時，抽出來的序列就等於從$p(X)$的機率分佈抽樣一般
 
 ### psudo code長這樣
-[TODO]
-psudo code
+[TODO] latax的逃脫字元
+1 set $t$ = 0
+2 genetate an intial state $x_{0} \in a_{1}, a_{2}, ..., a_{n}$
+3 repeat until $t = M$
+4   genetate a proposal state $a_{j}$ from $q(x_{t+1}|x_{t})$
+5 calculate the acceptance probability $\alpha$ = $min(1, \frac{p(a_{j})}{p(x_{t})})$
+6 draw a random number $u$ from $Unif(0, 1)$
+7 if $u \le \alpha$
+8 空白空白accept the proposal state $a_{j}$ and set $x_{t+1} = a_{j}$
+9 set
+10 空白空白 $x_{t+1} = x_{t}$
+
+其中，$M$為抽出的樣本數，而從Unif(0, 1)抽出的$u$，目的是要讓$x_{t+1}=a_{j}$成立的機率為$\alpha$
 
 # Further reading 
 1. [LDA-math-MCMC and Gibbs sampling(1)]()
