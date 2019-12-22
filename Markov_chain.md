@@ -1,23 +1,11 @@
-# Markov chain
+# Markov Chain I
 ## Outline
 * Introduction
 * 討論前提
 * 轉移圖(transition diagram), 樹狀圖(tree diagram),轉移矩陣
-
 * statinary distribution(穩定分配)
-* [穩定分配 to Metropolis Hasting](http://cpmarkchang.logdown.com/posts/737249-pgm-metropolis-hasting)
-
-
-* regular Marcov chain
-* 隨機矩陣
-* 正規隨機矩陣(regular stochastic matrix)
-* fix point (方陣固定點)
-* absornig Markov chain (吸收馬可夫鏈)
-* fundamental matrix of markov chain(馬可夫鍊的基本矩陣)
-* 吸收馬可夫鍊的應用
-  * 期望步數
-  * 到達吸收狀態之機率
-* 可逆性
+* Metropolis Sampler
+* Metropolis Hasting
 
 
 ## Introduction
@@ -29,7 +17,7 @@
 2. 任何試驗至多和前一試驗相關，而與其他試驗無關。
 3. 對於每一對狀態$(a_{i}, a_{j})$有一已知機率$p_{ij}$表示前一試驗為$a_{i}$時，接下來的試驗出現狀態為$a_{j}$的機率，這樣的$p_{ij}$稱為轉移機率
 以上的隨機過程即稱作馬可夫鍊
-### 馬可夫練的討論前提
+### 馬可夫鏈的討論前提
 如同上述所講，需要注意探討的項目是否為一個馬可夫鍊
 1. 在任何週期內，系統中的事件只存在於一種狀態內
 2. 從一種狀態轉換到另一種狀態的機率，決定於前一週期
@@ -85,7 +73,7 @@
 利用Markov Chian最後必定走道穩定狀態的特性，我們可以做這樣的事
 先給訂一個機率分佈函數，從這個機率函數建立Markov Chain，接著再利用建立出來的Markov Chain來進行抽樣
 
-設定一機率分佈$p(X)$，起始值為$x_{0}$。隨機變數的值為$ X = {a_{1},a_{2}, ..., a_{n}}$
+設定一機率分佈$p(X)$，起始值為$x_{0}$。隨機變數的值為$ X = \{ a_{1},a_{2}, ..., a_{n} \}$
 
 設目前時間點$t$抽出的值$x_{t}=a_{i}$，然後，從一機率分佈(稱為proposal distribution)  $q(x_{t+1}|x_{t})$中，抽出一個值，為$a_{j}$，其中$q(x_{t+1}|x_{t})$滿足以下對稱性 : 
 
@@ -167,20 +155,63 @@ $$
 可以把$X$只有兩個值的機率分佈，推廣到多個值，在$X = {a_{1}, a_{2},...,a_{n}}$中的任意兩個值都能夠建立這樣的Markov chain，在這些Markov chain中來回行走，最後達到平衡時，抽出來的序列就等於從$p(X)$的機率分佈抽樣一般
 
 ### psudo code長這樣
-[TODO] latax的逃脫字元
+
 1 set $t$ = 0
-2 genetate an intial state $x_{0} \in a_{1}, a_{2}, ..., a_{n}$
+2 genetate an intial state $x_{0} \in \{a_{1}, a_{2}, ..., a_{n}\}$
 3 repeat until $t = M$
-4   genetate a proposal state $a_{j}$ from $q(x_{t+1}|x_{t})$
+4 genetate a proposal state $a_{j}$ from $q(x_{t+1}|x_{t})$
 5 calculate the acceptance probability $\alpha$ = $min(1, \frac{p(a_{j})}{p(x_{t})})$
 6 draw a random number $u$ from $Unif(0, 1)$
 7 if $u \le \alpha$
-8 空白空白accept the proposal state $a_{j}$ and set $x_{t+1} = a_{j}$
+8 accept the proposal state $a_{j}$ and set $x_{t+1} = a_{j}$
 9 set
-10 空白空白 $x_{t+1} = x_{t}$
+10 $x_{t+1} = x_{t}$
 
-其中，$M$為抽出的樣本數，而從Unif(0, 1)抽出的$u$，目的是要讓$x_{t+1}=a_{j}$成立的機率為$\alpha$
+其中，$M$為抽出的樣本數，而從$Unif(0, 1)$抽出的$u$，目的是要讓$x_{t+1}=a_{j}$成立的機率為$\alpha$
+
+## Metropolis Hasting
+由於Metropolis Sampler的proposed distribution壹定要滿足對稱性
+如果$p(x)$為**非對稱性的機率分佈**，例如[Gamma distribution](#further-reading)
+
+Metropolis Hasting是一種更General的抽樣方式，它可以用於以下情形:
+$$
+q(x_{t+1}|x_{t}) \neq q(x_{t}|x_{t+1})
+$$
+
+如果$q_{x+1|x_{t}}$不對稱，例如$q(x_{t+1}|x_{t}) > q(x_{t}|x_{t+1})$這種情況，表示從$x_{t}$的位置"提出"走到 $x_{t+1}$ 的位置，機率會比從$x_{t+1}$“提出"走回$x_{t}$還要高。所以也要把這個機率的差異考慮到Markov Chain裡面，因此要加入correction factor $c$ : 
+$$
+c = \frac{q(x_{t}|x_{t+1})}{q(x_{t+1}|x_{t})}
+$$
+
+將$c$乘上proposed probability，來修改acceptance probability : 
+$$\alpha = \frac{p(a_{j})}{p(a_{i})} \times \frac{q(a_{i}|a_{j})}{q(a_{j}|a_{i})}$$
+
+如果要在$a_{i}$與$a_{j}$之間，建立Markov Chain，且$p(a_{j})q(a_{i}|a_{j}) > p(a_{i})q_(a_{j}|a_{i})$，則建立出來的Markov Chain，如下:
+
+<img src='./images/markov_chain_11.png'></img>
+
+除了 acceptance probability要加上correction factor之外，Mestropolis Hastnig的抽樣過程，幾乎和Metropolis Sampler一樣，整個抽樣過程的psudo code如下 : 
+
+
+1 set $t$ = 0
+2 genetate an intial state $x_{0} \in \{a_{1}, a_{2}, ..., a_{n}\}$
+3 repeat until $t = M$
+4 genetate a proposal state $a_{j}$ from $q(x_{t+1}|x_{t})$
+5 calculate the proposal correction factor $c$ = $\frac{q(x_{t-1}|a_{j})}{q(a_{j}|x_{t-1})}$
+5 calculate the acceptance probability $\alpha$ = $min(1, \frac{p(a_{j})}{p(x_{t})} \times c)$
+6 draw a random number $u$ from $Unif(0, 1)$
+7 if $u \le \alpha$
+8 accept the proposal state $a_{j}$ and set $x_{t+1} = a_{j}$
+9 set
+10 $x_{t+1} = x_{t}$
+
+## demo case
+
+[Show the demo using jupyter notebook](/demo/metropolis_sampler_metroplis_hasing.py)
+
 
 # Further reading 
 1. [LDA-math-MCMC and Gibbs sampling(1)]()
 2. [LDA-math-MCMC and Gibbs sampling(2)](http://www.52nlp.cn/lda-math-mcmc-%e5%92%8c-gibbs-sampling2)
+3. [Gamma function wiki](https://zh.wikipedia.org/wiki/%E4%BC%BD%E7%8E%9B%E5%88%86%E5%B8%83)
+4. [LDA-math 神奇的Gamma函數](https://cosx.org/2013/01/lda-math-gamma-function)

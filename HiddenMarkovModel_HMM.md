@@ -5,4 +5,4 @@
 [《白话深度学习与Tensorflow》学习笔记（3）HMM RNN LSTM](https://www.jianshu.com/p/a2755179be5b)
 [從Baive Bayes -> HMM -> CRF](https://www.zhihu.com/question/53458773) 68
 [機率圖模型 -> HMM -> MEMM -> CRF](https://www.zhihu.com/question/53458773) 180 順位2
-[自然語言處理 -- Hidden Markov Model](http://cpmarkchang.logdown.com/posts/192352-natural-language-processing-hidden-markov-models) 順位1
+[自然語言處理 -- Hidden Markov Model](http://cpmarkchang.logdown.com/posts/192352-natural-language-processing-hidden-markov-models) 
