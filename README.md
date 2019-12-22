@@ -11,7 +11,24 @@
 
 [Bayesian_analysis_python](https://github.com/YLTsai0609/bayesian_analysis_python)
 
-[Markov chain](Markov_chain.md)
+
+## Probabilistic_Graohical_Models
+
+[Markov Chain I : Markov chain, Metropolis Hasting](Markov_chain.md)
+
+[Markov Chain II : absoring Markov Chain](Markov_chain_II.md)
+
+[Probabilistic_Graphical_Models_PGM](Probabilistic_Graphical_Models_PGM.md)
+
+[HiddenMarkovModel_HMM](HiddenMarkovModel_HMM.md)
+
+## Deep Learning
+[PaperReading_Hints](PaperReading_Hints.md)
+
+[DNN Introduction](https://github.com/YLTsai0609/HandOn_ML/blob/master/tensorflow_1_8_0/DNN_Intro.md)
+
+[CNN Introduction](https://github.com/YLTsai0609/HandOn_ML/blob/master/tensorflow_1_8_0/CNN_intro.md)
+
 
 ## Information Theory
 [ShannonEntroy_to_KL_divergence](ShannonEntroy_to_KL_divergence.md)
@@ -29,13 +46,6 @@
 [object_tracking](Image_tracking.md)
 
 [Multiple_object_tracking_tmp](Multiple_object_tracking_tmp.md)
-
-## Deep Learning
-[PaperReading_Hints](PaperReading_Hints.md)
-
-[DNN Introduction](https://github.com/YLTsai0609/HandOn_ML/blob/master/tensorflow_1_8_0/DNN_Intro.md)
-
-[CNN Introduction](https://github.com/YLTsai0609/HandOn_ML/blob/master/tensorflow_1_8_0/CNN_intro.md)
 
 
 ## Geospatial Analysis
@@ -57,8 +67,6 @@
 [SpeedUp Strategy](SpeedUp_Strategy.md)
 
 ## Others
-
-
 
 # Resource
 [Data Science and Robots by Brandon Rohrer](https://brohrer.mcknote.com/zh-Hant/)
