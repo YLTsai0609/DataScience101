@@ -103,7 +103,7 @@ L2 normolization (batch?)
 3. `train_tripletloss.py` 重新訓練自己的網路模型
    * `train_softmax.py` 作者對論文所做出的延伸，除了使用facenet裡提到的`train_tripletloss.py`來訓練，還實現了softmax，**在樣本數很小的情況下，用softmax會更容易收斂**，但是當訓練集中人臉個數超過約莫10萬時，最後一層的softmax輸出數量會變得非常大，該時候使用`train_tripletloss.py`能夠有更好的效果
 4. `validate_on_lfw.py`驗證率FAR, 曲線下面積 AUC 等誤差率 EER 等性能指標
-5. `classifier.py` 從一個已經訓練好的facenet模型，在街上一個    SVM分類器，進而分類每個人
+5. `classifier.py` 從一個已經訓練好的facenet模型，在街上一個    SVM分類器，進而分類每個人。cudnn和tensorflow的相容性可能有問題，建議使用tf 1.7 version
 
 ## Minor file
 1. `cluster.py` 使用mtcnn進行人臉檢測，對齊以及裁切，進行embedding，最後output使用L2距離進行聚類
