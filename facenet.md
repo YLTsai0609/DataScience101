@@ -109,3 +109,48 @@ L2 normolization (batch?)
 1. `cluster.py` 使用mtcnn進行人臉檢測，對齊以及裁切，進行embedding，最後output使用L2距離進行聚類
 2. `predict.py` 使用mtcnn進行人臉檢測，對齊以及裁切，進行embedding，進行人臉識別(需要訓練好的svm模型)
 3. `export_embeddings.py` 輸出embedding array
+
+
+## 實作須知
+[Reference 1 metrics](https://medium.com/@weilihmen/%E4%BA%BA%E8%87%89%E8%BE%A8%E8%AD%98-%E5%9F%BA%E6%9C%AC%E6%B5%81%E7%A8%8B-%E6%B8%AC%E8%A9%A6%E6%A8%99%E6%BA%96-8d4d7c66e8ff)
+
+[Reference 2 landmark](https://makerpro.cc/2019/08/face-alignment-through-5-facial-landmarks/)
+
+[Reference 3 face alignment details](https://chtseng.wordpress.com/2018/08/18/face-landmark-alignment/)
+[Reference 4 臉部辨識技術的挑戰 知乎](https://www.zhihu.com/question/39032661)
+check 回答 
+1. 830+ overview
+2. 70+ 應用場景, 1:1, 1:N, N:N
+3. 145+ 實際場景落地, 配合型與非配合型
+4. 8+ 實際場景落地, 非配合型的難點
+<img src='/images/facenet_3.png'></img>
+
+### 場景
+
+#### 配合型人臉識別
+
+#### 非配合型人臉識別
+
+### 資料集
+#### 人種造成的影響
+
+### Metric
+分兩種，偵測指標，辨識指標
+#### 偵測指標
+<img src='/images/facenet_4.png'></img>
+
+#### 辨識指標
+Precision, recall
+
+誤識率(FAR)
+拒識率(FRR)
+分數閥值T
+
+### Face alignment(face nomorlization)
+
+#### landmarks
+
+#### alignment
+2D alignment and 3D alignment
+
+### 立體角(angular size)
