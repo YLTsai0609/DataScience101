@@ -211,7 +211,7 @@ PNet -> RNet -> ONet
       * Based on [Towards Detection of Glasses in Facial Images, 2000 Pattern Analysis & Application](https://link.springer.com/article/10.1007%2Fs100440050002)
         * 該書為Springer出版
       * 方法論 : TBD
-<img src='/images/facenet_5.png'></img>
+<img src='/images/facenet_6.png'></img>
     
     2. [CNN-Glasses-Remover](https://github.com/JubilantJerry/CNN-Glasses-Remover)
        * Star : 13, Fork : 9 
