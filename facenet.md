@@ -153,4 +153,70 @@ Precision, recall
 #### alignment
 2D alignment and 3D alignment
 
-### 立體角(angular size)
+#### MTCNN
+[Ref 1](https://zhuanlan.zhihu.com/p/38520597)
+[Ref 2](https://kpzhang93.github.io/MTCNN_face_detection_alignment/index.html)
+
+* 同時解決人臉檢測(face detection)和人臉對齊(face alignment)的任務
+* 3個NN聯集
+* online hard sample mining straegy
+* realtime
+* FDDB, WIDER FACE AFLW三項數據集中達到當前最好準確度
+* 還存在的問題:
+  * 大量數據，訓練時間長，收斂慢
+##### Structure
+PNet -> RNet -> ONet
+<img src='/images/facenet_5.png'></img>
+
+? 是否能看到中間步驟的處理圖片
+    1. 照理來說應該要看到landmark
+    2. Dilb face detector misses some of hard examples
+? 該Pre-trained model在哪個dataset
+### 眼鏡反光
+* 眼鏡反光情況破壞了臉部特徵，同時更不好檢測到眼睛特徵，在人臉偵測(detection)的階段就failure
+#### Survey tmp
+1. 關鍵字
+   1. opencv 眼鏡反光檢測 知乎
+   2. how to remove eye-glass reflection in face detection python
+   3. glasses removal face detection
+   4. glasses reflection removal
+   5. iSee glasses remove
+   6. eyeglasses removal - google scholar
+2. Blog/Medium
+   1. [iSee Method - use CNN](https://blog.insightdatascience.com/isee-removing-eyeglasses-from-faces-using-deep-learning-d4e7d935376f)
+      * 大致講了方法論，CNN確實可以做到各種物件的移除，但是尚未Survey到一些Pre-trained model
+3. 論文
+   1. [交大 2005, 自動眼睛偵測以及眼鏡去除方法](https://etd.lib.nctu.edu.tw/cgi-bin/gs32/tugsweb.cgi/ccd=RLMe66/search?s=id=%22GT009112541%22.&searchmode=basic)
+   
+   2. [Automatic Eyeglasses Removal from Face Images](https://people.csail.mit.edu/celiu/pdfs/ACCV_Eyeglasses.pdf)
+      * 期刊 Asian Conference on Computer Vision ACCV
+      * 引用數 2019, 12,31 -  143次
+      * 年份2004
+      * 方法論 : 
+        * face localization by Active Shape Model(ASM)
+        * Glasses recognition by a classifier
+          * classifier SVM
+          * **Feature Extraction : TBD important**
+        * Glasses localization by MCMC
+        * Glasses removal based on a set of traning example
+
+    3.[A fatigue detection system with eyeglasses removal](https://ieeexplore.ieee.org/abstract/document/6488199)
+        *  期刊 IEEE
+        *  引用數 2019, 12, 31 - 19次
+        *  年份 2013
+        *  方法論 : opencv 影像形態學 - 分離眼鏡
+4. Code
+   1. [Real-time Glasses Detection](https://github.com/TianxingWu/realtime-glasses-detection)
+      * Star : 17, Fork : 9
+      * Based on [Towards Detection of Glasses in Facial Images, 2000 Pattern Analysis & Application](https://link.springer.com/article/10.1007%2Fs100440050002)
+        * 該書為Springer出版
+      * 方法論 : TBD
+<img src='/images/facenet_5.png'></img>
+    
+    2. [CNN-Glasses-Remover](https://github.com/JubilantJerry/CNN-Glasses-Remover)
+       * Star : 13, Fork : 9 
+
+   
+
+## Dataset
+2018-04-10 pre-trained : Casia-WebFace, VGGFace2
