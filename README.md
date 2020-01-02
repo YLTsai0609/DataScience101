@@ -3,7 +3,7 @@
 ## Statistics
 [P-Value](Pvalue.md)
 
-[How_Bayyesian_inference_works](How_Bayesian_inference_works.md)
+[How_Bayesian_inference_works](How_Bayesian_inference_works.md)
 
 [Bayesian_Hyperparameter_tuning](Bayesian_Hyperparameter_tuning.md)
 
@@ -39,13 +39,25 @@
 [Topic_Modeling_LDA](Topic_Modeling_LDA.md)
 
 ## CV
-[Object Detection History (SVM, HOG, SlidingWindow CNN, R-CNN, YOLO)]([Kaggle]object_detection_histroy.md)
 
-[facenet](facenet.md)
+### Introduction
 
+[Object Detection History (SVM, HOG, SlidingWindow CNN, R-CNN, YOLO) from Kaggle Notebook]([Kaggle]object_detection_histroy.md)
+[The 5 Computer Vision Techniques That Will Change How You See The World from medium post](Five_CV_Techniques.md)
+
+### Image Classification
+[Feature Extraction - Histogram of Oriented Gradient HOG](Histogram_of_Oriented_Gradient.md)
+### Object Detection
+[Selective Search]()
+### Object Tracking
 [object_tracking](Image_tracking.md)
 
 [Multiple_object_tracking_tmp](Multiple_object_tracking_tmp.md)
+### Sematic Segmentation
+### Instance Segmentation
+
+### All about the faces
+[facenet](facenet.md)
 
 
 ## Geospatial Analysis
