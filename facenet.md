@@ -220,3 +220,4 @@ PNet -> RNet -> ONet
 
 ## Dataset
 2018-04-10 pre-trained : Casia-WebFace, VGGFace2
+[各種DataSet](https://www.itread01.com/content/1549455329.html?fbclid=IwAR3mxAg5EuFFdp8cRv4E-sU98vLARsOIBJ0RAvvZwW1RGn2LLWL9RmKgqzQ)
