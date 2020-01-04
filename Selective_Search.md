@@ -122,3 +122,6 @@ pass
 * 多樣性策略(Diversification Strategies)
   * 使用各種互補的色彩空間
   * 位置組合(Combining Locations)
+* region合成之後的相似性計算
+  * 應該不需要做到每個pixel重算，能夠更快
+  * 翻譯可以check [here](https://blog.csdn.net/charwing/article/details/27180421)
