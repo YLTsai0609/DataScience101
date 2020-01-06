@@ -78,7 +78,11 @@
 
 [SpeedUp Strategy](SpeedUp_Strategy.md)
 
+## Physics
+[Polorization by reflection 鏡片反光原理](Polorization_by_Reflection.md)
+
 ## Others
+
 
 # Resource
 [Data Science and Robots by Brandon Rohrer](https://brohrer.mcknote.com/zh-Hant/)
