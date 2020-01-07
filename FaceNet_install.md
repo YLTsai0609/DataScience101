@@ -7,8 +7,8 @@
 tensorflow==1.7
 # scipy 1.1.0 for misc.imread attribute
 scipy==1.1.0
-# numpy==1.6.1 for less tensorflow logging shit
-numpy==1.6.1
+# numpy==1.16.1 for less tensorflow logging shit
+numpy==1.16.1
 scikit-learn
 opencv-python
 h5py

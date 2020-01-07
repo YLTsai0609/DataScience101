@@ -33,6 +33,8 @@
       * Back to the movie theater, we actually use circular polization glass with Clockwise and Counterclockwise direction
       <img src='./images/polorization_4.png'></img>
 ### Polorization by Reflection
+[youtube video](https://www.youtube.com/watch?v=WrXQV7xTktE)
+[wiki](https://zh.wikipedia.org/wiki/%E5%B8%83%E5%84%92%E6%96%AF%E7%89%B9%E8%A7%92)
 * 1808年 Malus(馬拉斯) - 光經過非金屬表面反射後，反射光可以產生部分偏極化現象。
 <img src='./images/polorization_5.png'></img>
 
