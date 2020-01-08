@@ -70,7 +70,7 @@
 <img src='./images/markov_chain_5.png'></img>
 
 ## Metropolis Sampler
-利用Markov Chian最後必定走道穩定狀態的特性，我們可以做這樣的事
+利用Markov Chian最後必定走到穩定狀態的特性，我們可以做這樣的事
 先給訂一個機率分佈函數，從這個機率函數建立Markov Chain，接著再利用建立出來的Markov Chain來進行抽樣
 
 設定一機率分佈$p(X)$，起始值為$x_{0}$。隨機變數的值為$ X = \{ a_{1},a_{2}, ..., a_{n} \}$
