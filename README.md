@@ -38,6 +38,10 @@
 
 [Topic_Modeling_LDA](Topic_Modeling_LDA.md)
 
+[Ngram](ngram.md)
+
+[Word Embedding with GloVe](word_embedding.md)
+
 ## CV
 
 ### Introduction
@@ -78,8 +82,9 @@
 
 [SpeedUp Strategy](SpeedUp_Strategy.md)
 
-[ Manage_package_by_Conda](Manage_package_by_Conda.md)
+[Manage_package_by_Conda](Manage_package_by_Conda.md)
 
+[Compile and Install](compile_install.md)
 ## Physics
 [Polorization by reflection 鏡片反光原理](Polorization_by_Reflection.md)
 
