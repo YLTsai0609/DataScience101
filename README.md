@@ -85,6 +85,10 @@
 [Manage_package_by_Conda](Manage_package_by_Conda.md)
 
 [Compile and Install](compile_install.md)
+
+[dlib_compile](dlib_compile.md)
+
+[opencv_complie](opencv_compile.md)
 ## Physics
 [Polorization by reflection 鏡片反光原理](Polorization_by_Reflection.md)
 
