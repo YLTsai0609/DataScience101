@@ -23,6 +23,8 @@
 # 3. 抽樣結果儲存於X
 #
 
+# * 推論引擎 : pyMC3
+
 # +
 import random 
 import collections
@@ -85,6 +87,9 @@ count(X)
 # $$
 #
 # 3. 進行Metropolis Hasting抽樣的演算法為程式碼中的`metrohast`，抽樣結果儲存於`X`。`draw`則是將結果畫成Histogram
+#
+# * [Note] 關於Proposal distribution的選取，是否有一些準則? Proposal distribution和貝式推論中的prior distribution有什麼關係?
+# 知乎的解答提供一個大概的方向，是一個可以思考的點 https://www.zhihu.com/question/68720174
 
 # +
 import numpy as np
@@ -134,8 +139,11 @@ def draw(S):
 
 # -
 
-X = metrohast(1000)
+X_1000 = metrohast(1000)
+X_10000 = metrohast(10000)
 
-draw(X)
+# 1000
+draw(X_1000)
+draw(X_10000)
 
 

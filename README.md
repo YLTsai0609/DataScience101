@@ -40,7 +40,7 @@
 
 [Ngram](ngram.md)
 
-[Word Embedding with GloVe](word_embedding.md)
+[Word Embedding with GloVe](GloVe_word_embedding.md)
 
 ## CV
 
@@ -63,7 +63,7 @@
 ### All about the faces
 [facenet](facenet.md)
 
-
+[Face3D](Face3D.md)
 ## Geospatial Analysis
 [Kaggle Learn All Mash Up](https://github.com/YLTsai0609/Geospatial_Analysis.git)
 

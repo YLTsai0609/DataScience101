@@ -23,6 +23,8 @@
 # 3. 抽樣結果儲存於X
 #
 
+# * 推論引擎 : pyMC3
+
 # +
 import random 
 import collections
