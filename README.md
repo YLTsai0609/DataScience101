@@ -7,6 +7,8 @@
 
 [Bayesian_Hyperparameter_tuning](Bayesian_Hyperparameter_tuning.md)
 
+[Bayesian_LinearRegression](Bayesian_LinearRegression.md)
+
 [All_about_the_distribution](All_about_the_distribution.md)
 
 [Bayesian_analysis_python](https://github.com/YLTsai0609/bayesian_analysis_python)
@@ -14,7 +16,7 @@
 
 ## Probabilistic_Graohical_Models
 
-[Markov Chain I : Markov chain, Metropolis Hasting](Markov_chain.md)
+[Markov Chain I : Markov_chain_MCMC](Markov_chain_MCMC.md)
 
 [Markov Chain II : absoring Markov Chain](Markov_chain_II.md)
 
@@ -38,6 +40,8 @@
 [ShannonEntroy_to_KL_divergence](ShannonEntroy_to_KL_divergence.md)
 
 ## NLP
+[NLP_Model_evalution_metric](NLP_Model_evaluation_metrics.md)
+
 [KeyWord_Extrcaction_TFIDF_RAKE_Garph_TextRank](KeyWord_Extrcaction_TFIDF_RAKE_Garph_TextRank.md)
 
 [Topic_Modeling_LDA](Topic_Modeling_LDA.md)
@@ -57,10 +61,12 @@
 [Feature Extraction - Histogram of Oriented Gradient HOG](Histogram_of_Oriented_Gradient.md)
 ### Object Detection
 [Selective Search](Selective_Search.md)
+[MTCNN](MTCNN.md)
 ### Object Tracking
 [object_tracking](Image_tracking.md)
 
 [Multiple_object_tracking_tmp](Multiple_object_tracking_tmp.md)
+
 ### Sematic Segmentation
 ### Instance Segmentation
 
@@ -106,8 +112,11 @@
 
 ## Others
 
-
-# Resource
+[Tableau](Tableau.md)
+[Markdown_Ref]((markdown_Ref.md))
+[Latax_Ref](Latax_Ref.md)
 [Data Science and Robots by Brandon Rohrer](https://brohrer.mcknote.com/zh-Hant/)
 
-[Latax_Ref](Latax_Ref.md)
+
+
+

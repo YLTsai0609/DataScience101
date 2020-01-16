@@ -1,4 +1,4 @@
-# NLP_Model_evaluation
+# NLP_Model_evaluation_metrics
 ## Introduction
 評價語言模型的一種方式
 將語句視為一個詞語序列
