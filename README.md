@@ -22,6 +22,10 @@
 
 [HiddenMarkovModel_HMM](HiddenMarkovModel_HMM.md)
 
+[HMM_Viterbi_Algorithm](HMM_Viterbi_Algorithm.md)
+
+[From_Markov_Chain_to_LSTM](From_Markov_Chain_to_LSTM.md)
+
 ## Deep Learning
 [PaperReading_Hints](PaperReading_Hints.md)
 
@@ -64,6 +68,14 @@
 [facenet](facenet.md)
 
 [Face3D](Face3D.md)
+
+[face_clustering](face_cluster.md)
+
+## Unsupervised Learning
+### Clustering
+* [Introduction](clustering_introduction.md)
+
+
 ## Geospatial Analysis
 [Kaggle Learn All Mash Up](https://github.com/YLTsai0609/Geospatial_Analysis.git)
 
