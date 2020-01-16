@@ -69,7 +69,7 @@ $$
 * 狀態是可被觀察的
 * 以一個隨間變數作為一個狀態
 
-## Jidden Markov model
+## Hidden Markov model
 接下來是進階版的隱馬可夫模型(hidden Markov model)，他的假設是這樣的，在一個系統中存在一些我們看不到的狀態，是系統的內在狀態，隨著系統內在狀態的不同，所表現出來的外在狀態也不同，而外在狀態是我們可以觀測到的
 
 <img src='./images/From_Markov_Chain_to_LSTM_5.png'><img>
@@ -141,5 +141,5 @@ $$
 
 隨著一開始的馬科夫模型到這邊應該對這幾個模型有點感覺，其實RNN可以說是很大的突破，在假設上放了很多元素讓模型變得更強大
 
-## Long shot-term memory
-人們為了改進RNN這個模型的記憶性，希望他可以記住更遠以前的東西，所以設計了LSTM來替換他的hidden layer運作模式，後期更有GRU，還有人說只需要forget gate就有很強大效能的MCU，這些都是對於記憶性做的改進，個人覺得這些在工程上的貢獻比較大，真正學術上的突破其實海好
+## Long short-term memory
+人們為了改進RNN這個模型的記憶性，希望他可以記住更遠以前的東西，所以設計了LSTM來替換他的hidden layer運作模式，後期更有GRU，還有人說只需要forget gate就有很強大效能的MCU，這些都是對於記憶性做的改進，個人覺得這些在工程上的貢獻比較大，真正學術上的突破其實還好
