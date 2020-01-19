@@ -23,3 +23,7 @@ conda remove --name old_name --all # or its alias: `conda env remove --name old_
 4. conda 矛盾解不開的就表示無法做到了嗎?
    * 並不是，這時候google, stackoverflow, github issue查查看就對了，通常我們不是第一個遇到問題的人
      * 實例 : python 3.6 with dlib, conda failed, but pip work well。 
+
+5. conda界的`pip install -r requirements`
+   * environment.yml
+   * [check on stackoverflow](https://stackoverflow.com/questions/51042589/conda-version-pip-install-r-requirements-txt-target-lib/51043636) 
