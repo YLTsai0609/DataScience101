@@ -111,6 +111,7 @@
 ## Math
 [semi_positive_matrix](semi_positive_matrix.md)
 
+[all_about_the_distance](all_about_the_distance.md)
 ## Physics
 [Polorization by reflection 鏡片反光原理](Polorization_by_Reflection.md)
 
