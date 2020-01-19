@@ -35,7 +35,7 @@
 
 [CNN Introduction](https://github.com/YLTsai0609/HandOn_ML/blob/master/tensorflow_1_8_0/CNN_intro.md)
 
-
+[Convolution, dot, and Cross-correlation](Convolution_dot_and_Cross-correlation.md)
 ## Information Theory
 [ShannonEntroy_to_KL_divergence](ShannonEntroy_to_KL_divergence.md)
 
@@ -107,6 +107,10 @@
 [dlib_compile](dlib_compile.md)
 
 [opencv_complie](opencv_compile.md)
+
+## Math
+[semi_positive_matrix](semi_positive_matrix.md)
+
 ## Physics
 [Polorization by reflection 鏡片反光原理](Polorization_by_Reflection.md)
 
