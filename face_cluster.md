@@ -12,6 +12,9 @@
 Hierarchical Clustering](https://arxiv.org/pdf/1304.7465.pdf?fbclid=IwAR1rZyRX8qKlG8fy6gqIlJv4v66fE4h5ecSAgAySIobwn1MhEyqq1nP3_ig)
   * cited : 51
   * 2012
+* [Finding your Lookalike : Measuring Face Similarity Rather than Face Identity](https://arxiv.org/pdf/1806.05252.pdf)
+  * cited : 3
+  * 2018
 ## Survey region
 * [Deterministic clustering approaches on Cross Validated](https://stats.stackexchange.com/questions/205833/deterministic-clustering-approaches?fbclid=IwAR21mlUSk58zuAd4n2wM5TtLUFvbYByzw7r7TS7x78E48euHykqbw6MuFJQ)
 * [TSNE cons](https://www.jianshu.com/p/a67fb39a213a?fbclid=IwAR3TRvKwVzjPQw2TIhmAAyM7MNGjXDmiEhPP6JmTL29r2ZU3e11rbO7_TzU)
@@ -61,7 +64,11 @@ Hierarchical Clustering](https://arxiv.org/pdf/1304.7465.pdf?fbclid=IwAR1rZyRX8q
 
 ### Chinese Whisper
 
-
+### lookalike network
+* 仍然使用network來做
+* 有人工標記的ground-truth, 但每個人看得都不一樣
+* 仍然不具有解釋性
+* 採用Supervised, ranking problem的框架來思考
 ## 評估方式
 * 除了商業邏輯200類之外 - 如何評量分群品質?
 * Adjusted Rand Index(ARI)
