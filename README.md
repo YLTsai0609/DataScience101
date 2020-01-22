@@ -71,6 +71,7 @@
 ### Instance Segmentation
 
 ### All about the faces
+[awesome-Face_Recognition](https://github.com/ChanChiChoi/awesome-Face_Recognition?fbclid=IwAR0tTuucePwOD_b4FWyF7CS1xbXqQuM2o4pz0X1R4NW1FvwWs9f5Y1uB7To#face-clustering)
 [facenet](facenet.md)
 
 [Face3D](Face3D.md)

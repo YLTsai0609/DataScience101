@@ -90,3 +90,14 @@ Hierarchical Clustering](https://arxiv.org/pdf/1304.7465.pdf?fbclid=IwAR1rZyRX8q
   * 不需要ground truth(方差比準則)
 * 
 
+## IDEA ABOUT FEATURE ENGINEERIMG
+* 為了讓分群更能區分各種臉型，眼型，鼻型，嘴形等
+* 區域特徵 - 例如尖臉型
+<img src='/images/face_cluster_3.png'></img>
+
+## 資料噪聲
+* 影響臉型分群因素列表
+  * 平面旋轉角(下巴不是朝下)
+  * 立體旋轉角 - 1 (左側臉，右側臉)
+  * 立體旋轉角 - 2 (頭頂，下巴) - 較少出現的影響
+  * 臉部表情
