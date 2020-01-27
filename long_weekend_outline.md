@@ -12,6 +12,8 @@
     * 動態路由
     * 命令列選項
     * request物件, request勾點
+  * Chp 14: Restful API
+    * 藍圖 BluePrint用法
 * Plotly - plotly tutorial
   * line plot
   * scatter plot

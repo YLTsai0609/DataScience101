@@ -119,6 +119,7 @@
 ## Others
 
 [long_weekend_outline](long_weekend_outline.md)
+[Model_Deployment](Model_Deployment.md)
 [Tableau](Tableau.md)
 [Markdown_Ref]((markdown_Ref.md))
 [Latax_Ref](Latax_Ref.md)

@@ -15,9 +15,10 @@ while line:
             if md in line:
                 all_mds.remove(md)
     line = readme_file_obj.readline()
-print('-'*60)
-print('Done!')
+
 if all_mds:
     print(f'there are no record on README.md but exist {all_mds}')
 else:
+    print('-'*60)
+    print('Done!')
     print('all clear, commit the repo =)')
