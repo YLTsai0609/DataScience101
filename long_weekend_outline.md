@@ -3,6 +3,9 @@
 
 ## 過年
 小年夜(1/23) ~ 初五(1/29)
+* 文件操作 - python 101
+  * fnmatch - 文件名模式匹配
+  * 各種文件qulified以及展開 list, isdir,isfile, listdir, walk
 * Flask 網頁開發 - python_101 
   * Chp 2 : app結構
     * 路由, View函式
