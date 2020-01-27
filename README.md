@@ -13,8 +13,8 @@
 
 [Bayesian_analysis_python](https://github.com/YLTsai0609/bayesian_analysis_python)
 
-
-## Probabilistic_Graohical_Models
+[Price Dynamic in airbnb](Price_Dynamic_in_airbnb.md)
+## Probabilistic_Graphical_Models
 
 [Markov Chain I : Markov_chain_MCMC](Markov_chain_MCMC.md)
 
@@ -118,6 +118,7 @@
 
 ## Others
 
+[long_weekend_outline](long_weekend_outline.md)
 [Tableau](Tableau.md)
 [Markdown_Ref]((markdown_Ref.md))
 [Latax_Ref](Latax_Ref.md)
