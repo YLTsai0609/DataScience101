@@ -14,6 +14,8 @@
 [Bayesian_analysis_python](https://github.com/YLTsai0609/bayesian_analysis_python)
 
 [Price Dynamic in airbnb](Price_Dynamic_in_airbnb.md)
+
+[EM_algorithm](EM_algorithm.md)
 ## Probabilistic_Graphical_Models
 
 [Markov Chain I : Markov_chain_MCMC](Markov_chain_MCMC.md)
