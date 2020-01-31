@@ -1,0 +1,25 @@
+name: py_36_dlib
+channels:
+  - anaconda
+dependencies:
+  - python=3.6.9   # for tensorflow supported
+  - cudatoolkit=10.1.168
+  - cudnn=7.6.4
+  - tensorflow=1.14.0
+    # - tensorflow-gpu=1.14.0
+  - scipy==1.1.0
+  - conda-forge::cufflinks-py
+  - plotly::plotly
+  - numba::numba
+
+  - pip:
+    - dlib
+    - opencv-python
+    - imutils
+    - ipython
+    - jupyter
+    - jupytext
+    - chart-studio
+    - Pillow
+    - matplotlib
+    - seaborn

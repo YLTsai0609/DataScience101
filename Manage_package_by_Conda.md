@@ -27,3 +27,5 @@ conda remove --name old_name --all # or its alias: `conda env remove --name old_
 5. conda界的`pip install -r requirements`
    * environment.yml
    * [check on stackoverflow](https://stackoverflow.com/questions/51042589/conda-version-pip-install-r-requirements-txt-target-lib/51043636) 
+   * 有一項demo.yml放在[這裡](/demo/py_36_dlib_envirment.yml)
+   * 可以選擇預設channel，也可以每個安裝都選好特定的channel，最後再執行pip安裝

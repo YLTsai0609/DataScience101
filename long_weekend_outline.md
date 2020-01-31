@@ -26,3 +26,6 @@
 * Structure modeling for Price Dynamics from Airbnb - DataScience Note
   * 模型建構方式
   * maximum likelihood的三個方法
+* Expectation Maximization 
+  * Picture
+  * Code(3/5)
