@@ -2,6 +2,7 @@
 ## Outline
 [知乎 機率圖模型, HMM](https://www.zhihu.com/question/53458773)
 [概率图模型（PGM）有必要系统地学习一下吗？](https://www.zhihu.com/question/23255632)
+[知乎 感性地認識條件隨機場(CRF)，序列版本的Logistic Regression](https://zhuanlan.zhihu.com/p/104562658?fbclid=IwAR07XOkFqoa4HjftqRAdFmfkJOS-1RqYWStJUZrMnqcF_0FYiqkZS570vCA)
 
 概率图模型学习笔记：HMM、MEMM、CRF
 一、Preface
