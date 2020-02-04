@@ -23,6 +23,7 @@
 * 兩個最像的merge起來，做出一個虛擬的代表(例如把vector做平均)
 * 做一顆樹出來
 * 接著選個threshold，就可以決定你想分幾群
+* [Demo case on Iris dataset](/demo/demo_plot_agglomerative_dendrogram.py)
 
 <img src='./images/un_3.png'></img>
 * 優 : 和distance matrix一樣，可以清楚地觀察inner cluster的相似以及outer cluster的相似，在多維情況也適用
