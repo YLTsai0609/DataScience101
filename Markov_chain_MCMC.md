@@ -6,6 +6,9 @@
 * statinary distribution(穩定分配)
 * Metropolis Sampler
 * Metropolis Hasting
+## Reference
+[機率圖模型 -- Metropolis Hasting
+](http://cpmarkchang.logdown.com/posts/737249-pgm-metropolis-hasting)
 
 
 ## Introduction
@@ -80,6 +83,8 @@
 $$
 q(x_{t+1}|x_{t}) = q(x_{t}|x_{t+1})
 $$
+
+例如對稱分佈與均勻分布
 
 $q(x_{t+1}|x_{t})$可以是一個比較好計算的函數，用於快速產生下一個可能的樣本$a_{j}$，$a_{j}$為proposed state，意思是說，想要從$q(x_{t+1}|x_{t})$**提出**一個值，來看看這個值能不能成為$x_{t+1}$的值，事實上，這時候還不知道$a_{j}$適不適合為$x_{j}$，所以要做以下運算。
 
@@ -171,7 +176,7 @@ $$
 
 ## Metropolis Hasting
 由於Metropolis Sampler的proposed distribution壹定要滿足對稱性
-如果$p(x)$為**非對稱性的機率分佈**，例如[Gamma distribution](#further-reading)
+如果$p(x)$為**非對稱性的機率分佈**，例如[Gamma distribution](#further-reading)，或是log-normal - distribution(對，你需要猜一下你的目標分佈是對稱的還是分對稱的)
 
 Metropolis Hasting是一種更General的抽樣方式，它可以用於以下情形:
 $$
@@ -210,8 +215,10 @@ $$\alpha = \frac{p(a_{j})}{p(a_{i})} \times \frac{q(a_{i}|a_{j})}{q(a_{j}|a_{i})
 [Show the demo using jupyter notebook](/demo/metropolis_sampler_metroplis_hasing.py)
 
 
+## Gibbs sampling
+* 另一種利用Markov Chain的抽樣方法
 # Further reading 
-1. [LDA-math-MCMC and Gibbs sampling(1)]()
+1. [LDA-math-MCMC and Gibbs sampling(1)](http://www.52nlp.cn/lda-math-mcmc-%e5%92%8c-gibbs-sampling1)
 2. [LDA-math-MCMC and Gibbs sampling(2)](http://www.52nlp.cn/lda-math-mcmc-%e5%92%8c-gibbs-sampling2)
 3. [Gamma function wiki](https://zh.wikipedia.org/wiki/%E4%BC%BD%E7%8E%9B%E5%88%86%E5%B8%83)
 4. [LDA-math 神奇的Gamma函數](https://cosx.org/2013/01/lda-math-gamma-function)
