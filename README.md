@@ -85,6 +85,8 @@
 * [Introduction](clustering_introduction.md)
 * [ML_13_Unsupervised_Learning_HungYi_Lee](ML_13_Unsupervised_Learning_HungYi_Lee.md)
 
+* [ML_14_Unsupervised_Learning_WordEmbedding_HungYiLee](ML_14_Unsupervised_Learning_WordEmbedding_HungYiLee.md)
+* [ML_15_Unsupervised_Learning_NeiborhoodEmbedding_HungYiLee](ML_15_Unsupervised_Learning_NeiborhoodEmbedding_HungYiLee.md)
 
 ## Geospatial Analysis
 [Kaggle Learn All Mash Up](https://github.com/YLTsai0609/Geospatial_Analysis.git)
