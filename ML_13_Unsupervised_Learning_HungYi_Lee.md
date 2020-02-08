@@ -173,7 +173,7 @@ $$
 數學式
 
 $$
-X_{M, N} = R_{N, K} T_{K, N} 
+X_{M, N} = R_{M, K} T_{K, N} 
 $$
 然後 min reconstruction error 其實就是SVD
 你說SVD不是有三個Matrix嗎? 其實你就看你要把中間的$\Sigma$併到左邊還是右邊就可以了
@@ -205,6 +205,46 @@ Netflix的比賽在最初的版本就會用這樣的技術來做一個推薦系�
 * 同樣地就是GD硬解一波即可，你也可以加上regularization，例如你覺得買家要馬都是萌系要馬都是傲嬌系那就加上L1 regularizer
 
 <img src='./images/un_30.png'></img>
+
+## Suvvy for Non-Negtive Matrix Factorization
+
+(Algorithms for Non-negative Matrix Factorization 非負矩陣分解)[https://www.itread01.com/content/1542798604.html]
+* 非負矩陣分解可以從L2 distance也可以從KL divergence，兩者都是做最小化，其中使用KL散度會無法做新資料的transform，因為KL divergence並不是一個對稱度量，不能被稱為距離
+* 優化方法可以選擇GD(加法更新規則)，或是乘法更新規則
+
+非負矩陣分解NMF(https://codertw.com/%E7%A8%8B%E5%BC%8F%E8%AA%9E%E8%A8%80/560096/)
+* 用武之地 : 影像處理，文字探勘 非常常用，因為維度高，非結構化，而且負值不具解釋性等三項原因
+* 影像 
+  * 衛星發回的影像儲存
+  * 自動識別太空垃圾
+  * 辨識星體
+  * 自動識別進出機場的可疑恐怖份子
+* 文字
+  * Oeaclw : 文字特徵提取及分類
+* 語音
+  * 語音擷取
+  * 音樂調式識別
+* 機器人控制
+  * 影像訊息儲存及壓縮
+
+[非负矩阵分解(NMF)简介](https://zhuanlan.zhihu.com/p/22043930)
+* 贊同 355
+* 比較PCA, VQ, NMF
+針對矩陣分解問題
+$$
+V_{M\times N} ~ W_{M\times K}H_{K\times N}
+$$
+* VQ要求$H$的每一列只有一個元素為1，其他為0，相當於將m個數據歸納成了k個代表，原數據映射過去就是取$k$個basis當中與原向量距離最小的來重新表示，所以以臉來說，$VQ$的basis都是一張張完整臉，它們都是最具代表性的臉
+* PCA求的是一組標準正交basis，第一個basis的方向取元數據方差最大的方向，然後第2個basis再取剩下的最大方差，所以PCA是去相關性的，但也比較難有直觀的物理意義，因為原本的臉對於basis是加加減減得到的
+* NMF則約束了非負，因此只能把basis相加，不能相減，意味著basis和basis通過拼接組合來還原影像，所以會看到sub component
+
+[Projected Gradient Methods for Nonnegative Matrix
+Factorization 2007](http://citeseerx.ist.psu.edu/viewdoc/download;jsessionid=ACAE3131E5FA09D0798DF7D967F42000?doi=10.1.1.538.997&rep=rep1&type=pdf)
+* cited : 1700次
+* 說明了1990到現在解NMF的方法，Overiew article
+
+[漫谈 Clustering (番外篇): Vector Quantization](http://blog.pluskid.org/?p=57)
+* 解釋Vector Quantization，scipy中利用kmeans以及vq function可以實作
 
 ## Matirx Factorization for Topic analysis
 
