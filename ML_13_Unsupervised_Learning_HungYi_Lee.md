@@ -87,6 +87,9 @@ Key : min Reconstruction error
 * Linear
 * 想要把流線型曲線拉直，其實是強人所難的，是一個NonLinear tranformation，PCA是做不到的，只能產生下面這種藍色跟紅色疊再一起的情況
 
+## PCA 和 SVD之間的關係
+[【机器学习】降维——PCA（非常详细）贊同800+](https://zhuanlan.zhihu.com/p/77151308?fbclid=IwAR3FvbzHWpRUTIit-Gi1F5pKMo-on2s7PDBt7uUip3nZo-sdyvLSdpyCHOY)
+
 <img src='./images/un_14.png'></img>
 
 ## PCA - Pokemon
