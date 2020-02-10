@@ -52,6 +52,18 @@
 
 [Word Embedding with GloVe](GloVe_word_embedding.md)
 
+[Seq2seq]
+* Checked in RNN part2
+
+[Attention]
+* Checked in RNN part2
+
+[transformer]
+* checked
+
+[BERT]
+* checked
+
 ## CV
 
 ### Introduction
