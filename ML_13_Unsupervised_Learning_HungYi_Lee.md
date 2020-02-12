@@ -269,3 +269,26 @@ Factorization 2007](http://citeseerx.ist.psu.edu/viewdoc/download;jsessionid=ACA
 * CCA 有聲音訊號，有圖片訊號
 * ICA 
 * LDA
+
+## FA, PCA, SVD, ICA,LPP, LDA歸納介紹
+
+* FA : 高維樣本點實際上油滴為樣本點經過**高斯分佈，線性變換，誤差擾動生成**，從高維樣本中分解出低微向量
+* PCA : 根據Andrew的教學，PCA有9, 10種詮釋方式，而且Andrew的課程中，application會很有啟發，PCA有超多種用途
+  * Visualization
+  * Copmression
+  * Learning : 特徵維度太大時Overfitting
+  * Anomaly detection : 從reconstruction error來看每個樣本點
+  * Matching/distance calculations
+    * 例如人臉識別，在PCA空間來計算L2 distance
+    * 兩個documents的相似性，如果使用cosine distance，study將會和learn正交，相似度為0，而PCA則避免了這個缺點，用PCA的距離來行量，learn和study仍然保留正的相關性
+* FA和PCA 基本上是認為數據存在在子空間中，GMM和KMeans則是認為數據集合在數據塊中，使用哪種方法取決於妳認為數據屬於情況1還是情況2
+* SVD : 從Andrew的課來看，SVD相當於PCA的實作方法
+  * 現在計算機計算SVD的招數很成熟，Andrew本人說SVD的普遍程度就像計算平方
+  * 用SVD來實作的話，避免了高維度的共變數矩陣計算，scikit-learn中也是利用SVD來實作PCA
+* ICA 獨立成分分析 - ICA被稱為盲源分離(Blind Source Separation, BSS)，源指的是信號，即獨立成分，例如雞尾酒會中的說話者，而盲指的是我們對混合矩陣所知甚少，僅僅對信號做非常弱的假設，推荐电子工业出版社的一本中译本教材《独立成分分析》
+* 局部保留投影（LPP）
+最早是何晓飞（芝加哥大学，现在在浙大CAD）发表在NIPS上的文章提出来的，原文摘要称”LPP should be seen as an alternative to Principal Component Analysis (PCA)”.
+
+* 线性判别式分析( LDA)
+LDA也叫做Fisher线性判别(Fisher Linear Discriminant ,FLD)，是模式识别的经典算法，它是在1996年由Belhumeur引入模式识别和人工智能领域的。线性鉴别分析的基本思想是将高维的模式样本投影到最佳鉴别矢量空间，以达到抽取分类信息和压缩特征空间维数的效果，投影后保证模式样本在新的子空间有最大的类间距离和最小的类内距离，即模式在该空间中有最佳的可分离性。
+
