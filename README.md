@@ -76,6 +76,7 @@
 ### Object Detection
 [Selective Search](Selective_Search.md)
 [MTCNN](MTCNN.md)
+[YOLO](YOLO.md)
 ### Object Tracking
 [object_tracking](Image_tracking.md)
 

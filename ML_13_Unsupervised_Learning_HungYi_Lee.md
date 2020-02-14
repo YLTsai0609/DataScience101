@@ -271,7 +271,7 @@ Factorization 2007](http://citeseerx.ist.psu.edu/viewdoc/download;jsessionid=ACA
 * LDA
 
 ## FA, PCA, SVD, ICA,LPP, LDA歸納介紹
-
+[Ref](https://blog.csdn.net/qiusuoxiaozi/article/details/50810521?fbclid=IwAR3V_sACRKfa9mCHfaBYGnxKElJgRXc6xO2FQU1HsI6_8mW_J29o-dUY14U)
 * FA : 高維樣本點實際上油滴為樣本點經過**高斯分佈，線性變換，誤差擾動生成**，從高維樣本中分解出低微向量
 * PCA : 根據Andrew的教學，PCA有9, 10種詮釋方式，而且Andrew的課程中，application會很有啟發，PCA有超多種用途
   * Visualization
