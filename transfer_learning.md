@@ -84,9 +84,56 @@
 * 而這張圖解釋了，不同task上的Model，前面幾個layer是可以共用的，後面則不行
 * 橙色線表示換過layer，而且做parameter optimization
 * 但是需要注意，這個task的target data非常多
-* 藍色線，是這篇論文的另一個發現，主要是想表示說，layer之間是要互相搭配的，沒辦法只train部分，這樣後面的layer和前面的layer無法互相搭配
+* 藍色線(fragile co-adaption 脆弱的layer互適應性)，是這篇論文的另一個發現，主要是想表示說，layer之間是要互相搭配的，沒辦法只train部分，這樣後面的layer和前面的layer無法互相搭配
+  * fragile 脆弱的 adj
 
-TBD : 23:54
+<img src='./images/tran_11.png'></img>
+* 第二項實驗，如果Source Data和Target Data的distribution差較多，那會怎樣? - follow 人們的直覺
+* x軸和y軸仍然是一樣的
+* 如果Target data 和 source data差較多，例如人造物品以及自然物品，那麼transfer learning的效果就會差很多
+* 而從x軸可以看出，就算Source Data和Target Data差很多，前面的layer仍然是可以copy的，performance差得較少
+* 爛掉那條橘色線，則是將NN的weight取亂數，看會發生什麼事
+
+### labelled, labelled, Multi-task
+
+<img src='./images/tran_12.png'></img>
+
+Multi-task和model fine tuning的差別是
+model fine tuning : 只care在target domain，model能不能做得好 - source domain爛掉就算了
+multi-task : 在乎source domain以及target domain能不能做好
+
+* 其實Deep Learning Based的方法特別適合拿來做Multitask Learning
+
+* 下面同時展示兩種方式
+<img src='./images/tran_13.png'></img>
+
+* 左圖 : 確定input data含有兩個task所需要的feature，所以前面幾層就直接共用 - face detection and face alignment
+
+* 右圖，確認中間層能夠萃取出有用的抽象特徵，所以共用
+
+
+* 一個成功的例子，多語言的語音辨識 
+
+<img src='./images/tran_14.png'></img>
+
+* 目前發現就算是很不同的語系，NN還是能夠做transfer learning
+
+#### Transfer Learning 是否有負面效應?
+* 是有可能的，如果兩個Target Domain不像的話，就會有負面的效應
+* 但是如果每次都要思考能不能transfer，很浪費時間，所以有人發明了進步神經網路(Progressive Neural Networks, 2016)
+
+<img src='./images/tran_15.png'></img>
+
+* 主要思想是這樣的，借用Task1的所有layer，讓Task2都用新的一層weight來接Task1的layer，所以Task1的Performance不會變差，作者本人也覺得這樣怪怪的，因為層數會很多
+
+### labelled, unlabelled, Domain-adversarial training
+
+<img src='./images/tran_16.png'></img>
+
+<img src='./images/tran_17.png'></img>
+* TARGET MNIST 加上奇怪的背景
+
+TBD : 35:47
 
 ## Reference
 [How transferable are features in deep neural
