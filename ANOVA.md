@@ -19,7 +19,7 @@ Let's start from start from **t-test**
   此時假設了$x_{i}$為取自常態分佈母體$(\mu, \sigma)$的隨機樣本，且樣本均值為$\bar{x}$，樣本標準差為$S=\frac{\sum(x_{i} - \bar{x})^{2}}{n-1}$用來推估母體標準差。
   樣本數為$n$，自由度為$n-1$，此時可以從一組抽樣樣本$x_{i}$得到一個t-score，t-score則會對應到一個t分佈，
   該分佈是一個t-score的函數 : 
-  <img src='AVONA_1.png'></img>
+  <img src='images/ANOVA_2.png'></img>
 [t test wiki](https://zh.wikipedia.org/wiki/%E5%AD%B8%E7%94%9Ft%E6%AA%A2%E9%A9%97)
 ## proportion test(Z test)
 * target 是 0, 1
@@ -44,7 +44,7 @@ Let's start from start from **t-test**
 
 ###
 
-Demo case
+[Demo case](demo/hypothsis_testing/01_tests_with_simulated_datasets.py)
 
 ### 1 way ANOVA
 * 獨立樣本的延伸版本，n組以上獨立樣本，$n \leq 3$
