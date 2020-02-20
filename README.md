@@ -97,6 +97,7 @@
 
 [face_clustering](face_cluster.md)
 
+[facial_landmark_detection](facial_landmark_detection.md)
 ## Unsupervised Learning
 ### Clustering
 * [Introduction](clustering_introduction.md)
