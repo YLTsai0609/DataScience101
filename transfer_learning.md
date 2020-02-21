@@ -132,9 +132,47 @@ multi-task : 在乎source domain以及target domain能不能做好
 
 <img src='./images/tran_17.png'></img>
 * TARGET MNIST 加上奇怪的背景
+* 通常來說，我們就會把Source data視為Training data，Tatget data視為 Testing data
+* 而training data和testing data 分佈mismatch(基本上就是Kaggle上遇到的testing data資料分佈不一樣的情形...)
 
-TBD : 35:47
+### Domain-adversarial training
+* NN前面可以視為feature extractor, 後面可以視為classifier
+* 把feature拿來看會發現什麼事? - 怎麼看? T-SNE
+* 如果把source data標成一類，target data標成一類，把embedding layer拿去做T-SNE，會看到以下情形，source data和target data是全然不同的分佈，而且source data有10類也被看起來可以被區分XD
 
+<img src='./images/tran_18.png'></img>
+
+* 所以classifier雖然可以把藍色的部分做好，但是紅色部分的testing data基本上就是無能為力
+
+`想要做到的事情是，feature extractor可以把source data的domain去除掉`
+adversarial基本上是從GAN來的，原理很像
+視覺來上說，希望embedding space做T-SNE之後，source和target是不可被區分的，就可以說，feature extractor學到的是更general的特徵，可以同時滿足source data和target data
+
+* 這裡的feature extractor舊稱作為generator
+* discriminator在這個例子則是一個Domain classifier，該Domain classifier要預測式source data還是target data
+
+<img src='./images/tran_19.png'></img>
+
+* 但是會有trivial solution，Domain classifier直接全部預測source data，結束，所以要增加訓練難度，怎麼增加?
+* 同時做label predictor以及騙過domain classifer
+* 三個加在一起，其實就只是一個 Multi-task (2 task actually)的NN
+* 三項網路各有不同的任務
+
+<img src='./images/tran_20.png'></img>
+
+* 怎麼做到這件事呢?
+* 其實就是在domain classfier加入reversal layer，給gradient 負的貢獻
+* back-propergation時有forward以及backward兩個process
+* backward時回傳負的
+* 基本上feature extractor一定會fail掉，但是希望他奮力掙扎
+* 基本上應該是一個很難training的model
+
+#### 一些結果
+TBD 45:42
 ## Reference
 [How transferable are features in deep neural
 networks? NIPS 2014 citation 3630次](http://papers.nips.cc/paper/5347-how-transferable-are-features-in-deep-neural-networks.pdf)
+[Domain-Adversarial Training of Neural Networks 2015, citation 1484](https://arxiv.org/abs/1505.07818)
+[Domain-Adversarial Neural Network in Tensorflow github,495 star](https://github.com/pumpikano/tf-dann)
+
+[Domain-Adversarial Neural Network in PyTorch github, star 261](https://github.com/fungtion/DANN)
