@@ -45,6 +45,11 @@
 
 [Transfer Learning](transfer_learning.md)
 
+[Affine_tranformation_bilinear_interpretation](Affine_tranformation_bilinear_interpretation.md)
+
+[[Paper]Spatial_Tranformer Networks]([Paper]Spatial_Tranformer_Networks.md)
+
+
 ## Information Theory
 [ShannonEntroy_to_KL_divergence](ShannonEntroy_to_KL_divergence.md)
 
