@@ -1,6 +1,13 @@
 # Transfer_learning
+* Model Fine Tuning
+* MultiTask 
+* Domain-adversial Training
+* Zero-shot Learning
+* Self taught Learning
+# Video
 [李宏毅 ML 19 Transfer Learning](https://www.youtube.com/watch?v=qD6iD4TFsdQ&list=PLJV_el3uVTsPy9oCRY30oBPNLCo89yu49&index=28)
 
+# Introduction
 <img src='./images/tran_1.png'></img>
 
 * 和現在要進行的task沒有直接相關的data
@@ -166,13 +173,77 @@ adversarial基本上是從GAN來的，原理很像
 * backward時回傳負的
 * 基本上feature extractor一定會fail掉，但是希望他奮力掙扎
 * 基本上應該是一個很難training的model
+* Training target : x, y越接近越好
 
 #### 一些結果
-TBD 45:42
+
+<img src='./images/tran_21.png'></img>
+
+y軸為方法，Benchmark為**SOURCE ONLY**，Upper Bound為**TRAIN ON TARGET**，**SA**為2013年的作法，**PTOPOSED APPROACH**為16年使用的Domain-adbersarial training，在16年時，這樣的技術非常不錯
+
+#### Zero Shot Learning
+
+<img src='./images/tran_22.png'></img>
+就是我們的facenet
+
+<img src='./images/tran_23.png'></img>
+
+* source : 貓、狗 (或是LFW dataset)
+* taget : 草泥馬 (或是costum dataset)
+* 拆分成兩段，embedding以及classfier
+* class - attribute 
+
+<img src='./images/tran_24.png'></img>
+就算有完全看過的image，也可以output該image的attribute，該attr如果太多，也可以變成embedding space上的一個點
+
+<img src='./images/tran_25.png'></img>
+
+<img src='./images/tran_26.png'></img>
+
+##### 另一種方法做Zero-shot Learning
+* 也不要做什麼learning了
+
+<img src='./images/tran_27.png'></img>
+
+* 預測出來lion的機率是05 tiger的機率是0.5，就把lion的wordvec + lion的wec 線性組合，然後找最接近的wordvector 
+
+##### 看一下結果，其實還蠻驚人的
+
+<img src='./images/tran_28.png'></img>
+測試圖片都超難，第一張 北海獅，很像的有，海獅，海象，海豹，你就算認的出海獅，你也認不出北海獅，第二張，xxx草泥馬，除了要猜出草泥馬，還要猜出品種
+
+##### Google Translation
+
+<img src='./images/tran_29.png'></img>
+
+只看過少量的語言翻譯pair，例如 Eng-Kor, Eng-Jap, Jap-Eng，但是現在三對pair都能夠進行翻譯，標題聳動，Google AI 發明了自己的Sequence Leanguage
+<img src='./images/tran_30.png'></img>
+* 為什麼這樣的Task zero-shot是可行的呢?
+* 因為不同語言的句子，可以背投影到同個embedding vector上，在此space上，是language independent的
+* Encoder - 把input變成vector
+* Decoder - 把vector變成output
+* 這些不同語言的相同句子，變成的vector，在高維空間中的分佈有怎樣的關係?
+* Eng, Kor, Jp的同樣意思句子，在此space中，距離是接近的! 意即language independent
+* 所以圖中，不同顏色代表不同意思的句子，但可能來自於不同語言
+* 所以你說Machine 發明了一種sequence language，只有他自己知道，這確實是這樣沒錯
+
+## More about Zero-shot Learning
+Zero-shot learning用在recognition以及speech上的應用面非常廣，希望machine如果看到一個從來沒看過的東西，也可以透過極度少量的target data，認得該物品是什麼
+
+## Unlabelled Source data
+<img src='./images/tran_31.png'></img>
+* self-taught learning和semi-supervised learning不一樣的地方是，semi-supervised全部都是target data，而self-taught實際上想在target data上來完成任務
+* 基本上的做法是，source data沒有label，但是可以train一個feature extractor(like PCA or AutoEncoder)，再接續在target data繼續做訓練
+
+<img src='./images/tran_32.png'></img>
+
 ## Reference
 [How transferable are features in deep neural
 networks? NIPS 2014 citation 3630次](http://papers.nips.cc/paper/5347-how-transferable-are-features-in-deep-neural-networks.pdf)
-[Domain-Adversarial Training of Neural Networks 2015, citation 1484](https://arxiv.org/abs/1505.07818)
-[Domain-Adversarial Neural Network in Tensorflow github,495 star](https://github.com/pumpikano/tf-dann)
+[Unsupervised Domain Adapotation by Backpropagation citation 1254](https://arxiv.org/abs/1409.7495)
 
+[Domain-Adversarial Training of Neural Networks 2015, citation 1484](https://arxiv.org/abs/1505.07818)
+[Google’s Multilingual Neural Machine Translation System:
+Enabling Zero-Shot Translation 2017 citation 613](https://www.aclweb.org/anthology/Q17-1024.pdf)
+[Domain-Adversarial Neural Network in Tensorflow github,495 star](https://github.com/pumpikano/tf-dann)
 [Domain-Adversarial Neural Network in PyTorch github, star 261](https://github.com/fungtion/DANN)
