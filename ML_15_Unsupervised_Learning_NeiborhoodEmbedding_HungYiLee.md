@@ -132,3 +132,43 @@ $$
 * 在COIL-20上則是很驚人，圈圈是同個物體，但是角度不同
 * 而扭曲的圈圈是因為像是杯子，杯子轉來轉去常常很像
 <img src='./images/un_neibor_12.png'></img>
+
+# t-SNE notes
+* 關於t-SNE的參數調整以及解釋時的注意事項
+## parameter tuning
+[資料降維與視覺化：t-SNE 理論與應用](https://mropengate.blogspot.com/2019/06/t-sne.html)
+[Visualizing Data using t-SNE](http://www.jmlr.org/papers/volume9/vandermaaten08a/vandermaaten08a.pdf)
+
+### perplexity  - 困惑度
+可以視為平滑過後的有效鄰居數，這個值用於取得Similarity func中的sigma
+$$
+p_{j|i} = \frac{exp(-|x_{i}-x_{j}|^2 / 2\sigma_{i}^{2})}{\sum_{k \neq i}exp(-|x_{i}-x_{k}|^2 / 2\sigma_{i}^{2})}
+$$
+* 通常來說會一次跑多個值，挑一張合適的圖來進行假設
+
+**論文該段落翻譯**
+
+當計算$S(x^{i}, x^{j})$時，L2 distance會被計算，同時需要給一個$\sigma_{i}$，此為data point $i$吻合的高斯分佈標準差，全部的data point都使用同一個$\sigma_{i}$是不太實際的，事實上可以從資料點的密度來做考量，在密度稠密的區域，$\sigma_{i}$應該是較小的，反過來說，在密度稀疏的區域，$\sigma_{i}$應該是較大的，而一個$\sigma_{i}$都將會反映出一個機率分佈$P_{i}$(對於其他所有的資料點而言)，考慮到上述推斷，當分佈$P_{i}$的entropy增加時，$\sigma_{i}$則要增加，在SNE算法中使用了binary search來找到每個$\sigma_{i}$，而這個參數由使用者進行設定，perplexity defined as:
+$$
+Perp(P_{i}) = 2^{H(P_{i})}
+$$
+where $H(P_{i})$ is the Shannon entropy
+$$
+H(P_{i}) = -\sum_{j}p_{j|i}log_{2}p_{j|i}
+$$
+perlexity可以被視為一個smooth measure of the effective nunmber of neighbors, typical values afre between 5~50
+
+**sklearn該參數說明**
+perplexity與所決定的最近鄰居數有關，較大的資料集需要較大的perlexity，default=30
+
+<img src='./images/tsne_1.png'></img>
+
+* 考慮到RBF kernel的式子，我們可以直觀的了解，當perplexity大時，shannon entropy大，這對應到較大的$\sigma_{i}$，因此local embedding時就會考慮更多的鄰近資料點，反之則會考慮較少
+* perplexity太大 - 太多鄰近資料點被考慮，最後群聚效果不好，群都混在一起，如上圖Perplexity = 100
+* perplexity太小 - 太少鄰近資料點被考慮，最後群聚效果不好，群都散得很開，如上圖Perplexity = 2
+* perplexity適當 - 剛好數量的鄰近資料點被考慮，有效地抓住群內靠近，群與群之間距離拉開，如上圖中perplexity = 30以及50
+* 因此畫圖時可以一次畫很多張，例如[2, 5, 30, 50, 100]，看到兩邊端點之後，挑選中間的圖
+* 或是算個輪廓係數，也是ok的!
+
+### early exaggeration factor - 前期放大係數 
+
