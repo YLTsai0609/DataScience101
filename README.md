@@ -43,11 +43,13 @@
 
 [Convolution, dot, and Cross-correlation](Convolution_dot_and_Cross-correlation.md)
 
+[Brief_Introduction_of_4_well-known_CNN Architecture](Brief_Introduction_of_4_well-known_CNN_Architecture.md)
 [Transfer Learning](transfer_learning.md)
 
 [Affine_tranformation_bilinear_interpretation](Affine_tranformation_bilinear_interpretation.md)
 
 [[Paper]Spatial_Tranformer Networks]([Paper]Spatial_Tranformer_Networks.md)
+
 
 
 ## Information Theory
