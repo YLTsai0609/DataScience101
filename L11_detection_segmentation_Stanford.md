@@ -18,3 +18,6 @@ output : $N \times M \times c$
 # Other Resource
 * [semantic segmentation](https://kknews.cc/zh-tw/tech/mgqvl9.html)
   * 傳統使用Clustering，像是Mean shift，15年之後隨著FCN的發展，將DL帶入semantic segmentation
+* [SEMANTIC IMAGE SEGMENTATION WITH DEEP CONVOLUTIONAL NETS AND FULLY CONNECTED CRFS - 菜逼八看論文
+](https://ithelp.ithome.com.tw/articles/10223557)
+  * FCN, 2014年, citation : 2215 - 從圖片萃取feature vector相對容易，從feature vector重建image則相對難，CNN界的AutoEncoder!
