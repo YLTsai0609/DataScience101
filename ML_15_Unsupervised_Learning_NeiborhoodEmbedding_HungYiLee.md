@@ -172,3 +172,30 @@ perplexity與所決定的最近鄰居數有關，較大的資料集需要較大�
 
 ### early exaggeration factor - 前期放大係數 
 
+在論文中的3.4節有提到4次前期放大係數 exaggeration factor
+Optimization Methods for t-SNE
+**論文該段落翻譯**
+當然一開始cost function也是從Gradient Descent開始，這個Approach使用了一個隨著iteration遞減的momentum項
+雖然這樣可以產生一個還不錯的結果，但我們可以讓優化做得更好，這個糟數就做early compression
+`early compression`這個概念是讓資料點再開始優化時彼此都維持非常近的距離，當點的距離很近時，對於群A要換到群B會比沒有壓縮所有資料點(global organization of the data)來的更容易，這個概念透過在cost function加上L2-penalty來實作
+Early compression is implemented
+by adding an additional L2-penalty to the cost function that is proportional to the sum of square distances of the map points from the origin.
+而這個L2 penalty要什麼時候拔除掉呢，透過手動設定
+
+另一個較難說明的方法來改善優化，則稱作`early exaggeration`，怎麼做呢，一開始直接在所有的$p_{i,j}$都乘上一個數字，例如說4，這意味著什麼呢?
+一開始所有的$q_{i,j}$都會趨近於1...
+
+
+**sklearn文件翻譯**
+這個參數控制了natural clusters在original space距離的遠近，大的值，natural cluster彼此的空間會越大，並且，
+**這個參數並非是很關鍵的參數**，如果在訓練的過程中發現cost function在初始時增加，而不是下降，那麼可能是exaggeration factor太大了，或是learning rate太大了
+TODO 在了解一下論文
+
+### learning rate
+
+t-SNE learning rate通常都在10~1000，
+如果learning rate太快，無法好好的優化，這會導致產出的圖像是一個球，這時候任何點大約和他們最近的鄰居都是差不多距離的
+如果learning rate太小，可能卡在local minimum，大部分的點看起來會被壓縮在一個高密度的雲裡面，然後有一些outlier
+
+### n_iter
+預設1000，至少要有259
