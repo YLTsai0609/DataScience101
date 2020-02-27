@@ -91,6 +91,7 @@
 [Selective Search](Selective_Search.md)
 [MTCNN](MTCNN.md)
 [YOLO](YOLO.md)
+[[Paper]Zero_Shot_Object_Detection.md]([Paper]Zero_Shot_Object_Detection.md)
 ### Object Tracking
 [object_tracking](Image_tracking.md)
 
