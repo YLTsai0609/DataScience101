@@ -99,6 +99,7 @@
 
 [[Paper]Advancing 3D Multi-Object Tracking: Evaluation Metrics and A Baseline](3D_object_tracking_SORT.md)
 ### Sematic Segmentation
+[Detection_Localization_Segmentation_Stanford](L11_detection_segmentation_Stanford.md)
 ### Instance Segmentation
 
 ### All about the faces

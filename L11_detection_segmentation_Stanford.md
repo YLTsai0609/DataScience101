@@ -8,9 +8,10 @@
 
 # Semantic Segmentation
 input : $N \times M \times 3$
-output : $N \times M \times c$ c is the category the pixel belong to.
+output : $N \times M \times c$ 
+* c is the category the pixel belong to.
 * 對於semantic segmentation這樣的任務一個有趣的地方是，他並不是要區分實體
-* 所以在下圖中，右邊兩張圖都是牛(Cow)，但我們不care這兩隻牛有沒有分開，這樣能夠比較好的處理整個任務(當然，把牛分開應該就是所謂的instance segmentation)
+* 所以在下圖中，右邊兩張圖都是牛(cow)，但我們不care這兩隻牛有沒有分開，這樣能夠比較好的處理整個任務(當然，把牛分開應該就是所謂的instance segmentation)
 
 [TBD : 10:48](https://www.youtube.com/watch?v=nDPWywWRIRo&list=PLf7L7Kg8_FNxHATtLwDceyh72QQL9pvpQ&index=12&t=0s)
 
