@@ -50,6 +50,7 @@
 
 [[Paper]Spatial_Tranformer Networks]([Paper]Spatial_Tranformer_Networks.md)
 
+[[Paper]Visualizing_and_Understanding_Convolutional_Networks]([Paper]Visualizing_and_Understanding_Convolutional_Networks.md)
 
 
 ## Information Theory
