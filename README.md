@@ -1,15 +1,19 @@
 # Notes
 
 ## Statistics
+### Probability
+
 [P-Value](Pvalue.md)
 
+[All_about_the_distribution](All_about_the_distribution.md)
+
+
+### Bayesian Statistics
 [How_Bayesian_inference_works](How_Bayesian_inference_works.md)
 
 [Bayesian_Hyperparameter_tuning](Bayesian_Hyperparameter_tuning.md)
 
 [Bayesian_LinearRegression](Bayesian_LinearRegression.md)
-
-[All_about_the_distribution](All_about_the_distribution.md)
 
 [Bayesian_analysis_python](https://github.com/YLTsai0609/bayesian_analysis_python)
 
@@ -19,6 +23,9 @@
 
 ### A/B Testing
 [ANOVA](ANOVA.md)
+
+### Statistical Regression
+
 
 ## Probabilistic_Graphical_Models
 
