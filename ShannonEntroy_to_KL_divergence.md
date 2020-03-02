@@ -1,6 +1,13 @@
 # 如何直觀理解交叉熵(Cross-Entropy)及相對熵(Relative Entropy)
+## Outline
+* 動機
+* entropy
+* self-information
+* shnnon entropy
+* cross entropy(次佳策略、最優策略)
+* relative entropy a.k.a. KL divergnece
 ## 動機 : 
-* 想要把entropy, self-information, shnno entropy 一路到 relative entropy(KL-Divergence)複習一遍
+* 想要把entropy, self-information, shnnon entropy 一路到 relative entropy(KL-Divergence)複習一遍
 * 而且在LDA的visualization也會用到 KL-Divergence
 ## 情境 : 
 一個王者榮耀的例子，爸爸vs小明
@@ -96,8 +103,8 @@ Q2 真實分佈 $(1/2, 1/4, 1/8, 1/8)$
 * $$KL (p || q) = H(p, q) - H(p) = \sum_{k}^{N} p_k log_{2} \frac{1}{q_k} - \sum_{k}^{N} p_k log_{2} \frac{1}{p_k} = \sum_{k}^{N} p_k log_{2} \frac{p_k}{q_k}$$
 * $ KL (p || q) >= 0 , when KL(p || q) = 0 -> p = q$
 * Relative Entropy不具有交換性 $ KL (q || p) $ 
-  因此用距離來比擬Relative Entropy是比較不恰當的，更精準的說法是衡量一個分部相比另一個分部的訊息損失(information lost)，事實上，只要反過來說，也可以說是information gain(但和決策數中的定義不同，原因在於分之後樣本數變得不同)
-* 可以從Bayes Thinking的觀點來看Relative Entropy，我們從鮮豔機率分佈q到後驗機率分佈p所帶來的訊息增益
+  因此用距離來比擬Relative Entropy是比較不恰當的，更精準的說法是衡量一個分部相比另一個分部的訊息損失(information lost)，事實上，只要反過來說，也可以說是information gain(但和決策樹中的定義不同，原因在於分之後樣本數變得不同)
+* 可以從Bayesian Thinking的觀點來看Relative Entropy，我們從先驗機率分佈q到後驗機率分佈p所帶來的訊息增益
 * 在ML中我們為什麼最小化C.E而非KL-Divengence ? 
 * 事實上是一樣的，最小化C.E的過程就是在最小化KL-Divengence，在給定groud-truth的情況下，$ H(p) $ 為 constant，並且我們可以從數學上證明 : 
 $$
