@@ -9,6 +9,10 @@ https://scikit-learn.org/stable/auto_examples/manifold/plot_t_sne_perplexity.htm
 https://mropengate.blogspot.com/2019/06/t-sne.html
 
 perplexity : 可以視為平滑過後的有效鄰居數，這個值用於取得Similarity func中的sigma
+
+與PCA視覺化的比較
+https://towardsdatascience.com/visualising-high-dimensional-datasets-using-pca-and-t-sne-in-python-8ef87e7915b
+
 '''
 import numpy as np
 from sklearn.datasets import load_digits
