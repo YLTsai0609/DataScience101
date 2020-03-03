@@ -134,13 +134,15 @@
 [Kaggle Learn All Mash Up](https://github.com/YLTsai0609/Geospatial_Analysis.git)
 
 ## DevOps
-[Kaggle_Six_steps_to_more_professional_data_science_code]([Kaggle]Six_steps_to_more_professional_data_science_code.md)
-
-[Kaggle_Making_an_app_from_your_modeling_code]([Kaggle]Making_an_app_from_your_modeling_code.md)
+[Missing_Semester_of_Your_CS_Education](https://github.com/YLTsai0609/Missing_Semester_of_Your_CS_Education)
 
 [Bash Commend](bash.md)
 
 [Vi and Vim](Vi_Editer.md)
+
+[Kaggle_Six_steps_to_more_professional_data_science_code]([Kaggle]Six_steps_to_more_professional_data_science_code.md)
+
+[Kaggle_Making_an_app_from_your_modeling_code]([Kaggle]Making_an_app_from_your_modeling_code.md)
 
 [Serialization_Encoding_Bytes_ByteArray](Serialization_Encoding_Bytes_ByteArray.md)
 
@@ -155,6 +157,8 @@
 [dlib_compile](dlib_compile.md)
 
 [opencv_complie](opencv_compile.md)
+
+[packaging_your_code](packaging_your_code.md)
 
 ## Math
 [semi_positive_matrix](semi_positive_matrix.md)
