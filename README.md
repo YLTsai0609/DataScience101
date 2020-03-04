@@ -167,6 +167,8 @@
 ## Physics
 [Polorization by reflection 鏡片反光原理](Polorization_by_Reflection.md)
 
+## Hardware
+[hardware_introduction](hardware_introduction.md)
 ## Others
 
 [long_weekend_outline](long_weekend_outline.md)
