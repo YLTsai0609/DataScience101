@@ -2,16 +2,25 @@
 ANOVA(Analysis of Variance) - 變異數分析
 主要為探討連續型（Continuous）資料型態之應變數(Dependent variable）與類別型資料型態之自變數(Independent variable）的關係，當自變項的因子中包含等於或超過三個類別情況下，檢定其各類別間平均數是否相等的統計模式
 
+# Outline
+* T - test
+* z score and t score(t value)
+* Z - test
+* three types of T - tests
+* [TODO]One Way ANOVA
+  * F value
+* [TODO]Tukey TSD
+* [TODO]Two Way ANOVA
 Let's start from start from **t-test**
 ## T-test
 * 白話文 : 兩組連續變數是否一致
 * 更數學地說 : 兩組連續變數是否來自於同一個分佈?
-* 關於Z-score以及 t-score
+### 關於Z-score以及 t-score
 * Z score 知道母體平均的情況下
   $$
   Z_{i} = \frac{x_{i} - \mu}{\sigma}
   $$
-  此時假設了隨機變數$x_{i}$符合高斯分佈，且為母體中的隨機變數，$\mu$為母體平均數，$\sigma$為母體標準差
+  此時假設了隨機變數$x_{i}$符合高斯分佈，且為母體中的隨機變數，$\mu$為母體平均數，$\sigma$為母體標準差(老子的資料，就是母體!)
 * t score 不知道母體平均數的情況下，考慮從樣本來建立一個樣本分佈，且在樣本數夠多的情況下逼近母體分佈。
   $$
   t = \frac{\bar{x} - \mu}{\frac{S}{\sqrt{n}}}
@@ -20,6 +29,9 @@ Let's start from start from **t-test**
   樣本數為$n$，自由度為$n-1$，此時可以從一組抽樣樣本$x_{i}$得到一個t-score，t-score則會對應到一個t分佈，
   該分佈是一個t-score的函數 : 
   <img src='images/ANOVA_2.png'></img>
+* t distribution的用途
+* 母體變異數位之時，可用作木體平均數的檢定和估計。
+* 兩個常態母體平均數做比較時，且母體變異數未知時。
 [t test wiki](https://zh.wikipedia.org/wiki/%E5%AD%B8%E7%94%9Ft%E6%AA%A2%E9%A9%97)
 ## proportion test(Z test)
 * target 是 0, 1
@@ -47,15 +59,21 @@ Let's start from start from **t-test**
 [Demo case](demo/hypothsis_testing/01_tests_with_simulated_datasets.py)
 
 ### 1 way ANOVA
+[TODO] 完整理論，包含動機及數學推導
+[TODO] [Code1](https://github.com/thomas-haslwanter/statsintro_python/blob/master/ipynb/8_anovaOneway.ipynb)
+
 * 獨立樣本的延伸版本，n組以上獨立樣本，$n \leq 3$
 * 有三種房型，整棟，套房，共享房間
-* H_{0} u_1 = u_2 = u_3 : 三種房型，選擇哪種房型並不影響價格
-* H_{1} 至少有一個u不同 : 有任何一種房型的價格分佈與其他價格分佈有顯著差異
+* $H_{0}~:~u_1 = u_2 = u_3$ : 三種房型，選擇哪種房型並不影響價格
+* $H_{1}~:$  至少有一個u不同 : 有任何一種房型的價格分佈與其他價格分佈有顯著差異
 * F-value,
 * df = dgree of freedom 
 * resudials N of datapoint - df
 * 組間平均差
 * 穩定組內平均差SST，SSB，SSW
+* SST : Sum of Square Total
+* SSB : Sum of Square Between
+* SSW : Sum of Square Within
 $$
 SST = SSB + SSW = \sum_{i}^{K}\sum_{j}^{n_j}Y_{ij}^{2} - <Y>
 $$
@@ -65,9 +83,6 @@ $$
 $$
 F = \frac{MSB}{MSW} = \frac{SSB/df}{SSW/df}
 $$
-* within(組內)
-* total(總共)
-* between(B)
 * 事後檢定 : 到底哪一組不一樣?
 ## Tukey HSD
 * 類似t-test, 用於ANOVA之後的兩兩比較，找出獨立的那一項

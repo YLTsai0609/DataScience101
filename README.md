@@ -5,8 +5,20 @@
 
 [P-Value](Pvalue.md)
 
+### Distribution
 [All_about_the_distribution](All_about_the_distribution.md)
 
+#### univiate distribution
+
+[Normal distribution]
+
+[t , f , chi distribution](t_f_chi_distribution.md)
+
+### Hypothesis Testing
+
+[T - test, Z - test and ANOVA](ANOVA.md)
+
+### Statistical Regression
 
 ### Bayesian Statistics
 [How_Bayesian_inference_works](How_Bayesian_inference_works.md)
@@ -22,10 +34,12 @@
 [EM_algorithm](EM_algorithm.md)
 
 ### A/B Testing
-[ANOVA](ANOVA.md)
+[Chp1 ~ Chp5]
 
-### Statistical Regression
+### Statistical Regression Analysis
+[Linear Statistical Regression]
 
+[Logistic Statistical Regression]
 
 ## Probabilistic_Graphical_Models
 
