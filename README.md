@@ -5,12 +5,10 @@
 
 [P-Value](Pvalue.md)
 
-### Distribution
+### univiate distribution
+[displaying prd, cdf, sf, ppf, and isf](pdf_cdf_surviving_function.md)
+
 [All_about_the_distribution](All_about_the_distribution.md)
-
-#### univiate distribution
-
-[Normal distribution]
 
 [t , f , chi distribution](t_f_chi_distribution.md)
 
