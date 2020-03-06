@@ -153,7 +153,7 @@
 ## DevOps
 [Missing_Semester_of_Your_CS_Education](https://github.com/YLTsai0609/Missing_Semester_of_Your_CS_Education)
 
-[Bash Commend](bash.md)
+[Bash Commend Introduction](bash.md)
 
 [Vi and Vim](Vi_Editer.md)
 

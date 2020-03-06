@@ -449,8 +449,9 @@ linux命令是由左至右的，所以`&&`和`||`的位置不要放反喔!
 |tocuh|叫一個檔案，或是創建一個檔案||
 
 # System profiling
+
 |命令|使用場景|備註|
-|---|-------|---|****
+|---|-------|---|
 |top|最簡易版的工作管理員，可以看CPU，跟thread還有ProcessID|10秒更新，都黑白，可以用htop|
 |htop|豐富版，支援filter，自動提示，排序，比較美等等|Mac :brew install htop-osx|
 |df - h|Dsik Free，顯示磁碟空間資訊||

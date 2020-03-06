@@ -38,3 +38,6 @@
 * 顯示行號 `set nu` <--> `set nonu`
 * 觀看Options `set`
 * 搜尋 ?YourKeyword 搜尋到之後按enter進入，使用n來找尋下一個
+
+# Vi Vim 快捷鍵
+[TODO](http://www.vixual.net/blog/archives/234)
