@@ -20,4 +20,6 @@ Hamed Haddadi
 
 Deep Learning, Machine Learning, Mobile Net- working, Wireless Networking, Mobile Big Data, 5G Systems, Network Management.
 
-可以透過human activity關鍵字搜尋內文，太長了，很難掌握其內容
+
+關鍵字1 - 可以透過human activity關鍵字搜尋內文，太長了，很難掌握其內容
+關鍵字2 - A summary of works on app-level mobile data analysis

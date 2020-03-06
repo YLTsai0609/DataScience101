@@ -175,6 +175,8 @@
 
 [opencv_complie](opencv_compile.md)
 
+[Building YOLOv3](Build_YOLOv3.md)
+
 [packaging_your_code](packaging_your_code.md)
 
 ## Math
