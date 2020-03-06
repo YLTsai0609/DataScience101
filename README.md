@@ -186,6 +186,8 @@
 
 ## Hardware
 [hardware_introduction](hardware_introduction.md)
+
+
 ## Others
 
 [long_weekend_outline](long_weekend_outline.md)
@@ -193,6 +195,7 @@
 [Tableau](Tableau.md)
 [Markdown_Ref]((markdown_Ref.md))
 [Latax_Ref](Latax_Ref.md)
+[Solving Coding Problem Guideline](Solving_Coding_Problem_Guideline.md)
 [Data Science and Robots by Brandon Rohrer](https://brohrer.mcknote.com/zh-Hant/)
 [Paper Report Template](demo/jupyter%20ptt.py)
 
