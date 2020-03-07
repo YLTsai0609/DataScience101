@@ -106,6 +106,9 @@
 [Object Detection History (SVM, HOG, SlidingWindow CNN, R-CNN, YOLO) from Kaggle Notebook]([Kaggle]object_detection_histroy.md)
 [The 5 Computer Vision Techniques That Will Change How You See The World from medium post](Five_CV_Techniques.md)
 
+[SomeKeyword](SomeKeyword.md)
+
+
 ### Image Classification
 [Feature Extraction - Histogram of Oriented Gradient HOG](Histogram_of_Oriented_Gradient.md)
 ### Object Detection
