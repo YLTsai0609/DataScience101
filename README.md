@@ -190,6 +190,8 @@
 [hardware_introduction](hardware_introduction.md)
 
 
+## CaseStudy
+[CaseStudy Template](CaseStudy_Template.md)
 ## Others
 
 [long_weekend_outline](long_weekend_outline.md)

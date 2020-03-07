@@ -1,7 +1,6 @@
 # How to Soling a Coding Problem?
 
 **Stackoverflow Question Asking can be a lead !**
-
 1. PreSolving
    * 有把錯誤訊息`去除掉自己電腦上的資訊`放到google搜尋欄中詢問過嗎?
    * E.g. 
@@ -44,3 +43,8 @@
     * 例如 dataframe documentation after:2019-01-01
 Reference
 7. 覺得講得太少，自行google `google搜尋技巧`
+
+## 預防勝於治療 - 找github source code的注意事項
+
+1. 是否有官方，還是私人的?
+2. 目前維護的情況如何? (github issue and commits)  
