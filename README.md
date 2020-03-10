@@ -183,6 +183,8 @@
 [packaging_your_code](packaging_your_code.md)
 
 ## Math
+
+[sympy : use python to caculate Calculus](sympy.md)
 [semi_positive_matrix](semi_positive_matrix.md)
 
 [all_about_the_distance](all_about_the_distance.md)
@@ -195,8 +197,12 @@
 
 ## CaseStudy
 [CaseStudy Template](CaseStudy_Template.md)
+
+
+
 ## Others
 
+[learning how to learn](learning_how_to_learn.md)
 [long_weekend_outline](long_weekend_outline.md)
 [Model_Deployment](Model_Deployment.md)
 [Tableau](Tableau.md)

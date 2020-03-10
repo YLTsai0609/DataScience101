@@ -1,5 +1,8 @@
 # all_about_the_distance
 * 背景 : 隨著使用到的距離函數越來越多，有必要做一個統整，更了解距離的本質
+
+## Covarance vs distance
+
 ## personalized distance
 [Reference](https://zh.wikipedia.org/wiki/%E8%B7%9D%E7%A6%BB)
 一般度量

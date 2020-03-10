@@ -30,6 +30,11 @@
 * 請問這個比較差，在v1, v2, v3是改善重點嗎?
 * 單個網格，多個物件 / 單個物件，超過一個網格 - Anchor Box - 參數的一部分，處理多物件的偵測
 
+# Non-Max Suppression
+* 講白了，就是選框框
+* 以下提供了三種選框框的numpy實作，其實就是選出機率最高的，那個一定要保留，其他的要殺掉，用IOU來比較要不要殺掉，當然一般來說過程中包含排序
+* [淺談 NMS的多種實現 知乎 70+](https://zhuanlan.zhihu.com/p/64423753?fbclid=IwAR3asg3dzdH8H-sxlywd3FIspNPatlKFp0zqFBNO4cpRYRdimEDHlPZN-jI)
+
 # Reference
 https://mropengate.blogspot.com/2018/06/yolo-yolov3.html
 

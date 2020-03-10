@@ -8,10 +8,7 @@ CNN Backbone往往是各種CNN模型的共享結構
 
 # Multi-Scale
 
-
-
 pass
-
 
 # More about Backbone
 
