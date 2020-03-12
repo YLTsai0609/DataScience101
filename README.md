@@ -73,6 +73,7 @@
 
 [[Paper]Deep_Learning_in_Mobile_and_Wireless_Networking_A_Survey]([Paper[Deep_Learning_in_Mobile_and_Wireless_Networking_A_Survey.md)
 
+[Graph Convolutional Network Introduction](Graph_Convolutional_Network_Introduction.md)
 ## Information Theory
 [ShannonEntroy_to_KL_divergence](ShannonEntroy_to_KL_divergence.md)
 
