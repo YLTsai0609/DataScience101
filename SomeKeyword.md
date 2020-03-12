@@ -8,7 +8,7 @@ CNN Backbone往往是各種CNN模型的共享結構
 
 # Multi-Scale
 
-pass
+就像你的google map可以zoom in一樣，zoom in 就像是讓圖片的scale變大，反之則是變小，可想而知的這影響辨識的準確程度，而基本上這個讓模型可以產生有限度下的scale invariant在物件偵測的任務上很關鍵，也被研究了一番
 
 # More about Backbone
 
@@ -55,3 +55,6 @@ SORT: 一个小trick使用elementwise x*F(x)实现高阶
 Compact Bilinear: 通过学习矩阵A实现x’Ay实现制造新的特征
 
 ```
+
+# More about Multi-Scale
+[深度學習: 物件偵測上的模型結構變化](https://medium.com/@chih.sheng.huang821/%E6%B7%B1%E5%BA%A6%E5%AD%B8%E7%BF%92-%E7%89%A9%E4%BB%B6%E5%81%B5%E6%B8%AC%E4%B8%8A%E7%9A%84%E6%A8%A1%E5%9E%8B%E7%B5%90%E6%A7%8B%E8%AE%8A%E5%8C%96-e23fd928ee59)

@@ -199,11 +199,13 @@
 ## CaseStudy
 [CaseStudy Template](CaseStudy_Template.md)
 
-
+## Reviews
+[XGBoost theorem and code 贊同 700+](Review_XGBoost.md)
 
 ## Others
 
 [learning how to learn](learning_how_to_learn.md)
+[some_name_explaination_software_engineering](some_name_explaination_software_engineering.md)
 [long_weekend_outline](long_weekend_outline.md)
 [Model_Deployment](Model_Deployment.md)
 [Tableau](Tableau.md)
