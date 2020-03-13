@@ -74,6 +74,10 @@
 [[Paper]Deep_Learning_in_Mobile_and_Wireless_Networking_A_Survey]([Paper[Deep_Learning_in_Mobile_and_Wireless_Networking_A_Survey.md)
 
 [Graph Convolutional Network Introduction](Graph_Convolutional_Network_Introduction.md)
+
+## Network Architecture Search
+[[Paper]Proving_the_Lottery_Ticket_Hypothesis_Pruning_is_All_You_need]([Paper]Proving_the_Lottery_Ticket_Hypothesis_Pruning_is_All_You_need.md)
+
 ## Information Theory
 [ShannonEntroy_to_KL_divergence](ShannonEntroy_to_KL_divergence.md)
 
