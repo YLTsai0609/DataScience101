@@ -4,7 +4,6 @@ year : yyyy
 
 # Authors
 
-
 # 摘要
 
 # 導讀
