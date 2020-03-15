@@ -75,6 +75,8 @@
 
 [Graph Convolutional Network Introduction](Graph_Convolutional_Network_Introduction.md)
 
+[When Does Label Smoothing Help?]([Paper]When_Does_Label_Smoothing_Help.md)
+
 ## Network Architecture Search
 [[Paper]Proving_the_Lottery_Ticket_Hypothesis_Pruning_is_All_You_need]([Paper]Proving_the_Lottery_Ticket_Hypothesis_Pruning_is_All_You_need.md)
 
