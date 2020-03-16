@@ -32,6 +32,8 @@
 [EM_algorithm](EM_algorithm.md)
 
 ### A/B Testing
+
+
 [Chp1 ~ Chp5]
 
 ### Statistical Regression Analysis
@@ -123,6 +125,7 @@
 [MTCNN](MTCNN.md)
 [YOLO](YOLO.md)
 [[Paper]Zero_Shot_Object_Detection.md]([Paper]Zero_Shot_Object_Detection.md)
+[Object Detection Evaluation Metric](Object_Detection_Evaluation_Metric.md)
 ### Object Tracking
 [object_tracking](Image_tracking.md)
 
