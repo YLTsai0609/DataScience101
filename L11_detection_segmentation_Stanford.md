@@ -45,7 +45,7 @@ output : $N \times M \times c$
 其中一招叫做**Unpooling**
 
 #### Unpooling
-* 有pooling，那當然upsampling就要有unpooling囉
+* 有pooling，那當然就要有unpooling囉
 * 這裡我們舉例max pooling or average pooling
 
 下兩張圖對應到 input 2x2 output 4x4的 upsampling
@@ -58,6 +58,44 @@ output : $N \times M \times c$
 
 <img src='./images/seg_9.png'></img>
 
+* QA : 為甚麼這樣會是有用的? - 因為pooling丟失了圖片的空間訊息，但是我們的預測希望在pixel level，因此我們希望把空間訊息補回來，所以才使用unpooling
+* QA : 這樣的設計對backpropergagtion有什麼影響嗎 - 基本沒對參數傳遞沒有造成什麼影響
+
+
+#### Transpose Convolution
+* 另一種你會看到拿來做Upsampling的方法 - Transpose Convolution
+* 剛剛講到的unpooling，都只是固定形式的函數，他們並沒有辦法被更改(或稱為被學習)，那麼convolution應該要對應到什麼? inverse convolution?
+* 有的，有這樣的東西，而且說穿了其實只是另一種convoltuion
+
+* Recall 最簡單的3x3 convoltuion stride 1 pad 1
+<img src='./images/seg_10.png'></img>
+
+* 以下則是3x3 convoltuion **stride 2** pad 1
+<img src='./images/seg_11.png'></img>
+* 我們可以看到當stride = 2時，基本上就是對原本的圖做down sampling，factor為2
+
+* 所以說我們想要剛剛上面提到的反操作，怎麼做呢?
+* 這次我們不做內積，對於input的pixel，將其當作weight，經過一個filter，基於一個scaler x vector 的乘法丟到output裡面，然後把重疊的部分加起來
+
+<img src='./images/seg_12.png'></img>
+
+所以2D的版本就長成這樣
+
+<img src='./images/seg_13.png'></img>
+同樣地, stride就會變成input和output之間的放大倍率，而他有多種名稱，`Deconvolution`, `Upconvolution`, `Fractionally strided convolution`, `Backward strided convolution`，但其實你可以看到，他就只是一種convolution
+
+##### Convolution as Matrix Multiplication(1D)
+<img src='./images/seg_14.png'></img>
+
+<img src='./images/seg_15.png'></img>
+
+* QAs : 重疊的部分為什麼是sum而不是average? - 這是一個好問題，其實sum只是為了符合tranpose convolution，但是這樣確實有一個問題就是重疊的部分會有比較大的scale，所以在upsampling的部分也有學者去探討這個問題
+
+<img src='./images/seg_16.png'></img>
+
+以上就是semantic segmentation的基本概念，接下來我想談談Classification + Localization的方法
+
+<img src='./images/seg_17.png'></img>
 
 
 

@@ -41,6 +41,7 @@
 
 [Logistic Statistical Regression]
 
+[Generalized_Additive_Models(Non Linear)](Generalized_Additive_Models.md)
 ## Probabilistic_Graphical_Models
 
 [Markov Chain I : Markov_chain_MCMC](Markov_chain_MCMC.md)
