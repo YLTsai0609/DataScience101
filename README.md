@@ -65,6 +65,7 @@
 [Convolution, dot, and Cross-correlation](Convolution_dot_and_Cross-correlation.md)
 
 [Brief_Introduction_of_4_well-known_CNN Architecture](Brief_Introduction_of_4_well-known_CNN_Architecture.md)
+
 [Transfer Learning](transfer_learning.md)
 
 [Affine_tranformation_bilinear_interpretation](Affine_tranformation_bilinear_interpretation.md)
@@ -113,6 +114,7 @@
 ### Introduction
 
 [Object Detection History (SVM, HOG, SlidingWindow CNN, R-CNN, YOLO) from Kaggle Notebook]([Kaggle]object_detection_histroy.md)
+
 [The 5 Computer Vision Techniques That Will Change How You See The World from medium post](Five_CV_Techniques.md)
 
 [SomeKeyword](SomeKeyword.md)
@@ -120,12 +122,20 @@
 
 ### Image Classification
 [Feature Extraction - Histogram of Oriented Gradient HOG](Histogram_of_Oriented_Gradient.md)
+
 ### Object Detection
 [Selective Search](Selective_Search.md)
+
 [MTCNN](MTCNN.md)
+
 [YOLO](YOLO.md)
-[[Paper]Zero_Shot_Object_Detection.md]([Paper]Zero_Shot_Object_Detection.md)
+
+[[Paper]Zero_Shot_Object_Detection]([Paper]Zero_Shot_Object_Detection.md)
+
 [Object Detection Evaluation Metric](Object_Detection_Evaluation_Metric.md)
+
+[The Diversity of Images in Object Detection](diversity_of_image.md)
+
 ### Object Tracking
 [object_tracking](Image_tracking.md)
 
