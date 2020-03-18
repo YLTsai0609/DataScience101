@@ -187,6 +187,8 @@
 
 [Serialization_Encoding_Bytes_ByteArray](Serialization_Encoding_Bytes_ByteArray.md)
 
+[Model IO](Model_Saving.md)
+
 [FaceNet_install](FaceNet_install.md)
 
 [SpeedUp Strategy](SpeedUp_Strategy.md)
