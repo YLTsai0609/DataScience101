@@ -81,6 +81,10 @@
 
 [When Does Label Smoothing Help?]([Paper]When_Does_Label_Smoothing_Help.md)
 
+[[Paper]Stacked_Capsule_Autoencoders]([Paper]Stacked_Capsule_Autoencoders.md)
+
+[[Author]Hinton]([Author]Hinton.md)
+
 ## Network Architecture Search
 [[Paper]Proving_the_Lottery_Ticket_Hypothesis_Pruning_is_All_You_need]([Paper]Proving_the_Lottery_Ticket_Hypothesis_Pruning_is_All_You_need.md)
 
