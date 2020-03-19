@@ -140,6 +140,7 @@ Ch10, ch11
 
 [The Diversity of Images in Object Detection](diversity_of_image.md)
 
+[Make Object Detection Algorithm Useful]()
 ### Object Tracking
 [object_tracking](Image_tracking.md)
 
