@@ -98,8 +98,40 @@ output : $N \times M \times c$
 <img src='./images/seg_17.png'></img>
 
 
+# Classification + Localization
+* 基於一個基本的假設，圖片中有一個或是多個你想尋找的物體
+* 同樣的，我們會有一個巨大的網路(這裡假設一個全監督的情況)，例如這邊是AlexNet，但這次我們希望輸出的是Class Scores以及Box Corrdinates，如此一來我們產生了兩項loss, 一項是classification loss(這裡使用Softmax-loss)，另一項則是localization loss(這裡使用L2 loss)，會有其他人用L1, smooth L1，或是其他的，但是基本上就是在處理regression loss
+* QAs:
+  * Q : 一次做兩件事沒有問題嗎? 例如分錯的時候?
+  * A : 大部分的時候運作起來沒什麼問題，但是分錯累的時候就會有問題了，所以有些人對此做了改進
+  * Q : 這兩種loss的單位不同，是不是貢獻到total loss的時候需要經過一些normolizarion?
+  * A : 在這樣的場景下，我們會將此稱為multi-task loss，這樣的場景下，我們會設置一組參數來控制兩組loss，在貢獻到total loss當中，然後把最後的loss取gradient，這挺tricky的，因為這組weight是一個你必須給定的參數，但這個參數和以前你看到的超參數不太一樣，這組參數的變更會更改整個loss function，所以要設置這一組參數其實有一些困難的地方，在實務場景上，case by case，通常會用最後的performance metric來選這個值要是多少
+  * Q : 為什麼不分開作要一起做?
+  * A : 也可以分開做，但是一起做可以更充分的利用資訊
 
-[TBD : 20:00](https://www.youtube.com/watch?v=nDPWywWRIRo&list=PLf7L7Kg8_FNxHATtLwDceyh72QQL9pvpQ&index=12&t=0s)
+<img src='./images/seg_18.png'></img>
+
+## Human Pose Estimation
+
+<img src='./images/seg_19.png'></img>
+
+* 也有另一種形式的定位，就是Pose Estimation
+
+作法基本上就是一樣經過一個大的網路，最後出了一個feature vector，然後分成14x2的matrix，接著用regression loss來進行處理，這裡有趣的是，應該會針對點座標做L2 loss，在全部相加起來
+
+<img src='./images/seg_20.png'></img>
+
+* localization有一個令人困擾的地方是，你不總是知道圖片中有幾個你想辨識的物體
+
+# Object Detection
+
+<img src='./images/seg_21.png'></img>
+
+* 這是一個很有料的主題，幾乎是電腦視覺的核心
+* 同樣地我們先從一個固定種類的方法開始講起
+
+
+[TBD 42:00](https://www.youtube.com/watch?v=nDPWywWRIRo&list=PLf7L7Kg8_FNxHATtLwDceyh72QQL9pvpQ&index=12&t=0s)
 
 # Other Resource
 * [semantic segmentation](https://kknews.cc/zh-tw/tech/mgqvl9.html)

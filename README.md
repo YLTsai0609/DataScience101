@@ -16,8 +16,6 @@
 
 [T - test, Z - test and ANOVA](ANOVA.md)
 
-### Statistical Regression
-
 ### Bayesian Statistics
 [How_Bayesian_inference_works](How_Bayesian_inference_works.md)
 
@@ -33,10 +31,11 @@
 
 ### A/B Testing
 
-
+[Chp1 Experiement and Testing](Chp1_Experiment_and_Testing.md)
 [Chp1 ~ Chp5]
 
 ### Statistical Regression Analysis
+Ch10, ch11
 [Linear Statistical Regression]
 
 [Logistic Statistical Regression]
@@ -148,7 +147,9 @@
 
 [[Paper]Advancing 3D Multi-Object Tracking: Evaluation Metrics and A Baseline](3D_object_tracking_SORT.md)
 ### Sematic Segmentation
+
 [Detection_Localization_Segmentation_Stanford](L11_detection_segmentation_Stanford.md)
+
 ### Instance Segmentation
 
 ### All about the faces
