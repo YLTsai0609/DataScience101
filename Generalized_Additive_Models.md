@@ -15,5 +15,5 @@
 * Additive model在解釋時都有很大的方便(像是Non-Negtive Matrix Factorization)
 * 有各種統計量，是一個面對統計背景好解釋的模型
 * 有Patial Dependence Plot with feature，面向麻瓜也能有好的解釋性
-* GAM顯然無法用gradient descent優化，要用其他著數
+* GAM顯然無法用gradient descent優化，要用其他招數
 * 以上，顯然具實用價值
