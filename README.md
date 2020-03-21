@@ -82,6 +82,8 @@ Ch10, ch11
 
 [[Paper]Stacked_Capsule_Autoencoders]([Paper]Stacked_Capsule_Autoencoders.md)
 
+[Memory_in_Memory_A_Predcitve_Neural_Network_for_Learning_Higher_Order_Non_Stationarity_From_Spatiotemporal_Dynamics]([Paper]Memory_in_Memory_A_Predcitve_Neural_Network_for_Learning_Higher_Order_Non_Stationarity_From_Spatiotemporal_Dynamics.md)
+
 [[Author]Hinton]([Author]Hinton.md)
 
 ## Network Architecture Search
@@ -198,6 +200,8 @@ Ch10, ch11
 [FaceNet_install](FaceNet_install.md)
 
 [SpeedUp Strategy](SpeedUp_Strategy.md)
+
+[TensorRT highlight](TensorRT_highlight.md)
 
 [Manage_package_by_Conda](Manage_package_by_Conda.md)
 

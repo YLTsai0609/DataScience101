@@ -12,3 +12,5 @@
    * [官方網站](https://cupy.chainer.org/?fbclid=IwAR1gyp98svCgtEYqQkgr0QFCTLxPISK8S_57siUiZCvgCviQQszrf3Kq7cw#hero)
   <img src='./images/speed_1.png'></img>
 3. TensorRT : 重新調整Tensorflow計算圖，包含平行合併以及垂直合併，提供2x~20x效能優化，減少推論時間
+
+[TensorRT highlight](TensorRT_highlight.md)
