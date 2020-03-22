@@ -76,8 +76,6 @@ Ch10, ch11
 
 [[Paper]Deep_Learning_in_Mobile_and_Wireless_Networking_A_Survey]([Paper[Deep_Learning_in_Mobile_and_Wireless_Networking_A_Survey.md)
 
-[Graph Convolutional Network Introduction](Graph_Convolutional_Network_Introduction.md)
-
 [When Does Label Smoothing Help?]([Paper]When_Does_Label_Smoothing_Help.md)
 
 [[Paper]Stacked_Capsule_Autoencoders]([Paper]Stacked_Capsule_Autoencoders.md)
@@ -85,6 +83,12 @@ Ch10, ch11
 [Memory_in_Memory_A_Predcitve_Neural_Network_for_Learning_Higher_Order_Non_Stationarity_From_Spatiotemporal_Dynamics]([Paper]Memory_in_Memory_A_Predcitve_Neural_Network_for_Learning_Higher_Order_Non_Stationarity_From_Spatiotemporal_Dynamics.md)
 
 [[Author]Hinton]([Author]Hinton.md)
+
+## Graph Convolutional Network
+
+[graph convolutional network有什么比较好的应用task？](Graph_Convolutional_Network_Introduction.md)
+
+[from CNN to GCN, brief theorem introduction]()
 
 ## Network Architecture Search
 [[Paper]Proving_the_Lottery_Ticket_Hypothesis_Pruning_is_All_You_need]([Paper]Proving_the_Lottery_Ticket_Hypothesis_Pruning_is_All_You_need.md)

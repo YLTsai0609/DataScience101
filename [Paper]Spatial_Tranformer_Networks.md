@@ -15,3 +15,10 @@ CNN是一個表現力相當好的模型，但是這個模型仍然缺乏空間�
 
 # 註解
 註1 : 顯然這既是為什麼目前我們使用Data Augmentation時 zoom in zoom out 旋轉 仍然提昇了不少performance的原因
+
+
+## From 李弘毅課程
+[Advanced Topics in Deep Learning, Spatial Tranformer Layer](https://www.youtube.com/watch?v=SoCywZ1hZak)
+
+* Note below:
+* 
