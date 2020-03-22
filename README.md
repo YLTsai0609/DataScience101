@@ -232,8 +232,12 @@ Ch10, ch11
 [hardware_introduction](hardware_introduction.md)
 
 
-## CaseStudy
+## Consultant Things
 [CaseStudy Template](CaseStudy_Template.md)
+
+[How to do desktop reasearch well?](desktop_research.md)
+
+[baby product Desktop Research](baby_product_desktop_research.md)
 
 ## Reviews
 [XGBoost theorem and code 贊同 700+](Review_XGBoost.md)
