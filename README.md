@@ -82,6 +82,8 @@ Ch10, ch11
 
 [Memory_in_Memory_A_Predcitve_Neural_Network_for_Learning_Higher_Order_Non_Stationarity_From_Spatiotemporal_Dynamics]([Paper]Memory_in_Memory_A_Predcitve_Neural_Network_for_Learning_Higher_Order_Non_Stationarity_From_Spatiotemporal_Dynamics.md)
 
+[Circle_Loss_A_Unified_Perspective_of_Pair_Similarity_Optimization]([Paper]Circle_Loss_A_Unified_Perspective_of_Pair_Similarity_Optimization.md)
+
 [[Author]Hinton]([Author]Hinton.md)
 
 ## Graph Convolutional Network
@@ -187,6 +189,9 @@ Ch10, ch11
 [Kaggle Learn All Mash Up](https://github.com/YLTsai0609/Geospatial_Analysis.git)
 
 ## DevOps
+
+[How to read a big repository](How_to_read_a_big_respository.md)
+
 [Missing_Semester_of_Your_CS_Education](https://github.com/YLTsai0609/Missing_Semester_of_Your_CS_Education)
 
 [Bash Commend Introduction](bash.md)
