@@ -1,17 +1,21 @@
 # HMM_Viterbi_Algorithm
+
 ## 背景
+
 在HMM中其實，把所有的序列都列出來，這樣的演算法是非常沒有效率的，
 假設序列長度為$T$, state有$N$種，則所有可能的序列會有   $N^{T}$種
 逐一列出，使得時間複雜度為$O(N^{T})$
 事實上，我們要求機率最高的序列，不需要把所有的序列都算出來，用*Dynamic Programming*的技巧可以有效解決問題
 其中有一個演算法稱為Viterbi Algorithm，是將*Dynamic Programming*的技巧應用在*Hidden Marcov Model*
 
+
 ## Viterbi Algorithm
+
 * 計算這些序列的機率時，假設目前已經計算到第$t$個字$o_t$，這個字的tag為$r$時，上一個字的tag為$s$，發生機率為
 
 $$
 P(q_t = r | q_{t-1} = s) \times P(X_t = o_t | q_t = r) 
-\\\\ = a_{s,r} \times b_{r}(o_t)
+\\\\ = a_{s, r} \times b_{r}(o_t)
 $$
 
 $$s \in i, j, k$$
@@ -33,19 +37,20 @@ $$s \in i, j, k$$
 這樣每一個state就只會傳遞一個序列下去，而不會使序列數量呈現指數成長，即 *Viterbi Algorithm*
 
 ## 舉例
+
 有個研究者, 想根據某地人們生活日記中, 記載每天吃冰淇淋的數量, 來推斷當時的天氣變化如何
-在某個地點有兩種天氣, 分別是 Hot 和 Cold , 而當地的人們會記錄他們每天吃冰淇淋的數量, 數量分別為 1 , 2 或 3 ,
-則可以把天氣變化的機率, 以及天氣吃冰淇淋數量的關係, 用 Hidden Markov Model 表示,
+在某個地點有兩種天氣, 分別是 Hot 和 Cold , 而當地的人們會記錄他們每天吃冰淇淋的數量, 數量分別為 1 , 2 或 3 , 
+則可以把天氣變化的機率, 以及天氣吃冰淇淋數量的關係, 用 Hidden Markov Model 表示, 
 
 由於天氣是未知的，為*hidden state*，天氣的集合$Weather = \{HOT, COLD\}$
-而冰淇淋的數量是已知的，為*obervable*，冰淇淋數量的集合為$Icecream=\{1,2,3\}$，天氣的*Transition Matrix, A*，以及天氣變化對冰淇淋數量的*Output Matrix B*如下
+而冰淇淋的數量是已知的，為*obervable*，冰淇淋數量的集合為$Icecream=\{1, 2, 3\}$，天氣的*Transition Matrix, A*，以及天氣變化對冰淇淋數量的*Output Matrix B*如下
 
 |$Day_{~t} $\ $Day_{~t+1}$|$HOT$|$COLD$|
 |-------------------------|-----|------|
 |$HOT$|0.7|0.3|
 |$COLD$|0.4|0.6|
 
-而冰淇淋數量是已知的，為 *observable*，冰淇淋數量的集合為$Icecream=\{1,2,3\}$
+而冰淇淋數量是已知的，為 *observable*，冰淇淋數量的集合為$Icecream=\{1, 2, 3\}$
 天氣變化對於冰淇淋數量的*Output Matrix*:
 
 |$Weather $ \ $Icecream$|$1$|$2$|$3$|
@@ -98,10 +103,14 @@ $$
 <img src='./images/viterbi_6.gif'><img>
 
 ## 實作
+
 TBD
 [Implementation](/demo/HMM.py)
 [awesome tensorflow](https://github.com/dwiel/tensorflow_hmm/blob/master/tensorflow_hmm/hmm.py)
+
 ## 改進版本
 
 ## 備註
+
 * 註1 : 這種先過濾的方式，也可以說是一種貪婪搜尋，但是恰巧在HMM的例子中，後面的機率都不可能是比1大的數，這確保了當前所去除掉的序列一定不可能是機率最大的序列，普遍來說，只要應用在任何連乘的系統中，乘上的factor永遠小於1，就能夠透過這樣的技巧來有效縮減時間複雜度
+
