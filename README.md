@@ -249,7 +249,8 @@ Ch10, ch11
 
 ## Others
 [Efficient Vim + Markdown](Vim_Markdown.md)
-[learning how to learn](learning_how_to_learn.md)
+[learning how to learn mosky](learning_how_to_learn.md)
+[Learning ML DL 3 stage](3_stage.md)
 [some_name_explaination_software_engineering](some_name_explaination_software_engineering.md)
 [long_weekend_outline](long_weekend_outline.md)
 [Model_Deployment](Model_Deployment.md)
