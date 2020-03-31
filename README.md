@@ -198,6 +198,8 @@ Ch10, ch11
 
 [Vi and Vim](Vi_Editer.md)
 
+[tmux](tmux.md)
+
 [Kaggle_Six_steps_to_more_professional_data_science_code]([Kaggle]Six_steps_to_more_professional_data_science_code.md)
 
 [Kaggle_Making_an_app_from_your_modeling_code]([Kaggle]Making_an_app_from_your_modeling_code.md)
