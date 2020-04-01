@@ -23,7 +23,8 @@ session 概略的說，指的是終端機和主機間建立的一個連線，在
 |說明文件|ctrl+b ?|ctrl + c 離開|
 |將session放到背景|ctrl + b + d||
 |切回背景session|tmux at|at意思是`attach`|
-|上滾、下滑|ctrl+b 進入scroll mode, 就可以用方向鍵/觸控板/滑鼠ㄌ了|按q離開|
+|上滾、下滑|ctrl+b 進入scroll mode, 就可以用方向鍵/觸控板/滑鼠了|按q離開|
+|zoom in pane|ctrl + b + z|回到多個pane也是ctrl + b+ z|
 
 # why tmux
 * 遠端連線保留session
