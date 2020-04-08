@@ -58,6 +58,8 @@ Ch10, ch11
 ## Deep Learning
 [PaperReading_Hints](PaperReading_Hints.md)
 
+[Practical nn tuning](nn_tuning.md)
+
 [DNN Introduction](https://github.com/YLTsai0609/HandOn_ML/blob/master/tensorflow_1_8_0/DNN_Intro.md)
 
 [CNN Introduction](https://github.com/YLTsai0609/HandOn_ML/blob/master/tensorflow_1_8_0/CNN_intro.md)
