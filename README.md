@@ -228,6 +228,8 @@ Ch10, ch11
 
 [packaging_your_code](packaging_your_code.md)
 
+[test_your_code_pytest_unit_test](test_your_code.md)
+
 ## Math
 
 [sympy : use python to caculate Calculus](sympy.md)

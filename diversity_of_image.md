@@ -7,7 +7,6 @@
 * 各個視角 Viewpoint variation
 <img src='./images/diversity_2.png'></img>
 
-
 * 物體刑變 deformation
 
 <img src='./images/diversity_3.png'></img>
