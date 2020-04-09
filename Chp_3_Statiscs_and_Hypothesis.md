@@ -24,9 +24,15 @@
 <img src='./images/ch3Sh_3.png'></img>  
 
 ### 統計上之顯著水準及檢定力 : 兩者存在抵換關係
-* 再看一次來仔細聽顯著水準以及檢定力
 * 通常的做法會先找一個顯著水準$\alpha$，接著在此顯著水準下找尋最好的檢定力$1-\beta$
-* $\alpha$ : 顯著水準, 錯誤拒絕H_{0}的機率，Type I Error
+* $\alpha$ : Type I Error的機率，$\alpha = 0.05$，顯著性水平為95%，描述以下情境
+
+假設澳大利雅人的年輕成年人總體IQ平均是105，標準差為15，我們想檢查Linz的FH學生的平均IQ是否和澳大利雅得平均值相同
+我們選擇了20位學生，並設置$\alpha=0.5$，在這樣的情況下，我們設置顯著型水平為95%。現在讓我們假設重複了該研究20次，則20次會有一次，樣本的平均值和澳大利雅的平均值顯著不同，而這樣的發現會是一個錯誤的結果，哪怕我們的假設是正確的，如此一來就形成的type 1 錯誤
+
+* 下圖可以看到Type I Error會發生在$H_0$的尾巴和$H_1$交界的地方，事實上左側尾巴也有發生的可能，只是本圖沒有show出來
+<img src='./images/ch3Sh_6.png'></img>
+
 <img src='./images/ch3Sh_4.png'></img>
 
 * 固定顯著水準之下，怎麼提高檢定力呢? - 抽取更多樣本數，這樣可以更貼近母體平均
@@ -34,3 +40,8 @@
 * 要蒐集多少樣本? - 決定顯著水準以及檢定力之後看圖對照
 <img src='./images/ch3Sh_5.png'></img>
 
+# Resource
+
+* 大鼻課程
+* Python統計分析
+* [第一型與第二型誤差(type I and type II error)](https://smallcollation.blogspot.com/2013/08/type-i-and-type-ii-error.html#gsc.tab=0)
