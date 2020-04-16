@@ -138,12 +138,16 @@ def draw(S):
 
 
 # -
+def main():
 
-X_1000 = metrohast(1000)
-X_10000 = metrohast(10000)
+    X_1000 = metrohast(1000)
+    X_10000 = metrohast(10000)
 
-# 1000
-draw(X_1000)
-draw(X_10000)
+    # 1000
+    draw(X_1000)
+    draw(X_10000)
 
+
+if __name__ == "__main__":
+    main()
 

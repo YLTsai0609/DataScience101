@@ -32,6 +32,8 @@
 ### A/B Testing
 
 [Chp1 Experiement and Testing](Chp1_Experiment_and_Testing.md)
+[Chp_3_Statiscs_and_Hypothesis](Chp_3_Statiscs_and_Hypothesis.md)
+[Chp_4_Experiments_and_analysis](Chp_4_Experiments_and_analysis.md)
 [Chp1 ~ Chp5]
 
 ### Statistical Regression Analysis
@@ -255,7 +257,6 @@ Ch10, ch11
 
 ## Others
 [Efficient Vim + Markdown](Vim_Markdown.md)
-[learning how to learn mosky](learning_how_to_learn.md)
 [Learning ML DL 3 stage](3_stage.md)
 [some_name_explaination_software_engineering](some_name_explaination_software_engineering.md)
 [long_weekend_outline](long_weekend_outline.md)

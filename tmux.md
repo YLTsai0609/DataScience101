@@ -30,3 +30,15 @@ session 概略的說，指的是終端機和主機間建立的一個連線，在
 * 遠端連線保留session
 * 跨平台 macOS, Linux, RaspberryPi, BeagleBones,...
 * 客製化，可以自訂tmux設定
+
+# 修改
+* 預設讀取之conf - `/usr/local/etc/tmux.conf`，或者從man tmux -f的地方確認
+* from [tmux ，不只是 terminal multiplexer 五顆紅寶石](https://5xruby.tw/posts/tmux/)
+* prefix -> C+a
+* 可複製文字用vi模式，並且貼上，有可能要再preference中的selection進行設定(和系統剪貼簿存在不同buffer)
+  *  ctrl + V 進入vi 模式
+  *  V for selection, shift + V for selection line, w for navigation
+  *  y for yank
+  *  q離開vi模式
+  *  ctrl + p 貼上
+*  在vi模式之下，複製就可以直接進到buffer中，依樣ctrl + p 貼上
