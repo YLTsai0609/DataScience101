@@ -133,7 +133,7 @@ Ch10, ch11
 
 [The 5 Computer Vision Techniques That Will Change How You See The World from medium post](Five_CV_Techniques.md)
 
-[SomeKeyword](SomeKeyword.md)
+[CV_SomeKeyword](SomeKeyword.md)
 
 
 ### Image Classification
@@ -193,6 +193,7 @@ Ch10, ch11
 [Kaggle Learn All Mash Up](https://github.com/YLTsai0609/Geospatial_Analysis.git)
 
 ## DevOps
+[DevOps_SomeKeyWord](DevOps_SomeKeyWord.md)
 
 [How to read a big repository](How_to_read_a_big_respository.md)
 
@@ -217,6 +218,8 @@ Ch10, ch11
 [SpeedUp Strategy](SpeedUp_Strategy.md)
 
 [TensorRT highlight](TensorRT_highlight.md)
+
+[tflite and edgetpu](tflite_and_edge_tpu.md)
 
 [Manage_package_by_Conda](Manage_package_by_Conda.md)
 
