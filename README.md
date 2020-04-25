@@ -32,17 +32,25 @@
 ### A/B Testing
 
 [Chp1 Experiement and Testing](Chp1_Experiment_and_Testing.md)
+
 [Chp_3_Statiscs_and_Hypothesis](Chp_3_Statiscs_and_Hypothesis.md)
+
 [Chp_4_Experiments_and_analysis](Chp_4_Experiments_and_analysis.md)
 [Chp1 ~ Chp5]
 
 ### Statistical Regression Analysis
 Ch10, ch11
+
 [Linear Statistical Regression]
 
 [Logistic Statistical Regression]
 
+[Mosky Regression Analysis]
+
+    * [Check the resource](https://github.com/moskytw/statistical-regression-with-python)
+
 [Generalized_Additive_Models(Non Linear)](Generalized_Additive_Models.md)
+
 ## Probabilistic_Graphical_Models
 
 [Markov Chain I : Markov_chain_MCMC](Markov_chain_MCMC.md)
@@ -175,7 +183,10 @@ Ch10, ch11
 
 [facial_landmark_detection](facial_landmark_detection.md)
 
-## 3D Vision
+### Image Search
+* [KD-Tree with cnn](kd_tree_cnn.md)
+
+### 3D Vision
 [Introduction](3D_Vision.md)
 
 ## Unsupervised Learning

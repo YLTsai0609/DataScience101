@@ -1,3 +1,12 @@
+# Conda cheet sheet
+google search conda cheat sheet **your version**, there are always there. Because maintainer is ANACONDA
+
+4.6.0 here
+<img src='./images/conda_1.png'></img>
+<img src='./images/conda_2.png'></img>
+<img src='./images/conda_3.png'></img>
+<img src='./images/conda_4.png'></img>
+<img src='./images/conda_5.png'></img>
 # 背景
 * 使用Conda做環境管理比起pip + pyenv, 或是 pipenv 來說，優勢在於:
   * 將非python 底層的package compile好 - 例如tensorflow, dlib

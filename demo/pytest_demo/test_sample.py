@@ -13,8 +13,6 @@ def inc(x):
 
 def test_answer():
     assert inc(3) == 4
-
-
 '''
 我們將測試都寫在這裡，原本的func則寫在module_a.py
 裡面的內容是
