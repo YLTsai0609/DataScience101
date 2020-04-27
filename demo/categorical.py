@@ -7,8 +7,10 @@ import random
 import numpy as np
 from matplotlib import pyplot as plt
 
+
 def categorical(p, k):
     return p[k]
+
 
 n_experiment = 100
 p = [0.2, 0.1, 0.7]
