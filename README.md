@@ -82,7 +82,9 @@ Ch10, ch11
 
 [Affine_tranformation_bilinear_interpretation](Affine_tranformation_bilinear_interpretation.md)
 
-[[Paper]Spatial_Tranformer Networks]([Paper]Spatial_Tranformer_Networks.md)
+[[Paper]Spatial_Tranformer_Networks]([Paper]Spatial_Tranformer_Networks.md)
+
+[[Paper]Making_Convolutional_Networks_Shift-Invariant_Again]([[Paper]Making_Convolutional_Networks_Shift-Invariant_Again.md])
 
 [[Paper]Visualizing_and_Understanding_Convolutional_Networks]([Paper]Visualizing_and_Understanding_Convolutional_Networks.md)
 
