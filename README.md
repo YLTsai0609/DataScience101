@@ -248,6 +248,11 @@ Ch10, ch11
 
 [test_your_code_pytest_unit_test](test_your_code.md)
 
+### Coding style
+* [pep8 formatter](pep8_auto_formatter.md)
+* [pep 484 Type Hinting](Type_hinting.md)
+* [pep 498 f_string](f_string.md)
+
 ## Math
 
 [sympy : use python to caculate Calculus](sympy.md)

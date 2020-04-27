@@ -2,9 +2,8 @@
 citazion : 2551
 Part of: Advances in Neural Information Processing Systems 28 (NIPS 2015)
 
-A note about reviews: "heavy" review comments were provided by reviewers in the program committee as part of the evaluation process for NIPS 2015, along with posted responses during the author feedback period. Numerical scores from both "heavy" and "light" reviewers are not provided in the review link below.
-[PDF] [BibTeX] [Supplemental] [Reviews]
-Authors
+
+# Authors
 Max Jaderberg
 Karen Simonyan
 Andrew Zisserman
@@ -20,5 +19,3 @@ CNN是一個表現力相當好的模型，但是這個模型仍然缺乏空間�
 ## From 李弘毅課程
 [Advanced Topics in Deep Learning, Spatial Tranformer Layer](https://www.youtube.com/watch?v=SoCywZ1hZak)
 
-* Note below:
-* 
