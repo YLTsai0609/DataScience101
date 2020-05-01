@@ -18,3 +18,5 @@ Richard Zhang
 
 # Github
 [Antialiasing cnns to improve stability and accuracy. In ICML 2019. star 1k+](https://github.com/adobe/antialiased-cnns)
+
+# Sample code(Pytorch)

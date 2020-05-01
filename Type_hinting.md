@@ -12,3 +12,7 @@
 # cheat sheet
 
 * [right here](https://mypy.readthedocs.io/en/stable/cheat_sheet_py3.html)
+
+# numpy shape
+
+* [stackoverflow answer](https://stackoverflow.com/questions/52839427/numpy-type-hints-in-python-pep-484)
