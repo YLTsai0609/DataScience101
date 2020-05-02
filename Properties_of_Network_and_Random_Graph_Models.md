@@ -8,8 +8,8 @@
 
 # Degree Distribution
 * Find the hub, and the outskirts!
-* [degree - 一個頂點在圖中與相鄰鼎點連接的數目](https://zh.wikipedia.org/wiki/%E5%BA%A6_(%E5%9B%BE%E8%AE%BA))
-* degree distribution - 度分佈，where is the hub, where is the outskirs, and something like that
+* [degree - 一個頂點在圖中與相鄰頂點連接的數目](https://zh.wikipedia.org/wiki/%E5%BA%A6_(%E5%9B%BE%E8%AE%BA))
+* degree distribution - 度分佈，where is the hub, where is the outskirs, or something like that.
 
 <img src='./images/gn_2.png'></img>
 
@@ -44,10 +44,89 @@ $$
 * $h_{ij}$ - is the distance from node $i$ to node $j$
 * $E_{max}$ is the max number of edges(total number of node pairs) = $n(n-1)/2$
 * 可忽略未被連結的點(如果這些點不是很多)
+
 * 該測量和node connection有相依性
+
 <img src='./images/gn_5.png'></img>
 
 # Clustering Coefficient
 * only defined in undirected graph
+* idea comes from social science
+* how connected are one nodes neibor to each other
 
-[TBD 0843](https://www.youtube.com/watch?v=dD6LRgw_2mQ&list=PL1OaWjIc3zJ4xhom40qFY5jkZfyO5EDOZ&index=1)
+<img src='./images/gn_6.png'></img>
+
+* **Node $i$ with degree $k_{i}$**
+* $C_{i} \in [0, 1]$
+* $C_{i} = \frac{2e_{i}}{k_{i}(k_{i}-1)}$
+* Average Clustering Coefficient $C = \frac{1}{N}\sum_{i}C_{i}$
+
+another example
+<img src='./images/gn_7.png'></img>
+
+<img src='./images/gn_8.png'></img>
+
+# Connectivity  
+* Size of the largest connected component
+<img src='./images/gn_9.png'></img>
+
+# Summary : Key Network Properties
+
+<img src='./images/gn_10.png'></img>
+
+# Measurements in real world networks!
+
+# MSN dataset an Overview
+<img src='./images/gn_11.png'></img>
+
+* where are the users come from?
+<img src='./images/gn_12.png'></img>
+
+* Message as a Multi-Graph
+
+<img src='./images/gn_13.png'></img>
+* vertice(nodes) as users
+* Edges $(u, v$ if $u$ and $v$ exchanged at least one message.
+* $N$ for nods, $E$ for edges
+
+## degree distribution
+<img src='./images/gn_14.png'></img>
+
+* you must looked the histogram like that. it might br useless. XD
+
+* try log-log scale :P
+
+<img src='./images/gn_15.png'></img>
+* majority people have small degree
+* uilta less people, have so so many connections!
+
+## Clustering Coefficient
+
+<img src='./images/gn_16.png'></img>
+
+* the small degree people. their neibor easily kmow each other!
+* Check the average - about the 10% in MSN know each other.
+
+## Connectivity
+
+<img src='./images/gn_17.png'></img>
+* it's a undirected graph. the word "weakly" might be a typo
+
+* 99.1% the node are in the conponent (x axis $10^8$)
+* 0.01% just talk to each other in a isolated network.
+* Overall, it's a well-organized network.
+* largest network is so so big than second!
+
+## shortest path distribution
+
+<img src='./images/gn_18.png'></img>
+
+* hops -> 跳躍次數
+
+## Key Properties of MSN networks!
+
+<img src='./images/gn_19.png'></img>
+
+# Random Graph Model
+
+[TBD 24:41](https://www.youtube.com/watch?v=dD6LRgw_2mQ&list=PL1OaWjIc3zJ4xhom40qFY5jkZfyO5EDOZ&index=1)

@@ -9,7 +9,7 @@
 [2020年，我決定入門GCN with hello world code!](https://www.jishuwen.com/d/pYIu/zh-tw)
 [Graph properties](Properties_of_Network_and_Random_Graph_Models.md)
 
-Adhacency matrix A
+Adjacency matrix A
 
 degree maxtrix
 
