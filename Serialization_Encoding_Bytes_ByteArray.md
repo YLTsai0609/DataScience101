@@ -15,7 +15,7 @@ In [2]:with open(save_file, 'w') as file_to_write:
 * 有效性：数据非常冗长，原本日期 7/18/2019 变成了 datetime.datetime(2019, 7, 18, 0, 0) 这么一个字符串。在跨平台使用时，占用了过多的内存和网络资源。
 * 兼容性：文件是 .txt 格式，没有一个标准来定义该如何读取里面的内容。虽然在写入的时候是 Python 字典转化的，但是读取的程序如果不是 Python，或者不存入字典，就会出现 兼容性问题。
 
-> 序列化指的是把程序中的一個類轉換成一個標準化格式，可以跨程序，跨平台，而且保有其原有的內容與規範
+> 序列化指的是把程序中的一個類轉換成一個標準化格式，可以跨程序，跨平台，而且保有其原有的內容與規範，實質上就是轉成2進位碼並已Bytes傳送
 
 * 兩個常見方法
 
@@ -74,6 +74,34 @@ width, height = struct.unpack('>LL', data[16:24])
 google關鍵字 : python 二進位 資料 操作
 `bitstring`, `construct`, `struct`, `binascii`
 
+## Bit, Bytes and String
+* 所有的資料都能夠轉換為二進位資料(bit)，例如ascii可以容納0-255，當初規定成一些符號和英文字，例如`y`為121號
+`ord('y')`，會得到121，`ord('Y')`會得到89號，而0-255共有8個bits，可用一個bytes來傳送，在網路通訊中，交換格式必須是bytes，所以資料必須被轉換成2進位
+例如傳送一個1，若使用的資料型態為int32，表示使用了32個bits來表示該數字1，使用4個bytes
+* 在Python中字串預設為bytes利用`utf-8`解碼，因此想要看到該字串的bytes code，你必須將字串編碼回去，具體來說str.encode('utf-8')，例如
+`a = 鋼鐵人.encode('utf-8')`
+`Out : b'\xe9\x8b\xbc\xe9\x90\xb5\xe4\xba\xba`
+`type(a) : bytes`
+* 記事本預設為ascii解碼，所以編碼格式不符就會看到亂碼，中文常用的解碼為`utf-8`以及`Big5`
+
+byte code|decode using|result
+-----|-----|-----
+`b'\xe9\x8b\xbc\xe9\x90\xb5\xe4\xba\xba`|'utf-8'|'鋼鐵人'
+`b'\xe9\x8b\xbc\xe9\x90\xb5\xe4\xba\xba`|'ascii'|UnicodeDecodeError: 'ascii' codec can't decode byte 0xe9 in position 0: ordinal not in range(128)
+`b'\xe9\x8b\xbc\xe9\x90\xb5\xe4\xba\xba`|'Big5'|UnicodeDecodeError: 'big5' codec can't decode byte 0xe9 in position 0: illegal multibyte sequence
+`b'\xce\xa320'`|'utf-8'|'Σ20'|
+`b'\xce\xa320'`|'ascii'|UnicodeDecodeError: 'ascii' codec can't decode byte 0xce in position 0: ordinal not in range(128)|
+`b'\xce\xa320'`|'big5'|'峉20'|
+
+* 所有編碼都是ascii的Superset
+* Encoding - 將字元用整數編號來表示以及儲存
+* Decoding - 將整數編號用字元來表示方便人類閱讀
+
 ## Resource
 [Python 基本功: 5. 数据序列化](https://zhuanlan.zhihu.com/p/87470851?fbclid=IwAR2Z9CuZyR59EryrkQree6CKDXyU28GRe6OCQG4IGItzLdGRmBrQjDwzoaA)
+
 [为什么要使用base64编码，有哪些情景需求？](https://www.zhihu.com/question/36306744?fbclid=IwAR2w990I0qAJd7jKXuxL_aCj2vWQAVG3kfa8BoneP9rQFqbtQljkVezmHJE)
+
+[Day10 Python 基礎 - bytes數據類型](https://ithelp.ithome.com.tw/articles/10185614)
+
+[json python 資料型態對應表及說明](http://kuma-uni.blogspot.com/2012/06/jsonpythonjson.html)

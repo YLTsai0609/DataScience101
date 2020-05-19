@@ -164,12 +164,13 @@ Ch10, ch11
 [Feature Extraction - Histogram of Oriented Gradient HOG](Histogram_of_Oriented_Gradient. md)
 
 ### Object Detection
+[Data labeling](Data_labeling.md)
 
-[Selective Search](Selective_Search. md)
+[Selective Search](Selective_Search.md)
 
-[MTCNN](MTCNN. md)
+[MTCNN](MTCNN.md)
 
-[YOLO](YOLO. md)
+[YOLO](YOLO.md)
 
 [[Paper]Zero_Shot_Object_Detection]([Paper]Zero_Shot_Object_Detection.md)
 
@@ -229,7 +230,7 @@ Ch10, ch11
 
 [Kaggle Learn All Mash Up](https://github.com/YLTsai0609/Geospatial_Analysis.git)
 
-## DevOps
+## DevOps/Computer Science
 
 [DevOps_SomeKeyWord](DevOps_SomeKeyWord.md)
 

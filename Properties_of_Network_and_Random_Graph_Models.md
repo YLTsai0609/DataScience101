@@ -98,7 +98,7 @@ another example
 
 <img src='./images/gn_15.png'></img>
 * majority people have small degree
-* uilta less people, have so so many connections!
+* ultra less people, have so so many connections!
 
 ## Clustering Coefficient
 
