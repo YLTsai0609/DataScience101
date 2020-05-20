@@ -79,6 +79,8 @@ Ch10, ch11
 
 [CNN Introduction](https://github.com/YLTsai0609/HandOn_ML/blob/master/tensorflow_1_8_0/CNN_intro.md)
 
+[CNN 李弘毅](CNN_lee.md)
+
 [Convolution, dot, and Cross-correlation](Convolution_dot_and_Cross-correlation. md)
 
 [Brief_Introduction_of_4_well-known_CNN Architecture](Brief_Introduction_of_4_well-known_CNN_Architecture.md)
