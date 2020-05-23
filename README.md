@@ -77,11 +77,14 @@ Ch10, ch11
 
 [DNN Introduction](https://github.com/YLTsai0609/HandOn_ML/blob/master/tensorflow_1_8_0/DNN_Intro.md)
 
+[Batch Normalization](batch_normalization.md)
+[layer, instance, group normalization](layer_ins_group_normalization.md)
+
 [CNN Introduction](https://github.com/YLTsai0609/HandOn_ML/blob/master/tensorflow_1_8_0/CNN_intro.md)
 
 [CNN 李弘毅](CNN_lee.md)
 
-[Convolution, dot, and Cross-correlation](Convolution_dot_and_Cross-correlation. md)
+[Convolution, dot, and Cross-correlation](Convolution_dot_and_Cross-correlation.md)
 
 [Brief_Introduction_of_4_well-known_CNN Architecture](Brief_Introduction_of_4_well-known_CNN_Architecture.md)
 
