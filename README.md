@@ -6,7 +6,7 @@
 
 [P-Value](Pvalue.md)
 
-### univiate distribution
+### Univiate distribution
 
 [displaying prd, cdf, sf, ppf, and isf](pdf_cdf_surviving_function.md)
 
@@ -39,6 +39,7 @@
 [Chp_3_Statiscs_and_Hypothesis](Chp_3_Statiscs_and_Hypothesis.md)
 
 [Chp_4_Experiments_and_analysis](Chp_4_Experiments_and_analysis.md)
+
 [Chp1 ~ Chp5]
 
 ### Statistical Regression Analysis
@@ -116,7 +117,6 @@ Ch10, ch11
 
 [from CNN to GCN, brief theorem introduction]()
 
-[]
 
 ## Network Architecture Search
 
@@ -166,7 +166,7 @@ Ch10, ch11
 
 ### Image Classification
 
-[Feature Extraction - Histogram of Oriented Gradient HOG](Histogram_of_Oriented_Gradient. md)
+[Feature Extraction - Histogram of Oriented Gradient HOG](Histogram_of_Oriented_Gradient.md)
 
 ### Object Detection
 [Data labeling](Data_labeling.md)
@@ -288,7 +288,8 @@ Ch10, ch11
 ## Math
 
 [sympy : use python to caculate Calculus](sympy.md)
-[semi_positive_matrix](semi_positive_matrix. md)
+
+[semi_positive_matrix](semi_positive_matrix.md)
 
 [all_about_the_distance](all_about_the_distance.md)
 
@@ -315,13 +316,21 @@ Ch10, ch11
 ## Others
 
 [Efficient Vim + Markdown](Vim_Markdown.md)
+
 [Learning ML DL 3 stage](3_stage.md)
+
 [some_name_explaination_software_engineering](some_name_explaination_software_engineering.md)
-[long_weekend_outline](long_weekend_outline.md)
+
 [Model_Deployment](Model_Deployment.md)
+
 [Tableau](Tableau.md)
+
 [Markdown_Ref]((markdown_Ref.md))
-[Latax_Ref](Latax_Ref. md)
+
+[Latax_Ref](Latax_Ref.md)
+
 [Solving Coding Problem Guideline](Solving_Coding_Problem_Guideline.md)
+
 [Data Science and Robots by Brandon Rohrer](https://brohrer.mcknote.com/zh-Hant/)
+
 [Paper Report Template](demo/jupyter%20ptt.py)
