@@ -6,7 +6,7 @@
 
 # Hidden Layer?
 * $a^{1}$其實是layer2的feature，我們可以想像網路前面幾層是feature extractor，同理，每一層的input都可以是下一層的feature
-* 這種做法對NN很有幫助，解決了一個稱作Ibternal Covariate Shift的問題
+* 這種做法對NN很有幫助，解決了一個稱作Internal Covariate Shift的問題
 <img src='./images/bn_1.png'></img>
 
 * 如果對於每一個layer，input feature都是mean是0 variance是1，那麼training就會更容易一點

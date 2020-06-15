@@ -5,7 +5,11 @@
 
 [Confusion Matrix in Object Detection article](https://towardsdatascience.com/confusion-matrix-in-object-detection-with-tensorflow-b9640a927285)
 
+[目标检测中的mAP是什么含义？ 贊同300+](https://www.zhihu.com/question/53405779)
+
 ## 計算
 [Most popular metrics used to evaluate object detection algorithms, star 2.2k+](https://github.com/rafaelpadilla/Object-Detection-Metrics)
+
+[Object-Detection-Metrics/lib/Evaluator.py](https://github.com/rafaelpadilla/Object-Detection-Metrics/blob/master/lib/Evaluator.py)
 
 [Confusion Matrix in Object Detection code, 26+ star](https://github.com/svpino/tf_object_detection_cm)

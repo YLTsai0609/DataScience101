@@ -1,4 +1,5 @@
-# Notes
+## Business Analysis
+[問題定義、需求釐清、需求收斂 - 1](problem_define.md)
 
 ## Statistics
 
@@ -79,7 +80,9 @@ Ch10, ch11
 [DNN Introduction](https://github.com/YLTsai0609/HandOn_ML/blob/master/tensorflow_1_8_0/DNN_Intro.md)
 
 [Batch Normalization](batch_normalization.md)
+
 [layer, instance, group normalization](layer_ins_group_normalization.md)
+
 
 [CNN Introduction](https://github.com/YLTsai0609/HandOn_ML/blob/master/tensorflow_1_8_0/CNN_intro.md)
 
@@ -138,6 +141,7 @@ Ch10, ch11
 
 [Word Embedding with GloVe](GloVe_word_embedding.md)
 
+
 [Seq2seq]
 
 * Checked in RNN part2
@@ -176,6 +180,8 @@ Ch10, ch11
 [MTCNN](MTCNN.md)
 
 [YOLO](YOLO.md)
+
+[YOLO source code](yolo_src.md)
 
 [[Paper]Zero_Shot_Object_Detection]([Paper]Zero_Shot_Object_Detection.md)
 
@@ -239,9 +245,15 @@ Ch10, ch11
 
 [DevOps_SomeKeyWord](DevOps_SomeKeyWord.md)
 
-[How to read a big repository](How_to_read_a_big_respositorymd)
+[How to read a big repository](How_to_read_a_big_respository.md)
 
 [Missing_Semester_of_Your_CS_Education](https://github.com/YLTsai0609/Missing_Semester_of_Your_CS_Education)
+
+[Introduction to Computer Science and Programming in Python]()
+
+[Algorithm by python](https://github.com/YLTsai0609/Algorithms_by_python)
+
+[garbage collection, shallow copy, deep copy](garbage_collection.md)
 
 [Bash Commend Introduction](bash.md)
 

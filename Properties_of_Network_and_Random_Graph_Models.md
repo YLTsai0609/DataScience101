@@ -35,7 +35,7 @@
 <img src='./images/gn_4.png'></img>
 
 ## Network Diameter
-* Diameter = The max shortest path, which distance between any pair of nodes in a graph - the upper bound(it's ok but might too less information)
+* Diameter = The max shortest path, which distance between any pair of nodes in a graph - average of shortest path
 * Averafge path length - 
 $$
 \bar{h} = \frac{1}{2E_{max}}\sum_{i,~j \neq i}{h_{ij}}
@@ -64,11 +64,12 @@ $$
 another example
 <img src='./images/gn_7.png'></img>
 
-<img src='./images/gn_8.png'></img>
 
 # Connectivity  
 * Size of the largest connected component
-<img src='./images/gn_9.png'></img>
+<img src='./images/gn_8.png'></img>
+* connected components size : 4, 2, 1
+* counts 1, 1, 1
 
 # Summary : Key Network Properties
 
@@ -86,13 +87,13 @@ another example
 
 <img src='./images/gn_13.png'></img>
 * vertice(nodes) as users
-* Edges $(u, v$ if $u$ and $v$ exchanged at least one message.
+* Edges $(u, v)$ if $u$ and $v$ exchanged at least one message.
 * $N$ for nods, $E$ for edges
 
 ## degree distribution
 <img src='./images/gn_14.png'></img>
 
-* you must looked the histogram like that. it might br useless. XD
+* you must looked the histogram like that. it might be useless. XD
 
 * try log-log scale :P
 
@@ -122,6 +123,7 @@ another example
 <img src='./images/gn_18.png'></img>
 
 * hops -> 跳躍次數
+* the six degree theorem - just an average number of shortest path.
 
 ## Key Properties of MSN networks!
 
