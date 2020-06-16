@@ -218,13 +218,66 @@ the conclusion is learning it in one, it is computartionally cheaper
 * QA regional proposal network怎麼train? 沒有gt啊! 其實有的，不那麼細節地說， 你可以拿著框好的ground truth去做selective search，IoU在某個threshold以上就是true regional proposal, 小於則是negive，但是這裡面有很多dark magic，真的有興趣可以去研究XD，這算是minor issue
 * QA RPN的classification loss? - 通常用binary，但也有不用的，這裡也是毛有點多 hairy通常在英文裡面也表示為恐怖的，驚險刺激的XD
 
-
 <img src='./images/seg_36.png'></img>
+
 * 這些就是 R-CNN family or called region-based methods for object detection
 
-# Detection without Proposals : YOLO/SSD
+# Detection without Proposals : YOLO / SSD
 
-[TBD 62:00](https://www.youtube.com/watch?v=nDPWywWRIRo&list=PLf7L7Kg8_FNxHATtLwDceyh72QQL9pvpQ&index=12&t=0s)
+<img src='./images/seg_37.png'></img>
+
+* YOLO / SSD - came out almost the same time
+* 不針對每個獨立的區塊做處理，想要一次ok，採用regression的思維來處理
+* 讓NN只對圖片做一次預測，這樣就快起來了
+
+1. 把圖切分成grid, $S$, 每一個grid會有base bounding box，number of bbox $B$，這裡$B=3$，in practice, use more than 3
+
+<img src='./images/seg_38.png'></img>
+input : image 
+output : 3 dimensional tensor : $7 \times 7 \times (5B+C)$
+
+* RPN和這兩種網路有一四類似觀念的味道
+* faster R-CNN : treating the regional proposal step as kind of an end to end regression problem
+* Single shot / yolo : do once with a single forwar pass
+
+<img src='./images/seg_39.png'></img>
+
+# Oject detection + captioning = Dense Csaptioning
+
+<img src='./images/seg_40.png'></img>
+* 做了Region proposal之後，不放到classification，放到RNN裡面，變成caption
+<img src='./images/seg_41.png'></img>
+
+
+# Instance Segmentation
+
+<img src='./images/seg_42.png'></img>
+
+* Combine RPN-like and segmentation!
+
+Mask R-CNN !
+
+<img src='./images/seg_43.png'></img>
+
+* RPN -> 不做 regression, classification
+* anti-convolution!
+
+<img src='./images/seg_44.png'></img>
+
+* the mask R-CNN unified everything today!
+
+<img src='./images/seg_45.png'></img>
+
+* only could do pose!
+
+<img src='./images/seg_46.png'></img>
+
+* maybe 5 frames per second!
+
+* QA how much training data do we need?
+  * trained on MS COCO, 200,000(20萬筆data)，80 category，on average 5 or 6 instance per image, each category 1.25w筆data
+  * transfer learning is hot, less data, same performance
+
 
 # Other Resource
 * [semantic segmentation](https://kknews.cc/zh-tw/tech/mgqvl9.html)
@@ -233,3 +286,5 @@ the conclusion is learning it in one, it is computartionally cheaper
 ](https://ithelp.ithome.com.tw/articles/10223557)
   * FCN, 2014年, citation : 2215 - 從圖片萃取feature vector相對容易，從feature vector重建image則相對難，CNN界的AutoEncoder!
 * [YOLO you only look once](https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Redmon_You_Only_Look_CVPR_2016_paper.pdf)
+* [you only look once keras implementation, check network and loss function](https://www.google.com/search?q=you+only+look+once+keras+source+code&oq=you+only+look+once+keras+source+code&aqs=chrome..69i57j69i64.10155j0j1&sourceid=chrome&ie=UTF-8)
+* [Speed/accuracy trade-offs for modern convolutional object detectors 2017](http://openaccess.thecvf.com/content_cvpr_2017/papers/Huang_SpeedAccuracy_Trade-Offs_for_CVPR_2017_paper.pdf)
