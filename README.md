@@ -189,7 +189,9 @@ Ch10, ch11
 
 [The Diversity of Images in Object Detection](diversity_of_image.md)
 
-[Make Object Detection Algorithm Useful]()
+[[Paper] Focal Loss for Dense Object Detection](focal_loss_for_dense_object_detection.md)
+
+[[Paper] YOLO v3 ](yolo_v3.md)
 
 ### Object Tracking
 
