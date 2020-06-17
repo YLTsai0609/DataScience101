@@ -197,6 +197,8 @@ Ch10, ch11
 
 [object_tracking](Image_tracking.md)
 
+[[Paper]Detect to Track and Track to Detect](detect_track.md)
+
 [Multiple_object_tracking_tmp](Multiple_object_tracking_tmp.md)
 
 [[Paper]Advancing 3D Multi-Object Tracking: Evaluation Metrics and A Baseline](3D_object_tracking_SORT.md)
