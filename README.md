@@ -207,6 +207,9 @@ Ch10, ch11
 
 ### Instance Segmentation
 
+### Speedup algorithm / hardware
+[Efficient Methods and hardware for deep learning](L15_Efficient_Methods_and_Hardware_for_Deep_Learning.md)
+
 ### All about the faces
 [awesome-Face_Recognition](https://github.com/ChanChiChoi/awesome-Face_Recognition?fbclid=IwAR0tTuucePwOD_b4FWyF7CS1xbXqQuM2o4pz0X1R4NW1FvwWs9f5Y1uB7To#face-clustering)
 [facenet](facenet.md)
