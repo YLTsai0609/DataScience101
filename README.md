@@ -168,6 +168,9 @@ Ch10, ch11
 
 [CV_SomeKeyword](SomeKeyword.md)
 
+[CNN Architecture AlexNet, VGG, GoogleLeNet, ResNet, NIN, DenseNet, SqueezeNet](L9_CNN_architechture.md)
+
+
 ### Image Classification
 
 [Feature Extraction - Histogram of Oriented Gradient HOG](Histogram_of_Oriented_Gradient.md)
@@ -308,7 +311,7 @@ Ch10, ch11
 
 ## DataBase and SQL
 * [sqlalchemy, pymysql, pyodbc](sql_intro.md)
-
+* [Basic sql injection](sql_injection_intro.md)
 ## Math
 
 [sympy : use python to caculate Calculus](sympy.md)

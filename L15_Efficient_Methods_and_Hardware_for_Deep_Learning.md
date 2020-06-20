@@ -1,5 +1,8 @@
 # Resource
+Stanford University
 https://www.youtube.com/watch?v=eZdOkDtYMoo&list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8sYv&index=15
+
+
 
 <img src='./images/effDL_1.png'></img>
 
@@ -119,11 +122,37 @@ compression ratio 10x ~ 40x without accuracy decrease
 
 we can do that! SqueezeNet + Deep Compression
 
-* TODO - how squeeze work?
+<img src='./images/effDL_35.png'></img>
+<img src='./images/effDL_36.png'></img>
 
-[TBC, 20.12](https://www.youtube.com/watch?v=eZdOkDtYMoo&list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8sYv&index=15)****
+# Quantization
+
+* why/how do thwy use in TPU design
+* All the TPU designs use only eight bit for inference
+* max number, min number, how many bits are enough to represent this dynamic range
+
+<img src='./images/effDL_39.png'></img>
+<img src='./images/effDL_40.png'></img>
+* basically good to fix8
+
+# low rank Approximation
+turns one conv to 2 conv
+
+<img src='./images/effDL_41.png'></img>
+<img src='./images/effDL_42.png'></img>
+
+[TBC, 22.43](https://www.youtube.com/watch?v=eZdOkDtYMoo&list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8sYv&index=15)****
+1. Pruning(checked)
+2. Weight Sharing(checked)
+3. Quantization(?)
+4. Low Rank Approximation(?)
+5. Binary / Ternary Net
+6. Winograd Transformation
 
 # Other Resource
 [Learning both Weights and Connections for Efficient Neural Networks by Song Han 2015, 2336](http://papers.nips.cc/paper/5784-learning-both-weights-and-connections-for-efficient-neural-network.pdf)
 
 [Deep Compression: Compressing Deep Neural Networks with Pruning, Trained Quantization and Huffman Coding by Song Han 2016, 3462](https://arxiv.org/pdf/1510.00149.pdf)
+
+[SqueezeNet: AlexNet-level accuracy with 50x fewer parameters and <0.5MB model size 2017, 2564+](https://arxiv.org/pdf/1602.07360.pdf)
+  * you could find tensorflow/keras/pytorch implementation
