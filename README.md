@@ -196,7 +196,7 @@ Ch10, ch11
 
 [[Paper] YOLO v3 ](yolo_v3.md)
 
-[[Topic survey]chop_object_with_different_background_to_boost_robustness](chop_object_with_different_background_to_boost_robustness.md)
+[[Topic survey]chop_object_with_different_background_to_boost_robustness]([Topic]chop_object_with_different_background_to_boost_robustness.md)
 
 ### Object Tracking
 
