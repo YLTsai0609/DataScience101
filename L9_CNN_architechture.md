@@ -216,6 +216,49 @@ https://www.youtube.com/watch?v=DAOcjicFr1Y
 
 # Other architectures to konw
 
+## NIN
+start with 53
+<img src='./images/cnna_53.png'></img>
+
+* the first view of 1x1 conv which is treated as MLP layer
+
+## Improve ResNet
+* how many layer / which layer we skip could get more backprop information?
+<img src='./images/cnna_54.png'></img>
+
+* Wide Residue Blocks!
+<img src='./images/cnna_55.png'></img>
+
+* 50 layer wide ResNet outperforms 152-layer original ResNet
+* researchers tring to figure out what's the connection between block size, depth of network, and blablabla
+
+
+<img src='./images/cnna_56.png'></img>
+
+* looks like some flavor like inception module
+
+<img src='./images/cnna_57.png'></img>
+
+* stochastic depth! 
+* random drop a subset of layers, replace with identity
+
+## other architectures
+## FractalNet 
+
+<img src='./images/cnna_58.png'></img>
+
+## DenseNet
+* Densely connected convolutional network
+* still talking about gradient vanishing problem stuff, tring another approach, densly connected :P
+
+# Efficient networks
+* more stufy of 1x1 conv, alexnet level accuracy but 1/50 size
+
+<img src='./images/cnna_59.png'></img>
+
+<img src='./images/cnna_60.png'></img>
+
+
 [TBC 36:01](https://www.youtube.com/watch?v=DAOcjicFr1Y)
 
 # Other Resource
@@ -224,3 +267,5 @@ https://www.youtube.com/watch?v=DAOcjicFr1Y
 * [Deep Residual Learning for Image Recognition, 2016, 48669](http://openaccess.thecvf.com/content_cvpr_2016/papers/He_Deep_Residual_Learning_CVPR_2016_paper.pdf)
 * [AN ANALYSIS OF DEEP NEURAL NETWORK MODELS
 FOR PRACTICAL APPLICATIONS, 2016, 543](https://arxiv.org/pdf/1605.07678.pdf)
+
+* [卷积神经网络中用1*1 卷积有什么作用或者好处呢？](zhihu.com/question/56024942)
