@@ -137,7 +137,7 @@ Ch10, ch11
 
 [Topic_Modeling_LDA](Topic_Modeling_LDA.md)
 
-[Ngram](ngram. md)
+[Ngram](ngram.md)
 
 [Word Embedding with GloVe](GloVe_word_embedding.md)
 
@@ -200,13 +200,14 @@ Ch10, ch11
 
 ### Object Tracking
 
-[object_tracking](Image_tracking.md)
-
 [[Paper]Detect to Track and Track to Detect](detect_track.md)
 
-[Multiple_object_tracking_tmp](Multiple_object_tracking_tmp.md)
+[Multiple_object_tracking_sort_deep_sort](Multiple_object_tracking_tmp.md)
+
+[[Paper]SORT and Deep SORT]([Paper]SORT_Deep_SORT.md)
 
 [[Paper]Advancing 3D Multi-Object Tracking: Evaluation Metrics and A Baseline](3D_object_tracking_SORT.md)
+
 
 ### Sematic Segmentation
 
@@ -240,6 +241,7 @@ Ch10, ch11
 ### Clustering
 
 * [Introduction](clustering_introduction.md)
+
 * [ML_13_Unsupervised_Learning_HungYi_Lee](ML_13_Unsupervised_Learning_HungYi_Lee.md)
 
 * [ML_14_Unsupervised_Learning_WordEmbedding_HungYiLee](ML_14_Unsupervised_Learning_WordEmbedding_HungYiLee.md)
@@ -254,16 +256,40 @@ Ch10, ch11
 [Kaggle Learn All Mash Up](https://github.com/YLTsai0609/Geospatial_Analysis.git)
 
 ## DevOps/Computer Science
+### Course
+
+[Missing_Semester_of_Your_CS_Education](https://github.com/YLTsai0609/Missing_Semester_of_Your_CS_Education)
+
+* shell, shell tools and scripting, Vim, Data Wrangling, command-line env, version control(git), debugging and profiling
+* metaprogramming, security and cryptography, Potpourri, QAs
+
+[Introduction to Computer Science and Programming in Python](https://github.com/YLTsai0609/Introduction-to-Computer-Science-and-Programming-in-Python)
+
+* what is computation, branching and iteration, string manipulation, decomposition_abstractions_functions,  
+* tuple_lists_aliasing_murability_cloning, recursion_dictionaries, testing_debugger_exceptions_assertions,
+* object oriented programming, python classes and inheritance, undrstanding programming efficiency 1, 
+* understanding programming efficiency 2, searching and sorting Pset
+
+[Algorithm by python](https://github.com/YLTsai0609/Algorithms_by_python)
+* complexity, fix array, dynamic array, hashtable, tree, recusion, dynamic programming
+
+[Advance python](https://github.com/YLTsai0609/advance_python)
+* function as a object
+* variable scope
+* generator
+* class
+* method, instance, life cycle of instance, 
+* self-defined python class(str, for in add sub)
+* sequence in python, tuple, list
+* slicing, dictionary, hash function
+* duck typing, inheritance, class variable scope,
+* functional programming
+
+### Other pieces
 
 [DevOps_SomeKeyWord](DevOps_SomeKeyWord.md)
 
 [How to read a big repository](How_to_read_a_big_respository.md)
-
-[Missing_Semester_of_Your_CS_Education](https://github.com/YLTsai0609/Missing_Semester_of_Your_CS_Education)
-
-[Introduction to Computer Science and Programming in Python]()
-
-[Algorithm by python](https://github.com/YLTsai0609/Algorithms_by_python)
 
 [garbage collection, shallow copy, deep copy](garbage_collection.md)
 
@@ -341,6 +367,8 @@ Ch10, ch11
 [XGBoost theorem and code 贊同 700+](Review_XGBoost.md)
 
 ## Others
+
+[Data pipeline design principle](data_pipeline_design_principle.md)
 
 [Efficient Vim + Markdown](Vim_Markdown.md)
 

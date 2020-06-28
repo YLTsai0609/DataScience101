@@ -258,8 +258,50 @@ start with 53
 
 <img src='./images/cnna_60.png'></img>
 
+# Recap
+* [introduce by Justin Johnson](https://web.eecs.umich.edu/~justincj/)
 
-[TBC 36:01](https://www.youtube.com/watch?v=DAOcjicFr1Y)
+* An intesting thing is
+* when VGG and GoogeNet published, which is before batch normalization invented
+* training theses relative deep network is very challenging
+* VGG and googleNet tried some hacky way to get their deep models to converge
+
+### VGG(2014)
+* 16 and 19 layers final version
+* actually they train 11 layers model, because 11 layers get to converge, and add some random layer in the middle to make it work
+
+### GoogleNet
+* use auxiliary classifiers to inject gradient in to middle layer
+
+### Batch normalization
+* once you have this techinique, you don't need these ugly hacks to get these deeper models to converge
+
+### ResNet
+* funny skip block design, two nice properties
+  * if we set all the weight in residual block to zero - block is compeletely identity - easier to compare the layer is needed or not $F(x) = 0$, output just $x$
+    * kind of L2 regularization $F(x) + x$
+    * if drive $F(x)$ to zero, means optimization encourage model do not use the layer, just use identify
+  * good gradient flow in the backward paths
+    * gradient will be $\frac{\partial L}{\partial x} + x$
+    * which is feeding more gradient, like a gradient super highway, allow us to train much easier and faster
+
+## DenseNet and FractalNet
+
+<img src='./images/cnna_61.png'></img>
+
+* think about gradient flow, it make more sense
+* they add additinal short-cut connection between layers
+* it will give directly gradient flow when BP
+
+### Sumup
+* manage your gradient flow is super important everywhere in machine learning
+
+### Parameters
+
+<img src='./images/cnna_62.png'></img>
+
+* a lot of params in fc layers 
+* which should be avoid
 
 # Other Resource
 * [if gary still coming.... show him this](https://brohrer.mcknote.com/zh-Hant/how_machine_learning_works/how_convolutional_neural_networks_work.html)
