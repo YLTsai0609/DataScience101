@@ -336,7 +336,10 @@ Ch10, ch11
 * [pep 498 f_string](f_string.md)
 
 ## DataBase and SQL
+* [MySQL install and python connector](mysql_install_python_connector.md)
+
 * [sqlalchemy, pymysql, pyodbc](sql_intro.md)
+
 * [Basic sql injection](sql_injection_intro.md)
 ## Math
 

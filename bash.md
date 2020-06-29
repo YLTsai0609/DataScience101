@@ -270,6 +270,23 @@ cd ~/Desktop/${d} # worked!
   * **子程序僅會繼承父程序的環境變數，子程序不會繼承父成數的自訂變數!**
   * export可以將變數輸出，讓父程序可以使用!
 
+### 加入環境變數
+1. 先確認該檔案存在在你的系統中，這裡舉例mysql
+`ls /usr/local/mysql/bin/mysql` - 確認執行檔存在
+2. 進入.bashrc, .bash_profile
+```
+# MySQL path variable
+mysql_path=/usr/local/mysql/bin/
+export PATH=$PATH:mysql_path
+```
+
+3. source .bashrc, .bash_profile
+
+4. echo $PATH - 確認路徑是否存在
+
+5. 呼叫指令，應該要呼叫到該執行檔, 例如呼叫 mysql
+
+
 # 變數鍵盤讀取、陣列和宣告 : read, array, declare
 * `read`, `declare`, `typeset`, `array`
 pass
