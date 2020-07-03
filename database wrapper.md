@@ -11,6 +11,6 @@
 
 * [pandas read sql](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_sql.html)
 
-* [Pandas read_sql with parameters avoid injection](https://stackoverflow.com/questions/24408557/pandas-read-sql-with-parameters)
-
-* [past work about read sql](https://github.com/YLTsai0609/TSTAR_forum_crawling/blob/master/crawler.py)
+* MySQL
+  * [past work, insert crawlered data](https://github.com/YLTsai0609/TSTAR_forum_crawling/blob/master/crawler.py)
+  * [recent work, read data by orm](https://github.com/YLTsai0609/database_eplore.git) 

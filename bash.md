@@ -433,6 +433,21 @@ grep --corlor=auto 'MANPATH' /etc/man_db.conf
 4. 一些執行命令可能已知錯誤訊息，想以 2>/dev/null丟掉時
 5. 錯誤訊息和鄭瘸訊息需要分別輸出時
 
+## example
+
+安裝軟體時，你希望有log紀錄又有stdout
+
+使用 tee
+
+範例
+
+`ls 2>&1 | tee file.tmp` 
+
+super easy!
+
+[How do I get both STDOUT and STDERR to go to the terminal and a log file?](https://stackoverflow.com/questions/363223/how-do-i-get-both-stdout-and-stderr-to-go-to-the-terminal-and-a-log-file)
+
+
 ## 命令執行的判斷依據 : ; && ||
 
 |指令|舉例|說明|

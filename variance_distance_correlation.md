@@ -1,5 +1,5 @@
-
 # Some Basic Component
+
 * Variance (genetally, co-variance)
 * L2 distance
 * Correlation

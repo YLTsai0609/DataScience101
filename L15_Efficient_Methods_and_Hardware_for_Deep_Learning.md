@@ -141,6 +141,10 @@ turns one conv to 2 conv
 <img src='./images/effDL_41.png'></img>
 <img src='./images/effDL_42.png'></img>
 
+* kind of dimension reduction using **1x1 conv**
+* 講的不是很清楚，基本上speed up 5x大概也只減少了7% err
+
+
 [TBC, 22.43](https://www.youtube.com/watch?v=eZdOkDtYMoo&list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8sYv&index=15)****
 1. Pruning(checked)
 2. Weight Sharing(checked)
@@ -156,3 +160,5 @@ turns one conv to 2 conv
 
 [SqueezeNet: AlexNet-level accuracy with 50x fewer parameters and <0.5MB model size 2017, 2564+](https://arxiv.org/pdf/1602.07360.pdf)
   * you could find tensorflow/keras/pytorch implementation
+
+[Efficient and Accurate Approximations of Nonlinear Convolutional Networks 2015, 175+](https://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Zhang_Efficient_and_Accurate_2015_CVPR_paper.pdf)

@@ -79,10 +79,11 @@ Ch10, ch11
 
 [DNN Introduction](https://github.com/YLTsai0609/HandOn_ML/blob/master/tensorflow_1_8_0/DNN_Intro.md)
 
+[DL software](L8_DeepLearning_Software.md)
+
 [Batch Normalization](batch_normalization.md)
 
 [layer, instance, group normalization](layer_ins_group_normalization.md)
-
 
 [CNN Introduction](https://github.com/YLTsai0609/HandOn_ML/blob/master/tensorflow_1_8_0/CNN_intro.md)
 
@@ -270,6 +271,8 @@ Ch10, ch11
 * object oriented programming, python classes and inheritance, undrstanding programming efficiency 1, 
 * understanding programming efficiency 2, searching and sorting Pset
 
+[cs50](cs50.md)
+
 [Algorithm by python](https://github.com/YLTsai0609/Algorithms_by_python)
 * complexity, fix array, dynamic array, hashtable, tree, recusion, dynamic programming
 
@@ -298,6 +301,8 @@ Ch10, ch11
 [Vi and Vim](Vi_Editer.md)
 
 [tmux](tmux.md)
+
+[Standard Data Science project template](ds_prj_template.md)
 
 [Kaggle_Six_steps_to_more_professional_data_science_code]([Kaggle]Six_steps_to_more_professional_data_science_code.md)
 
@@ -338,9 +343,11 @@ Ch10, ch11
 ## DataBase and SQL
 * [MySQL install and python connector](mysql_install_python_connector.md)
 
-* [sqlalchemy, pymysql, pyodbc](sql_intro.md)
+* [database wrapper sqlalchemy, pymysql, pyodbc](database%20wrapper.md)
 
 * [Basic sql injection](sql_injection_intro.md)
+
+
 ## Math
 
 [sympy : use python to caculate Calculus](sympy.md)
