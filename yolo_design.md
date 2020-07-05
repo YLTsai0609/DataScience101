@@ -10,7 +10,7 @@
 * 會定義自己的loss function
 
 * 鴻海 - 用darknet XD
-* qqwweee - keras yolo....
+* qqwweee - keras yolo.... source code reading
 
 ## 開場
 
@@ -38,6 +38,10 @@
 
 # 定義問題
 
+<img src='./images/yoloDesign_11.png'></img>
+
+<img src='./images/yoloDesign_12.png'></img>
+
 * 用一個框框，然後左上角跟右下角
 * 然後要有label 告訴我們是貓還狗，就這樣
 * 整個Framework就這樣，開始!
@@ -57,8 +61,6 @@
 * 在格子跟格子中間怎麼辦?
 * 一格裡面超過一個動物怎麼辦?
 
-<img src='./images/yoloDesign_11.png'></img>
-
 <img src='./images/yoloDesign_12.png'></img>
 
 * 定個loss 硬train一發
@@ -67,8 +69,6 @@
 
 * 採用中心點, W, H 可以大於1，所以標籤 $(W, H, x_c, y_c, cat_1, cat_2, ... , cat_n)$
 * $4 \times 4 \times 1$表示有16個格子
-
-<img src='./images/yoloDesign_12.png'></img>
 
 * XD
 
