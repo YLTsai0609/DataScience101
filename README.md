@@ -1,4 +1,5 @@
 ## Business Analysis
+
 [問題定義、需求釐清、需求收斂 - 1](problem_define.md)
 
 ## Statistics
@@ -121,7 +122,6 @@ Ch10, ch11
 
 [from CNN to GCN, brief theorem introduction]()
 
-
 ## Network Architecture Search
 
 [[Paper]Proving_the_Lottery_Ticket_Hypothesis_Pruning_is_All_You_need]([Paper]Proving_the_Lottery_Ticket_Hypothesis_Pruning_is_All_You_need.md)
@@ -141,7 +141,6 @@ Ch10, ch11
 [Ngram](ngram.md)
 
 [Word Embedding with GloVe](GloVe_word_embedding.md)
-
 
 [Seq2seq]
 
@@ -171,12 +170,12 @@ Ch10, ch11
 
 [CNN Architecture AlexNet, VGG, GoogleLeNet, ResNet, NIN, DenseNet, SqueezeNet](L9_CNN_architechture.md)
 
-
 ### Image Classification
 
 [Feature Extraction - Histogram of Oriented Gradient HOG](Histogram_of_Oriented_Gradient.md)
 
 ### Object Detection
+
 [Data labeling](Data_labeling.md)
 
 [Selective Search](Selective_Search.md)
@@ -184,6 +183,8 @@ Ch10, ch11
 [MTCNN](MTCNN.md)
 
 [YOLO](YOLO.md)
+
+[How to design a system like yolo](yolo_design.md)
 
 [YOLO source code](yolo_src.md)
 
@@ -209,7 +210,6 @@ Ch10, ch11
 
 [[Paper]Advancing 3D Multi-Object Tracking: Evaluation Metrics and A Baseline](3D_object_tracking_SORT.md)
 
-
 ### Sematic Segmentation
 
 [Detection_Localization_Segmentation_Stanford](L11_detection_segmentation_Stanford.md)
@@ -217,9 +217,13 @@ Ch10, ch11
 ### Instance Segmentation
 
 ### Speedup algorithm / hardware
+
 [Efficient Methods and hardware for deep learning](L15_Efficient_Methods_and_Hardware_for_Deep_Learning.md)
 
+[Network Compression by hung yi lee team]()
+
 ### All about the faces
+
 [awesome-Face_Recognition](https://github.com/ChanChiChoi/awesome-Face_Recognition?fbclid=IwAR0tTuucePwOD_b4FWyF7CS1xbXqQuM2o4pz0X1R4NW1FvwWs9f5Y1uB7To#face-clustering)
 [facenet](facenet.md)
 
@@ -257,6 +261,7 @@ Ch10, ch11
 [Kaggle Learn All Mash Up](https://github.com/YLTsai0609/Geospatial_Analysis.git)
 
 ## DevOps/Computer Science
+
 ### Course
 
 [Missing_Semester_of_Your_CS_Education](https://github.com/YLTsai0609/Missing_Semester_of_Your_CS_Education)
@@ -266,17 +271,19 @@ Ch10, ch11
 
 [Introduction to Computer Science and Programming in Python](https://github.com/YLTsai0609/Introduction-to-Computer-Science-and-Programming-in-Python)
 
-* what is computation, branching and iteration, string manipulation, decomposition_abstractions_functions,  
-* tuple_lists_aliasing_murability_cloning, recursion_dictionaries, testing_debugger_exceptions_assertions,
+* what is computation, branching and iteration, string manipulation, decomposition_abstractions_functions, 
+* tuple_lists_aliasing_murability_cloning, recursion_dictionaries, testing_debugger_exceptions_assertions, 
 * object oriented programming, python classes and inheritance, undrstanding programming efficiency 1, 
 * understanding programming efficiency 2, searching and sorting Pset
 
 [cs50](cs50.md)
 
 [Algorithm by python](https://github.com/YLTsai0609/Algorithms_by_python)
+
 * complexity, fix array, dynamic array, hashtable, tree, recusion, dynamic programming
 
 [Advance python](https://github.com/YLTsai0609/advance_python)
+
 * function as a object
 * variable scope
 * generator
@@ -285,7 +292,7 @@ Ch10, ch11
 * self-defined python class(str, for in add sub)
 * sequence in python, tuple, list
 * slicing, dictionary, hash function
-* duck typing, inheritance, class variable scope,
+* duck typing, inheritance, class variable scope, 
 * functional programming
 
 ### Other pieces
@@ -341,12 +348,12 @@ Ch10, ch11
 * [pep 498 f_string](f_string.md)
 
 ## DataBase and SQL
+
 * [MySQL install and python connector](mysql_install_python_connector.md)
 
 * [database wrapper sqlalchemy, pymysql, pyodbc](database%20wrapper.md)
 
 * [Basic sql injection](sql_injection_intro.md)
-
 
 ## Math
 
