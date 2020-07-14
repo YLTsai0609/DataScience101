@@ -1,5 +1,6 @@
 # Cookiecutter Data Science
-```
+
+``` 
 ├── LICENSE
 ├── Makefile           <- Makefile with commands like `make data` or `make train`
 ├── README.md          <- The top-level README for developers using this project.
@@ -15,7 +16,7 @@
 │
 ├── notebooks          <- Jupyter notebooks. Naming convention is a number (for ordering),
 │                         the creator's initials, and a short `-` delimited description, e.g.
-│                         `1.0-jqp-initial-data-exploration`.
+│ `1.0-jqp-initial-data-exploration` .
 │
 ├── references         <- Data dictionaries, manuals, and all other explanatory materials.
 │

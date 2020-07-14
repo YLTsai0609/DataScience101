@@ -337,9 +337,13 @@ Ch10, ch11
 
 [Building YOLOv3](Build_YOLOv3.md)
 
-[packaging_your_code](packaging_your_code.md)
+### Deployment and maintaining
+
+[api_doctring_generator](api_doc.md)
 
 [test_your_code_pytest_unit_test](test_your_code.md)
+
+[packaging_your_code](packaging_your_code.md)
 
 ### Coding style
 

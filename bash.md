@@ -1,3 +1,4 @@
+
 # bash
 > 紀錄工作中常用到的一些bash指令，以及使用場景
 > 查看當前bash版本 `help`
@@ -565,3 +566,8 @@ https://www.itread01.com/content/1541720962.html
 |ctrl + U|從光標刪除到字首|
 |ctrl + k|從光標刪除到字尾|
 |ctrl + XX|在命令列首和光標之間移動|
+
+
+
+
+
