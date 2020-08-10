@@ -9,3 +9,15 @@
 # Graph Neural Networks and Recommendations
 
 [summary](https://github.com/yazdotai/graph-networks)
+
+# Sample code
+
+[Implementation of Graph Convolutional Networks in TensorFlow](https://github.com/tkipf/gcn)
+
+[Keras implementation of Graph Convolutional Networks](https://github.com/tkipf/keras-gcn)
+
+[Graph Convolution Network for PyTorch](https://github.com/dragen1860/GCN-PyTorch)
+
+# blogs
+
+* [graph convolutional network有什么比较好的应用task？, 830+](https://www.zhihu.com/question/305395488/answer/554847680)

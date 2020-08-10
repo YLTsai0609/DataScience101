@@ -2,7 +2,7 @@
 
 # Backbone
 CNN Backbone往往是各種CNN模型的共享結構
-而這些網路結構就是Object Detection, tracking, ...等等的用途，通常就是一個識別模型，但也有不適的時候，其實也可以說他是一個對raw iamge的**Feature Extractor**
+而這些網路結構就是Object Detection, tracking, ... 等等的用途，通常就是一個識別模型，但也有不適的時候，其實也可以說他是一個對raw iamge的**Feature Extractor**
 
 [More about backbone](#more-about-backbone)
 
@@ -14,7 +14,7 @@ CNN Backbone往往是各種CNN模型的共享結構
 
 例如說，以下的backbone
 
-```
+``` 
 AlexNet: https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf
 VGG: https://arxiv.org/pdf/1409.1556.pdf
 GoogleNet: https://arxiv.org/pdf/1409.4842.pdf
@@ -30,7 +30,7 @@ SORT: https://arxiv.org/pdf/1703.06993.pdf
 
 這些共享結構除了調參之外(總深度，總寬度)以外，還反覆使用了多種技巧
 
-```
+``` 
 Residual(残差): 直接elementwise加法。
 Concat(特征拼接): 直接对特征深度作拼接。
 Bottleneck(特征压缩): 通过Conv(1,1)对稀疏的或者臃肿的特征进行压缩
@@ -42,7 +42,7 @@ Asymmetric(非对称): Conv(1,3),Conv(1,5),Conv(1,7)属于非对称结构，这�
 
 所以站在這個制高點，我們對於CNN結構有一個重新的審視
 
-```
+``` 
 AlexNet/VGG: 普通
 VGG: 加深
 ResNet: 通过x+F(x)直接加法实现了Residual模块
@@ -57,4 +57,5 @@ Compact Bilinear: 通过学习矩阵A实现x’Ay实现制造新的特征
 ```
 
 # More about Multi-Scale
+
 [深度學習: 物件偵測上的模型結構變化](https://medium.com/@chih.sheng.huang821/%E6%B7%B1%E5%BA%A6%E5%AD%B8%E7%BF%92-%E7%89%A9%E4%BB%B6%E5%81%B5%E6%B8%AC%E4%B8%8A%E7%9A%84%E6%A8%A1%E5%9E%8B%E7%B5%90%E6%A7%8B%E8%AE%8A%E5%8C%96-e23fd928ee59)

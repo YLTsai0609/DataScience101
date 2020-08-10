@@ -1,12 +1,14 @@
 ## Business Analysis
 
 [資料科學中的商業分析 1：定義問題，不做沒有用的專案](problem_define.md)
+
 [資料科學中的商業分析 2：假說思考對資料科學家來說至關重要](hypothesis_thinking.md)
 
 [Infomation Quality (I) ](infoQ.md)
+
 [Information Quality (II)](infoQ_2.md)
 
-#### A/B Testing
+### A/B Testing
 
 [T - test, Z - test and ANOVA](ANOVA.md)
 
@@ -18,7 +20,7 @@
 
 [Chp_5_button_experiments](https://github.com/YLTsai0609/AB_testing)
 
-#### Decision Analysis
+### Decision Analysis
 
 [Decision Tree 1, 2, 3, 4, 5](dt_123.md)
 
@@ -26,19 +28,19 @@
 
 [matirials](matirials_stats.md)
 
-#### Probability
+### Probability
 
 [P-Value](Pvalue.md)
 
-#### Univiate distribution
+### Univiate distribution
 
-[displaying prd, cdf, sf, ppf, and isf](pdf_cdf_surviving_function.md)
+[displaying pdf, cdf, sf, ppf, and isf](pdf_cdf_surviving_function.md)
 
 [All_about_the_distribution](All_about_the_distribution.md)
 
 [t , f , chi distribution](t_f_chi_distribution.md)
 
-#### Bayesian Statistics
+### Bayesian Statistics
 
 [How_Bayesian_inference_works](How_Bayesian_inference_works.md)
 
@@ -52,27 +54,17 @@
 
 [EM_algorithm](EM_algorithm.md)
 
-#### Statistical Regression Analysis
-
-Ch10, ch11
-
-[Linear Statistical Regression]
-
-[Logistic Statistical Regression]
-
-[Mosky Regression Analysis]
-
-    - [Check the resource](https://github.com/moskytw/statistical-regression-with-python)
+### Statistical Regression Analysis
 
 [Generalized_Additive_Models(Non Linear)](Generalized_Additive_Models.md)
 
-#### Probabilistic_Graphical_Models
+### Probabilistic_Graphical_Models
 
 [Markov Chain I : Markov_chain_MCMC](Markov_chain_MCMC.md)
 
 [Markov Chain II : absoring Markov Chain](Markov_chain_II.md)
 
-[Probabilistic_Graphical_Models_PGM](Probabilistic_Graphical_Models_PGMmd)
+[Probabilistic_Graphical_Models_PGM](Probabilistic_Graphical_Models_PGM.md)
 
 [HiddenMarkovModel_HMM](HiddenMarkovModel_HMM.md)
 
@@ -80,7 +72,11 @@ Ch10, ch11
 
 [From_Markov_Chain_to_LSTM](From_Markov_Chain_to_LSTM.md)
 
-## Deep Learning
+## SVM, Gradient Boosting Tree, and some classical method
+
+[XGBoost theorem and code thumb up 700+](Review_XGBoost.md)
+
+## Deep Learning Introduction
 
 [PaperReading_Hints](PaperReading_Hints.md)
 
@@ -96,15 +92,11 @@ Ch10, ch11
 
 [CNN Introduction](https://github.com/YLTsai0609/HandOn_ML/blob/master/tensorflow_1_8_0/CNN_intro.md)
 
-[CNN 李弘毅](CNN_lee.md)
+[CNN hung yee lee](CNN_lee.md)
 
 [Convolution, dot, and Cross-correlation](Convolution_dot_and_Cross-correlation.md)
 
 [Brief_Introduction_of_4_well-known_CNN Architecture](Brief_Introduction_of_4_well-known_CNN_Architecture.md)
-
-[Transfer Learning](transfer_learning.md)
-
-[domain_adaptation_1.md](domain_adaptation_1.md)
 
 [Affine_tranformation_bilinear_interpretation](Affine_tranformation_bilinear_interpretation.md)
 
@@ -114,7 +106,7 @@ Ch10, ch11
 
 [[Paper]Visualizing_and_Understanding_Convolutional_Networks]([Paper]Visualizing_and_Understanding_Convolutional_Networks.md)
 
-[[Paper]Deep_Learning_in_Mobile_and_Wireless_Networking_A_Survey]([Paper[Deep_Learning_in_Mobile_and_Wireless_Networking_A_Survey.md)
+[Deep_Learning_in_Mobile_and_Wireless_Networking_A_Survey]([Paper]Deep_Learning_in_Mobile_and_Wireless_Networking_A_Survey.md)
 
 [When Does Label Smoothing Help?]([Paper]When_Does_Label_Smoothing_Help.md)
 
@@ -126,6 +118,12 @@ Ch10, ch11
 
 [[Author]Hinton]([Author]Hinton.md)
 
+## Transfer learning
+
+[Transfer Learning](transfer_learning.md)
+
+[domain_adaptation_1.md](domain_adaptation_1.md)
+
 ## Graph Convolutional Network
 
 [Graph study matrial](graph.md)
@@ -135,6 +133,10 @@ Ch10, ch11
 [Graph Neural Networks: Models and Applications AAAI 2020 tutorial](http://cse.msu.edu/~mayao4/tutorials/aaai2020/)
 
 [GCN QAs](GCN_intro.md)
+
+[Stanford_Graph_Representation_Learning](Graph_Representation_Learning_Stanford.md)
+
+[Standord_Properties_of_Network_and_Random_Graph_Models](Properties_of_Network_and_Random_Graph_Models.md)
 
 [Graph Convolution implementation using numpy and MXNet](https://github.com/YLTsai0609/HandOn_ML)
 
@@ -147,6 +149,8 @@ Ch10, ch11
 ## Information Theory
 
 [ShannonEntroy_to_KL_divergence](ShannonEntroy_to_KL_divergence.md)
+
+[from KL_divergence_to_conditional_entropy](Conditional_Entropy.md)
 
 ## NLP
 
@@ -172,7 +176,7 @@ Ch10, ch11
 
 [The 5 Computer Vision Techniques That Will Change How You See The World from medium post](Five_CV_Techniques.md)
 
-[CV_SomeKeyword](SomeKeyword.md)
+[CV_SomeKeyword](CV_SomeKeyword.md)
 
 [CNN Architecture AlexNet, VGG, GoogleLeNet, ResNet, NIN, DenseNet, SqueezeNet](L9_CNN_architechture.md)
 
@@ -200,6 +204,8 @@ Ch10, ch11
 
 [The Diversity of Images in Object Detection](diversity_of_image.md)
 
+[Make_Object_Detection_Algorithm_Useful](Make_Object_Detection_Algorithm_Useful.md)
+
 [[Paper] Focal Loss for Dense Object Detection](focal_loss_for_dense_object_detection.md)
 
 [[Paper] YOLO v3 ](yolo_v3.md)
@@ -226,11 +232,12 @@ Ch10, ch11
 
 [Efficient Methods and hardware for deep learning](L15_Efficient_Methods_and_Hardware_for_Deep_Learning.md)
 
-[Network Compression by hung yi lee team]()
+[Network Compression by hung yi lee lee](network_compression_hung_yee_lee.md)
 
 ### All about the faces
 
 [awesome-Face_Recognition](https://github.com/ChanChiChoi/awesome-Face_Recognition?fbclid=IwAR0tTuucePwOD_b4FWyF7CS1xbXqQuM2o4pz0X1R4NW1FvwWs9f5Y1uB7To#face-clustering)
+
 [facenet](facenet.md)
 
 [Face3D](Face3D.md)
@@ -262,6 +269,7 @@ Ch10, ch11
 * [ML_13_Unsupervised_Learning_HungYi_Lee](ML_13_Unsupervised_Learning_HungYi_Lee.md)
 
 * [ML_14_Unsupervised_Learning_WordEmbedding_HungYiLee](ML_14_Unsupervised_Learning_WordEmbedding_HungYiLee.md)
+
 * [ML_15_Unsupervised_Learning_NeiborhoodEmbedding_HungYiLee](ML_15_Unsupervised_Learning_NeiborhoodEmbedding_HungYiLee.md)
 
 ### Self-Supervised Learning
@@ -307,7 +315,7 @@ Ch10, ch11
 * duck typing, inheritance, class variable scope, 
 * functional programming
 
-### Other pieces
+### Other pieces of DevOps
 
 [DevOps_SomeKeyWord](DevOps_SomeKeyWord.md)
 
@@ -353,7 +361,7 @@ Ch10, ch11
 
 ### Deployment and maintaining
 
-[api_doctring_generator](api_doc.md)
+[API_doctring_generator](api_doc.md)
 
 [test_your_code_pytest_unit_test](test_your_code.md)
 
@@ -361,17 +369,19 @@ Ch10, ch11
 
 ### Coding style
 
-* [pep8 formatter](pep8_auto_formatter.md)
-* [pep 484 Type Hinting](Type_hinting.md)
-* [pep 498 f_string](f_string.md)
+[pep8 formatter](pep8_auto_formatter.md)
+
+[pep 484 Type Hinting](Type_hinting.md)
+
+[pep 498 f_string](f_string.md)
 
 ## DataBase and SQL
 
-* [MySQL install and python connector](mysql_install_python_connector.md)
+[MySQL install and python connector](mysql_install_python_connector.md)
 
-* [database wrapper sqlalchemy, pymysql, pyodbc](database%20wrapper.md)
+[database wrapper sqlalchemy, pymysql, pyodbc](database_wrapper.md)
 
-* [Basic sql injection](sql_injection_intro.md)
+[Basic sql injection](sql_injection_intro.md)
 
 ## Math
 
@@ -380,6 +390,8 @@ Ch10, ch11
 [semi_positive_matrix](semi_positive_matrix.md)
 
 [all_about_the_distance](all_about_the_distance.md)
+
+[variance_distance_correlation](variance_distance_correlation.md)
 
 ## Physics
 
@@ -397,11 +409,9 @@ Ch10, ch11
 
 [baby product Desktop Research](baby_product_desktop_research.md)
 
-## Reviews
-
-[XGBoost theorem and code 贊同 700+](Review_XGBoost.md)
-
 ## Others
+
+[Paper_template](Paper_template.md)
 
 [Data pipeline design principle](data_pipeline_design_principle.md)
 

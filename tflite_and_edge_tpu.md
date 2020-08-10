@@ -14,6 +14,8 @@
 
 # edgetpu
 
+* [開箱文](usb_accelator.md)
+
 * 可以將 `tflite` 模型compile成edgetpu support的形式，那麼就可以使用edgetpu做推論，需要使用[edgetpu compiler](https://coral.ai/docs/edgetpu/compiler/)，[posenet](https://github.com/google-coral/project-posenet)中的BasicEngine有python接口
 * can edge TPU run two model at the same time?
   + [Background] yes, but it might be slow, because edgetpu cache the model parameters in edgetpu memory, which enabling fast inference speed. when running a second model if we want, requires swapping the model parameter data in RAM，
