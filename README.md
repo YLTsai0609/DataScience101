@@ -1,14 +1,36 @@
 ## Business Analysis
 
-[問題定義、需求釐清、需求收斂 - 1](problem_define.md)
+[資料科學中的商業分析 1：定義問題，不做沒有用的專案](problem_define.md)
+[資料科學中的商業分析 2：假說思考對資料科學家來說至關重要](hypothesis_thinking.md)
+
+[Infomation Quality (I) ](infoQ.md)
+[Information Quality (II)](infoQ_2.md)
+
+#### A/B Testing
+
+[T - test, Z - test and ANOVA](ANOVA.md)
+
+[Chp1 Chp2 Experiement and Testing](Chp_1_2_Experiment_and_Testing.md)
+
+[Chp_3_Statiscs_and_Hypothesis](Chp_3_Statiscs_and_Hypothesis.md)
+
+[Chp_4_Experiments_and_analysis](Chp_4_Experiments_and_analysis.md)
+
+[Chp_5_button_experiments](https://github.com/YLTsai0609/AB_testing)
+
+#### Decision Analysis
+
+[Decision Tree 1, 2, 3, 4, 5](dt_123.md)
 
 ## Statistics
 
-### Probability
+[matirials](matirials_stats.md)
+
+#### Probability
 
 [P-Value](Pvalue.md)
 
-### Univiate distribution
+#### Univiate distribution
 
 [displaying prd, cdf, sf, ppf, and isf](pdf_cdf_surviving_function.md)
 
@@ -16,11 +38,7 @@
 
 [t , f , chi distribution](t_f_chi_distribution.md)
 
-### Hypothesis Testing
-
-[T - test, Z - test and ANOVA](ANOVA.md)
-
-### Bayesian Statistics
+#### Bayesian Statistics
 
 [How_Bayesian_inference_works](How_Bayesian_inference_works.md)
 
@@ -34,17 +52,7 @@
 
 [EM_algorithm](EM_algorithm.md)
 
-### A/B Testing
-
-[Chp1 Experiement and Testing](Chp1_Experiment_and_Testing.md)
-
-[Chp_3_Statiscs_and_Hypothesis](Chp_3_Statiscs_and_Hypothesis.md)
-
-[Chp_4_Experiments_and_analysis](Chp_4_Experiments_and_analysis.md)
-
-[Chp1 ~ Chp5]
-
-### Statistical Regression Analysis
+#### Statistical Regression Analysis
 
 Ch10, ch11
 
@@ -58,7 +66,7 @@ Ch10, ch11
 
 [Generalized_Additive_Models(Non Linear)](Generalized_Additive_Models.md)
 
-## Probabilistic_Graphical_Models
+#### Probabilistic_Graphical_Models
 
 [Markov Chain I : Markov_chain_MCMC](Markov_chain_MCMC.md)
 
@@ -96,6 +104,8 @@ Ch10, ch11
 
 [Transfer Learning](transfer_learning.md)
 
+[domain_adaptation_1.md](domain_adaptation_1.md)
+
 [Affine_tranformation_bilinear_interpretation](Affine_tranformation_bilinear_interpretation.md)
 
 [[Paper]Spatial_Tranformer_Networks]([Paper]Spatial_Tranformer_Networks.md)
@@ -118,9 +128,17 @@ Ch10, ch11
 
 ## Graph Convolutional Network
 
+[Graph study matrial](graph.md)
+
 [graph convolutional network有什么比较好的应用task？](Graph_Convolutional_Network_Introduction.md)
 
-[from CNN to GCN, brief theorem introduction]()
+[Graph Neural Networks: Models and Applications AAAI 2020 tutorial](http://cse.msu.edu/~mayao4/tutorials/aaai2020/)
+
+[GCN QAs](GCN_intro.md)
+
+[Graph Convolution implementation using numpy and MXNet](https://github.com/YLTsai0609/HandOn_ML)
+
+[GCN_for_Web_Scale_Recommender_System]([Paper]GCN_for_Web_Scale_Recommender_System.md)
 
 ## Network Architecture Search
 
@@ -142,21 +160,9 @@ Ch10, ch11
 
 [Word Embedding with GloVe](GloVe_word_embedding.md)
 
-[Seq2seq]
+[transformer](transformer.md)
 
-* Checked in RNN part2
-
-[Attention]
-
-* Checked in RNN part2
-
-[transformer]
-
-* checked
-
-[BERT]
-
-* checked
+[ELMO, BERT, GPT](ELMO_BERT_GPT.md)
 
 ## CV
 
@@ -216,7 +222,7 @@ Ch10, ch11
 
 ### Instance Segmentation
 
-### Speedup algorithm / hardware
+### Model compression / Speedup algorithm / hardware
 
 [Efficient Methods and hardware for deep learning](L15_Efficient_Methods_and_Hardware_for_Deep_Learning.md)
 
@@ -232,6 +238,12 @@ Ch10, ch11
 [face_clustering](face_cluster.md)
 
 [facial_landmark_detection](facial_landmark_detection.md)
+
+### All about the human
+
+[[Paper]Crowdhuman: A benchmark for detecting human in a crowd]([Paper]Crowdhuman_A_benchmark_for_detecting_human_in_a_crowd.md)
+
+[[Paper]Survey_on_Emotional_Body_Gesture_Recognition]([Paper]Survey_on_Emotional_Body_Gesture_Recognition.md)
 
 ### Image Search
 
@@ -317,7 +329,7 @@ Ch10, ch11
 
 [Serialization_Encoding_Bytes_ByteArray](Serialization_Encoding_Bytes_ByteArray.md)
 
-[Model IO](Model_Saving.md)
+[Model Saving Keras, Tensorflow, Pytorch, Other](Model_Saving.md)
 
 [FaceNet_install](FaceNet_install.md)
 
@@ -336,6 +348,8 @@ Ch10, ch11
 [opencv_complie](opencv_compile.md)
 
 [Building YOLOv3](Build_YOLOv3.md)
+
+[Rasperry pi 4 hints](rasperry_pi_4.md)
 
 ### Deployment and maintaining
 

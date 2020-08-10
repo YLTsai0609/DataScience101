@@ -1,12 +1,19 @@
-# Infor
+# Infors
 
-citazion : 60+
+citazion : 63
 year : 2018
-https://arxiv.org/pdf/1801.07481.pdf
 
 # Authors
 
+Fatemeh Noroozi, Ciprian Adrian Corneanu, Dorota Kaminska, Tomasz Sapi ´ nski, Sergio Escalera, ´
+and Gholamreza Anbarjafari, 
+
 # 摘要
+
+自動化的情緒識別在過去10年代形成一股研究熱潮，相較起從臉部表情及語音進行識別，基於身體姿態的辯士則較少被討論
+我們發表了一個較為全面的研究來幫助這個領域的發展，首先我們先列出了各個身體姿態所代表的肢體語言，並且以性別及文化做比較
+接著我們定義了一個自動化的框架來自動畫姿體語言的識別，我們使用了人類偵測，在靜態以及動態的影像中，並且使用了RGB以及3D的資訊
+同時我們也討論了將姿體語言及表情/聲音結合起來一起進行情緒識別，在近期的預處理技巧中(人類偵測，姿態偵測)已經相對成熟，並且能夠應付大規模的分析，我們展示了情緒識別的資料是非常缺乏的，並且非常難有一個標準供我們進行檢查這些情緒識別的結果
 
 # 導讀
 
