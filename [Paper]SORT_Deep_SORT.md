@@ -1,4 +1,5 @@
 # SORT & Deep SORT
+
 * SORT citation 437
 * SORT year 2016
 * Deep SORT citation 377
@@ -8,6 +9,7 @@
 * [Deep SORT](https://arxiv.org/pdf/1703.07402.pdf)
 
 # Key equation of Kalman filter
+
 [ref](https://zhuanlan.zhihu.com/p/39912633)
 [original](https://www.bzarg.com/p/how-a-kalman-filter-works-in-pictures/)
 
@@ -15,13 +17,13 @@ robot with position info and velocity info(state vector)
 
 $$\vec{x_{k}} = (\vec{p}, \vec{v})$$
 
-
 could be $(\vec{a}, \vec{\dot{a}})$ form
 
 * position uncertainty - 10m
 * velocity uncertainty - unknown
 
 ## describe predction
+
 * Suppose variable of each component in state vector is stocastic variable, fit gaussian distribution with $\mu, \sigma^{2}$
 * then they are covariance. in our case we have two variable
 
@@ -50,7 +52,6 @@ $$P_k = \begin{pmatrix}
 \sum_{vp}~~~\sum_{vv}
 \end{pmatrix}$$
 
-
 <img src='./images/sortDeepsort_4.png'></img>
 
 we use matrix operation $F_{k}$ to describe state matrix $\hat{x}_{k-1}$ to $\hat{x}_{k}$
@@ -69,7 +70,6 @@ $$
 $$
 
 then in matrix form
-
 
 $$\hat{x}_{k} = \begin{pmatrix}
 1~~~\Delta t\\
@@ -97,7 +97,6 @@ $$
 $$
 
 if you have second order differentiate, we could add in it. in this case, is accelation
-
 
 $$
 \begin{aligned}
@@ -131,7 +130,6 @@ where $B_{k}$ is controlling matrix, $\hat{u}_{k}$ is controlling vector
 
 * then our update formula will add on covatiance $Q_{k}$
 
-
 $$
 \begin{aligned}
  & \hat{x}^{k} = F_{k}\hat{x}_{k-1} + B_{k}\vec{u}_{k}\\
@@ -159,7 +157,7 @@ again, it is a matrix operation, but we measure at time $k$ not time $k-1$
 $$
 \begin{aligned}
  & \vec{\mu}_{expected} = H_{k}\hat{x}_{k}\\
- & \sum_{expetected} = H_{k}P_{k}F_{k}^{T}
+ & \sum_{expetected} = H_{k}P_{k}H_{k}^{T}
 \end{aligned}
 $$
 
@@ -199,7 +197,6 @@ $$k = \frac{\sigma_{0}^{2}}{\sigma_{0}^{2} + \sigma_{0}^{1}}$$
 
 we have
 
-
 $$
 \begin{aligned}
  & \mu' = \mu_{0} + k(\mu_1 - \mu_{0})\\
@@ -210,7 +207,6 @@ $$
 we could see if $k \in R, k \geq 0$ uncertainty $\sigma$' is decreasing, $k$ also be called as kalmain gain
 
 in matrix form, we get
-
 
 $$
 \begin{aligned}
@@ -231,7 +227,6 @@ $$
 
 then 
 
-
 $$
 \begin{aligned}
  & K = H_{k}P_{k}H_{k}^{T}(H_{k}P_{k}H_{k}^{T} + R_{k})^{-1}\\
@@ -250,7 +245,6 @@ $$
 \end{aligned}
 $$
 
-
 <img src='./images/sortDeepsort_13.png'></img>
 
 <img src='./images/sortDeepsort_14.png'></img>
@@ -258,6 +252,3 @@ $$
 
 * 匈牙利算法 - matrix steps
 * Deep sort combine appreance matrix
-
-
-

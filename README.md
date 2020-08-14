@@ -58,6 +58,8 @@
 
 [Generalized_Additive_Models(Non Linear)](Generalized_Additive_Models.md)
 
+[Linear regression analysis](regression.md)
+
 ### Probabilistic_Graphical_Models
 
 [Markov Chain I : Markov_chain_MCMC](Markov_chain_MCMC.md)
@@ -172,6 +174,8 @@
 
 ### Introduction
 
+[metrials](cv_metrials.md)
+
 [Object Detection History (SVM, HOG, SlidingWindow CNN, R-CNN, YOLO) from Kaggle Notebook]([Kaggle]object_detection_histroy.md)
 
 [The 5 Computer Vision Techniques That Will Change How You See The World from medium post](Five_CV_Techniques.md)
@@ -221,8 +225,6 @@
 [[Paper]SORT and Deep SORT]([Paper]SORT_Deep_SORT.md)
 
 [[Paper]Advancing 3D Multi-Object Tracking: Evaluation Metrics and A Baseline](3D_object_tracking_SORT.md)
-
-### Sematic Segmentation
 
 [Detection_Localization_Segmentation_Stanford](L11_detection_segmentation_Stanford.md)
 
