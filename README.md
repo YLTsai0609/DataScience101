@@ -1,3 +1,9 @@
+# What is it?
+
+* `100+` concepts to be a better machine learning engineer.
+
+* continously updating.
+
 ## Business Analysis
 
 [資料科學中的商業分析 1：定義問題，不做沒有用的專案](problem_define.md)
@@ -19,6 +25,8 @@
 [Chp_4_Experiments_and_analysis](Chp_4_Experiments_and_analysis.md)
 
 [Chp_5_button_experiments](https://github.com/YLTsai0609/AB_testing)
+
+[How Pinterest Supercharged its Growth Team With Experiment Idea Review](ab_test_priority.md)
 
 ### Decision Analysis
 
