@@ -193,7 +193,7 @@ $$
 $$
 
 let 
-$$k = \frac{\sigma_{0}^{2}}{\sigma_{0}^{2} + \sigma_{0}^{1}}$$
+$$k = \frac{\sigma_{0}^{2}}{\sigma_{0}^{2} + \sigma_{1}^{2}}$$
 
 we have
 
@@ -203,6 +203,18 @@ $$
  & \sigma' = \sigma_{0}^{2} - k \sigma_{0}^{2}
 \end{aligned}
 $$
+
+### 物理意義
+
+$$
+when~~~~k=0, u'=u_{0} (不相信當前測量值)
+$$
+$$
+when~~~~k=1, u'=u_{1} (完全相信當前測量值)
+
+$$
+
+### Extend to more than 1D
 
 we could see if $k \in R, k \geq 0$ uncertainty $\sigma$' is decreasing, $k$ also be called as kalmain gain
 
@@ -249,6 +261,8 @@ $$
 
 <img src='./images/sortDeepsort_14.png'></img>
 <img src='./images/sortDeepsort_15.png'></img>
+
+# Other
 
 * 匈牙利算法 - matrix steps
 * Deep sort combine appreance matrix

@@ -4,6 +4,8 @@
 * 共18招
 * 以下還有3個回答，都在1k+贊同
 
+* [壹些常見的深度學習調參觀念](https://mp.weixin.qq.com/s/cD0IgS6BUq-DiOy2ltpYBg?fbclid=IwAR0UHqFDKrYQ2ROfu8h5_uNc8NLqfRahd32la6EllQ-QvZQwsYJKuWxqMrU)
+
 ## 關於Clone別人的code
 
 0. 對於大多數任務，數據比模型重要，面對新任務的時候先充分分析數據，再根據數據設計模型，並決定參數，例如posenet的抖動產生的影響
