@@ -14,6 +14,8 @@
 
 [Information Quality (II)](infoQ_2.md)
 
+[Case_Study_Questionnaire_analysis_improve_website_UIUX](case_study_website_UIUX.md)
+
 ### A/B Testing
 
 [T - test, Z - test and ANOVA](ANOVA.md)
