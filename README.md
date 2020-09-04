@@ -30,6 +30,8 @@
 
 [How Pinterest Supercharged its Growth Team With Experiment Idea Review](ab_test_priority.md)
 
+[A/B Testing：「偷看結果」將成為最大的錯誤](do_not_peaking_ab_test.md)
+
 ### Decision Analysis
 
 [Decision Tree 1, 2, 3, 4, 5](dt_123.md)
@@ -395,6 +397,8 @@
 
 [Basic sql injection](sql_injection_intro.md)
 
+[sql hint](sql_hint.md)
+
 ## Math
 
 [sympy : use python to caculate Calculus](sympy.md)
@@ -420,6 +424,10 @@
 [How to do desktop reasearch well?](desktop_research.md)
 
 [baby product Desktop Research](baby_product_desktop_research.md)
+
+## Data Culture Building
+
+[Introduction](data_culture.md)
 
 ## Others
 

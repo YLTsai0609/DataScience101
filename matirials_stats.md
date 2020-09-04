@@ -1,5 +1,9 @@
 # Courses
 
+* [統計學](http://ocw.aca.ntu.edu.tw/ntu-ocw/ocw/cou/102S113/8)
+  + 農藝系    劉仁沛
+  + 本課程由具有統計學博士學位，並在 SCI 統計與機率領域發表過統計方法學論文並於 2012 年榮獲美國統計學會會士 (Fellow of the American Statistical Associ...
+
 * [MIT 18.650 Statistics for Applications, Fall 2016](https://ocw.mit.edu/courses/mathematics/18-650-statistics-for-applications-fall-2016/)
   + 25 videos, each videos about 1 hour
 
