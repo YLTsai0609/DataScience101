@@ -349,6 +349,8 @@
 
 [Kaggle_Making_an_app_from_your_modeling_code]([Kaggle]Making_an_app_from_your_modeling_code.md)
 
+[BCG GAMMA Data Science in Production — Advanced Python Best Practices](devops_ds_bset_prac.md)
+
 [Serialization_Encoding_Bytes_ByteArray](Serialization_Encoding_Bytes_ByteArray.md)
 
 [Model Saving Keras, Tensorflow, Pytorch, Other](Model_Saving.md)
