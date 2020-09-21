@@ -90,7 +90,7 @@
 
 [XGBoost theorem and code thumb up 700+](Review_XGBoost.md)
 
-## Deep Learning Introduction
+## Deep Learning
 
 [PaperReading_Hints](PaperReading_Hints.md)
 
@@ -179,6 +179,8 @@
 [Ngram](ngram.md)
 
 [Word Embedding with GloVe](GloVe_word_embedding.md)
+
+### Contextulized Word Embedding
 
 [transformer](transformer.md)
 
