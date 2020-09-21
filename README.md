@@ -168,6 +168,8 @@
 
 ## NLP
 
+[metirials](nlp_metirials.md)
+
 [NLP_Model_evalution_metric](NLP_Model_evaluation_metrics.md)
 
 [KeyWord_Extrcaction_TFIDF_RAKE_Garph_TextRank](KeyWord_Extrcaction_TFIDF_RAKE_Garph_TextRank.md)

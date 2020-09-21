@@ -1,6 +1,7 @@
 # Resource
 
-[tranformer by Hung-yi Lee, 2019](https://www.youtube.com/watch?v=XnyM3-xtxHs&list=PLJV_el3uVTsOK_ZK5L0Iv_EQoL1JefRL4)
+* [tranformer by Hung-yi Lee, 2019](https://www.youtube.com/watch?v=XnyM3-xtxHs&list=PLJV_el3uVTsOK_ZK5L0Iv_EQoL1JefRL4)
+* Summary : RNN的缺點是不可平行化，因此改裝CNN，讓他達到RNN的效果，並且使用一個可視覺化解釋的設計，這就是Attension layer，Attension layer的出現狂洗了以往所有RNN的方法，由於可以平行化，原本因為會算太久的事情現在都做得到了!
 
 # Introduction
 
@@ -67,7 +68,7 @@ psudocode
 <img src='./images/tf_10.png'></img>
 <img src='./images/tf_11.png'></img>
 
-* 你可以看到$b^{1}$事實上也是看過所有$a^{1} = a^{4}$，然而你只想考慮local information而不是global information，只要$\hat{\sum_{j}\alpha_{1, j}v^{j}}$裡面的$\hat{\alpha_{1, j}}$足夠小，那麼那個input就沒有被收到更多的關注
+* 你可以看到$b^{1}$事實上也是看過所有$a^{1}~-~ a^{4}$，然而你只想考慮local information而不是global information，只要$\hat{\sum_{j}\alpha_{1, j}v^{j}}$裡面的$\hat{\alpha_{1, j}}$足夠小，那麼那個input就沒有被收到更多的關注
 * 至於到底要看到多遠，可以用attension layer根據資料去學習出來
 * 這樣的做法是可平行化的，$b^{2}$不用等$b^{1}$就可以算出來
 
@@ -206,7 +207,7 @@ Encoder -> 雙向RNN, decoder -> RNN 全部換成Self-Attention
 
 <img src='./images/tf_38.png'></img>
 
-Summarizer : input文章，output摘要
+Summarizer : input文章，output摘要(same thing using tfidf can be a baseline)
 google想要用這個做法，input一大堆文章，output wiki的每個頁面
 
     - 作法 : 從真正的wiki找答案，然後google 搜尋引擎當作input X，訓練出來的y pred和真正的wiki y計算loss
@@ -216,7 +217,7 @@ google想要用這個做法，input一大堆文章，output wiki的每個頁面
 
 ## Universal Transformer
 
-* 把同樣的transformer拿來當作RNN的單元
+* 把同樣的transformer拿來當作RNN的單元(seq to seq using transformer!)
 
 <img src='./images/tf_40.png'></img>
 
@@ -224,4 +225,4 @@ google想要用這個做法，input一大堆文章，output wiki的每個頁面
 
 <img src='./images/tf_41.png'></img>
 
-* 看起來attention似乎可以近似一種解釋性的結果
+* 看起來attention似乎可以近似一種解釋性的結果(研究領域)
