@@ -86,3 +86,8 @@ $x^{1}$ -> $z^{1}$ -> $a^{1}$
 
 * Batch normalization在testing時使用training的stats，但是如果測試時目標離training時較不同(transfer task)，表現較差
 * 如果特定的training process，無法用較大的batch數，那麼也會很差(例如object detection)，Group Normalization有解決方法
+
+# Batch Normalization on Transfer Learning
+
+* [Resource](https://medium.com/towards-artificial-intelligence/batchnorm-for-transfer-learning-df17d2897db6)
+* 照理來說，BN的$\mu, \sigma$是用於估計training dataset的，transfer learning會apply在不同的dataset上，因此$\mu, \sigma$也需要適應到新的資料集上，合理的做法是fine-tune時$\mu, \sigma$可以繼續更新，並使用moving average的方式update，這個功能在tensorflow 1.x之中並沒有實作，在tensorflow 2裡面才有實作，因此除了Alexnet, VGG之外，其他有BN層的network要fine tune要記得在tensorflow 2裡面操作

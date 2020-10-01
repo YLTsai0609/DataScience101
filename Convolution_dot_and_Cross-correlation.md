@@ -1,11 +1,16 @@
 # Convolution_dot_and_Cross-correlation
+
 * 原文為CNN的意義 from Julia Taiwan 創辦人 Yueh-Hua Tu
 * 背景 : 念Convolution時，覺得他很像local的dot production, 但無奈數學不好，無法把他們連結起來，現在有人做到這件事了，當然要來朝聖一下
+
 [註] 必須已經對CNN, Convolution, dot production, cross correlation有所了解
+
 * 特色 : 兼具數學公式以及圖示，我自己更加入了gif動畫!
 
 ## 影像處理的秘密
+
 這個部分在其他地方已經唸過一次，快速帶過，影像處理有幾個特點
+
 1. 一些模式比整張圖小
 2. 同樣的模式可能出現在圖片的不同地方
 3. 縮放圖片不影響圖片中物件的辨識
@@ -17,6 +22,7 @@
 第 3 點，如果圖片縮放不影響圖片辨識，那麼。這時候我們可以做 subsampling，除了可以減少資料處理的量，也不會影響圖片的辨識結果。
 
 ## Convolution
+
 真正的作用是什麼? ****擷取local的資訊****
 承接前面第一點，在圖片當中，pattern是local的資訊而是global的，而pattern是我們想抓的資訊，我們要的資訊只有local的而已
 
@@ -56,14 +62,16 @@ $$
 
 在下圖我們可以假想左邊的向量是$\vec{b}$，右邊的是$\vec{a}$，而向量$\vec{a}$是有被window給限定範圍的$m=1, ..., k$，所以在下面這張圖就是當:
 1.$n=1$
+
 2. $m=1, ..., 4$
+
 的情境，箭頭則是向量元素相乘的對象，每次內積完，$n$就會往下移動一個元素
 <img src='./images/convolution_1.png'></img>
 更實際的例子可以看這個gif動畫，來自於[這個影片](https://www.youtube.com/watch?v=ulKbLD6BRJA)
 
 <img src='./images/convolution_2.gif'></img>
 
-計算完之後就變成一個新的向量，這就是window版本的內積的運作原理了！他其實有一個正式的名字，稱為corss-correlation
+計算完之後就變成一個新的向量，這就是window版本的內積的運作原理了！他其實有一個正式的名字，稱為cross-correlation
 
 我們來看看把convolution離散化來看看是長什麼樣子，剛剛我們看到的convolution是連續的版本，是函數的版本，那我們實際上的運算式以向量去操作的，那麼離散版本的convolution是
 
@@ -77,14 +85,16 @@ $$
 (\vec{a}*\vec{b})[n] = \sum_{m=1}^{k}\vec{a}[m]\vec{b}[n-m]
 $$
 
-所以這邊的windoe大小調成是$k$了!
+所以這邊的window大小調成是$k$了!
 <img src='./images/convolution_3.png'></img>
+
 你會發現，convolution會跟cross-correlation很像，差別在於順序，也就是convolution內稽的順序是相反的，所以他在數學式上的表達是用相減的
-這邊的情境是，$n=6, m=1,.., 4$
+這邊的情境是，$n=6, m=1, .., 4$
 
 我們來總結一下convolution這個運算，他其實是local版本的內稽運算，而且他的內積分像是反序的
 
 ## Convolution layer
+
 這邊我們回到我們的convolution layer
 如果把以上一維向量拓展到二維的矩陣資料會長什麼樣子呢
 
@@ -98,9 +108,11 @@ $$
 
 1. 一些模式比整張圖小
 2. 同樣的模式可能出現在圖片的不同地方
+
 兩點
 
 ## Subsampling
+
 如果讓圖片變小，不只可以降低要辨識的區塊大小，還可以降低需要訓練的參數量
 Maxpooling是目前主流的方法，也就是在一個window的範圍內去找最大值，只保留最大值，還有一種是meanpooling，顧名思義，他娶整個window的平均值作為保留值
 
@@ -121,6 +133,7 @@ Maxpooling是目前主流的方法，也就是在一個window的範圍內去找�
 前一篇我們有提到**MLP因為會從整體特徵去做內積，所以整體的模式會優先被考慮，如果有區域性特徵並不一定會被凸顯出來**，在MLP相對上會比較注重整體性而不是區域性，所以使用MLP在影響處理上就比CNN不是那麼有利
 
 ## 關鍵在哪裡
+
 作者認為關鍵在資料的**區域性**，也就是你想做的事情其實是跟資料的區域性有關係，或是你的資料是週期性資料，這樣你就可以用convolution later!(注意! 不是CNN!)
 
 像是音樂中有週期性的模式出現就可以用，在生物領域，蛋白質會去辨認DNA序列，有被辨認到的部分就會有蛋白質黏附上去，生物學家會想知道到底哪些地方有蛋白質黏附，黏附的序列是區域性的，所以也有應用 CNN 技術在這方面上。

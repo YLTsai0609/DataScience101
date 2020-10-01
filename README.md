@@ -110,6 +110,8 @@
 
 [Convolution, dot, and Cross-correlation](Convolution_dot_and_Cross-correlation.md)
 
+[all about the convolutions](all_about_the_convolutions.md)
+
 [Brief_Introduction_of_4_well-known_CNN Architecture](Brief_Introduction_of_4_well-known_CNN_Architecture.md)
 
 [Affine_tranformation_bilinear_interpretation](Affine_tranformation_bilinear_interpretation.md)
