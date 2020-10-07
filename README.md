@@ -16,6 +16,10 @@
 
 [Case_Study_Questionnaire_analysis_improve_website_UIUX](case_study_website_UIUX.md)
 
+### Experiment Design
+
+* [The type of experiments](type_of_experiment.md)
+
 ### A/B Testing
 
 [T - test, Z - test and ANOVA](ANOVA.md)
