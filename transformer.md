@@ -49,25 +49,31 @@ v : value
 ``` 
 psudocode
 
-1. sequence x 先通過任意的網路結構，產生embedding a
-2. attention layer會對seq中的每個單元做三個transform : q, k, v
-3. 拿每個query q 去對每個key k 做attention 
-4. 將attention的alpha i j 過Soft-max
-5. 產生一個match分數之後，拿去跟v相乘
-6. 以alpha 1, j 算完的weight sum就是b1，alpha 2, j算完的 weight sum就是b2 依此類推
+1. sequence x 先通過任意的網路結構，產生embedding a，這裡先假設是一個線性個Matrix，W
+2. attention layer會對seq中的每個單元a做三個transform(透過neroun weight) : q, k, v，
 
+這個q稱作query，待會會拿去和其他人match
+
+k稱作key，會被其他人match
+
+v則是information，會被抽取出來
 ```
 
 * attention 吃兩個向量 - output一個分數
-  + 有幾百種做法，例如inner product
-  + self attention使用的是 scaled dot product attention - 為了讓分數之間能夠被比較，必須做normalization，這裡採用$d$ = dimension of q and k(因為d越大，mean, variance就會越大)
-  + 老師提到你也可以做其他的attention方法，看看會怎樣，老師自己也沒做過實驗XD
+* 有幾百種做法，例如inner product
+* self attention使用的是 scaled dot product attention - 為了讓分數之間能夠被比較，必須做normalization，這裡採用$d$ = dimension of q and k(因為q和k兩個向量的dimension越大，內積出來的variance就會越大)
+* 老師提到你也可以做其他的attention方法，看看會怎樣，老師自己也沒做過實驗XD
 
 <img src='./images/tf_8.png'></img>
 <img src='./images/tf_9.png'></img>
 <img src='./images/tf_10.png'></img>
+
+* 接下來$q^{1}$對很多$k$做attention之後，把這些alpha值經過一層soft-max的normalization
+* 事實上soft-max也是一種normalization，normalized之後所有score加起來會是1，而這些$alpha_{1, i}$的值最大的會戰最大比重，其他的都會小得多(exponential decay)
+
 <img src='./images/tf_11.png'></img>
 
+* 所以看起來這些$\hat{\alpha_{1, j}}$是把query和value match之後所產生的某種權重，接下來怎麼做呢，我們拿去和$v$相乘
 * 你可以看到$b^{1}$事實上也是看過所有$a^{1}~-~ a^{4}$，然而你只想考慮local information而不是global information，只要$\hat{\sum_{j}\alpha_{1, j}v^{j}}$裡面的$\hat{\alpha_{1, j}}$足夠小，那麼那個input就沒有被收到更多的關注
 * 至於到底要看到多遠，可以用attension layer根據資料去學習出來
 * 這樣的做法是可平行化的，$b^{2}$不用等$b^{1}$就可以算出來
@@ -131,12 +137,22 @@ $$
 # Multi-head Self-attention
 
 * 一種變形
-* $q, k, v$分裂成兩個
+* $q, k, v$分裂成兩個，最後再接起來
 * 有可能不同的head會關注不同的$alpha$，可能一個關注短期，一個關注長期等，你想做幾個head都可以
+* Multi-head的好處是在現行架構下，每一個attention幾乎就只會關注到一個值，如果你希望他關注到多個值，你就可以使用Multi-head的self attention
 
 <img src='./images/tf_25.png'></img>
+
 但是一個head只對一組q, k, v 作用
 兩個head產生$b^{1, 1}, b^{i, 2}$然後再乘上一個$W^{0}$變成$b^{i}$
+
+但是我們仍然會想要同樣的output，所以最後這些b還會降維回來
+<img src='./images/tf_25_2.png'></img>
+
+* 但實際上我們只要一個b，所以這些multi-head的result還可以再透過一個matrix降維回來1維的b
+* 透過這樣的機制就可以關注多個位置的information
+
+<img src='./images/tf_25_3.png'></img>
 
 # Positional Encoding
 
@@ -146,16 +162,16 @@ $$
 <img src='./images/tf_26.png'></img>
 
 * 為什麼是相加而不是concat?
-  + 有另一篇論文做了這件事情，採用one-hot的concat，然後在乘上$W$，於是乎就會發現需要一個$W^{I}, W^{P}$
+* 李老師這邊提供了一個直觀的觀點，對於原本的X我們都給訂一個p，採用one-hot的編碼來表達位置資訊，是一個column vector，concat，然後在乘上$W$，於是乎就會發現需要一個$W^{I}, W^{P}$
 
 <img src='./images/tf_27.png'></img>
-
-* 而這樣的做法最後會得到$a^{i}$ + $e^{i}$這樣的結果
 
 <img src='./images/tf_28.png'></img>
 
 * 然而在$W^{p}$的學習上，原始paper(attention is all you need)中，google團隊有做過嘗試，然而並沒有比較好
+* 所以我們可以看到說，$a^{i}$就是$W^{I}x^{i}$，$e^{i}$就是$W^{P}p^{i}$
 
+  
 <img src='./images/tf_29.png'></img>
 
 # Seq2seq with Attention
@@ -184,11 +200,18 @@ Encoder -> 雙向RNN, decoder -> RNN 全部換成Self-Attention
 <img src='./images/tf_34.png'></img>
 <img src='./images/tf_35.png'></img>
 
+<img src='./images/tf_36.png'></img>
+
+* Input 機器學習
+* Decoder input BOS(Begin of Sentence)，output machine
+* 再輸入machine 輸出learning
+* 再輸入learning，輸出句點 結束
+* 所以有一個Masked Multi-Head Attention是因為在產生output sequence的時候，尚未產生的token沒辦法被attention，所以Mask Multi-Head Attention已經有的output word做Attention
+* 接著再拿Encoder裡面已經看過的input做attention
+
 # Attention Visialization
 
 每兩個word會有一個attention
-
-<img src='./images/tf_36.png'></img>
 
 * 左方，The animal didn't cross the street because it was too tired.
   + it 對應到animal最明顯
@@ -201,11 +224,11 @@ Encoder -> 雙向RNN, decoder -> RNN 全部換成Self-Attention
 
 顯然Multi-head attention的每個head關注的是不同的事情，上方關注更global，下方關注更local
 
+<img src='./images/tf_38.png'></img>
+
 # Application
 
 ## Summarizer
-
-<img src='./images/tf_38.png'></img>
 
 Summarizer : input文章，output摘要(same thing using tfidf can be a baseline)
 google想要用這個做法，input一大堆文章，output wiki的每個頁面
