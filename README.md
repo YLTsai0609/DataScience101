@@ -90,11 +90,13 @@
 
 [From_Markov_Chain_to_LSTM](From_Markov_Chain_to_LSTM.md)
 
-## SVM, Gradient Boosting Tree, and some classical method
+## Tree-based model
 
 [XGBoost theorem and code thumb up 700+](Review_XGBoost.md)
 
 ## Deep Learning
+
+[YuLong's paper note](https://github.com/YLTsai0609/paper_summary)
 
 [PaperReading_Hints](PaperReading_Hints.md)
 
@@ -138,11 +140,13 @@
 
 [[Author]Hinton]([Author]Hinton.md)
 
+[optimization_I](optimization_I.md)
+
 ## Transfer learning
 
 [Transfer Learning](transfer_learning.md)
 
-[domain_adaptation_1.md](domain_adaptation_1.md)
+[domain_adaptation.md](domain_adaptation_1.md)
 
 ## Graph Convolutional Network
 
@@ -310,34 +314,11 @@
 
 [Missing_Semester_of_Your_CS_Education](https://github.com/YLTsai0609/Missing_Semester_of_Your_CS_Education)
 
-* shell, shell tools and scripting, Vim, Data Wrangling, command-line env, version control(git), debugging and profiling
-* metaprogramming, security and cryptography, Potpourri, QAs
-
-[Introduction to Computer Science and Programming in Python](https://github.com/YLTsai0609/Introduction-to-Computer-Science-and-Programming-in-Python)
-
-* what is computation, branching and iteration, string manipulation, decomposition_abstractions_functions, 
-* tuple_lists_aliasing_murability_cloning, recursion_dictionaries, testing_debugger_exceptions_assertions, 
-* object oriented programming, python classes and inheritance, undrstanding programming efficiency 1, 
-* understanding programming efficiency 2, searching and sorting Pset
-
-[cs50](cs50.md)
+[Introduction for Computer Science cs50](cs50.md)
 
 [Algorithm by python](https://github.com/YLTsai0609/Algorithms_by_python)
 
-* complexity, fix array, dynamic array, hashtable, tree, recusion, dynamic programming
-
 [Advance python](https://github.com/YLTsai0609/advance_python)
-
-* function as a object
-* variable scope
-* generator
-* class
-* method, instance, life cycle of instance, 
-* self-defined python class(str, for in add sub)
-* sequence in python, tuple, list
-* slicing, dictionary, hash function
-* duck typing, inheritance, class variable scope, 
-* functional programming
 
 ### Other pieces of DevOps
 
@@ -411,6 +392,10 @@
 
 [sql hint](sql_hint.md)
 
+## Distributed Computing
+
+* [Spark](spark.md)
+
 ## Math
 
 [sympy : use python to caculate Calculus](sympy.md)
@@ -464,5 +449,3 @@
 [Solving Coding Problem Guideline](Solving_Coding_Problem_Guideline.md)
 
 [Data Science and Robots by Brandon Rohrer](https://brohrer.mcknote.com/zh-Hant/)
-
-[Paper Report Template](demo/jupyter%20ptt.py)
