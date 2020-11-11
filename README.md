@@ -122,24 +122,6 @@
 
 [Affine_tranformation_bilinear_interpretation](Affine_tranformation_bilinear_interpretation.md)
 
-[[Paper]Spatial_Tranformer_Networks]([Paper]Spatial_Tranformer_Networks.md)
-
-[[Paper]Making_Convolutional_Networks_Shift-Invariant_Again]([[Paper]Making_Convolutional_Networks_Shift-Invariant_Again.md])
-
-[[Paper]Visualizing_and_Understanding_Convolutional_Networks]([Paper]Visualizing_and_Understanding_Convolutional_Networks.md)
-
-[Deep_Learning_in_Mobile_and_Wireless_Networking_A_Survey]([Paper]Deep_Learning_in_Mobile_and_Wireless_Networking_A_Survey.md)
-
-[When Does Label Smoothing Help?]([Paper]When_Does_Label_Smoothing_Help.md)
-
-[[Paper]Stacked_Capsule_Autoencoders]([Paper]Stacked_Capsule_Autoencoders.md)
-
-[Memory_in_Memory_A_Predcitve_Neural_Network_for_Learning_Higher_Order_Non_Stationarity_From_Spatiotemporal_Dynamics]([Paper]Memory_in_Memory_A_Predcitve_Neural_Network_for_Learning_Higher_Order_Non_Stationarity_From_Spatiotemporal_Dynamics.md)
-
-[Circle_Loss_A_Unified_Perspective_of_Pair_Similarity_Optimization]([Paper]Circle_Loss_A_Unified_Perspective_of_Pair_Similarity_Optimization.md)
-
-[[Author]Hinton]([Author]Hinton.md)
-
 [optimization_I](optimization_I.md)
 
 ## Transfer learning
@@ -163,12 +145,6 @@
 [Standord_Properties_of_Network_and_Random_Graph_Models](Properties_of_Network_and_Random_Graph_Models.md)
 
 [Graph Convolution implementation using numpy and MXNet](https://github.com/YLTsai0609/HandOn_ML)
-
-[GCN_for_Web_Scale_Recommender_System]([Paper]GCN_for_Web_Scale_Recommender_System.md)
-
-## Network Architecture Search
-
-[[Paper]Proving_the_Lottery_Ticket_Hypothesis_Pruning_is_All_You_need]([Paper]Proving_the_Lottery_Ticket_Hypothesis_Pruning_is_All_You_need.md)
 
 ## Information Theory
 
@@ -228,33 +204,17 @@
 
 [YOLO source code](yolo_src.md)
 
-[[Paper]Zero_Shot_Object_Detection]([Paper]Zero_Shot_Object_Detection.md)
-
 [Object Detection Evaluation Metric](Object_Detection_Evaluation_Metric.md)
 
 [The Diversity of Images in Object Detection](diversity_of_image.md)
 
 [Make_Object_Detection_Algorithm_Useful](Make_Object_Detection_Algorithm_Useful.md)
 
-[[Paper] Focal Loss for Dense Object Detection](focal_loss_for_dense_object_detection.md)
-
-[[Paper] YOLO v3 ](yolo_v3.md)
-
 [[Topic survey]chop_object_with_different_background_to_boost_robustness]([Topic]chop_object_with_different_background_to_boost_robustness.md)
 
-### Object Tracking
-
-[[Paper]Detect to Track and Track to Detect](detect_track.md)
-
-[Multiple_object_tracking_sort_deep_sort](Multiple_object_tracking_tmp.md)
-
-[[Paper]SORT and Deep SORT]([Paper]SORT_Deep_SORT.md)
-
-[[Paper]Advancing 3D Multi-Object Tracking: Evaluation Metrics and A Baseline](3D_object_tracking_SORT.md)
+[Multiple_object_tracking_sort_deep_sort_survey](Multiple_object_tracking_tmp.md)
 
 [Detection_Localization_Segmentation_Stanford](L11_detection_segmentation_Stanford.md)
-
-### Instance Segmentation
 
 ### Model compression / Speedup algorithm / hardware
 
@@ -266,7 +226,7 @@
 
 [awesome-Face_Recognition](https://github.com/ChanChiChoi/awesome-Face_Recognition?fbclid=IwAR0tTuucePwOD_b4FWyF7CS1xbXqQuM2o4pz0X1R4NW1FvwWs9f5Y1uB7To#face-clustering)
 
-[facenet](facenet.md)
+[facenet practical usage](facenet.md)
 
 [Face3D](Face3D.md)
 
@@ -274,13 +234,7 @@
 
 [facial_landmark_detection](facial_landmark_detection.md)
 
-### All about the human
-
-[[Paper]Crowdhuman: A benchmark for detecting human in a crowd]([Paper]Crowdhuman_A_benchmark_for_detecting_human_in_a_crowd.md)
-
-[[Paper]Survey_on_Emotional_Body_Gesture_Recognition]([Paper]Survey_on_Emotional_Body_Gesture_Recognition.md)
-
-### Image Search
+## Image Search
 
 * [KD-Tree with cnn](kd_tree_cnn.md)
 
@@ -319,6 +273,10 @@
 [Algorithm by python](https://github.com/YLTsai0609/Algorithms_by_python)
 
 [Advance python](https://github.com/YLTsai0609/advance_python)
+
+[Data Structures and Algorithms: In-Depth using Python](https://www.udemy.com/course/learning-data-structures-algorithms-in-python-from-scratch/)
+
+[Deployment of Machine Learning Models](https://github.com/trainindata/deploying-machine-learning-models)
 
 ### Other pieces of DevOps
 
@@ -437,8 +395,6 @@
 [Learning ML DL 3 stage](3_stage.md)
 
 [some_name_explaination_software_engineering](some_name_explaination_software_engineering.md)
-
-[Model_Deployment](Model_Deployment.md)
 
 [Tableau](Tableau.md)
 
