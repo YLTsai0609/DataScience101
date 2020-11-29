@@ -340,6 +340,8 @@
 
 [pep 498 f_string](f_string.md)
 
+[Boost Maintainability](Boost_Maintainability.md)
+
 ## DataBase and SQL
 
 [MySQL install and python connector](mysql_install_python_connector.md)
