@@ -366,6 +366,8 @@
 
 [variance_distance_correlation](variance_distance_correlation.md)
 
+[lemma_theorem_proposition](lemma_theorem_proposition.md)
+
 ## Physics
 
 [Polorization by reflection 鏡片反光原理](Polorization_by_Reflection.md)
