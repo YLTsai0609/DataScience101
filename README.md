@@ -152,6 +152,10 @@
 
 [from KL_divergence_to_conditional_entropy](Conditional_Entropy.md)
 
+## RecSys
+
+[The ranking model](the_ranking_model.md)
+
 ## NLP
 
 [metirials](nlp_metirials.md)
@@ -355,6 +359,7 @@
 ## Distributed Computing
 
 * [Spark](spark.md)
+* [RAPIDS for spark](rapids_spark.md)
 
 ## Math
 
