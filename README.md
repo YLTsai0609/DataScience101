@@ -154,7 +154,11 @@
 
 ## RecSys
 
+[metirials](recsys_metrials.md)
+
 [The ranking model](the_ranking_model.md)
+
+[recsys architecture](recsys_artc.md)
 
 ## NLP
 
