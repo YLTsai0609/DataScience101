@@ -216,6 +216,8 @@
 
 [The Diversity of Images in Object Detection](diversity_of_image.md)
 
+[image_attributes](image_attributes.md)
+
 [Make_Object_Detection_Algorithm_Useful](Make_Object_Detection_Algorithm_Useful.md)
 
 [[Topic survey]chop_object_with_different_background_to_boost_robustness]([Topic]chop_object_with_different_background_to_boost_robustness.md)
