@@ -41,6 +41,8 @@
    [認識 300 dpi](https://www.oxxostudio.tw/articles/201501/know-300-dpi.html)
    (dot per inch) - 一種解析度得表達方式，指的是每2.54cm(1英吋)中有幾個pixel，以面積來說，10dpi會在1平方英吋中有100個pixel，100dpi則會在1平方英吋中有10000個pixel
 
+<img src='./images/imga_1.png'></img>
+
    一些常見現實情況 : 
 
     1.我有一張 200 pixel x 200 pixel ，解析度 300 dpi 的圖，印成 A4 的大小，會清楚嗎？

@@ -296,7 +296,7 @@
 
 [garbage collection, shallow copy, deep copy](garbage_collection.md)
 
-[Bash Commend Introduction](bash.md)
+[handy_linux_command](handy_linux_command.md)
 
 [Vi and Vim](Vi_Editer.md)
 

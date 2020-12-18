@@ -1,15 +1,9 @@
 
 
 
-
-
-# bash
+# handy linux commands/tips
 > 紀錄工作中常用到的一些bash指令，以及使用場景
 > 查看當前bash版本 `help`
-* [TODO] 週一問問題
-* 有沒有快捷鍵可以前選一個字? (已經查過網路了，可是不work)
-* 怎麼看目前terminal的一些short cut
-
 # NetWork
 |命令|使用場景|備註|
 |---|-------|---|
@@ -124,6 +118,21 @@ pass
 |RTSP：即時串流協議(Real Time Streaming Protocol)|除了控制聲音或是影像外，還可以允許同時多個串流需求控制，並且可以自己選擇要用TCP或是UPD來進行串流內容，在這個Protocol中可以傳送播放、錄製、暫停等等控制協定、蠻像遙控錄影機的。|
 * 上述中的RTSP也是我們採用的協定，[其Wiki在這裡](https://zh.wikipedia.org/wiki/%E5%8D%B3%E6%99%82%E4%B8%B2%E6%B5%81%E5%8D%94%E5%AE%9A)
 * 套件實作 GStreamer, based on C，可以使用樹莓派硬體進行H.264編碼，串流品質優
+# subnetwork mask(子網路遮罩)
+
+用於確認兩個IP是否屬於同個網域，計算方式如下
+
+host_1 : `192.168.0.21`
+
+host_2 : `192.168.0.31`
+
+subnetwork mask(子網路遮罩) : `255.255.255.0`
+
+公式 ip of host_1 in binary && subnetwork mask in binary == ip of host_2 in binary && subnetwork mask in binary 
+
+Then : host_1 and host_2 in the same subnetwork
+
+or just ping another ip address
 
 # Permission
 
@@ -570,6 +579,16 @@ https://www.itread01.com/content/1541720962.html
 |ctrl + U|從光標刪除到字首|
 |ctrl + k|從光標刪除到字尾|
 |ctrl + XX|在命令列首和光標之間移動|
+
+
+
+
+
+
+
+
+
+
 
 
 
