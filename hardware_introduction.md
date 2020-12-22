@@ -1,12 +1,14 @@
 # Hardware Introduction
+
 * 快速對硬體有個OVerview，了解各個組件，並提供各個更深入的關鍵字。
+
 ## Source 
 
 1. 高效能Python 程式設計 O' Relly
 2. Wiki
 
-
 # 基本電腦系統
+
 構成電腦的基礎元件可被簡化成三個基本部分，**計算單元**，**記憶單元**，**以及他們之間的連接**。每個單元都具有不同的特性，我們能夠利用這些特性來理解他們。
 
 * 計算單元 : 每秒鐘能夠做多少運算
@@ -18,16 +20,18 @@
 不過，我們也能夠深入更多細節，並且看到CPU本身包含數個記憶單元 : L1, L2，有時候甚至有L3, L4快取，他們的容量不大，但是速度非常快(從幾KB到幾MB)，這些額外的記憶單元以名為**後端匯流排**，例如Intel的Nehalem CPU使用Intel QuickPath Interconnect取代前端匯流排，並且重新組織諸多連接。最後，我們在這裡忽略網路連接(書裡面)，相對於許多其他的計算與記憶單元，那實際上是非常緩慢的連接。
 
 * Summary : 電腦基本上可以被簡單區分成4個區塊
-  * 計算單元
-  * 記憶單元
-  * 通訊層 - 硬體
-  * 通訊層 - 網路
+  + 計算單元
+  + 記憶單元
+  + 通訊層 - 硬體
+  + 通訊層 - 網路
 * CPU可以被稱作計算單元，但也可以進入裡面計算細分，裡面還是有記憶單元(L1, L2, L3, L4快取)。
 
 # 計算單元
+
 # 記憶單元
 
 # 通訊層
+
 基本區塊之間有很多種不同的溝通模式，但全部都是一種稱作**匯流排(Bus)**的變形，例如**前端匯流排(frontside bus)是RAM與L1/L2快取之間的連接**，他將**準備好被處理器轉換的資料移動到集結地，準備計算，並將完成的計算移出來。**
 
 另外，還有其他匯流排，像是作為硬體裝置(例如硬碟以及網路卡)到CPU及系統記憶體之主要通道的**外部匯流排(external bus)**，這個匯流排通常比前端匯流排還要緩慢
@@ -61,21 +65,25 @@ Home Work指的是家用網路，注意，這份圖表中完全沒有談到延�
 <img src='./images/hardware_2.png'></img>
 
 * Summary : 
-  * 前端匯流排(front side bus, FSB)是CPU L1, L2快取與RAM之間的通道
-  * 硬碟，網卡到CPU的匯流排稱為外部匯流排(external bus)，通常比前端匯流排要慢得多
-  * 使用GPU可能潛在的問題，GPU通常是週邊設備，他透過PCI匯流排進行溝通，這也比前端匯流排慢得多，因此GPU IO的時間成本就會變高
-  * 異構計算(hetergeneous computing)主要就是想要解決IO的Bottleneck，讓GPU和CPU同時使用前端匯流排計算以及溝通。
-  * $$匯流排頻寬 = 匯流排寬度 \times 匯流排頻率 （Bytes/sec）$$
-  * 大的匯流排寬度有助於向量化的程式碼(一般的前端匯流排應該就足夠大了，我們可以在任何地方使用向量化，應該都可以有還不錯的performance)
-  * USB(Universal Serial Bus) 通用序列匯流排，是連接電腦系統與外部裝置的一種序列埠匯流排標準，也是一種輸入輸出介面的技術規範，被廣泛地應用於個人電腦和行動裝置等訊息通訊產品，並擴充至攝影器材、數位電視（機上盒）、遊戲機等其它相關領域。
-  * USB 2.0 480 MBits/s = 60 MB/s，表格參考[資料數量級](#additinal-matirials)，傳輸速度參考[wiki](https://zh.wikipedia.org/wiki/USB#USB_2.0)
-  * USB 3.0 5GB/s，傳輸速度參考[wiki](https://zh.wikipedia.org/wiki/USB_3.0)
-  * 根據以上兩者，一個Frame經由Motion JPEG傳輸 or h.264傳輸，我們可以做費米估計FrameRate。
+  + 前端匯流排(front side bus, FSB)是CPU L1, L2快取與RAM之間的通道
+  + 硬碟，網卡到CPU的匯流排稱為外部匯流排(external bus)，通常比前端匯流排要慢得多
+  + 使用GPU可能潛在的問題，GPU通常是週邊設備，他透過PCI匯流排進行溝通，這也比前端匯流排慢得多，因此GPU IO的時間成本就會變高
+  + 異構計算(hetergeneous computing)主要就是想要解決IO的Bottleneck，讓GPU和CPU同時使用前端匯流排計算以及溝通。
+  + $$匯流排頻寬 = 匯流排寬度 \times 匯流排頻率 （Bytes/sec）$$
+  + 大的匯流排寬度有助於向量化的程式碼(一般的前端匯流排應該就足夠大了，我們可以在任何地方使用向量化，應該都可以有還不錯的performance)
+  + USB(Universal Serial Bus) 通用序列匯流排，是連接電腦系統與外部裝置的一種序列埠匯流排標準，也是一種輸入輸出介面的技術規範，被廣泛地應用於個人電腦和行動裝置等訊息通訊產品，並擴充至攝影器材、數位電視（機上盒）、遊戲機等其它相關領域。
+  + USB 2.0 480 MBits/s = 60 MB/s，表格參考[資料數量級](#additinal-matirials)，傳輸速度參考[wiki](https://zh.wikipedia.org/wiki/USB#USB_2.0)
+  + USB 3.0 5GB/s，傳輸速度參考[wiki](https://zh.wikipedia.org/wiki/USB_3.0)
+  + 根據以上兩者，一個Frame經由Motion JPEG傳輸 or h.264傳輸，我們可以做費米估計FrameRate。
+
 ## Bus 匯流排
+
 <img src='./images/hardware_1.png'></img>
+
 * [Wiki](https://zh.wikipedia.org/wiki/%E6%80%BB%E7%BA%BF)
 
 ## Additinal Matirials
+
 1. 資料數量集
 
 <img src='./images/hardware_3.png'></img>

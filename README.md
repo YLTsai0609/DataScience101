@@ -405,6 +405,8 @@
 
 [Data pipeline design principle](data_pipeline_design_principle.md)
 
+[computation_profling](computation_profling.md)
+
 [Efficient Vim + Markdown](Vim_Markdown.md)
 
 [Learning ML DL 3 stage](3_stage.md)
