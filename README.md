@@ -94,13 +94,15 @@
 
 [XGBoost theorem and code thumb up 700+](Review_XGBoost.md)
 
-## Deep Learning
+## Deep Learning misc
 
 [YuLong's paper note](https://github.com/YLTsai0609/paper_summary)
 
 [PaperReading_Hints](PaperReading_Hints.md)
 
 [Practical nn tuning](nn_tuning.md)
+
+[over_parameterization](over_parameterization.md)
 
 [DNN Introduction](https://github.com/YLTsai0609/HandOn_ML/blob/master/tensorflow_1_8_0/DNN_Intro.md)
 
