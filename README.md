@@ -292,6 +292,8 @@
 
 ### Other pieces of DevOps
 
+[Tech Estimation](tech_estimation.md)
+
 [DevOps_SomeKeyWord](DevOps_SomeKeyWord.md)
 
 [How to read a big repository](How_to_read_a_big_respository.md)
