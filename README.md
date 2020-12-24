@@ -162,6 +162,8 @@
 
 [recsys architecture](recsys_artc.md)
 
+[factorlization machine implementation](fm_im.md)
+
 ## NLP
 
 [metirials](nlp_metirials.md)
