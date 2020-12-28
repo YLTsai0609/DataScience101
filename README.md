@@ -156,7 +156,6 @@
 
 ## RecSys
 
-[metirials](recsys_metrials.md)
 
 [recsys_overview](recsys_overview.md)
 

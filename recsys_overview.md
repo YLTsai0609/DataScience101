@@ -4,6 +4,7 @@
   + 線上商業指標/線下準確度，質化指標
 
 * 算法類別
+  + 基於內容(Content-based) 
   + 基於協同過濾(Collaborative filtering)
   + 基於隱語意(Latent factor / factorlization)
   + 基於圖結構(Graph)
@@ -21,7 +22,7 @@
 
 # Reference
 
-## book
+## Book
 
 ### 推薦系統實踐
 
@@ -32,7 +33,7 @@
 
 [book](https://www.books.com.tw/products/CN11608396)
 
-## course
+## Course
 
 ### Information Retrieval(IR)
 
@@ -41,6 +42,16 @@
    * [x] ppt/pdf
    * [ ] video / [does_anyone_have_videos_of_cs276 it's seems like no](https://www.reddit.com/r/stanford/comments/gefdki/does_anyone_have_videos_of_cs276/)
 
-## Python 推薦系統入門: 打造令人上癮的產品
+### Python 推薦系統入門: 打造令人上癮的產品
 
 [hahow](https://hahow.in/courses/59c688e3757b61001eea421f)
+
+## Survey
+
+[microsoft/recommenders, 8k+ recommendation system model zoo, useful utils](https://github.com/microsoft/recommenders)
+
+[chihming/competitive-recsys 400+ stars](https://github.com/chihming/competitive-recsys)
+
+[r0f1/datascience/recommender 2k+ stars](https://github.com/r0f1/datascience)
+
+[一服見效的 AI 應用 系列](https://ithelp.ithome.com.tw/users/20001976/ironman/2646)
