@@ -24,20 +24,21 @@
 1. 單機上可以跑多模型，並接收多個client
 2. (Optional)可分散式到多台機器
 
-keyword : distributed development
+keyword : distributed development, message queue, loading balance
 
 ### 需求細節化
 
 一開始的需求可能是一個方向，對真正要做的事不會很明確，隨著時間的推移，所需要的東西會越來越明確，就可以寫在這裡
 
 1. client丟出request之後就回應(blocking mode)同步式通訊協定
+2. 有python/java/c#的server以及client code
 
 # 候選套件/框架
 
 | 套件名稱 | 星星數 | 開發成本粗估 |社群大小| 優點 | 缺點 |
 |--------|-------|------------|-------|-----|-----|
 | celery  | 16.4k |       |     |     ||
-| pyzmq  | 2.7k |       |     |     ||
+| pyzmq  | 2.7k |   週 - 雙週    |  中   |  1. api簡潔易用 <br> 2. 爾後可去中心化 (brokerless) <br> 3. 超高效能(但bottleneck可能並不在通訊上)   | 1. 非TCP-based協定，使用了自己的ZMTP協定(和TCP很像)，爾後使用上有些風險|
 
 Celery : Distributed Task Queue
 
@@ -45,4 +46,10 @@ Celery : Distributed Task Queue
 
 ZeroMQ for python - pyzmq
 
-ZeroMQ : distrbiuted, sync/async, cross machine/process/thread, flexiable, 
+ZeroMQ : distrbiuted, sync/async, cross machine/process/thread, flexiable
+
+ZeroMQ(可n to m)，m可為多台機器/多個進程/多個線程，API簡潔易用
+
+[ZeroMQ, RabbitMQ, 效能比較](https://kknews.cc/zh-tw/code/ljl4nez.html)
+
+[ZeroMQ可用架構](https://blog.ez2learn.com/2011/12/31/transport-lib-of-new-era-zeromq/)
