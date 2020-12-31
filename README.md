@@ -156,14 +156,15 @@
 
 ## RecSys
 
-
 [recsys_overview](recsys_overview.md)
 
 [The ranking model](the_ranking_model.md)
 
 [recsys architecture](recsys_artc.md)
 
-[factorlization machine implementation](fm_im.md)
+[factorlization machine implementation survey](fm_im.md)
+
+[tffm source code analysis](tffm_analysis.md)
 
 ## NLP
 
@@ -295,7 +296,7 @@
 
 ### Other pieces of DevOps
 
-[Tech Estimation](tech_estimation.md)
+[Tech Estimation](tech_estimation_template.md)
 
 [DevOps_SomeKeyWord](DevOps_SomeKeyWord.md)
 
@@ -372,6 +373,7 @@
 ## Distributed Computing
 
 * [Spark](spark.md)
+
 * [RAPIDS for spark](rapids_spark.md)
 
 ## Math

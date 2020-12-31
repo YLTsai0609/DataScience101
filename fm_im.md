@@ -31,7 +31,7 @@ candidate
 
 2. api
 
-[PyFM 800+ stars using python and cython](https://github.com/coreylynch/pyFM)
+[PyFM (most straight forward) 800+ stars using python and cython](https://github.com/coreylynch/pyFM)
 
 [fastFM 800+ using python and C, support binary classification, regression, ranking](https://github.com/ibayer/fastFM)
 

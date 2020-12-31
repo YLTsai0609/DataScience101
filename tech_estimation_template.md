@@ -38,7 +38,7 @@ keyword : distributed development, message queue, loading balance
 | 套件名稱 | 星星數 | 開發成本粗估 |社群大小| 優點 | 缺點 |
 |--------|-------|------------|-------|-----|-----|
 | celery  | 16.4k |       |     |     ||
-| pyzmq  | 2.7k |   週 - 雙週    |  中   |  1. api簡潔易用 <br> 2. 爾後可去中心化 (brokerless) <br> 3. 超高效能(但bottleneck可能並不在通訊上)   | 1. 非TCP-based協定，使用了自己的ZMTP協定(和TCP很像)，爾後使用上有些風險|
+| pyzmq  | 2.7k |   週 - 雙週    |  中   |  1. api簡潔易用 <br> 2. 爾後可去中心化 (brokerless) <br> 3. 超高效能(但bottleneck可能並不在通訊上) <br> 4. 社群支援與多語言支援相對完善(python, C#, Unity, Java, Android)   | 1. 類TCP-based協定，使用了自己的ZMTP協定(和TCP很像)，爾後使用上有些風險|
 
 Celery : Distributed Task Queue
 
@@ -53,3 +53,7 @@ ZeroMQ(可n to m)，m可為多台機器/多個進程/多個線程，API簡潔易
 [ZeroMQ, RabbitMQ, 效能比較](https://kknews.cc/zh-tw/code/ljl4nez.html)
 
 [ZeroMQ可用架構](https://blog.ez2learn.com/2011/12/31/transport-lib-of-new-era-zeromq/)
+
+redis, rabbitmq, [docker swam](https://www.netadmin.com.tw/netadmin/zh-tw/feature/167CDFB3615E42229B5C7053DC452755)
+
+結案，可以使用ZeroMQ
