@@ -6,7 +6,7 @@
 # Introduction
 
 * 英文意思就是變形金剛
-* 現在最有名的應用就是BERT - unsupervised trained Transformer
+* 現在最有名的應用就是BERT - Unsupervised Pre-Trained Transformer
 
 <img src='./images/tf_1.png'></img>
 <img src='./images/tf_2.png'></img>
@@ -23,6 +23,7 @@
 * 只要夠多層cnn，就能夠更大的感受野，如下圖，在$b^{1}, b^{2}, b^{3}$的filter基本上就是看過$a^{1}, a^{2}, a^{3}, a^{4}$的seq
 
 ``` 
+
 cnn的優點 : 可以平行化
 cnn的缺點 : 要做到跟rnn一樣的事，層數要比較多
 
@@ -39,6 +40,7 @@ cnn的缺點 : 要做到跟rnn一樣的事，層數要比較多
 <img src='./images/tf_6.png'></img>
 
 ``` 
+
 q : query
 k : key
 v : value
@@ -47,6 +49,7 @@ v : value
 <img src='./images/tf_7.png'></img>
 
 ``` 
+
 psudocode
 
 1. sequence x 先通過任意的網路結構，產生embedding a，這裡先假設是一個線性個Matrix，W
@@ -60,7 +63,7 @@ v則是information，會被抽取出來
 ```
 
 * attention 吃兩個向量 - output一個分數
-* 有幾百種做法，例如inner product
+* 有幾百種做法，inner product廣義上來說就是一種attension
 * self attention使用的是 scaled dot product attention - 為了讓分數之間能夠被比較，必須做normalization，這裡採用$d$ = dimension of q and k(因為q和k兩個向量的dimension越大，內積出來的variance就會越大)
 * 老師提到你也可以做其他的attention方法，看看會怎樣，老師自己也沒做過實驗XD
 
@@ -68,8 +71,8 @@ v則是information，會被抽取出來
 <img src='./images/tf_9.png'></img>
 <img src='./images/tf_10.png'></img>
 
-* 接下來$q^{1}$對很多$k$做attention之後，把這些alpha值經過一層soft-max的normalization
-* 事實上soft-max也是一種normalization，normalized之後所有score加起來會是1，而這些$alpha_{1, i}$的值最大的會戰最大比重，其他的都會小得多(exponential decay)
+* 接下來$q^{1}$對很多$k$做attention之後，把這些alpha值經過一層soft-max的layer
+* 事實上soft-max也是一種normalization，normalized之後所有score加起來會是1，而這些$\alpha_{1, i}$的值最大的會佔最大比重，其他的都會小得多(exponential decay)
 
 <img src='./images/tf_11.png'></img>
 
@@ -82,6 +85,7 @@ v則是information，會被抽取出來
 <img src='./images/tf_13.png'></img>
 
 ``` 
+
 self attention做的事情和rnn是一模一樣的
 但是可以平行的被計算出來
 ```
@@ -114,7 +118,7 @@ A = K^{T}Q
 $$
 
 $$
-\hat{A} = sotmax(A) by column
+\hat{A} = sotmax(A) ~~\text{by column}
 $$
 
 計算$b$?
@@ -138,7 +142,7 @@ $$
 
 * 一種變形
 * $q, k, v$分裂成兩個，最後再接起來
-* 有可能不同的head會關注不同的$alpha$，可能一個關注短期，一個關注長期等，你想做幾個head都可以
+* 有可能不同的head會關注不同的$\alpha$，可能一個關注短期，一個關注長期等，你想做幾個head都可以
 * Multi-head的好處是在現行架構下，每一個attention幾乎就只會關注到一個值，如果你希望他關注到多個值，你就可以使用Multi-head的self attention
 
 <img src='./images/tf_25.png'></img>
@@ -146,10 +150,10 @@ $$
 但是一個head只對一組q, k, v 作用
 兩個head產生$b^{1, 1}, b^{i, 2}$然後再乘上一個$W^{0}$變成$b^{i}$
 
-但是我們仍然會想要同樣的output，所以最後這些b還會降維回來
+但是我們仍然會想要同樣的output，所以最後這些$b$還會降維回來
 <img src='./images/tf_25_2.png'></img>
 
-* 但實際上我們只要一個b，所以這些multi-head的result還可以再透過一個matrix降維回來1維的b
+* 但實際上我們只要一個$b$，所以這些multi-head的result還可以再透過一個matrix降維回來1維的$b$
 * 透過這樣的機制就可以關注多個位置的information
 
 <img src='./images/tf_25_3.png'></img>
@@ -194,8 +198,8 @@ Encoder -> 雙向RNN, decoder -> RNN 全部換成Self-Attention
 
 <img src='./images/tf_33.png'></img>
 
-* Batch - 對一個batch裡面的不同data的同一個dimension做normalization，希望不同data的feature影響力不要差太多
-* Layer - 對於一筆data，各個不同feature dimension的影響力不要差太多，一般RNN會搭配Layer normalization
+* Batch norm - 對一個batch裡面的不同data的同一個dimension做normalization，希望不同data的feature影響力不要差太多
+* Layer norm - 對於一筆data，各個不同feature dimension的影響力不要差太多，一般RNN會搭配Layer normalization
 
 <img src='./images/tf_34.png'></img>
 <img src='./images/tf_35.png'></img>

@@ -112,10 +112,14 @@ rank : latent factor的數量
 
 analysis model : 
 
-logistic regression, svm-2nd poly, random-forest
+6個Model : logistic regression, svm-2nd poly, random-forest, lightgbm, fm-2rd, fm-3nd
+Dataset : MNIST
 
-1. MINST/movie lens? - baseline and tensorflow
-2. training time / training accuracy analysis
-3. inference time / features / sparsity analysis
-4. accuracy versus latent factors
-5. cpu/gpu benchmark(不進行操作，僅show結果)
+1. Accuracy vs model - Figure 1
+
+fm-2rd, fm-3nd
+
+2. inference time / dense input vs sparse input
+2. inference time / features / sparsity analysis
+3. accuracy versus latent factors
+4. cpu/gpu benchmark(不進行操作，僅show結果)

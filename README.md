@@ -90,11 +90,11 @@
 
 [From_Markov_Chain_to_LSTM](From_Markov_Chain_to_LSTM.md)
 
-## Tree-based model
+## Tree-based Model
 
 [XGBoost theorem and code thumb up 700+](Review_XGBoost.md)
 
-## Deep Learning misc
+## Deep Learning Tech
 
 [YuLong's paper note](https://github.com/YLTsai0609/paper_summary)
 
@@ -102,17 +102,11 @@
 
 [Practical nn tuning](nn_tuning.md)
 
-[over_parameterization](over_parameterization.md)
-
-[DNN Introduction](https://github.com/YLTsai0609/HandOn_ML/blob/master/tensorflow_1_8_0/DNN_Intro.md)
-
 [DL software](L8_DeepLearning_Software.md)
 
 [Batch Normalization](batch_normalization.md)
 
 [layer, instance, group normalization](layer_ins_group_normalization.md)
-
-[CNN Introduction](https://github.com/YLTsai0609/HandOn_ML/blob/master/tensorflow_1_8_0/CNN_intro.md)
 
 [CNN hung yee lee](CNN_lee.md)
 
@@ -126,7 +120,11 @@
 
 [optimization_I](optimization_I.md)
 
-## Transfer learning
+## Deep Learning Theorem
+
+[over_parameterization](over_parameterization.md)
+
+## Transfer Learning / Domain Adaptation
 
 [Transfer Learning](transfer_learning.md)
 
@@ -134,9 +132,7 @@
 
 ## Graph Convolutional Network
 
-[Graph study matrial](graph.md)
-
-[graph convolutional network有什么比较好的应用task？](Graph_Convolutional_Network_Introduction.md)
+[Graph deep learning study matrial](graph.md)
 
 [Graph Neural Networks: Models and Applications AAAI 2020 tutorial](http://cse.msu.edu/~mayao4/tutorials/aaai2020/)
 
@@ -219,6 +215,8 @@
 [YOLO source code](yolo_src.md)
 
 [Object Detection Evaluation Metric](Object_Detection_Evaluation_Metric.md)
+
+[focal_loss_for_dense_object_detection](focal_loss_for_dense_object_detection.md)
 
 [The Diversity of Images in Object Detection](diversity_of_image.md)
 

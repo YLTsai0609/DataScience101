@@ -22,7 +22,7 @@ Word Embedding 就是某種抽feature的方法
 * 過去的做法是先查字典，了解該字有幾種type，接下來在訓練時讓該字擁有兩種不同的embedding
 * 但是這樣無法滿足現實世界的需求
 * blood bank應該算哪一種?
-* 以往word embedding的方法對於一字多意近乎沒輒，只能提叔狠rule based的解法
+* 以往word embedding的方法對於一字多意近乎沒輒，只能提出非常rule based的解法
 
 <img src='./images/bert_4.png'></img>
 
@@ -44,9 +44,7 @@ Word Embedding 就是某種抽feature的方法
 <img src='./images/bert_10.png'></img>
 <img src='./images/bert_11.png'></img>
 
-* deep?
-
-<img src='./images/bert_12.png'></img>
+<!-- <img src='./images/bert_12.png'></img> -->
 
 * 我怎麼知道我最後要拿哪一層的embedding? - ELMO paper : 我全部拿
 
@@ -55,17 +53,19 @@ Word Embedding 就是某種抽feature的方法
 * 每個字現在都會吐出一個上下文相關的embedding，前向的稱作$h_{1}$, 反向的稱作$h_{2}$
 * ELMO做weights sum
 
-<img src='./images/bert_13.png'></img>
+<!-- <img src='./images/bert_13.png'></img> -->
 
-* $alpha_1, alpha_2$怎麼決定? 用你要訓練的下游任務來決定此參數
+* $\alpha_1, \alpha_2$怎麼決定? 用你要訓練的下游任務來決定此參數
 
-<img src='./images/bert_14.png'></img>
+<!-- <img src='./images/bert_14.png'></img> -->
 
-* 每一層都拿出一組$alpha_1, alpha_2$在下游任務繼續學習
+* 每一層都拿出一組$\alpha_1, \alpha_2$在下游任務繼續學習
 
 # BERT(Encoder of transformer)
 
-<img src='./images/bert_15.png'></img>
+<img src='./images/bert_12.png'></img>
+
+<img src='./images/bert_13.png'></img>
 
 * 把ELMO的RNN全部換成self attention
 * again，我們不需要標籤，我們收集一大堆句子即可
@@ -79,7 +79,7 @@ Word Embedding 就是某種抽feature的方法
 
 ## 法一 Masked Language Model (MLM)(讓模型做克漏字)
 
-<img src='./images/bert_15.png'></img>
+<img src='./images/bert_14.png'></img>
 
 * 把輸入的每個句子隨機15%置換為特殊的toekn，稱作mask
 * BERT去猜測被蓋住的地方到底應該是哪個詞彙
@@ -88,17 +88,16 @@ Word Embedding 就是某種抽feature的方法
 * 所以我們想像，如果兩個詞彙填在同個地方沒有違和感，那他們就會有類似的embedding -> 他們有類似的意思
 * 潮水**退了**就知道誰沒穿褲子 vs 潮水**弱了**就知道誰沒穿褲子，應該會是極其類似的embedding
 
-<img src='./images/bert_16.png'></img>
-
 ## 法二 Next Sentence Prediction
 
 * 讓BERT去預測兩個句子是否可以接在一起，例如醒醒吧SEP你沒有妹妹
 
-<img src='./images/bert_17.png'></img>
+<img src='./images/bert_15.png'></img>
+<img src='./images/bert_16.png'></img>
 <!-- <img src='./images/bert_18.png'></img> -->
 <!-- <img src='./images/bert_19.png'></img> -->
 
-* 需要兩個token，CLS以及SEP，SEP表示連接處，CLS表示要把連接處左右的句子做訓練，進入一個Linear Binary CLassifier，告訴我們說應該要被接在一起還是不應該被揭在一起
+* 需要兩個token，CLS以及SEP，SEP表示連接處，CLS表示要把連接處左右的句子做訓練，進入一個Linear Binary Classifier，告訴我們說應該要被接在一起還是不應該被揭在一起
 
 * 例如下面這個句子，醒醒吧，眼睛業障重，CLS就應該輸出False
 
