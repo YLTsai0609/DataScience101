@@ -1,16 +1,16 @@
 # Factorization Machine II
 
-選定tensorflow-based的library : tffm，能夠較為仔細的觀察底層架構
-
 本篇分析重點會在原始碼
 
 [tffm](https://github.com/geffy/tffm)
 
 [tensor-fm](https://github.com/gmodena/tensor-fm)
 
-tffm主要是透過tensorflow1.8(筆者用tensorflow 1.14跑，小改了幾個變數名稱就能動了)實作的是任意Order都可用的[High Order Factorization Machine(HOFM)](https://arxiv.org/pdf/1607.07195.pdf)
+tffm主要是透過tensorflow1.8來開發(筆者用tensorflow 1.14跑，小改了幾個變數名稱就能動了)實作的是任意Order都可用的
 
-tensor-fm主要則是透過tensorflow2.0以及sklearn實作了factorization machine
+[High Order Factorization Machine(HOFM)](https://arxiv.org/pdf/1607.07195.pdf)
+
+tensor-fm主要則是透過tensorflow2.0以及sklearn實作了factorization machine並使用sklearn的wrapper包起來
 
 ## FM Order = 2
 
@@ -25,7 +25,7 @@ FM Order = 2 的部分分析的是[tensor-fm](https://github.com/gmodena/tensor-
 <img src='images/tffm_11.png'></img>
 <img src='images/tffm_12.png'></img>
 
-該程式碼還用sklearn包了一層，讓使用起來的感覺就sklearn一樣，但實作的時候並沒有實作sparse aware，也就是就算只要幾個index有值，for loop還是會全部跑一遍
+該程式碼還用sklearn包了一層，讓使用起來的感覺就sklearn一樣，但實作的時候並沒有實作sparse matrix，也就是就算只要幾個index有值，for loop還是會全部跑一遍
 
 ## FM Order >= 2
 
@@ -89,7 +89,9 @@ FMCore處在第一階封裝，定義了計算圖的初始化，怎麼跑計算�
 演算法實作細節 : 
 
 input_type : (dense or sparse)
+
 order : 特徵交叉項要做到幾階(對，這份實作支援任意階數的特徵交叉)
+
 rank : latent factor的數量
 
 至於其他比較常見的內容像是 : n_features, optimizer, loss_function, reduce_loss, loss
@@ -108,18 +110,63 @@ rank : latent factor的數量
 
 因此以下實驗我們我們選用tffm來進行分析
 
-## 實際訓練
+## 準確度/訓練時間/推論時間分析
 
-analysis model : 
+和幾個常見的模型比較，訓練時間，準確度，以及推論時間為何?
 
-6個Model : logistic regression, svm-2nd poly, random-forest, lightgbm, fm-2rd, fm-3nd
-Dataset : MNIST
+資料集 : MNIST, 數字3以及數字5
 
-1. Accuracy vs model - Figure 1
+| 資料列數 | 特徵數 | 非零特徵比例 |
+|--------|-------|------------|
+| 10625  | 784   | 4%         |
 
-fm-2rd, fm-3nd
+訓練集 : 測試集 = 7:3
 
-2. inference time / dense input vs sparse input
-2. inference time / features / sparsity analysis
-3. accuracy versus latent factors
-4. cpu/gpu benchmark(不進行操作，僅show結果)
+目標佔比 = 46 : 53
+
+| 比較模型             |
+|---------------------|
+| LR                  |
+| RF                  |
+| SVM - order 2       |
+| LGBM                |
+| FM - order 2 dense  |
+| FM - order 2 sparse |
+| FM - order 3 dense  |
+| FM - order 3 sparse |
+
+<img src='images/tffm_13.png'></img>
+
+<img src='images/tffm_14.png'></img>
+
+<img src='images/tffm_15.png'></img>
+
+<img src='images/tffm_16.png'></img>
+
+1. 準確度可以看到FM order = 3的準確度更高，接下來則是LGBM
+2. SVM order = 2在這個資料集是訓練的起來的(但需要訓練很久)，應該是在特定的情況下SVM order = 2會訓練不起來
+3. tffm的sparse input實作上可能有一些問題，在我的mac上跑訓練和推論都是dense比較快，這與理論上不太符合，sparse input應該要可以比dense input來得快才是
+4. FM order = 2 及 FM order = 3 如實能夠做到自動化特徵工程以及還不錯的訓練速度/推論速度
+5. LR 可以有最快的訓練速度以及推論速度，單個樣本的推論速度在我的mac上可以跑到0.06毫秒
+6. 若是需要準確度和訓練速度/推論速度上的權衡，LGBM也可以加入作為實驗對象，LGBM表現也不錯，且推論時間也不慢(但MNIST資料集應該是難度相對簡單)
+7. 用tensorflow寫的好處是可以透過GPU在加速訓練及推論，相關benchmark可以在[這裡](https://github.com/geffy/tffm/blob/master/gpu_benchmark.ipynb)找到
+
+## 特徵數量 - 時間複雜度分析
+
+FM - order = 2
+
+latent factors = 100
+
+inference time samples  50
+
+errbar : std
+
+<img src='images/tffm_17.png'></img>
+
+1. dense input的推論相對穩定，sparse input則不太穩定，從dense input的資料來看，時間複雜度是線性的，而900個Feature大致上是0.9毫秒的推論時間
+
+<!-- ## Notebook
+
+[model_training_inference_acc](demo/fm/model_training_inference_acc.ipynb)
+
+[model_tuning](demo/fm/model_tuning.ipynb) -->
