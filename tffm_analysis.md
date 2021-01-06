@@ -84,6 +84,7 @@ FMBaseModel處在第2階段封裝，定義了較多只要是個模型大致上�
 ### FMCore
 
 <img src='images/tffm_6.png'></img>
+
 FMCore處在第一階封裝，定義了計算圖的初始化，怎麼跑計算圖，計算圖的長相等，也定義了演算法實作細節
 
 演算法實作細節 : 
@@ -120,7 +121,7 @@ rank : latent factor的數量
 |--------|-------|------------|
 | 10625  | 784   | 4%         |
 
-訓練集 : 測試集 = 7:3
+訓練集 : 測試集 = 7 : 3
 
 目標佔比 = 46 : 53
 
@@ -143,13 +144,13 @@ rank : latent factor的數量
 
 <img src='images/tffm_16.png'></img>
 
-1. 準確度可以看到FM order = 3的準確度更高，接下來則是LGBM
+1. 準確度可以看到FM order = 3的準確度最高，接下來則是LGBM
 2. SVM order = 2在這個資料集是訓練的起來的(但需要訓練很久)，應該是在特定的情況下SVM order = 2會訓練不起來
 3. tffm的sparse input實作上可能有一些問題，在我的mac上跑訓練和推論都是dense比較快，這與理論上不太符合，sparse input應該要可以比dense input來得快才是
 4. FM order = 2 及 FM order = 3 如實能夠做到自動化特徵工程以及還不錯的訓練速度/推論速度
 5. LR 可以有最快的訓練速度以及推論速度，單個樣本的推論速度在我的mac上可以跑到0.06毫秒
 6. 若是需要準確度和訓練速度/推論速度上的權衡，LGBM也可以加入作為實驗對象，LGBM表現也不錯，且推論時間也不慢(但MNIST資料集應該是難度相對簡單)
-7. 用tensorflow寫的好處是可以透過GPU在加速訓練及推論，相關benchmark可以在[這裡](https://github.com/geffy/tffm/blob/master/gpu_benchmark.ipynb)找到
+7. 用tensorflow寫的好處是可以透過GPU在加速訓練及推論，相關benchmark可以看這裡[這裡](https://github.com/geffy/tffm/blob/master/gpu_benchmark.ipynb)
 
 ## 特徵數量 - 時間複雜度分析
 
