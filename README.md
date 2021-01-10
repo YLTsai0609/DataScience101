@@ -158,6 +158,12 @@
 
 [recsys architecture](recsys_artc.md)
 
+### Product/Industry property analysis
+
+[data property of recommendation system](data_property_recsys.md)
+
+### Sourcing Model
+
 [factorlization machine implementation survey](fm_im.md)
 
 [tffm source code analysis](tffm_analysis.md)
