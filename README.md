@@ -376,7 +376,8 @@
 
 ## Distributed Computing
 
-* [Spark](spark.md)
+* [Spark - standalone](spark.md)
+* [Spark - cluster](spark_cluster.md)
 
 * [RAPIDS for spark](rapids_spark.md)
 
@@ -411,6 +412,8 @@
 ## Data Culture Building
 
 [Introduction](data_culture.md)
+
+[Science vs Analytics vs Engineering vs Product](sci_ana_egn_pro.md)
 
 ## Others
 

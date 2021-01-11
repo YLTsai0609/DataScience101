@@ -15,7 +15,7 @@
    2. Java - `which Java` , `Java -version`
 
       * Java環境管理如下
-      * 使用環境變數來控管目前Java版本 from [stackovetflow](https://stackoverflow.com/questions/46513639/how-to-downgrade-java-from-9-to-8-on-a-macos-eclipse-is-not-running-with-java-9) - 例如java 8 : `export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)`
+      * 使用環境變數來控管目前Java版本 from [stackovetflow](https://stackoverflow.com/questions/46513639/how-to-downgrade-java-from-9-to-8-on-a-macos-eclipse-is-notz-running-with-java-9) - 例如java 8 : `export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)`
 
 ``` 
 
@@ -48,6 +48,9 @@ Matching Java Virtual Machines (2):
 
   6. SparkUI
 
+  
+  (py_37_ds) YuLong@MacBook-Pro:/usr/local/spark$ ./sbin/start-all.sh
+
 # Hello world
 
 <img src='./images/spark_1.png'></img>
@@ -56,7 +59,7 @@ Matching Java Virtual Machines (2):
 
 # log & trouble shooting
 
-**java 11**
+## **java 11**
 
 ``` 
 
@@ -106,3 +109,57 @@ To use with IntelliJ, set the Scala home to:
 🍺  /usr/local/Cellar/scala/2.13.3: 41 files, 22.8MB, built in 2 seconds
 
 ```
+
+## `ERROR SparkContext: Error initializing SparkContext.`
+
+1. intesting thing is 
+
+using wejump3-5G/WEJUMP 2 (應該是因為防火牆問題)
+
+``` 
+
+21/01/11 15:44:02 ERROR SparkContext: Error initializing SparkContext.
+org.apache.spark.SparkException: Invalid Spark URL: spark://HeartbeatReceiver@macbook-pro.wejump_nat:55259
+```
+
+using My ASUS
+
+worked!
+
+``` 
+
+Python 3.7.6 (default, Jan  8 2020, 13:42:34)
+[Clang 4.0.1 (tags/RELEASE_401/final)] :: Anaconda, Inc. on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+21/01/11 15:45:36 WARN Utils: Your hostname, MacBook-Pro.local resolves to a loopback address: 127.0.0.1; using 192.168.52.57 instead (on interface en0)
+21/01/11 15:45:36 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by org.apache.spark.unsafe.Platform (file:/usr/local/spark-3.0.1-bin-hadoop2.7/jars/spark-unsafe_2.12-3.0.1.jar) to constructor java.nio.DirectByteBuffer(long,int)
+WARNING: Please consider reporting this to the maintainers of org.apache.spark.unsafe.Platform
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+21/01/11 15:45:36 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+Setting default log level to "WARN".
+To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+Welcome to
+      ____              __
+     / __/__  ___ _____/ /__
+    _\ \/ _ \/ _ `/ __/  '_/
+   /__ / .__/\_,_/_/ /_/\_\   version 3.0.1
+      /_/
+
+Using Python version 3.7.6 (default, Jan  8 2020 13:42:34)
+SparkSession available as 'spark'.
+>>>
+```
+
+# Summary
+
+| language/pkg | version | note |
+|--------------|---------|------|
+| pyspark      |         |      |
+| spark        | 3.0.1   |      |
+| hadoop       | 2.7     |      |
+| java         |         |      |
+| scala        | 2.12    |      |
