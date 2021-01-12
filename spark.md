@@ -158,8 +158,8 @@ SparkSession available as 'spark'.
 
 | language/pkg | version | note |
 |--------------|---------|------|
-| pyspark      |         |      |
+| pyspark      | py4j=0.10.9 |      |
 | spark        | 3.0.1   |      |
 | hadoop       | 2.7     |      |
-| java         |         |      |
+| java         | 11      |      |
 | scala        | 2.12    |      |

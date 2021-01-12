@@ -168,6 +168,8 @@
 
 [tffm source code analysis](tffm_analysis.md)
 
+[personal rank](personalrank.md)
+
 ## NLP
 
 [metirials](nlp_metirials.md)
