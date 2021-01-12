@@ -258,7 +258,7 @@
 
 ## Image Search
 
-* [KD-Tree with cnn](kd_tree_cnn.md)
+[KD-Tree with cnn](kd_tree_cnn.md)
 
 ### 3D Vision
 
@@ -268,13 +268,13 @@
 
 ### Clustering
 
-* [Introduction](clustering_introduction.md)
+[Introduction](clustering_introduction.md)
 
-* [ML_13_Unsupervised_Learning_HungYi_Lee](ML_13_Unsupervised_Learning_HungYi_Lee.md)
+[ML_13_Unsupervised_Learning_HungYi_Lee](ML_13_Unsupervised_Learning_HungYi_Lee.md)
 
-* [ML_14_Unsupervised_Learning_WordEmbedding_HungYiLee](ML_14_Unsupervised_Learning_WordEmbedding_HungYiLee.md)
+[ML_14_Unsupervised_Learning_WordEmbedding_HungYiLee](ML_14_Unsupervised_Learning_WordEmbedding_HungYiLee.md)
 
-* [ML_15_Unsupervised_Learning_NeiborhoodEmbedding_HungYiLee](ML_15_Unsupervised_Learning_NeiborhoodEmbedding_HungYiLee.md)
+[ML_15_Unsupervised_Learning_NeiborhoodEmbedding_HungYiLee](ML_15_Unsupervised_Learning_NeiborhoodEmbedding_HungYiLee.md)
 
 ### Self-Supervised Learning
 
@@ -378,10 +378,13 @@
 
 ## Distributed Computing
 
-* [Spark - standalone](spark.md)
-* [Spark - cluster](spark_cluster.md)
+[Spark - standalone](spark.md)
 
-* [RAPIDS for spark](rapids_spark.md)
+[Spark - cluster](spark_cluster.md)
+
+[pyspark 101](https://github.com/YLTsai0609/pyspark_101)
+
+[RAPIDS for spark](rapids_spark.md)
 
 ## Math
 
