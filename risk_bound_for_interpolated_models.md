@@ -137,9 +137,131 @@ Simplical Interpolation could be used in arbitrary dimensions.
 
 # Risk Bound for Interpolated Model
 
-https://www.youtube.com/watch?v=ks4W9Ze5rOg
+<img src='./images/riskbim_9.png'></img>
 
-TODO 26.32
+<img src='./images/riskbim_10.png'></img>
+
+Since the mathematical analysis for weighted knn is too complicated. we'll talk about the regression case for Simplical Interpolation.
+
+Regression case also fit the classification case. Just give a threshold. The mathematical analysis is yhe same in this paper.
+
+<img src='./images/riskbim_11.png'></img>
+
+$(X, Y)$ represents the random variable of the Population.
+
+$(x, y)$ represents the sample instance by sampling drom population.
+
+we scale the $y$ values in to $[0.1]$ for a finite regression(more easy for mathmatical analysis). 
+
+<img src='./images/riskbim_12.png'></img>
+
+The bound and assumption.
+
+## Geometrical picture of the motation
+
+Suppose for 1-dimensional $X$
+
+<img src='./images/riskbim_13.png'></img>
+
+$\mu$ represent the possible value-band of $X$
+
+<img src='./images/riskbim_14.png'></img>
+
+$\eta (x) = E[Y|X = x]$ represnet the mean of distribution $X$. **also represnts the theorical distribution of $X$**
+
+$\nu (x) = Var[Y|X = x]$ represnet the variance of distribution $X$.
+
+<img src='./images/riskbim_15.png'></img>
+
+$\hat{\eta} (x)$ represnet the hypothesis distribution drived from training data.
+
+In our geomatric picture, we can see that if we get more data.
+
+$|\eta (x) - \hat{\eta} (x)|$ will be smaller.
+
+<img src='./images/riskbim_16.png'></img>
+
+<img src='./images/riskbim_17.png'></img>
+$\hat{\delta}_{T}$ - the maximum edge of the triangulation $T$.
+
+$\hat{C}$ : convex hull, the area of $T$.
+
+The simplex is always a convex(凸多邊形), so the $\hat{C}$ is always a convex hull.
+
+## Assumption
+
+<img src='./images/riskbim_18.png'></img>
+
+full-dimension - the dimension of $\mu$ is the same as $R^{d}$, which is $d$.
+
+compact - closed and bounded(means the edge is not open, the area is not infinite.)
+
+The properties above should be found in topology(拓墣學).
+
+<img src='./images/riskbim_19.png'></img>
+
+Only the left part $\mu$ matches the assumption.
+
+<img src='./images/riskbim_20.png'></img>
+
+smoothness-condition : 
+
+We use a high level concept to demonstate it.
+
+You can treat this condition define the slope should be smooth, not too sharp, or rapidly changed.
+
+The property above should be found in real-analysis(實分析).
+
+<img src='./images/riskbim_21.png'></img>
+
+So the 
+
+   $\mu(x)$ - the theoretical distribution.
+   
+   $\nu(x)$ - the variance of theoretical distribution.
+
+should be smooth, unlike the discontinuity(the slope goes to infinity).
+
+## Risk bound
+
+<img src='./images/riskbim_22.png'></img>
+
+$E[(\hat{\eta(X)} - \eta(X)^2]$ - the variance of prediction and theoretical distribution.(a.k.a generalization)
+
+if $E[(\hat{\eta(X)} - \eta(X)^2]$ is big means overfit/underfit. 
+
+$E[(\hat{\eta(X)} - \eta(X)^2]$ is small means perfect git.
+
+However, we are talking about Simplical Interpolation, the model complexity can be infinity.
+
+So we are talking about the overfitting case.
+
+The upper bound consist of serveal terms. they represent some property of the data.(Since the model complexity already goes to infinity)
+
+### First term
+
+<img src='./images/riskbim_23.png'></img>
+
+teminology : 
+
+1. $R^{d} / \hat{C}$ - the space difference $R^{d}$ minus $\hat{C}$.
+2. $\mu(R^{d} / \hat{C})$ - the space difference $R^{d}$ minus $\hat{C}$, also in the $\mu$
+
+which means the other space in the possible $X$ value band(red area)
+
+we can observe that. the yellow area is bigger, the red one is smaller.
+
+This means we need to collect the maximum data diversity matches production scenerio.
+
+Also, the values in red area (there is no data). prediction should be less accurate. we can see the orange line is far away from the purple one in the red area.(left picture)
+
+On the other hand, the red area in the right picture is smaller. the orange curve is closer to the purple one. this one fits better.
+
+TODO 
+
+https://www.youtube.com/watch?v=ks4W9Ze5rOg&t=1592s
+
+48:32
 
 # Misc
 
