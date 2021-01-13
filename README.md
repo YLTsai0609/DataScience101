@@ -90,6 +90,14 @@
 
 [From_Markov_Chain_to_LSTM](From_Markov_Chain_to_LSTM.md)
 
+## Learning Theorem(Optimization and Generalization)
+
+[Overfitting or Perfect Fitting? Risk Bound for Interpolated Models](risk_bound_for_interpolated_models.md)
+
+[over_parameterization](over_parameterization.md)
+
+[optimization_deep_learning_I](optimization_dl_I.md)
+
 ## Tree-based Model
 
 [XGBoost theorem and code thumb up 700+](Review_XGBoost.md)
@@ -117,12 +125,6 @@
 [Brief_Introduction_of_4_well-known_CNN Architecture](Brief_Introduction_of_4_well-known_CNN_Architecture.md)
 
 [Affine_tranformation_bilinear_interpretation](Affine_tranformation_bilinear_interpretation.md)
-
-[optimization_I](optimization_I.md)
-
-## Deep Learning Theorem
-
-[over_parameterization](over_parameterization.md)
 
 ## Transfer Learning / Domain Adaptation
 
