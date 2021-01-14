@@ -256,12 +256,84 @@ This means we need to collect the maximum data diversity matches production scen
 Also, the values in red area (there is no data). prediction should be less accurate. we can see the orange line is far away from the purple one in the red area.(left picture)
 
 On the other hand, the red area in the right picture is smaller. the orange curve is closer to the purple one. this one fits better.
+s
 
-TODO 
+### Second and third terms
 
-https://www.youtube.com/watch?v=ks4W9Ze5rOg&t=1592s
+<img src='./images/riskbim_24.png'></img>
 
-48:32
+Since there is a $\hat{\delta}_{T}$ in both the second term and third term, we explain them together.
+
+$\hat{\delta}_{T}$ : the maxmum diameter of the simplex.
+
+if your data cover the possible value band more uniformly : $\hat{\delta}_{T}$ will be smaller. which makes $\hat{\eta}(x)$ fit better(the right figure)
+
+on the other hand, if your data cover the possible value band more unbalanced :  $\hat{\delta}_{T}$ will be larger. which makes $\hat{\eta}(x)$ fit worse(the left figure)
+
+This means a lot when we are collecting data.
+
+1. figure out the production scenario as clear as possible.
+2. make sure the data collection procedure represent the sampling of the production scenario(not partially). This always happens in the medical image(very easy to get image from healthy person but difficult from the sicked person.)
+3. sample your data by a stratified sampling flavor makes your training data more uniformly to decrease $\hat{\delta}_{T}$ 
+
+<img src='./images/riskbim_25.png'></img>
+
+How about the $A$?
+
+$A$ represent the smoothness condition.
+
+Large $A$, the $y$ value change a lot when $x$ change a little bit. - this makes model harder fitting your data.(Left figure)
+
+On the contrary, smaller $A$ menas $y$ value change samller when $x$ cjamge a little bit. - this makes model easier fitting your data.(right figure)
+
+The real-world example like the financial market. 
+
+If you wanna to predict a miniute-lvel prediction / second level-prediciton. It change strongly. It's harder to predict.
+
+But if you wanna predict a long term trend. It will be easier!(but the general feature in the financial market might be very hard to find......)
+
+## forth term
+
+<img src='./images/riskbim_26.png'></img>
+
+$E[\nu(X)]$ is the variance of theoretical distribution.
+
+There are two possible scenario make the $E[\nu(X)]$ larger : 
+
+1. noise.
+2. you feature and your target is not correlated.
+
+   1. your feature is bad.(build new one or exract new feature from it)
+   2. labeller do something wrong with the data(build a label standard and label evaluation).
+
+smaller $E[\nu(X)]$ - easier fitting(right figure)
+
+larger $E[\nu(X)]$ - harder fitting(left figure)
+
+This give us the insight that make sure your noise level is low enough, and you need find new feature/extract feature from your raw feature!
+
+# What we get from the risk bound?
+
+How to prepare your data?
+
+1. Training data should cover your production scenario.
+2. Training data should be properly distributed within the space of your production scenario.
+3. Labels should be correlated with input features.
+4. The flutctuation of labels with respect to input feature should be small.
+5. The noise in input feature and labels should be small.
+
+# Connection to NN
+
+<img src='./images/riskbim_27.png'></img>
+
+NN is basically with infinite model complexity. 
+
+This bound give us another way to improve our model performance from data.
+
+# Next topic
+
+[Explaining the Success of AdaBoost and Random Forests as
+Interpolating Classifiers](https://www.jmlr.org/papers/volume18/15-240/15-240.pdf)
 
 # Misc
 
@@ -269,6 +341,4 @@ https://www.youtube.com/watch?v=ks4W9Ze5rOg&t=1592s
 
 1. Rethinking Optimization and Generalization
 
-2. [Overfitting or perfect fitting? Risk bounds for
-
-classification and regression rules that interpolate NIPS 2018](https://papers.nips.cc/paper/2018/file/e22312179bf43e61576081a2f250f845-Paper.pdf)
+2. [Overfitting or perfect fitting? Risk bounds for classification and regression rules that interpolate NIPS 2018](https://papers.nips.cc/paper/2018/file/e22312179bf43e61576081a2f250f845-Paper.pdf)
