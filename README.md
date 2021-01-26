@@ -98,6 +98,8 @@
 
 [optimization_deep_learning_I](optimization_dl_I.md)
 
+[Explaining the Success of AdaBoost and Random Forests as Interpolating Classifiers](success_of_adaboost_and_random_forest.md)
+
 ## Tree-based Model
 
 [XGBoost theorem and code thumb up 700+](Review_XGBoost.md)
@@ -301,6 +303,8 @@
 [Data Structures and Algorithms: In-Depth using Python](https://www.udemy.com/course/learning-data-structures-algorithms-in-python-from-scratch/)
 
 [Deployment of Machine Learning Models](https://github.com/trainindata/deploying-machine-learning-models)
+
+[Machine Learning System Design Stanford CS329S](ml_system_design.md)
 
 ### Other pieces of DevOps
 

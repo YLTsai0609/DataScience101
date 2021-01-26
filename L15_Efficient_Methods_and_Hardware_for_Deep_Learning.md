@@ -1,8 +1,7 @@
 # Resource
+
 Stanford University
 https://www.youtube.com/watch?v=eZdOkDtYMoo&list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8sYv&index=15
-
-
 
 <img src='./images/effDL_1.png'></img>
 
@@ -21,7 +20,9 @@ https://www.youtube.com/watch?v=eZdOkDtYMoo&list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8
 * dive to 4 parts 
 
 # Hardware 101
+
 ## Device
+
 <img src='./images/effDL_8.png'></img>
 
 * GPU weak memory
@@ -62,20 +63,23 @@ https://www.youtube.com/watch?v=eZdOkDtYMoo&list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8
 
 * QA  how do we deal with zero connections? - force them(the output) to zero
 * QA how do you decide which weight to drop?
-  * so very simple, sort all weight, small weights, drop it - maybe not, the figure show not exactly
-  * QA any threshold that I decide?
+  + so very simple, sort all weight, small weights, drop it - maybe not, the figure show not exactly
+  + QA any threshold that I decide?
 
 <img src='./images/effDL_20.png'></img>
 
 ### Weight Sharing
+
 * similar weights -> get it into one!
 * details weight leads big model, reduce them, and might slightly release overfitting
 
 <img src='./images/effDL_21.png'></img>
 
 * using simple clustering method to do it, or just rule based
+
 <img src='./images/effDL_22.png'></img>
 <img src='./images/effDL_23.png'></img>
+
 16 times saving!
 
 * How to train this? - when we do BP, they are binind together
@@ -83,12 +87,15 @@ https://www.youtube.com/watch?v=eZdOkDtYMoo&list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8
 * trained quantization if we have centroids, groupby the gradient -> sum it to get quantization gradient
 
 * add graident to previous centroids
+
 <img src='./images/effDL_25.png'></img>
 <img src='./images/effDL_26.png'></img>
 
 * result
+
 <img src='./images/effDL_27.png'></img>
 <img src='./images/effDL_28.png'></img>
+
 only sixteeen discrete number, means we can use four bits to represent
 
 <img src='./images/effDL_29.png'></img>
@@ -104,8 +111,8 @@ only sixteeen discrete number, means we can use four bits to represent
 
 <img src='./images/effDL_30.png'></img>
 
-in short,
-In-frequent weights : use more,
+in short, 
+In-frequent weights : use more, 
 Frequent weights : use less
 
 <img src='./images/effDL_31.png'></img>
@@ -127,15 +134,21 @@ we can do that! SqueezeNet + Deep Compression
 
 # Quantization
 
-* why/how do thwy use in TPU design
+If you wanna review, at [20:58](https://www.youtube.com/watch?v=eZdOkDtYMoo&list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8sYv&index=15)
+
+* why/how do they use in TPU design
 * All the TPU designs use only eight bit for inference
 * max number, min number, how many bits are enough to represent this dynamic range
 
 <img src='./images/effDL_39.png'></img>
 <img src='./images/effDL_40.png'></img>
+
 * basically good to fix8
 
+[Going Deeper with Embedded FPGA Platform for Convolutional Neural Network](https://dl.acm.org/doi/pdf/10.1145/2847263.2847265?casa_token=q9xTjLLV5bQAAAAA:Fs8PgMIax4aGVgZGrTU0k8WotrkVRtNx1FzIUk45hNKztFWmxzi3N69A9ojBZyn7XDPC4_dOeRkWNd8)
+
 # low rank Approximation
+
 turns one conv to 2 conv
 
 <img src='./images/effDL_41.png'></img>
@@ -144,8 +157,8 @@ turns one conv to 2 conv
 * kind of dimension reduction using **1x1 conv**
 * 講的不是很清楚，基本上speed up 5x大概也只減少了7% err
 
-
 [TBC, 22.43](https://www.youtube.com/watch?v=eZdOkDtYMoo&list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8sYv&index=15)****
+
 1. Pruning(checked)
 2. Weight Sharing(checked)
 3. Quantization(?)
@@ -154,11 +167,13 @@ turns one conv to 2 conv
 6. Winograd Transformation
 
 # Other Resource
+
 [Learning both Weights and Connections for Efficient Neural Networks by Song Han 2015, 2336](http://papers.nips.cc/paper/5784-learning-both-weights-and-connections-for-efficient-neural-network.pdf)
 
 [Deep Compression: Compressing Deep Neural Networks with Pruning, Trained Quantization and Huffman Coding by Song Han 2016, 3462](https://arxiv.org/pdf/1510.00149.pdf)
 
 [SqueezeNet: AlexNet-level accuracy with 50x fewer parameters and <0.5MB model size 2017, 2564+](https://arxiv.org/pdf/1602.07360.pdf)
-  * you could find tensorflow/keras/pytorch implementation
+
+  + you could find tensorflow/keras/pytorch implementation
 
 [Efficient and Accurate Approximations of Nonlinear Convolutional Networks 2015, 175+](https://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Zhang_Efficient_and_Accurate_2015_CVPR_paper.pdf)

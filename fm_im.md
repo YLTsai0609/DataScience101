@@ -29,6 +29,8 @@ candidate
 
 [tensorflow implementation, 700+ star](https://github.com/geffy/tffm)
 
+[lightfm - for ranking and classification](https://github.com/lyst/lightfm)
+
 2. api
 
 [PyFM (most straight forward) 800+ stars using python and cython](https://github.com/coreylynch/pyFM)
@@ -40,6 +42,7 @@ Pick :
 1. tffm(for understanding)
 2. fastFM - for explaination(can access w and v), and other task (ranking)
 3. keras-fm - for study purpose, eligant `Embedding` layer to make problem very easy.
+4. lightfm - for stduy ranking optimization
 
 # Discussion
 

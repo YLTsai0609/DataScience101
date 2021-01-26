@@ -2,8 +2,8 @@
 
 1. Gpu data science!
 2. [home](https://rapids.ai/index.html) [github](https://github.com/rapidsai)
-3. Intergretion the dataframe adn gpu(cudf), ml lib(cuml), graph analytics(cugraph) and so on 
-4. Might be unstable,       `0.1.x`
+3. Intergretion the dataframe and gpu(cudf), mllib(cuml), graph analytics(cugraph) and so on 
+4. Might be unstable,          `0.1.x`
 5. provide python api
 
 # RAPIDS + Spark
@@ -18,7 +18,7 @@ NVIDIA is bring RAPIDS to Apache Spark to accelerate ETL workflows with GPUs
 6. LACK OF DOCUMENTATION
 7. Example just start, [Jun 2019 - Now, star 25+](https://github.com/NVIDIA/spark-xgboost-examples)
 
-# PAPIDS + dask
+# RAPIDS + dask
 
 1. friendly python api (shorter and easier compare between dask and spark)
 2. training is extremely faster! (experiements case is random-forest)
