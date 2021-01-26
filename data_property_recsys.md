@@ -77,8 +77,8 @@ Knowledge base, graph, multi-view graph, RNN next play
 | 季節節慶時效性 | 商品 = 房源 > 新聞 > 貼文 >> 電影 = 遊戲 = 音樂|     |
 | item數量級 | 貼文 >> 新聞 > 商品 > 音樂 > 電影 > 遊戲 > 房源|     |
 | user 互動量 | 貼文 >> 音樂 > 新聞 > 電影 > 遊戲 > 商品 > 房源|     |
-| item 被互動量 | 音樂 > 電影 > 遊戲 > 商品 > 房源 > 新聞 > 貼文(??) |     |
-| item 被互動量 skewness | 商品 > 房源 > 貼文 > 音樂 > 電影 = 遊戲 > 新聞(??) |     |
+| item 被互動量 | 音樂 > 電影 > 遊戲 > 商品 > 房源 > 新聞 > 貼文(??) |     |
+| item 被互動量 skewness | 商品 > 房源 > 貼文 > 音樂 > 電影 = 遊戲 > 新聞(??) |     |
 | item content, side information | 房源 > 商品 > 新聞 > 音樂 = 電影 = 遊戲(??)|     |
 | user side information | 音樂 > 電影 > 遊戲 > 房源 > 商品 >> 新聞(??) |     |
 
@@ -167,7 +167,7 @@ Pinkoi沒說
 
 # PIXNET
 
-1. PIXNET的使用者行為
+PIXNET的使用者行為
 
 1/8/2021
 
