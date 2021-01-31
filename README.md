@@ -110,6 +110,8 @@
 
 [PaperReading_Hints](PaperReading_Hints.md)
 
+[efficient_research_workflow](reserch_effient_workflow.md)
+
 [Practical nn tuning](nn_tuning.md)
 
 [DL software](L8_DeepLearning_Software.md)
@@ -161,6 +163,8 @@
 [The ranking model](the_ranking_model.md)
 
 [recsys architecture](recsys_artc.md)
+
+[collections of top componies](top_comp_recsys.md)
 
 ### Product/Industry property analysis
 

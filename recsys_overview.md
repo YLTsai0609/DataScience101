@@ -22,6 +22,20 @@
 
 # Reference
 
+## Paper
+
+[RecSys ACM Recommender Systems](https://recsys.acm.org/)
+
+[KDD Knowledge discovery and data mining](https://www.kdd.org/kdd2019/)
+
+[SIGIR Special Interest Group on Information Retrieval](https://dl.acm.org/sig/sigir)
+
+WWW
+
+[IJCAI](International Joint Conferences on Artificial Intelligence)
+
+[WSDM Web Search and Data Mining](https://www.wsdm-conference.org/2021/)
+
 ## Book
 
 ### 推薦系統實踐
