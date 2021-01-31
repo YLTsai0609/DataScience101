@@ -63,18 +63,22 @@ A-c vs A-e
 
 Psudo code
 
+personalrank(user_i : Union[int, str]) -> item_distribution : List[int]
+
 1. Start with user $u$ at vertex $v_{u}$
-2. if random.random() > alpha:
+2. rec_item = {}
+3. if random.random() > alpha:   
 
-   
    random pick an edge and go to next vertex
+   
+   rec_item[item_idx] += 1
 
-3. else:
+4. else:
 
    restart at $v_{u}$ 
 
-4. repeat 2 and 3, K times
-5. get recommendation list of user $u$
+5. repeat 2 and 3, K times
+6. return rec_item
 
 以數學式來表達的話，則會長以下這樣
 
