@@ -14,3 +14,11 @@ Benifits :
 
 1. avoid random experiments(no any new result to improve your hypothesis) - save a lot of time!
 2. make sure you know what are you doing
+
+### Two stage from experiments data analysis
+
+1. define experiments input and output
+2. run the data, stored them.
+3. plot them, play with some color
+4. post-processing in keynote.
+5. make beautiful keynote.(your own style)
