@@ -106,9 +106,13 @@
 
 ## Deep Learning Tech
 
+[deep learning library tutorial](dllb.md)
+
 [YuLong's paper note](https://github.com/YLTsai0609/paper_summary)
 
 [PaperReading_Hints](PaperReading_Hints.md)
+
+[Paper development](paper_development.md)
 
 [efficient_research_workflow](reserch_effient_workflow.md)
 
