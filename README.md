@@ -104,6 +104,10 @@
 
 [XGBoost theorem and code thumb up 700+](Review_XGBoost.md)
 
+## Mixture of Gaussians
+
+[cs229 machine learning in stanford](http://cs229.stanford.edu/syllabus-fall2020.html)
+
 ## Deep Learning Tech
 
 [deep learning library tutorial](dllb.md)
