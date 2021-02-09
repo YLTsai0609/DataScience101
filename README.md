@@ -286,6 +286,8 @@
 
 [Introduction](clustering_introduction.md)
 
+[cs229_11_Expectation_Maximization_Algorithms](cs229_em_algortihms.md)
+
 [ML_13_Unsupervised_Learning_HungYi_Lee](ML_13_Unsupervised_Learning_HungYi_Lee.md)
 
 [ML_14_Unsupervised_Learning_WordEmbedding_HungYiLee](ML_14_Unsupervised_Learning_WordEmbedding_HungYiLee.md)
