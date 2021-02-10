@@ -68,8 +68,6 @@
 
 [Price Dynamic in airbnb](Price_Dynamic_in_airbnb.md)
 
-[EM_algorithm](EM_algorithm.md)
-
 ### Statistical Regression Analysis
 
 [Generalized_Additive_Models(Non Linear)](Generalized_Additive_Models.md)
@@ -96,17 +94,15 @@
 
 [over_parameterization](over_parameterization.md)
 
-[optimization_deep_learning_I](optimization_dl_I.md)
+[optimization_deep_learning_I (gradient decent - liked method)](optimization_dl_I.md)
 
 [Explaining the Success of AdaBoost and Random Forests as Interpolating Classifiers](success_of_adaboost_and_random_forest.md)
+
+[EM_algorithm](EM_algorithm.md)
 
 ## Tree-based Model
 
 [XGBoost theorem and code thumb up 700+](Review_XGBoost.md)
-
-## Mixture of Gaussians
-
-[cs229 machine learning in stanford](http://cs229.stanford.edu/syllabus-fall2020.html)
 
 ## Deep Learning Tech
 
@@ -286,7 +282,7 @@
 
 [Introduction](clustering_introduction.md)
 
-[cs229_11_Expectation_Maximization_Algorithms](cs229_em_algortihms.md)
+[cs229_11_GMM](cs229_em_algortihms.md)
 
 [ML_13_Unsupervised_Learning_HungYi_Lee](ML_13_Unsupervised_Learning_HungYi_Lee.md)
 
