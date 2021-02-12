@@ -100,6 +100,10 @@
 
 [EM_algorithm](EM_algorithm.md)
 
+## Machine Learning Tech
+
+[implementation_survey](ml_imp.md)
+
 ## Tree-based Model
 
 [XGBoost theorem and code thumb up 700+](Review_XGBoost.md)
