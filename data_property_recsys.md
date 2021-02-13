@@ -165,6 +165,22 @@ Pinkoi沒說
 |[Real-time Personalization using Embeddings for Search Ranking at Airbnb](https://dl.acm.org/doi/pdf/10.1145/3219819.3219885?casa_token=3va8AIIEgaoAAAAA:gsFYAi4M_85RfCN_6IiKH0WPBWsqK9GOcXCFTT3Ms-K1NN74rcmcZcL3g_4WfpqqGBDb_Niw-uRE)|1. The house rental market problem is quite unique, no previous solution before.  <br> 2. A great case study to understand a special product characteristics and the techinique airbnb used for develop real-time personalization search ranking and similar listing recommendations(data, embedding)|
 |[Billion-scale Commodity Embedding for E-commerceRecommendation in Alibaba](https://dl.acm.org/doi/pdf/10.1145/3219819.3219869?casa_token=d4c4SgxZUUwAAAAA:tkdePVckXhGckcmCAxM4xaYFura44xbOgmPOB4gYuYbPZ_FIJyEUVrFgLYwRTPt91RZ4KJkFHcRH)|1. check out that how alibaba overcome scalability, sparsity and cold start problem in developing billion-scale RSs(graph + embedding)|
 
+# Quantified Description
+
+<img src='./images/dprec_1.png'></img>
+
+使用者數量、物品數量、平均使用者互動物品數量、平均物品互動使用者數量、互動密度 - 可量化展現以上質性分析，加強說服力
+
+<img src='./images/dprec_2.png'></img>
+
+物品流行程度分佈 (縱軸 : 物品累積百分比, 橫軸 : 物品貢獻紀錄累積百分比) - 可以量化展現物品流行度分佈，並以long tail的Coverage，或long tail的hit ratio來進行評估，上圖顯示Movielens10M有1%的物品貢獻了20%的紀錄
+
+<img src='./images/dprec_3.png'></img>
+
+移除最受歡迎1%物品進行模型訓練與驗證，量測long tail的hit ratio
+
+[ref 2011, Sparse Linear Method for Top-N Recommender System](http://glaros.dtc.umn.edu/gkhome/fetch/papers/SLIM2011icdm.pdf)
+
 # PIXNET
 
 PIXNET的使用者行為
