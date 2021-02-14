@@ -12,6 +12,9 @@
 
 from : 推薦系統實踐
 
+## different version coverage
+
+
 # Recall & Precision
 
 能夠被離線計算的指標，通常看Recall，來評估在訓練集所收集的時間區段中，平均每$a$個使用者點擊會有$b$個是系統推薦
