@@ -228,7 +228,7 @@ $T$或許是total iteration? 可以查書，基本上有些數學技巧可以快
 
 [personalrank code from recommendation system](https://github.com/lpty/recommendation/blob/master/model/prank.py)
 
-[推薦系統實踐 - 項亮 2010](https://cdn-1253764997.cos.ap-chongqing.myqcloud.com//download/%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F%E5%AE%9E%E8%B7%B5.pdf)
+[推薦系統實踐 - 項亮 2010](https://github.com/jzmq/book/blob/master/novel/%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F%E5%AE%9E%E8%B7%B5.pdf)
 
 [个性化召回算法实践(三)——PersonalRank算法](https://www.cnblogs.com/hellojamest/p/11763033.html)
 

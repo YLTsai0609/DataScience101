@@ -174,6 +174,8 @@
 
 [collections of top componies](top_comp_recsys.md)
 
+[metrics](rec_metrics.md)
+
 ### Product/Industry property analysis
 
 [data property of recommendation system](data_property_recsys.md)
