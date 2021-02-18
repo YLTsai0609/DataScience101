@@ -1,4 +1,4 @@
-# python venv + portry
+# python venv + poetry
 
 why not conda? 
 
@@ -15,3 +15,12 @@ dependency requirement defined in `pyproject.toml`
 specific version of package satisfied `pyproject.toml` generated in `poetry.lock`
 
 [poetry](https://github.com/python-poetry/poetry)
+
+# don't mix conda python and poetry
+
+the python which conda installed may have different config. It will be not compatible with poetry.
+
+# Summary
+
+1. conda only
+2. python venv + poetry
