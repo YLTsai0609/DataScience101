@@ -360,6 +360,8 @@
 
 [Manage_package_by_Conda](Manage_package_by_Conda.md)
 
+[python and poetry package management](py_poetry.md)
+
 [Compile and Install](compile_install.md)
 
 [dlib_compile](dlib_compile.md)
