@@ -322,6 +322,8 @@
 
 [Machine Learning System Design Stanford CS329S](ml_system_design.md)
 
+[Python Best practice for development]
+
 ### Other pieces of DevOps
 
 [Tech Estimation](tech_estimation_template.md)
@@ -362,6 +364,8 @@
 
 [python and poetry package management](py_poetry.md)
 
+[python command line](python_cmd.md)
+
 [Compile and Install](compile_install.md)
 
 [dlib_compile](dlib_compile.md)
@@ -387,8 +391,6 @@
 [pep 484 Type Hinting](Type_hinting.md)
 
 [pep 498 f_string](f_string.md)
-
-[Boost Maintainability](Boost_Maintainability.md)
 
 ## DataBase and SQL
 
