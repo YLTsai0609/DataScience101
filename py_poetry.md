@@ -196,6 +196,7 @@ bin        include    lib        pyvenv.cfg
  `(base) YuLong@MacBook-Pro-2:~/Desktop/Working_Area/poetry_py37$ poetry add pandas numpy scipy pandas-profiling ipython`
 
 ``` 
+
 The following packages are already present in the pyproject.toml and will be skipped:
 
   • pandas
@@ -309,6 +310,7 @@ Package operations: 87 installs, 0 updates, 0 removals
 都裝在這裡
 
 ``` 
+
 (base) YuLong@MacBook-Pro-2:~/Desktop/Working_Area/poetry_py37$ poetry run which python
 /Users/YuLong/Desktop/Working_Area/poetry_py37/.venv/bin/python
 (base) YuLong@MacBook-Pro-2:~/Desktop/Working_Area/poetry_py37$ poetry run which pytest
@@ -324,6 +326,7 @@ Python 3.7.4
 5.1 interactive shell
 
 ``` 
+
 (base) YuLong@MacBook-Pro-2:~/Desktop/Working_Area/poetry_py37$ poetry shell
 Spawning shell within /Users/YuLong/Desktop/Working_Area/poetry_py37/.venv
 
@@ -341,3 +344,15 @@ exit
  `(base) YuLong@MacBook-Pro-2:~/Desktop/Working_Area/poetry_py37$ poetry run which python`
 
 /Users/YuLong/Desktop/Working_Area/poetry_py37/.venv/bin/python
+
+# Further Study
+
+[相比 Pipenv，Poetry 是一个更好的选择](https://zhuanlan.zhihu.com/p/81025311)
+
+[python 套件管理 - poetry](https://myoceane.fr/index.php/python-poetry/)
+
+[PEP 518 -- Specifying Minimum Build System Requirements for Python Projects](https://www.python.org/dev/peps/pep-0518/)
+
+[Basic usage of poetry official doc](https://python-poetry.org/docs/basic-usage/)
+
+[Dependency specification of poetry official doc](https://python-poetry.org/docs/dependency-specification/)
