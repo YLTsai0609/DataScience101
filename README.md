@@ -448,6 +448,8 @@
 
 ## Others
 
+[Question Asking Guide](qa_guide.md)
+
 [Paper_template](Paper_template.md)
 
 [Data pipeline design principle](data_pipeline_design_principle.md)
