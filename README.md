@@ -446,6 +446,11 @@
 
 [Science vs Analytics vs Engineering vs Product](sci_ana_egn_pro.md)
 
+## GCP
+
+[GCP service](gcp.md)
+
+
 ## Others
 
 [Question Asking Guide](qa_guide.md)
