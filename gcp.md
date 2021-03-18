@@ -6,3 +6,15 @@
 | `gcould` | `google could shell tools` | 用於操作gcp專案資源 |
 
 [Google Cloud Shell 入門：gcloud & gsutil](https://titangene.github.io/article/getting-started-with-cloud-shell-gcloud-and-gsutil.html)
+
+# gcould
+
+## login
+可以透過gcloud auth login 進行帳號登入，接著就可以設定project
+
+## set project
+
+```
+(base) joetsai@thor:~$ gcloud config set project pixnet-gt
+Updated property [core/project].
+```
