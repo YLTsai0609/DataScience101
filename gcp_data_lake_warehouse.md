@@ -241,5 +241,3 @@ Standard
 Nearline
 Coldline
 Archive
-
-# Streamming data pipeline
