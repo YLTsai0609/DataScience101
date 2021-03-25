@@ -1,3 +1,7 @@
+# Installation
+
+https://cloud.google.com/storage/docs/gsutil_install
+
 # 名詞們
 
 | command  | what is it                 | note             |
