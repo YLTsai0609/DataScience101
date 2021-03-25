@@ -386,7 +386,7 @@
 
 ### Coding style
 
-[pep8 formatter](pep8_auto_formatter.md)
+[code formatter](pep8_auto_formatter.md)
 
 [pep 484 Type Hinting](Type_hinting.md)
 
