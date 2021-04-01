@@ -208,6 +208,11 @@
 
 [ELMO, BERT, GPT](ELMO_BERT_GPT.md)
 
+### NER
+
+[Introduction of NER](ner_intro.md)
+
+
 ## CV
 
 ### Introduction
