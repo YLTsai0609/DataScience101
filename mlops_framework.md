@@ -8,4 +8,4 @@ experiement tracking, data versioning
 
 # [bugetml](https://github.com/ebhy/budgetml)
 
-build the endpoint easily
+build the endpoint easily - 學Flask就好，這件事別做了!
