@@ -13,6 +13,7 @@ Cloud Pub/Sub - Message Queue
 Dataflow - Uniform, Serverless ETL
 
 # PubSub
+
 <img src='./images/gcpstream_5.png'></img>
 
 <img src='./images/gcpstream_6.png'></img>
@@ -32,9 +33,11 @@ Event-based microservices
 Fully managed, serverless, secure
 
 Triggers : 
+
     1. Cloud Pub/Sub, HTTP, Cloud Storage
 
 Code : 
+
     1. Pythob, Node.js, Go
     2. Deploy functions from a Cloud Storage bucket, Github, or Bibucket repo
 
@@ -51,7 +54,6 @@ Stackdriver integration
 Airflow on GCP
 
 <img src='./images/gcpstream_10.png'></img>
-
 
 Composer其實可以管理Pipeline的Trigger
 

@@ -453,8 +453,15 @@
 
 ## GCP
 
-[GCP service](gcp.md)
+[GCP command](gcp_command.md)
 
+[GCP data_lake_warehouse](gcp_data_lake_warehouse.md)
+
+[GCP streamming](gcp_streamming.md)
+
+## MLOps Framework
+
+[overview](mlops_framework.md)
 
 ## Others
 

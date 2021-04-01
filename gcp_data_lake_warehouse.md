@@ -241,3 +241,7 @@ Standard
 Nearline
 Coldline
 Archive
+
+# Reference
+
+[data warehouse vs data mart](https://kknews.cc/zh-tw/code/oeoylvp.html)
