@@ -140,7 +140,7 @@ word shape is kind of reguar expression. it's a powerful feature.
 pos tagging : 詞性標註 
 chunking : 短動詞，短名詞等，可以藉由pos tagging接續做
 
-# Case Study I (AML NER 玉山挑戰賽)
+# Case Study I - 洗錢防制模型 - 玉山挑戰賽
 
 [webpage](https://tbrain.trendmicro.com.tw/Competitions/Details/11)
 
@@ -180,13 +180,16 @@ AML NER Model :
 highlights : 
 1. chinese document data cleaning
 2. hybird rule-based and ml-based approach.
-# Hello world!
+
+# NER Hello world!
 
 https://github.com/YLTsai0609/bert_ner
 
 ## Labelling
 
 
-# Case Study II PoI extraction in article title
+# Case Study II -  PoI extraction on the Internet.
+
+http://www.aclclp.org.tw/clclp/v19n4/v19n4a1.pdf
 
 
