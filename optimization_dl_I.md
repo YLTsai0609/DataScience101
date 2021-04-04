@@ -12,7 +12,6 @@
 
 <img src='images/opt_4.png'></img>
 
-從15開始
 
 <img src='images/opt_15.png'></img>
 
@@ -25,9 +24,6 @@
 
 # TA補充課
 
-## Method
-
-* 閱讀方法這篇在第一階段 - 快速掃過並且幫助解決Adam怎麼做trouble shooting?
 
 ## Background
 
