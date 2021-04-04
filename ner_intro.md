@@ -155,7 +155,7 @@ task :
 
 language : chinese
 
-dataset : news url, is_news_contain_aml, new_aml_name
+dataset : news url, contain_aml, aml_name_list
 
 used model :
 
