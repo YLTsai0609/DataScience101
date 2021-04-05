@@ -345,6 +345,7 @@ exit
 
 /Users/YuLong/Desktop/Working_Area/poetry_py37/.venv/bin/python
 
+
 # Further Study
 
 [相比 Pipenv，Poetry 是一个更好的选择](https://zhuanlan.zhihu.com/p/81025311)
@@ -356,3 +357,9 @@ exit
 [Basic usage of poetry official doc](https://python-poetry.org/docs/basic-usage/)
 
 [Dependency specification of poetry official doc](https://python-poetry.org/docs/dependency-specification/)
+
+# cheatsheet
+
+1. `poetry add -E food-img-recm tensorflow=2.3.1` - add extra dependency, [the usage, the library]
+2. 
+3. 
