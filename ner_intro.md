@@ -133,6 +133,52 @@ POS-Tagging - 詞性標注
 
 word shape is kind of reguar expression. it's a powerful feature.
 
+# L46 Maximum Entropy Sequence Models
+
+Maximum entropy markov models (MEMMs) or Conditional Markov models.
+
+![alt](images/ner_19.png)
+
+word segmentation -> 斷詞
+
+text segmentation -> what part is questions, what part is answer?(Q and A as label)
+
+![alt](images/ner_20.png)
+
+![alt](images/ner_21.png)
+
+use each preceding labels - greedy sequence modeler(works quiet well)
+
+but sometimes people wanna explore the best preceding window.
+
+## Beam Inference
+
+Instead of keep top 1 most likely label for each position, we keep the top k most likely labels.
+
+In practial, k = 3 ~ 5 helps a lot.(but not all of the case)
+
+??
+
+![alt](images/ner_22.png)
+
+## Viterbi Inference
+
+we can actually find the best sequence of states that has the globally highest score in the model.
+
+![alt](images/ner_23.png)
+
+## CRFs (Conditional Random Fields)
+
+![alt](images/ner_24.png)
+
+??
+3 types of inference
+
+https://ithelp.ithome.com.tw/articles/10208587
+
+Inference of CTC
+https://www.ycc.idv.tw/crnn-ctc.html
+
 ## other resource
 
 [NLP中的 POS Tagging 和Chunking](https://www.twblogs.net/a/5cb40e0ebd9eee480f07af98)
@@ -184,6 +230,8 @@ highlights :
 # NER Hello world!
 
 https://github.com/YLTsai0609/bert_ner
+
+https://github.com/GitYCC/bert-minimal-tutorial/blob/master/notebooks/chinese_ner.ipynb
 
 ## Labelling
 
