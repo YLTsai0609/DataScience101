@@ -143,21 +143,47 @@ word segmentation -> 斷詞
 
 text segmentation -> what part is questions, what part is answer?(Q and A as label)
 
+# MEMM Inference
+
 ![alt](images/ner_20.png)
+
+## additional
+
+[nltk all pos tags](https://www.nltk.org/book/ch05.html)
+
+DT - 限定詞
+NNP - ?
+VBD - 動詞，過去式
+
+
+**A larger space of sequences is usually explored via search.**
+
+Inference in sequence model : 
+
+make decision at the point based on conditional evidence(from observation and previous decision)
 
 ![alt](images/ner_21.png)
 
-use each preceding labels - greedy sequence modeler(works quiet well)
+But we can't use all of the sequence data(it will be too big). so we need to use local(smaller) data to make decision.
 
-but sometimes people wanna explore the best preceding window.
+On above figure, we have a greedy search inference model(always pick best decision based on small window ground truth and features) 
+
+the greedy search approach works well in practice. but it is not the optimal decision.
+
+Sometimes the decision based on prevoius word(which is not the strong signal at the previous decision point.)
+
+Then we have another search method. Beam search.
+
 
 ## Beam Inference
+
+
 
 Instead of keep top 1 most likely label for each position, we keep the top k most likely labels.
 
 In practial, k = 3 ~ 5 helps a lot.(but not all of the case)
 
-??
+Beam Search still not a global optimal. but an approximate search method.
 
 ![alt](images/ner_22.png)
 
@@ -171,13 +197,18 @@ we can actually find the best sequence of states that has the globally highest s
 
 ![alt](images/ner_24.png)
 
-??
-3 types of inference
-
 https://ithelp.ithome.com.tw/articles/10208587
 
 Inference of CTC
 https://www.ycc.idv.tw/crnn-ctc.html
+
+## Note
+
+In nowday, we use attention NN to capture long distance word interaction. which above the method cannot solve it very will.
+
+check 
+
+[24. 深度學習甜點系列：需要專注力的機械翻譯員](https://ithelp.ithome.com.tw/articles/10208824)
 
 ## other resource
 

@@ -1,10 +1,10 @@
 # What is it?
 
-* `100+` concepts to be a better machine learning engineer.
+* `150+` concepts to be a better machine learning engineer.
 
 * continously updating.
 
-## Business Analysis
+# Business Analysis
 
 [資料科學中的商業分析 1：定義問題，不做沒有用的專案](problem_define.md)
 
@@ -16,11 +16,11 @@
 
 [Case_Study_Questionnaire_analysis_improve_website_UIUX](case_study_website_UIUX.md)
 
-### Experiment Design
+## Experiment Design
 
 * [The type of experiments](type_of_experiment.md)
 
-### A/B Testing
+## A/B Testing
 
 [T - test, Z - test and ANOVA](ANOVA.md)
 
@@ -36,9 +36,9 @@
 
 [A/B Testing：「偷看結果」將成為最大的錯誤](do_not_peaking_ab_test.md)
 
-### Decision Analysis
+# Decision Analysis
 
-[Decision Tree 1, 2, 3, 4, 5](dt_123.md)
+[Using Decision Tree for decision making 1, 2, 3, 4, 5](dt_123.md)
 
 ## Statistics
 
@@ -87,6 +87,11 @@
 [HMM_Viterbi_Algorithm](HMM_Viterbi_Algorithm.md)
 
 [From_Markov_Chain_to_LSTM](From_Markov_Chain_to_LSTM.md)
+# Machine Learning
+
+## Regular ML Implementation
+[implementation_survey](ml_imp.md)
+
 
 ## Learning Theorem(Optimization and Generalization)
 
@@ -100,15 +105,11 @@
 
 [EM_algorithm](EM_algorithm.md)
 
-## Machine Learning Tech
-
-[implementation_survey](ml_imp.md)
-
 ## Tree-based Model
 
 [XGBoost theorem and code thumb up 700+](Review_XGBoost.md)
 
-## Deep Learning Tech
+## Deep Learning
 
 [deep learning library tutorial](dllb.md)
 
@@ -327,7 +328,6 @@
 
 [Machine Learning System Design Stanford CS329S](ml_system_design.md)
 
-[Python Best practice for development]
 
 ### Other pieces of DevOps
 
@@ -339,9 +339,6 @@
 
 [garbage collection, shallow copy, deep copy](garbage_collection.md)
 
-[handy_linux_command](handy_linux_command.md)
-
-[Vi and Vim](Vi_Editer.md)
 
 [tmux](tmux.md)
 
