@@ -448,17 +448,25 @@
 
 [Science vs Analytics vs Engineering vs Product](sci_ana_egn_pro.md)
 
-## GCP
+# MLOps
+
+## MLOps Python Framework
+
+[overview](mlops_framework.md)
+
+## Data Engineering
+
+[martials](de_martials.md)
+
+[data_engineering_brief_intro_by_google](data_engineering_describe_by_google.md)
+
+## Google Cloud Platform
 
 [GCP command](gcp_command.md)
 
 [GCP data_lake_warehouse](gcp_data_lake_warehouse.md)
 
 [GCP streamming](gcp_streamming.md)
-
-## MLOps Framework
-
-[overview](mlops_framework.md)
 
 ## Others
 
