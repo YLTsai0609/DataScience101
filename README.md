@@ -189,7 +189,7 @@
 
 [personal rank](personalrank.md)
 
-## NLP
+## Nature Language Processing (NLP)
 
 [metirials](nlp_metirials.md)
 
@@ -203,6 +203,10 @@
 
 [Word Embedding with GloVe](GloVe_word_embedding.md)
 
+### Data Diversity / Data Augmentation
+
+[Introduction to Text Augmentation](nlp_aug_1.md)
+
 ### Contextulized Word Embedding
 
 [transformer](transformer.md)
@@ -214,7 +218,7 @@
 [Introduction of NER](ner_intro.md)
 
 
-## CV
+## Computer Vision(CV)
 
 ### Introduction
 
@@ -450,9 +454,15 @@
 
 # MLOps
 
-## MLOps Python Framework
+## Concept and Best Practice
+[mlops from gcp introduction](mlpops_gcp.md)
+
+[Tech debt in ML system and best practice from google](ml_debt_and_best_practice.md)
+
+## Framework
 
 [overview](mlops_framework.md)
+
 
 ## Data Engineering
 
@@ -460,7 +470,7 @@
 
 [data_engineering_brief_intro_by_google](data_engineering_describe_by_google.md)
 
-## Google Cloud Platform
+# Google Cloud Platform
 
 [GCP command](gcp_command.md)
 
@@ -468,7 +478,7 @@
 
 [GCP streamming](gcp_streamming.md)
 
-## Others
+# Others
 
 [Question Asking Guide](qa_guide.md)
 
