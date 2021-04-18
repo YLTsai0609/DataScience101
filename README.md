@@ -215,8 +215,12 @@
 
 ### NER
 
-[Introduction of NER](ner_intro.md)
+[Introduction to NER](ner_intro.md)
 
+
+### POS Tagging
+
+[Introduction to POS-Tagging](pos_tagging.md)
 
 ## Computer Vision(CV)
 
