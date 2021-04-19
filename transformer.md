@@ -1,8 +1,15 @@
 # Resource
 
 * [tranformer by Hung-yi Lee, 2019](https://www.youtube.com/watch?v=XnyM3-xtxHs&list=PLJV_el3uVTsOK_ZK5L0Iv_EQoL1JefRL4)
-* Summary : RNN的缺點是不可平行化，因此改裝CNN，讓他達到RNN的效果，並且使用一個可視覺化解釋的設計，這就是Attension layer，Attension layer的出現狂洗了以往所有RNN的方法，由於可以平行化，原本因為會算太久的事情現在都做得到了!
+# Summary 
 
+1. RNN的缺點是不可平行化，因此改裝CNN，讓他達到RNN的效果，並且使用一個可視覺化解釋的設計，這就是Attension layer，Attension layer的出現狂洗了以往所有RNN的方法，由於可以平行化，原本因為會算太久的事情現在都做得到了!
+
+2. self-Attention的設計裡面就是要設計一個可被平行化，且類似rnn功能的layer
+
+3. attention的定義是給予兩個向量，輸出一個分數，廣義來說，內積就是一種attention，self attention使用的是 scaled dot product attention，會多除以一個normalization contant
+
+4. 用一句話來表達self-attention的精神就是**天涯若比鄰**，遠的和近的對self-attention是一樣的，可以平行運算
 # Introduction
 
 * 英文意思就是變形金剛
@@ -52,7 +59,7 @@ v : value
 
 psudocode
 
-1. sequence x 先通過任意的網路結構，產生embedding a，這裡先假設是一個線性個Matrix，W
+1. sequence x 先通過任意的網路結構，產生embedding a，這裡先假設是一個線性的Matrix，W
 2. attention layer會對seq中的每個單元a做三個transform(透過neroun weight) : q, k, v，
 
 這個q稱作query，待會會拿去和其他人match

@@ -1,65 +1,93 @@
 # Resource
 
-[ELMO, BERT, GPT by Hung-yi Lee, 2019](https://www.youtube.com/watch?v=XnyM3-xtxHs&list=PLJV_el3uVTsOK_ZK5L0Iv_EQoL1JefRL4)
+[ELMO, BERT, GPT by Hung-yi Lee, 2019](https://www.youtube.com/watch?v=UYPa347-DdE&list=PLJV_el3uVTsOK_ZK5L0Iv_EQoL1JefRL4&index=61)
 
 <img src='./images/bert_1.png'></img>
 
+# Summary
+
+1. word embedding是一種對於文字來說得特徵抽取法，然而word embedding沒辦法對一字多意做非常好的處理，基於上下文的word embedding -> contextulized embedding 這個領域就專門來解這類型的問題
+2. 在contextulzied embedding之前，word embedding可以讓word token從OHE變成dense vector，並且發揮某種分群效果，然而對於**一字多意**卻無法有很好的解決
+3. 第一種做法稱為ELMO(Embedding from Language Model) - 使用一大堆語料，每個句子中的token利用上下文來訓練該token的embedding，如此一來就算同樣的word-token(例如bank)，也會因為上下文的不同而有不一樣的embedding
+4. BERT其實有Follow ELMO的架構，只是使用了Transformer的Encoder作為Extractor(裡面有self-attention layer)，加上其他東西，就成了BERT，所以BERT也是你給他token，他給你embedding
+5. BERT的第一種訓練方法，稱作MaskLM，隨機蓋掉句子中15%的字，讓每個token的embedding做克漏字測驗，被遮掉的字以 token - [MASK] 表示
+6. BERT的第二種訓練方法，稱作Next Sentence Prediction，給他兩個句子，讓他預測這兩個句子是接在一起的or不是接在一起的，boundary以token - [SEP]表示
+7. BERT的訓練，兩個做法會同時使用
+8. BERT的功用(特徵抽取器(fix parameter) or fine-tuning downstream task)
+   1. Input sentence, output class (sentence classification )- 情緒分析，文章分類
+   2. Input sentence, output, class of each word - Slot filling, name entity recognintion
+   3. Input two sentence, output class - Natural Language Inference (Ture/False/Unkown)
+   4. Question Answering(QA)
+9. BERT的下游任務訓練 - 下游Model要重學，BERT只要fine tuning 
 # Before BERT
 
 <img src='./images/bert_2.png'></img>
 
-Word Embedding - soft word class, 可以在class裡面表示遠近關係
 
 <img src='./images/bert_3.png'></img>
 
-Word Embedding 就是某種抽feature的方法
+Word Embedding - 
+1. 文字原本OHE，可以轉變為soft word class，在feature space中可以表達遠近關係
+2. 用來表達文字的dimension比起OHE，維度減少了，訓練過程中建立了某種分群效應，雖然是基於監督式學習
+3. Word Embedding 就是某種抽feature的方法
 
 # A word can gave multiple senses
 
+<img src='./images/bertsecond_1.png'></img>
+
+<img src='./images/bertsecond_2.png'></img>
+
+* 過往的訓練方式，所有bank的embedding是一樣意思的
 * 不同token同樣type
 * 前兩個句子指的是銀行
 * 後兩個指的是河堤
 * 過去的做法是先查字典，了解該字有幾種type，接下來在訓練時讓該字擁有兩種不同的embedding
 * 但是這樣無法滿足現實世界的需求
-* blood bank應該算哪一種?
 * 以往word embedding的方法對於一字多意近乎沒輒，只能提出非常rule based的解法
 
 <img src='./images/bert_4.png'></img>
 
 基於上下文的word embedding - contextulized word embedding !
 
-我們期待每一個word的token都有一個embedding
-我們讓上下文來決定他們是不是同一個embedding
+我們知道每一個word-token都有一個embedding
+那麼能不能透過我上下文來決定他們是不是同一個embedding?
+
+這個問題就是Contextulize embedding想要解決的問題
+
+* 參考下圖，每一個bank要有不同的embedding，我們透過上下文來訓練它!
 
 <img src='./images/bert_5.png'></img>
 
 <img src='./images/bert_6.png'></img>
 
-* 這件事怎麼做呢，使用ELMO架構，不需要標注資料，需要交他的事情就是給他一個Begin sign，他就要輸出潮水，給他潮水，他就要輸出退了，給他退了，就要輸出**就**，這樣給他一大堆句子進行學習，學完之後你就會有contextualized word enbedding
+* 這件事怎麼做呢，使用ELMO架構，**不需要標注資料**(非監督式學習)，需要交他的事情就是給他一個Begin sign，他就要輸出潮水，給他潮水，他就要輸出退了，給他退了，就要輸出**就**，這樣給他一大堆句子進行學習，學完之後你就會有contextualized word enbedding
 * 你可以想像，你給他高燒，退了，或是臣，退了，都會輸出不一樣的embedding，因為存在memory裡面的玩意兒不同
-
+* 中間hidden layer的embedding全都拿走
 * 這樣子好像只有考慮到前面，沒有考慮到後面?
 * 不然我們訓練一個雙向的，然後把前向和反向拼接起來
+
+<img src='./images/bertsecond_3.png'></img>
+<img src='./images/bertsecond_4.png'></img>
 
 <img src='./images/bert_10.png'></img>
 <img src='./images/bert_11.png'></img>
 
 <!-- <img src='./images/bert_12.png'></img> -->
 
-* 我怎麼知道我最後要拿哪一層的embedding? - ELMO paper : 我全部拿
+* 我怎麼知道我最後要拿哪一層的embedding?
+* 同個token我應該拿哪一個embedding?
+*  - ELMO paper : 我全部拿
 
   
 
-* 每個字現在都會吐出一個上下文相關的embedding，前向的稱作$h_{1}$, 反向的稱作$h_{2}$
-* ELMO做weights sum
+* 每個詞彙現在都會吐出多個上下文相關的embedding，這些embedding怎麼用呢?
+* ELMO做weights sum，$h1$是第一層的embedding，$h2$是第二層的embedding，兩層把它相加，可是參數怎麼取?
+* 利用你的下游任務來決定係數
 
 <!-- <img src='./images/bert_13.png'></img> -->
 
-* $\alpha_1, \alpha_2$怎麼決定? 用你要訓練的下游任務來決定此參數
-
-<!-- <img src='./images/bert_14.png'></img> -->
-
-* 每一層都拿出一組$\alpha_1, \alpha_2$在下游任務繼續學習
+* 上圖是不同的下游任務所學到的weights
+* token是未進入ELMO之前的owrd embedding，SQuAD是問答題，Coref是代名詞的主語猜測，可以看出來SQuAD特別重視第一層embedding的結果，其他任務則是比較平均
 
 # BERT(Encoder of transformer)
 
@@ -72,10 +100,13 @@ Word Embedding 就是某種抽feature的方法
 * 兩句話講完BERT，你給他一個句子，每個句子的每個單詞他都會吐一個上下文相關的embedding出來，這個embedding很好，能夠讓同樣的單詞在不同的句子中有不同的意思
 * 實際上，如果你要訓練一個中文的BERT，用字來當作單位會更為恰當，為什麼?
   + 潮水 - 輸入的one hot encoding dimension基本上是無限大，無法被窮舉
-  + 潮, 水 - 輸入的one hit encoding是有限的，常用的大概就4000多個
+  + 潮, 水 - 輸入的OHE是有限的，常用的大概就4000多個
   + 不用斷詞了! 不然會造成無限大維度的One Hot Encoding dimension!
 
 ## Training of BERT
+
+
+* 與ELMO不同的地方是，BERT有自己訓練的方法
 
 ## 法一 Masked Language Model (MLM)(讓模型做克漏字)
 
@@ -266,4 +297,12 @@ Normal BERT有24層，Large BERT有48層，每一層做了什麼事情!?
 
 <img src='./images/bert_42.png'></img>
 
-* 兩層意思 : 1 GPT-2 比較新，2 GPT-2 download不下來(沒有被release)，BERT可以XD
+* 兩層意思
+
+1. GPT-2 比較新
+  
+2. GPT-2 download不下來(沒有被release)，BERT可以XD
+
+# Papers
+
+[Deep contextualized word representations - ELMO 2018](https://arxiv.org/pdf/1802.05365.pdf)
