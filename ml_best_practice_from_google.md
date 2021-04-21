@@ -1,31 +1,27 @@
 # Ref
 
-Paper : 
-[Hidden Technical Debt in Machine Learning Systems 2015, google 450+ citations](https://web.kaust.edu.sa/Faculty/MarcoCanini/classes/CS290E/F19/papers/tech-debt.pdf)
-
-
 Best Practice : [Best practice for ml in google](files/rules_of_ml.pdf)
 
-* The source actually comes from [google machine learning crash course](https://developers.google.com/machine-learning/guides/rules-of-ml)
+The source actually comes from [google machine learning crash course](https://developers.google.com/machine-learning/guides/rules-of-ml)
 
 
-# Notes
 
-## Best Practives for ML Engineering
 
-The best practice in machine learning from around Google.
-
-Sections
+# Sections
 
 0. Overview
 1. Before ML
 2. ML Phase I - Your First Pipeline
+   1. Monitoring
+   2. Your First Objective
 3. ML Phase II - Feature Engineering
+   1. Human Analysis of the system
+   2. Training-Serving Skew
 4. ML Phase III - Slowed Growth, Optimization Refinement, and Complex Model
 
-### Overview
+# Overview
 
-Most of the problems you will face are, in fact, **engineering problems**. Even with all the resource of a great ML export, most od the gain come from great feature, not great ML algorithms.
+Most of the problems you will face are, in fact, **engineering problems**. Even with all the resource of a great ML export, most ad the gain come from great feature, not great ML algorithms.
 
 So the approach is 
 
@@ -40,9 +36,9 @@ Diverge from this apporach only when there are no more simple tricks to get you 
 
 Once you've exhausted the simple tricks, cutting-edge ML might indeed be in your future.
 
-### Before ML
+# Before ML - 3 rules
 
-#### **R1 Don't be afraid to launch a product without ML**
+## **R1 Don't be afraid to launch a product without ML**
 
 1. ML is cool, but it requires data.
 2. If you think ML will give you a 100% boost, heuristic will grt you 50% of the way there.
@@ -57,7 +53,7 @@ Once you've exhausted the simple tricks, cutting-edge ML might indeed be in your
    2. popularity with category recommendation
    3. the newest content which your following
 
-#### **R2 First, design and implement metrics.**
+## **R2 First, design and implement metrics.**
 
 1. It's easier to gain pernission from the system's users.
 2. If you think that something might be a concern in the future, it's better to get historical data now.
@@ -78,7 +74,7 @@ Notice a problem? Add a metric to track it.
 
 Excited about some quantitative change on the last release? Add a metric to track it.
 
-#### **R3 Choose ML over a complex heuristic**
+## **R3 Choose ML over a complex heuristic**
 
 A simple heuristic can get your product out the door.
 
@@ -88,12 +84,12 @@ Once you have data and a basic idea of what you are trying to accomplish. move o
 
 As in most software engineering tasks, you will want to be contantly updating your approach, whether it is a heuristic or a machine-learned model, and you will find that the machine learned-model is easier to update and maintain(See Rule#16)
 
-### ML Pahse I: Your First Pipeline
+# ML Pahse I: Your First Pipeline
 
-### Monitoring
+# Monitoring
 In general, practice good alerting hygiene, such as making alerts actionable and having a dashboard page.
 
-#### **R8 Know the freshness requirements of your system.**
+## **R8 Know the freshness requirements of your system.**
 
 
 How much does performance degrade if you have a model?
@@ -108,14 +104,32 @@ Example : if ML model for Google Play Search is not updated, it can have an impa
 
 Also notice that freshness can change over time. especially when feature columns are added or removed from your model.
 
+## **R9 Detect problems nefore exporting models**
+
+Many machine learning system have as stage where you export the model to serving.
+
+If there is an issue with an exported model. It is a user-facing issue.
+
+If there is an issue before, then it is a training issue. and user will not notice.
+
+Do sanity checkes right before you export the model.
+
+Specifically, make sure the model's performance is reasonable on held out data. Or, if you have lingering(揮之不去的) concerns with the data, don't export a model.
+
+Many teams continoisly deploying models check the AUC value before exporting.
+
+**Issue about models that haven't been exported require an e-mail alert, but issues on a user-facing model may require a page**
+
+So better to wait and be sure before impacting users.
 
 
 
-### ML Pahse II: Feature Engineering
 
-### ML Phase III: Slowed Growth, Optimization Refinement, and Complex Models
+# ML Pahse II: Feature Engineering
 
-#### **R16 Plan to launch and iterate**
+# ML Phase III: Slowed Growth, Optimization Refinement, and Complex Models
+
+## **R16 Plan to launch and iterate**
 
 Don't expect that the model you are working on now will be the last one that you will launch, or even that you will ever stop launching models. Thus consider whether the complexity you are adding with this launch will slow down futher launches.
 

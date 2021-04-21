@@ -334,7 +334,6 @@
 
 [Deployment of Machine Learning Models](https://github.com/trainindata/deploying-machine-learning-models)
 
-[Machine Learning System Design Stanford CS329S](ml_system_design.md)
 
 
 ### Other pieces of DevOps
@@ -456,12 +455,18 @@
 
 [Science vs Analytics vs Engineering vs Product](sci_ana_egn_pro.md)
 
-# MLOps
+# MLOps and ML System Design
+
+## Course
+
+[Machine Learning System Design Stanford CS329S](ml_system_design.md)
 
 ## Concept and Best Practice
 [mlops from gcp introduction](mlpops_gcp.md)
 
-[Tech debt in ML system and best practice from google](ml_debt_and_best_practice.md)
+[ml best practice from google](ml_best_practice_from_google.md)
+
+[ml system tech deut](ml_tech_debt.md)
 
 ## Framework
 
