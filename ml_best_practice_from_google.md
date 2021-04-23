@@ -104,7 +104,7 @@ Example : if ML model for Google Play Search is not updated, it can have an impa
 
 Also notice that freshness can change over time. especially when feature columns are added or removed from your model.
 
-## **R9 Detect problems nefore exporting models**
+## **R9 Detect problems before exporting models**
 
 Many machine learning system have as stage where you export the model to serving.
 
@@ -122,7 +122,19 @@ Many teams continoisly deploying models check the AUC value before exporting.
 
 So better to wait and be sure before impacting users.
 
+## **R10 Watch for silent failures**
 
+This is a problem that occurs more for ML systems than for ther kinds of system.
+
+e.g. : a particular table is being joined is no longer being updated. -> performance of ML system might decay!(due to the data freshness).
+
+## **R11** Give feature column owners and documentation
+
+If the system is large, and there are many feature columns, know who created or is maintaining each feature column.
+
+If you find that the person who understands a feature column is leaving, make sure that someone has the information.
+
+It's good to have a more detailed description of what the feature is, where it came from, and how it's expected to help.
 
 
 # ML Pahse II: Feature Engineering

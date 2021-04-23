@@ -217,6 +217,7 @@
 
 [Introduction to NER](ner_intro.md)
 
+[kashgari - production level bert model source code analysis](kashgari_src_analysis.md)
 
 ### POS Tagging
 
