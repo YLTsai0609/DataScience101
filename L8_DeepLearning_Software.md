@@ -36,7 +36,6 @@ Graphics Processing Uint, Graphics card, originally render computer graphics, es
 
 * commonly, 60x - 70x
 * benchmark like that basically unfair, he might not tuning good performance on CPU, this is just a out-of-box benchmark like, tensorflow cpu vs tensorflow gpu, torch cpu vs torch gpu
-* 
 
 
 <img src='./images/dls_10.png'></img>
