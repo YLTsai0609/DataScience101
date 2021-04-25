@@ -5,6 +5,7 @@ Best Practice : [Best practice for ml in google](files/rules_of_ml.pdf)
 The source actually comes from [google machine learning crash course](https://developers.google.com/machine-learning/guides/rules-of-ml)
 
 
+Total rules : 43
 
 
 # Sections
@@ -41,7 +42,7 @@ Once you've exhausted the simple tricks, cutting-edge ML might indeed be in your
 ## **R1 Don't be afraid to launch a product without ML**
 
 1. ML is cool, but it requires data.
-2. If you think ML will give you a 100% boost, heuristic will grt you 50% of the way there.
+2. If you think ML will give you a 100% boost, heuristic will get you 50% of the way there.
 3. **Example 1 :** Ranking apps in an app marketplaces.
    1. install rate
    2. number of installs
@@ -86,7 +87,7 @@ As in most software engineering tasks, you will want to be contantly updating yo
 
 # ML Pahse I: Your First Pipeline
 
-# Monitoring
+# Monitoring - 4 rules
 In general, practice good alerting hygiene, such as making alerts actionable and having a dashboard page.
 
 ## **R8 Know the freshness requirements of your system.**
@@ -137,7 +138,7 @@ If you find that the person who understands a feature column is leaving, make su
 It's good to have a more detailed description of what the feature is, where it came from, and how it's expected to help.
 
 
-# ML Pahse II: Feature Engineering
+# ML Pahse II: Feature Engineering - 1 rules
 
 # ML Phase III: Slowed Growth, Optimization Refinement, and Complex Models
 

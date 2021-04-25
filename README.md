@@ -111,6 +111,8 @@
 
 ## Deep Learning
 
+[model_size_gpu_resource_estimation](model_gpu_usage.md)
+
 [deep learning library tutorial](dllb.md)
 
 [YuLong's paper note](https://github.com/YLTsai0609/paper_summary)
