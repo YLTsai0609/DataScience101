@@ -153,9 +153,42 @@ Inference
 
 # Tokenizer
 
-## Corpus Genrator
+Tokenizer的部分，`kashgari`這個lib分成了
+
+`base_tokenizer.py`, `bert_tokenizer.py`, 以及 `jieba_tokenizer.py`
+
+可以看到`base_tokenizer.py`中的`Tokenizer`是相對簡單的，有空白就切分
+
+![img](images/kashgari_12.png)
+
+`jieba+tokenizer.py`的部分
+
+則是將`tokenize`換成了jieba的斷詞，相當簡單，卻也表現出了作者良好的設計，讓人清楚易懂
+
+![img](images/kashgari_13.png)
+
+接著就看到`bert_tokenizer.py`
+
+裡面定義了`BertTokenizer`
+
+可以看到特殊token，以及是否要維持大小寫，載入BERT字典等方法
+
+![img](images/kashgari_14.png)
+
+![img](images/kashgari_15.png)
+
+其中`tokenize`方法會經過諸多處理
+
+1. unicode字元經過轉半型的Normalization
+2. 並且將非分隔符的字元都join起來，`Mn`表示為[NonSpacing Mark](https://www.compart.com/en/unicode/category/Mn)
+3. 如果有英文轉小寫
+4. ...等一連串處理
+
+並且也做了WordPiece的處理，算是寫的相對完整的tokenizer
 
 # ABCTask Model
+
+# Dataset and Corpus Genrator
 
 # Reference
 
