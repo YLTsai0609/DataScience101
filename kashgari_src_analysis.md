@@ -1,7 +1,7 @@
 # kashgari
 
 kashgari是一套將BERT模型推展到產品級的套件，特色是
-簡單，容易使用，了解，修改，規模化，且能夠直接部署到雲端上
+簡單，容易使用、了解、修改，規模化，且能夠直接部署到雲端上
 
 # Profiling BERT NER
 
@@ -14,8 +14,8 @@ kashgari是一套將BERT模型推展到產品級的套件，特色是
 Question berfore analysis : 
 
 1. BERT的模型結構被藏在哪裡? - 藏在`bert4keras`
-2. TextProcessor怎麼做的? - 是MultiProcessing嗎?
-3. Tokenizer怎麼做的，怎麼自定義詞典 - 透過`vocab.txt`
+2. TextProcessor怎麼做的? - 是MultiProcessing嗎 - No, Single Processing
+3. Tokenizer怎麼做的，怎麼自定義詞典 - BaseTokenizer, JiebaTokenizer, BertTokenizer,字典透過`vocab.txt`來定義
 
 Training
 
