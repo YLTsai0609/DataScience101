@@ -116,6 +116,21 @@ Onces you have a system that does these 3 things reliably, you have done most of
 Your simple model provides you with baseline metrics and a baseline behavior that you can use to test more complex models.
 
 
+## **R5 Test the infra indenpendently from the machine learning**
+
+Make sure the infra is testable, and that the learing parts of the system are encapsulated(封裝好的) so that you can test you can test everything around it.
+
+Specifically,
+
+1. Test getting data into algorithm.
+2. Check the feature creation shcema is expected.
+3. check your data match the data privacy permits.
+4. Test getting models out of the training algorithm. Make sure that the model in your training environment gives the same score as the model in your sercing environment(kind of sanity check) - for deployment specifically.
+
+ML has an element of unpredictabilty, so make sure that you have tests for the code for creating examples in training and serving, and that you can load and use a fix model during serving.
+
+
+
 # Monitoring - 4 rules
 In general, practice good alerting hygiene, such as making alerts actionable and having a dashboard page.
 
