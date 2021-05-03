@@ -116,6 +116,56 @@ Onces you have a system that does these 3 things reliably, you have done most of
 Your simple model provides you with baseline metrics and a baseline behavior that you can use to test more complex models.
 
 
+## **R5 Test the infra indenpendently from the machine learning**
+
+Make sure the infra is testable, and that the learing parts of the system are encapsulated(封裝好的) so that you can test you can test everything around it.
+
+Specifically,
+
+1. Test getting data into algorithm.
+2. Check the feature creation shcema is expected.
+3. check your data match the data privacy permits.
+4. Test getting models out of the training algorithm. Make sure that the model in your training environment gives the same score as the model in your sercing environment(kind of sanity check) - for deployment specifically.
+
+ML has an element of unpredictabilty, so make sure that you have tests for the code for creating examples in training and serving, and that you can load and use a fix model during serving.
+
+**R6 Be careful about dropped data when copying pipelines**
+
+Often we careate pipeline by coping an existing pipeline(i.e. [cargo cult programming](https://zh.wikipedia.org/wiki/%E8%B4%A7%E7%89%A9%E5%B4%87%E6%8B%9C%E7%BC%96%E7%A8%8B)). **And the old pipeline drops data that we need for the new pipeline**
+
+E.g. 
+
+1. A hot article recommender - drop older post - because it is trying to rank fresh posts.
+
+This pipeline was cpoied to use for Content-based item recommender, where all articles contents matter.
+
+**R7 Turn heuristics into features, or handle them externally**
+
+Usually the problems that ML is trying to solve are not completely new.
+
+There is an existing system for ranking or classifying.
+
+This means that there are a bunch of rules and heuristics.
+
+**These same heuristics can give you a lift when tweaked with ML**
+
+Your heuristics should be mined for whatever information they have, for 2 reseaons:
+
+1. The trasnsition to a ML system will be smoother.
+2. Usually theose rules contain a lot of the intution about the system you don't want to throw away.
+
+There are 4 ways you can use an existing heuristic : 
+
+
+1. Preprocess using heuristic : If the feature is incredibly awesome, then this is an option 
+   * e.g. A sender has already been blacklisted in a spam filter(make sense in binary classification task)
+2. Create a feature
+   * e.g. you use a heuristic to compute a relevance score for a query result, you can include the score as the value of a feautre \. Later on you may wan to use ML techniques to massage the value(converting into distinct values, combing it with other features)
+3. Mine the raw inputs of the heuristic
+   * e.g. a hruristic for apps that combines the number of installs, the number of characters in the text, the day of the week. Then consider pulling these pieces apart, and feeding these inputs into the learning.
+4. Modify the label(?) - This is an option when you feel that the heuristic captures information not currently contained in the label.
+   * If you are trying to maximize the number of downloads, bbut you also want quality content, **then maybe the solution is to multiply the label by the average number of starts the app received**
+
 # Monitoring - 4 rules
 In general, practice good alerting hygiene, such as making alerts actionable and having a dashboard page.
 
