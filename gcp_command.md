@@ -23,6 +23,16 @@ https://cloud.google.com/storage/docs/gsutil_install
 (base) joetsai@thor:~$ gcloud config set project pixnet-gt
 Updated property [core/project].
 ```
+
+## Manage your project
+
+```
+(base) joetsai@thor:~/work/research-appengine/recommender/food$ gcloud config configurations list
+NAME     IS_ACTIVE  ACCOUNT            PROJECT              COMPUTE_DEFAULT_ZONE  COMPUTE_DEFAULT_REGION
+default  False      joetsai@pixnet.tw  pixnet-gt
+lab      True       joetsai@pixnet.tw  pixnet-research-lab
+```
+
 # 常用指令
 
 | command example | usage  | note |

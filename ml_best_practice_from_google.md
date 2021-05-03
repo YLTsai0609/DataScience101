@@ -5,6 +5,7 @@ Best Practice : [Best practice for ml in google](files/rules_of_ml.pdf)
 The source actually comes from [google machine learning crash course](https://developers.google.com/machine-learning/guides/rules-of-ml)
 
 
+Total rules : 43
 
 
 # Sections
@@ -41,7 +42,7 @@ Once you've exhausted the simple tricks, cutting-edge ML might indeed be in your
 ## **R1 Don't be afraid to launch a product without ML**
 
 1. ML is cool, but it requires data.
-2. If you think ML will give you a 100% boost, heuristic will grt you 50% of the way there.
+2. If you think ML will give you a 100% boost, heuristic will get you 50% of the way there.
 3. **Example 1 :** Ranking apps in an app marketplaces.
    1. install rate
    2. number of installs
@@ -84,9 +85,38 @@ Once you have data and a basic idea of what you are trying to accomplish. move o
 
 As in most software engineering tasks, you will want to be contantly updating your approach, whether it is a heuristic or a machine-learned model, and you will find that the machine learned-model is easier to update and maintain(See Rule#16)
 
-# ML Pahse I: Your First Pipeline
+# ML Pahse I: Your First Pipeline - 4 rules
 
-# Monitoring
+Focus on your infrastructure for your first pipeline.
+
+While it's fun to think about all the imaginative ml you sre going to do, it will be hard to figure out what is happening if you don't first trust your pipeline.
+
+## **R4 Keep the first model simple and get the infrastructre right**
+
+The first model provides the biggest boost to your product, so it doesn't need to be fancy.
+
+But you will run into many more infrastructure issues than you expect.
+
+Before anyone can use your fancy new ML system. you have to determine:
+
+1. How to get examples to your learning algorithm.
+2. A first cut to what "good" and "bad" mean to your system.
+3. How to integrate the model into your application. apply the model live or pre-compute the model on examples offline and store the result in a table.
+
+E.g. Pre-classify web pages and store the result in a table, but classify chat messages live.
+
+Choosing simple feature makes it easier to enusre that.
+
+1. The feature reach your learning algo correctly.
+2. The model learns researonable weights.
+3. The features reach your model in the server correctly.
+
+Onces you have a system that does these 3 things reliably, you have done most of the work.
+
+Your simple model provides you with baseline metrics and a baseline behavior that you can use to test more complex models.
+
+
+# Monitoring - 4 rules
 In general, practice good alerting hygiene, such as making alerts actionable and having a dashboard page.
 
 ## **R8 Know the freshness requirements of your system.**
@@ -137,7 +167,7 @@ If you find that the person who understands a feature column is leaving, make su
 It's good to have a more detailed description of what the feature is, where it came from, and how it's expected to help.
 
 
-# ML Pahse II: Feature Engineering
+# ML Pahse II: Feature Engineering - 1 rules
 
 # ML Phase III: Slowed Growth, Optimization Refinement, and Complex Models
 
