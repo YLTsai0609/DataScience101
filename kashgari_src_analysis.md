@@ -1,6 +1,6 @@
 # kashgari
 
-kashgari是一套將BERT模型推展到產品級的套件，特色是
+Kashgari是一套將BERT模型推展到產品級的套件，特色是
 簡單，容易使用、了解、修改，規模化，且能夠直接部署到雲端上
 
 # Profiling BERT NER
@@ -23,15 +23,13 @@ Training
 
 `from kashgari.embeddings.bert_embedding import BertEmbedding`
 
-`from kashgari.tasks.labeling import (BiLSTM_CRF_Model)` - Model物件
+`from kashgari.tasks.labeling import (BiLSTM_CRF_Model)`
 
-Basically based on [bert4keras](https://github.com/bojone/bert4keras#%E5%8A%9F%E8%83%BD)
+core model bert based on [bert4keras](https://github.com/bojone/bert4keras#%E5%8A%9F%E8%83%BD)
 
-重點 : BertEmbedding_Model Tokenizer
+Inference 
 
-Inference
-
-重點 : TextProcessor
+TextProcessor, Tokenizer
 
 # BertEmbedding
 
@@ -44,7 +42,6 @@ Inference
 
 `bert_config.json`
 
-`bert_model.ckpt`
 
 ![img](images/kashgari_2.png)
 
@@ -68,7 +65,7 @@ Inference
 
 1. `setup_text_processor` - 將text_prcessor中的一些屬性傳過來，例如`token2idx`
 2. `build_embedding_model` - 宣告了繼承的物件要實作這個方法
-3. `load_embed_vocab` - 宣高了繼承的物件要實作這個方法
+3. `load_embed_vocab` - 宣吿了繼承的物件要實作這個方法
 4. `get_seq_length_from_corpus` - 了解文本中序列長度會使用到的method
 5. `embed` - 把input sentecne 經過 text prcoessor處理，再經由embedding model predict，最後回傳embedding result(np.array)
 
@@ -188,7 +185,61 @@ Tokenizer的部分，`kashgari`這個lib分成了
 
 # ABCTask Model
 
-# Dataset and Corpus Genrator
+接著看到下游任務相關模型，`task`資料夾的結構如下
+
+
+```
+tasks/
+├── __init__.py
+├── abs_task_model.py
+├── classification
+│   ├── __init__.py
+│   ├── abc_model.py
+│   ├── bi_gru_model.py
+│   ├── bi_lstm_model.py
+│   ├── cnn_attention_model.py
+│   ├── cnn_gru_model.py
+│   ├── cnn_lstm_model.py
+│   └── cnn_model.py
+├── labeling
+│   ├── __init__.py
+│   ├── abc_model.py
+│   ├── bi_gru_crf_model.py
+│   ├── bi_gru_model.py
+│   ├── bi_lstm_crf_model.py
+│   ├── bi_lstm_model.py
+│   └── cnn_lstm_model.py
+└── seq2seq
+    ├── __init__.py
+    ├── decoder
+    │   ├── __init__.py
+    │   ├── att_gru_decoder.py
+    │   └── gru_decoder.py
+    ├── encoder
+    │   ├── __init__.py
+    │   └── gru_encoder.py
+    └── model.py
+```
+
+可以看到classification, labelling, seq2seq各有多種模型，先來看看
+
+`abc_task_model.py`
+
+![img](images/kashgari_25.png)
+
+可以看到ABCTask Model裝裝有model，embedding，text_processor，label_processor
+
+並且定義了模型存取和載入，那麼我們sequence labelling中的`bi_lstm_crf_model`又是怎麼實作的呢?
+
+![img](images/kashgari_26.png)
+
+![img](images/kashgari_27.png)
+
+![img](images/kashgari_28.png)
+
+`build_model_arc`這裡可以看layer的結構，基本上是LSTM + Dropout + Dense + CRF
+
+其中CRF也是透過Keras進行實作的
 
 # Reference
 
