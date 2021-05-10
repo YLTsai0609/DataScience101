@@ -24,9 +24,15 @@ Model Parameter size : suppose 1 millions with (float32 4 bytes) -
 
 1000000 x 4 / 1000000 = 4MB (1百萬參數量 with float32 = 4MB)
 
-E.g. [BERT-Base, Chinese: Chinese Simplified and Traditional, 12-layer, 768-hidden, 12-heads, 110M parameters](https://github.com/google-research/bert)
+E.g. 
 
-model loading with float32 : 110 x 4MB = 440MB
+1. [BERT-Base, Chinese: Chinese Simplified and Traditional, 12-layer, 768-hidden, 12-heads, 110M parameters](https://github.com/google-research/bert)
+
+    model loading with float32 : 110 x 4MB = 440MB
+
+2. [Efficientnet B7 66M parameters](https://arxiv.org/pdf/1905.11946.pdf%E5%A4%8D%E5%90%88%E6%A8%A1%E5%9E%8B%E7%BC%A9%E6%94%BE)
+
+    model loading with float32 : 66 x 4MB =  264MB
 
 you can check by 
 
