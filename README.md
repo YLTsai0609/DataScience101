@@ -350,8 +350,6 @@
 [garbage collection, shallow copy, deep copy](garbage_collection.md)
 
 
-[tmux](tmux.md)
-
 [Standard Data Science project template](ds_prj_template.md)
 
 [Kaggle_Six_steps_to_more_professional_data_science_code]([Kaggle]Six_steps_to_more_professional_data_science_code.md)

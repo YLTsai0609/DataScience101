@@ -361,5 +361,31 @@ exit
 # cheatsheet
 
 1. `poetry add -E food-img-recm tensorflow=2.3.1` - add extra dependency, [the usage, the library]
-2. 
-3.  
+2. `poetry env info` - show the current venv path and python interpreter information (it will check by `pyproject.toml`) 
+3. `poetry xxx --dry-run` - just dry run your command 
+4. `poetry add tensorflow=2.3.1 --optional` - Add as an optional dependency
+5. `sudo poetry add numpy="1.16.1"` - downgrade / upgrade the package and perform the dependency check.
+6. write custom package depdendency in `pyproject.toml`
+
+```
+[tool.poetry]
+name = "awesome"
+
+[tool.poetry.dependencies]
+onnxruntime = { version = "^1.3.0", optional = true }
+onnxruntime-gpu = { version = "^1.3.0", optional = true }
+
+[tool.poetry.extras]
+cpu = ["onnxruntime"]
+gpu = ["onnxruntime-gpu"]
+```
+
+要達成以上config，需要做以下步驟
+
+  6.1 - `poetry add --optional onnxruntime-gpu`
+
+  6.2 - 修改`pyproject.toml`成以上形式
+
+  6.3 - `poetry update` - 將`pyproject.toml`的組態更新到`poetry.lock`
+  
+  6.4 - `poetry install -E gpu`
