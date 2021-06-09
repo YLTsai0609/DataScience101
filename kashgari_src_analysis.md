@@ -1,7 +1,7 @@
 # kashgari
 
 Kashgari是一套將BERT模型推展到產品級的套件，特色是
-簡單，容易使用、了解、修改，規模化，且能夠直接部署到雲端上
+簡單，容易使用、了解、修改，規模化，且能夠直接部署到雲端上(tf-serving)
 
 # Profiling BERT NER
 

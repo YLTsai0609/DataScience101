@@ -362,4 +362,4 @@ exit
 
 1. `poetry add -E food-img-recm tensorflow=2.3.1` - add extra dependency, [the usage, the library]
 2. 
-3. 
+3.  

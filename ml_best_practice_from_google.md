@@ -85,7 +85,7 @@ Once you have data and a basic idea of what you are trying to accomplish. move o
 
 As in most software engineering tasks, you will want to be contantly updating your approach, whether it is a heuristic or a machine-learned model, and you will find that the machine learned-model is easier to update and maintain(See Rule#16)
 
-# ML Pahse I: Your First Pipeline - 4 rules
+# ML Pahse I : Your First Pipeline - 4 rules
 
 Focus on your infrastructure for your first pipeline.
 
@@ -215,6 +215,74 @@ If the system is large, and there are many feature columns, know who created or 
 If you find that the person who understands a feature column is leaving, make sure that someone has the information.
 
 It's good to have a more detailed description of what the feature is, where it came from, and how it's expected to help.
+
+# Your First Objective - 4 rules
+
+## **R12 - Don't overthink which objective you choose to directly optimize**
+
+You wnat make money, make your user happy, make the world a better place. There are tons of metrics that you care about. and you should measure them all.
+
+However, early in the ML process, you will notice them all going up. even that you do not directly optimize!
+
+e.g.
+
+Uf you optmize for number of clicks, you are likely to see the time spent increase!
+
+So keep it simple and don't think too hard about balancing different metrics when you can still easily increase all the metrics.
+
+Don't take this rule too far though : do not confuse your objective with the ultimate health of the system (see Rule #39).
+
+And, **if you find yourself increasing the directly optimized metrics, but deciding not to launch, some objective revision may be required**
+
+## **R13 - Choose a simple observable and attributable for your first objective**
+
+Often you don't know what the true objective is. You think you do but ten you as you stare at the data and side-by-side analysis of your old system and new ML system, you realizae you want to tweak it. 
+
+Futher, different team member often can't agree on the true objective.
+
+**The ML objctive should be something that is easy to measure and is a proxy for the true objective**
+
+So train on the simple ML objective, and consider having a **policy layer** on the top that allows you to add additional logic(hopefully very simple logic) to do the final ranking.
+
+The eaasiet thing to model is a user behavior that is directly observed and attributeable to an action of the system.
+
+(直接觀察使用者行為，並且可以歸因成系統操作上的原因)
+
+1. Was this ranked link clicked?
+2. Was this ranked object downloaded?
+3. Was this ranked object forwarded/replied to/ e-mailed?
+4. Was this ranked object rated?
+5. Was this shown object marked as spam/pornography/offensive?
+
+Avoid modeling indirect effects at first:
+
+1. Did ther user visit the next day?
+2. How long did the user visit the site?
+3. What were the daily active user?
+
+Indirect effects make great metrics, and can be used during A/B testing during launch decisions.
+
+Finally, don't try to get the ML to figure out:
+
+1. Is the user happy using the product.
+2. Is the user satisfied with the experience?
+3. Is the product improving the user's overall well-being?
+4. How will this affect the company's overall health?
+
+There are all important, but also incredibly hard!
+
+Instead, use peoxies : 
+
+1. if the user is happy, they will stay on the site longer
+2. If the user is satisfied, they will visit again tomorrow.
+
+Insofar as well-being and company health is concerned, human judgement is required to connect any ML objectvie to the nature of the product you are selling and your business plan.
+
+Insofar(就此而言)
+
+## **R14 Starting with an iterpretable model makes debugging easier**
+
+Linear Regression, logistic regression, and Possion regression are directly motivated by a probabilistic model.
 
 
 # ML Pahse II: Feature Engineering - 1 rules

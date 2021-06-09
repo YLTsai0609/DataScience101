@@ -292,3 +292,4 @@ Factorization 2007](http://citeseerx.ist.psu.edu/viewdoc/download;jsessionid=ACA
 * 线性判别式分析( LDA)
 LDA也叫做Fisher线性判别(Fisher Linear Discriminant ,FLD)，是模式识别的经典算法，它是在1996年由Belhumeur引入模式识别和人工智能领域的。线性鉴别分析的基本思想是将高维的模式样本投影到最佳鉴别矢量空间，以达到抽取分类信息和压缩特征空间维数的效果，投影后保证模式样本在新的子空间有最大的类间距离和最小的类内距离，即模式在该空间中有最佳的可分离性。
 
+# Case Study of PCA

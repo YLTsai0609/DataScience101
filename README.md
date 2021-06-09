@@ -440,6 +440,7 @@
 
 [Polorization by reflection 鏡片反光原理](Polorization_by_Reflection.md)
 
+
 ## Hardware
 
 [hardware_introduction](hardware_introduction.md)
@@ -457,6 +458,10 @@
 [Introduction](data_culture.md)
 
 [Science vs Analytics vs Engineering vs Product](sci_ana_egn_pro.md)
+
+## Align for Software development
+
+[talk from infuseAI](align_talk_infuseAI.md)
 
 # MLOps and ML System Design
 
@@ -498,6 +503,9 @@
 
 [overview](mlops_framework.md)
 
+# Use Case survey
+
+[eBay-User-Journey](ebay_user_journey.md)
 # Others
 
 [Question Asking Guide](qa_guide.md)
