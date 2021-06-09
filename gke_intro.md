@@ -176,24 +176,95 @@ Regional cluster - 單一個Zone故障了，幫你起另外一個Zone
 
 多個 pod ?
 
-把 config 丟給api 3次，但是換名字
+(暴力法) 把 config 丟給api 3次，但是換名字
 
 <img src='./images/gke_27.png'></img>
 
 
 在 `kubernetes` 的架構中， pod 不總是活得好好的，而是會透過不同的pod賴支撐你的application，也可以同時運行多個pod，這樣一來如果你正在服務的pod死掉了，其他pod就會立刻接手服務
 
+那麼一定要使用暴力法，改3個config，打API嗎?
+
+可以透過Controller
+
+<img src='./images/gke_28.png'></img>
+
+Controller object 有很多種
+
+這邊介紹Deployment object
+
+label : `niginx`, replica : `3`
+
+此時只要apply一次 config即可
 
 
+Node pool / name space
 
+<img src='./images/gke_29.png'></img>
+
+內建 service : 跑在 Kube-system
+
+自行開發的 application : default / 自行建立的name space
+
+
+現行 GKE 可以支援 Yaml and Json
+
+### Summary
+
+pod , controller, master
+
+<img src='./images/gke_31.png'></img>
+
+<img src='./images/gke_32.png'></img>
 
 ## Kubernetes on GCP
 
 
-# GKE Getting Start
 
-# GKE Architecture and Safty
+<img src='./images/gke_33.png'></img>
 
-# GKE Setup GKE for CI/CD
+1. load balance
+2. frontend, backend 個字掛一個load balancer(透過GKE object 操作)
 
-# Cloud-Build - Getting Start
+<img src='./images/gke_34.png'></img>
+
+<img src='./images/gke_35.png'></img>
+
+autoscaling
+
+
+<img src='./images/gke_36.png'></img>
+
+
+node pools
+
+<img src='./images/gke_36.png'></img>
+
+Preemotible : 極少量cpu, 24小時之內被回收, 資料會被暫存
+
+<img src='./images/gke_37.png'></img>
+
+看 Node 忙不忙，再來塞 Node
+
+<img src='./images/gke_38.png'></img>
+
+<img src='./images/gke_39.png'></img>
+
+打勾就可以
+
+
+<img src='./images/gke_40.png'></img>
+
+<img src='./images/gke_41.png'></img>
+
+<img src='./images/gke_42.png'></img>
+
+<img src='./images/gke_43.png'></img>
+
+
+
+StackDriver 現在 應該是改名成了 Cloud Monitor
+
+# Additional 
+
+[K8s introduction](https://blog.ewocker.com/intro-to-k8s/?fbclid=IwAR0xUUyO6gfTpdXkxijwijl8n-rM1gU-TFJFQyvL7_TGFoYMrMK9-K4NZAA)
