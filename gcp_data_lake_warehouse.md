@@ -245,3 +245,5 @@ Archive
 # Reference
 
 [data warehouse vs data mart](https://kknews.cc/zh-tw/code/oeoylvp.html)
+
+[pyspark parquet to googlebigquery](pixlake/pixlake/etl/foodapp/reporting/multi_dimensional/export_bigquery.py)
