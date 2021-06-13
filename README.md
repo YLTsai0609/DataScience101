@@ -277,7 +277,8 @@
 
 [Efficient Methods and hardware for deep learning](L15_Efficient_Methods_and_Hardware_for_Deep_Learning.md)
 
-[Network Compression by hung yi lee lee](network_compression_hung_yee_lee.md)
+[Network Compression II by hung yi lee lee](network_compression_hung_yee_lee.md)
+
 
 ### All about the faces
 
