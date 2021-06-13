@@ -1,4 +1,104 @@
-[Ref](https://www.youtube.com/watch?v=xrlbLPaq_Og&t=985s)
+[Ref I](https://www.youtube.com/watch?v=utk3EnAUh-g)
+
+[Ref II](https://www.youtube.com/watch?v=xrlbLPaq_Og&t=985s)
+
+# Smaller Model
+
+<img src='./images/mc_23.png'></img>
+
+<img src='./images/mc_24.png'></img>
+
+Lower lantency and Privacy.
+
+## Neywork Pruning
+
+Prune the useless parameters.
+
+<img src='./images/mc_25.png'></img>
+
+1. train a network.
+2. measure the importance of a weights by
+   1. absolute values
+   2. life long?
+3. measure the importance of a neuron
+   1. mrsure the number of times it wasn't zero on a given dataset.
+4. remove
+5. fine-tune the network.
+6. start from 2 --> 5 evaluate the importance
+
+<img src='./images/mc_26.png'></img>
+
+<img src='./images/mc_27.png'></img>
+
+
+
+
+### what's the difference when we pruning the weights/neuron?
+
+### Weights
+
+<img src='./images/mc_27.png'></img>
+
+<img src='./images/mc_28.png'></img>
+
+Hard to implement, hard to speedup.
+
+after experiment, 95% weights are useless, but the wired shape network is even slower!
+
+<img src='./images/mc_29.png'></img>
+
+### Neuron
+
+<img src='./images/mc_30.png'></img>
+
+QA : 
+1. inefficency is the package impelemtation issue, not a algorithm issue.
+   1. yes, it is.
+2. instread of getting the network smaller, how about getting the network bigger and bigger?
+   1. after experiemnt, answer is no. we'll check it out below.
+
+## Why Prunning?
+
+instread of getting the network smaller, how about getting the network bigger and bigger?
+
+Why big network is easier to train?
+
+Lottery Ticket Hypothesis.(Best paper award @2019 ICLR)
+
+<img src='./images/mc_31.png'></img>
+
+When we train a Large network, we are training a lot of sub-network.
+
+Not all of the subnetwork trained successfully.
+
+But large network success when only one subnetwork successed!
+
+ 
+How to design the experiement?
+
+<img src='./images/mc_32.png'></img>
+
+Deconstructing Lottery Tickets:
+
+
+<img src='./images/mc_33.png'></img>
+
+we found that, it is possible a initilize parameter is good enough, we even don't need to train it.
+
+So called Weight-Agnoise Network.
+
+
+<img src='./images/mc_34.png'></img>
+
+<img src='./images/mc_35.png'></img>
+
+打臉大樂透假說
+
+just run more epoch for smaller network.
+
+Well, it's still a hypothesis.
+
+
 
 # Knowledge Distillation
 
@@ -123,3 +223,10 @@ MSDNet
 ## Computation based on Sample Difficultyu.
 
 <img src='./images/mc_21.png'></img>
+
+
+# Conclusion
+
+You can use them all
+
+<img src='./images/mc_22.png'></img>
