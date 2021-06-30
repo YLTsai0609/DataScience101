@@ -475,6 +475,8 @@
 
 [ml system tech deut](ml_tech_debt.md)
 
+[why your pipeline is slow?](why_pipeline_slow.md)
+
 ## Framework
 
 [overview](mlops_framework.md)
