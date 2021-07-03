@@ -318,6 +318,8 @@
 
 [Introduction](self_supervised_learning_intro.md)
 
+[auto-encoder and it's application](auto_encoder.md)
+
 ## Geospatial Analysis
 
 [Kaggle Learn All Mash Up](https://github.com/YLTsai0609/Geospatial_Analysis.git)
