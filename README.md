@@ -90,6 +90,7 @@
 # Machine Learning
 
 ## Regular ML Implementation
+
 [implementation_survey](ml_imp.md)
 
 
@@ -111,9 +112,19 @@
 
 ## Deep Learning
 
-[model_size_gpu_resource_estimation](model_gpu_usage.md)
+### Framework
 
-[deep learning library tutorial](dllb.md)
+[DL software](L8_DeepLearning_Software.md)
+
+[tensorflow-note](https://github.com/YLTsai0609/tensorflow_101)
+
+[keras-note](https://github.com/YLTsai0609/keras_101)
+
+[pytorch-note](https://github.com/YLTsai0609/pytorch_101.git/)
+
+### research flow
+
+[model_size_gpu_resource_estimation](model_gpu_usage.md)
 
 [YuLong's paper note](https://github.com/YLTsai0609/paper_summary)
 
@@ -123,9 +134,9 @@
 
 [efficient_research_workflow](reserch_effient_workflow.md)
 
-[Practical nn tuning](nn_tuning.md)
+### Fundamental
 
-[DL software](L8_DeepLearning_Software.md)
+[Practical nn tuning](nn_tuning.md)
 
 [Batch Normalization](batch_normalization.md)
 
