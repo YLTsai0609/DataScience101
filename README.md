@@ -76,6 +76,8 @@
 
 ### Probabilistic_Graphical_Models
 
+[Plane Notation for Directive Graph Model](plane_notation.md)
+
 [Markov Chain I : Markov_chain_MCMC](Markov_chain_MCMC.md)
 
 [Markov Chain II : absoring Markov Chain](Markov_chain_II.md)
