@@ -27,8 +27,28 @@
     - 每天特定16:00-20:00進店客數
     - 在公車站等1小時，總共會停靠的公車數
     - 寫一篇文章，總共會寫多少字
+    - 一個時間區段，每個使用者所聽的歌曲數量(over 所有使用者)
 * 對於每一個用字$w_{i, j}$，文件-主題分佈，主題-詞彙分佈採用Multinomial分佈
   + multinominal分佈被拿來描述多個cateogry時，各個category的出現機率，在主題很多，詞彙很多的假設下，每次選字可是為不變動的分佈。
+
+
+<img src = './images/LDA_4.png'></img>
+
+# Notations
+
+----- document, words, topic ------
+
+1. 文件 : $i = 1, ...M$
+2. $i^{th}$ 文件中的用詞 : $j = 1, ... N_{i}$
+3. $i^{th}$ 文件, $j^{th}$ 用詞 : $w_{ij}$
+4. 主題 : $t = 1, ... K$
+5. $i^{th}$ 文件, $j^{th}$ 用詞 所屬於的主題 : $z_{ij}$
+
+--- distribution -----
+
+1. 假設進行一次實驗(撰寫一個詞，該詞屬於主題$t$的機率為 $\theta_{t}$) - 主題$Z_{ij}$ ~ Multinominal $(1, \theta_{i})$
+
+2. 假設進行一次實驗(選定一個主題，寫下一個詞，該詞屬於某個詞的機率$\phi_{k}$) $w_{i,j}$ ~ Multinominal ~ $(1, \phi(z_{ij}))$
 
 # Prior distribution
 
@@ -36,10 +56,20 @@
 
 <img src = './images/LDA_3.png'></img>
 
+
 * 先驗分配這裡取 Dirichlet distribution，這裡事實上可以針對我們對文字資料的了解選用符合的先驗分佈，例如exponential distribution。
 * [TODO 為什麼先驗使用Dirichlet?]
   + 猜測 : 這個分佈在數學上能夠變成任何其他常見的分佈，可塑型強
 * 然後就跑Bayesian, 這裡是採用Gibbs sampling的方式，而非MCMC的sampling方式，scikit-learn的Model中也有多個變種，論文是2011, 2013年
+
+# Keywords:
+
+Dirchlet distrubtion
+1. https://zh.wikipedia.org/wiki/%E7%8B%84%E5%88%A9%E5%85%8B%E9%9B%B7%E5%88%86%E5%B8%83
+2. https://blog.rosetta.ai/%E6%B7%B1%E5%85%A5%E6%8E%A2%E8%A8%8E-latent-dirichlet-allocation-lda-%E8%88%87%E5%9C%A8%E6%8E%A8%E8%96%A6%E7%B3%BB%E7%B5%B1%E4%B8%8A%E7%9A%84%E6%87%89%E7%94%A8-2441d57ecc8a
+  
+Gibbs sampling
+
 
 # Result
 
