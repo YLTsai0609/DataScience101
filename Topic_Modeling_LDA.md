@@ -29,7 +29,7 @@
     - 寫一篇文章，總共會寫多少字
     - 一個時間區段，每個使用者所聽的歌曲數量(over 所有使用者)
 * 對於每一個用字$w_{i, j}$，文件-主題分佈，主題-詞彙分佈採用Multinomial分佈
-  + multinominal分佈被拿來描述多個cateogry時，各個category的出現機率，在主題很多，詞彙很多的假設下，每次選字可是為不變動的分佈。
+  + multinominal分佈被拿來描述多個cateogry時，且有多次試驗的情況下，各個category及試驗次數的的出現機率，在主題很多，詞彙很多的假設下，每次選字可是為不變動的分佈。
 
 
 <img src = './images/LDA_4.png'></img>
@@ -46,9 +46,23 @@
 
 --- distribution -----
 
+
 1. 假設進行一次實驗(撰寫一個詞，該詞屬於主題$t$的機率為 $\theta_{t}$) - 主題$Z_{ij}$ ~ Multinominal $(1, \theta_{i})$
 
 2. 假設進行一次實驗(選定一個主題，寫下一個詞，該詞屬於某個詞的機率$\phi_{k}$) $w_{i,j}$ ~ Multinominal ~ $(1, \phi(z_{ij}))$
+
+Model : 
+
+對於每個文件，其字數會符合 Possion 分佈，
+
+選字時 - 
+
+1. 先選出主題(MultiNominal distribution by topic)
+
+2. 再從主題中選字
+
+(Multinominal distribution by words in topic)
+
 
 # Prior distribution
 
@@ -83,3 +97,17 @@ Gibbs sampling
   + bubble plot 右邊扔然有bar-plot, 左邊則是Reduction的axis, 透過壓縮算法來計算各主兼之間的距離
 
 # Evaluation
+
+# Ref
+
+[review Multinominal - distribution from note](https://github.com/YLTsai0609/DataScience_Note/blob/master/demo/graph/multinomial.png)
+
+Reviewing Multinominal distribution
+
+對於主題 $t$ 中有$q=1, ... Q$個用詞
+
+令用詞集 $|Q| =\{今, 好, 今天, 天氣, 真好\}$
+
+當選定主題$t$來進行寫作時，寫3個詞，那麼寫出
+
+**今天天氣真好** 這個文本的機率，即可表示為 $P(w_{11} = 今天, w_{12} = 天氣, w_{13} = 真好)$

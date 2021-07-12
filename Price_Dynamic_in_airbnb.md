@@ -20,6 +20,7 @@
    1. max cross entropy
    2. Expectation Maximization (EM) Algorithm
    3. Any sampling method for Bayesian inference (E.g. MCMC) 
+   4. Can we use gradient-based optimizer?
 
 4. 結果
 

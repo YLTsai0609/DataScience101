@@ -18,7 +18,7 @@
 
 ## Experiment Design
 
-* [The type of experiments](type_of_experiment.md)
+[The type of experiments](type_of_experiment.md)
 
 ## A/B Testing
 
@@ -87,6 +87,8 @@
 [HMM_Viterbi_Algorithm](HMM_Viterbi_Algorithm.md)
 
 [From_Markov_Chain_to_LSTM](From_Markov_Chain_to_LSTM.md)
+
+
 # Machine Learning
 
 ## Regular ML Implementation
