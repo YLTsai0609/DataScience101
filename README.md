@@ -90,6 +90,7 @@
 # Machine Learning
 
 ## Regular ML Implementation
+
 [implementation_survey](ml_imp.md)
 
 
@@ -111,9 +112,19 @@
 
 ## Deep Learning
 
-[model_size_gpu_resource_estimation](model_gpu_usage.md)
+### Framework
 
-[deep learning library tutorial](dllb.md)
+[DL software](L8_DeepLearning_Software.md)
+
+[tensorflow-note](https://github.com/YLTsai0609/tensorflow_101)
+
+[keras-note](https://github.com/YLTsai0609/keras_101)
+
+[pytorch-note](https://github.com/YLTsai0609/pytorch_101.git/)
+
+### research flow
+
+[model_size_gpu_resource_estimation](model_gpu_usage.md)
 
 [YuLong's paper note](https://github.com/YLTsai0609/paper_summary)
 
@@ -123,9 +134,9 @@
 
 [efficient_research_workflow](reserch_effient_workflow.md)
 
-[Practical nn tuning](nn_tuning.md)
+### Fundamental
 
-[DL software](L8_DeepLearning_Software.md)
+[Practical nn tuning](nn_tuning.md)
 
 [Batch Normalization](batch_normalization.md)
 
@@ -277,7 +288,8 @@
 
 [Efficient Methods and hardware for deep learning](L15_Efficient_Methods_and_Hardware_for_Deep_Learning.md)
 
-[Network Compression by hung yi lee lee](network_compression_hung_yee_lee.md)
+[Network Compression II by hung yi lee lee](network_compression_hung_yee_lee.md)
+
 
 ### All about the faces
 
@@ -316,6 +328,8 @@
 ### Self-Supervised Learning
 
 [Introduction](self_supervised_learning_intro.md)
+
+[auto-encoder and it's application](auto_encoder.md)
 
 ## Geospatial Analysis
 
@@ -422,6 +436,10 @@
 
 [RAPIDS for spark](rapids_spark.md)
 
+## BigData Tech
+
+[LSH open source survey](lsh_open_source.md)
+
 ## Math
 
 [sympy : use python to caculate Calculus](sympy.md)
@@ -473,6 +491,8 @@
 [ml best practice from google](ml_best_practice_from_google.md)
 
 [ml system tech deut](ml_tech_debt.md)
+
+[why your pipeline is slow?](why_pipeline_slow.md)
 
 ## Framework
 
