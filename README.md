@@ -216,6 +216,8 @@
 
 [Topic_Modeling_LDA](Topic_Modeling_LDA.md)
 
+[LDA source code survey](lda_src.md)
+
 [Ngram](ngram.md)
 
 [Word Embedding with GloVe](GloVe_word_embedding.md)
