@@ -41,11 +41,14 @@ $$
 <img src = './images/keywordExtraction_7.png'></img>
 * 透過RAKE算法萃取出了關鍵字 : 珍珠、紅茶、拿鐵
 * RAKE(rapid automatic keyword extraction)
+
 ### RAKE 使用情境
+pass
+
 # Text Rank 
 <img src = './images/keywordExtraction_8.png'></img>
 * 和Google搜尋引擎使用的PageRank基本上是相同原理，只是把text換成page
-* 一個詞彙到底是不是一個關鍵字? 透過和這個詞彙共同ㄉ的其他詞彙來表達(某種embedding)
+* 一個詞彙到底是不是一個關鍵字? 透過和這個詞彙共同的其他詞彙來表達(某種embedding)
 * Ex 拿鐵這個字的重要性，由紅茶，我，愛，你，奶茶來決定，該重要性稱為Weight Score $WS(word)$
 $$
 WS(拿鐵) = (1-d) + d*相鄰結點分數
@@ -63,8 +66,11 @@ d越小，相鄰節點的影響越小
 * 從上推論來看，如果有一組字只和拿鐵一起出現，這會使得對於$WS(拿鐵)$的貢獻度在權重的部分是 1，充分展現了共現
 <img src = './images/keywordExtraction_11.png'></img>
 * 雞生蛋，蛋生雞問題，給一個初始值，用遞迴跑破解，可以得到收斂的Weighted Score
+
 ### 公式與收斂展示
+
 <img src = './images/keywordExtraction_12.png'></img>
+
 ### TextRank 使用情境
 * 我們可以看到，"愛"有最高的weighted score，這是因為"愛"常常是連接主詞和受詞之間的橋樑，使得"愛"的分數較高，TextRank被用來找出辭彙語詞彙之間的橋樑作為一種關鍵字萃取方式
 * [缺點] 需要計算圖以及遞回，要算比較久
