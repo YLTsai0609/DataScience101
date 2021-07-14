@@ -163,3 +163,29 @@ SparkSession available as 'spark'.
 | hadoop       | 2.7     |      |
 | java         | 11      |      |
 | scala        | 2.12    |      |
+
+# spark-on-hadoop
+
+為了上 spark 可以直接在 hadoop file system 上操作，以及使用 gcs (底層也是 hadoop file system)
+
+1. 撰寫設定檔
+
+`vi spark-3.1.2-bin-hadoop2.7/conf/spark-default.conf`
+
+```
+   # https://stackoverflow.com/questions/55595263/how-to-fix-no-filesystem-for-scheme-gs-in-pyspark
+  spark.hadoop.google.cloud.auth.service.account.enable true # 讓pyspark啟用google.cloud.service
+  spark.hadoop.google.cloud.auth.service.account.json.keyfile path_of_you_key # 給 spark 你的 gcp key
+  spark.hadoop.fs.gs.impl com.google.cloud.hadoop.fs.gcs.GoogleHadoopFileSystem # 啟用gcs的java實作
+  spark.hadoop.fs.AbstractFileSystem.gs.impl com.google.cloud.hadoop.fs.gcs.GoogleHadoopFileSystem # 啟用 gcs 的 java 實作
+  spark.hadoop.fs.gs.project.id your_project_id # 給定gcp project id
+
+```
+
+2. 下載 spark 連接 gcs 的 hadoop 實作(.jar)
+
+`gcs-connector-hadoop2-2.0.1.jar`(for hadoop 2) 放到
+
+`spark-3.1.2-bin-hadoop2.7/jars`
+
+3. 完成
