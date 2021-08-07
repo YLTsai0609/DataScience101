@@ -1,8 +1,14 @@
 # What is it?
 
-* `150+` concepts to be a better machine learning engineer.
+* `200+` concepts to be a better machine learning engineer(including business analysis, machine learning, deep learning, data enginnering, researching, machine learning operations, ...).
 
-* continously updating.
+* Continously updating.
+
+* Other branches : 
+
+	[DataEngineering101 - contains 15+ notes so far](https://github.com/YLTsai0609/DataEngineering101)
+
+	[Paper101 - contains - 45+ notes so far](https://github.com/YLTsai0609/paper101)
 
 # Business Analysis
 
@@ -36,19 +42,27 @@
 
 [A/B Testing：「偷看結果」將成為最大的錯誤](do_not_peaking_ab_test.md)
 
-# Decision Analysis
+## Decision Analysis
 
 [Using Decision Tree for decision making 1, 2, 3, 4, 5](dt_123.md)
 
-## Statistics
+## Use Case survey
+
+[eBay-User-Journey](ebay_user_journey.md)
+
+## Geospatial Analysis
+
+[Kaggle Learn All Mash Up](https://github.com/YLTsai0609/Geospatial_Analysis.git)
+
+# Statistics
 
 [matirials](matirials_stats.md)
 
-### Probability
+## Probability
 
 [P-Value](Pvalue.md)
 
-### Univiate distribution
+## Univiate distribution
 
 [displaying pdf, cdf, sf, ppf, and isf](pdf_cdf_surviving_function.md)
 
@@ -56,7 +70,7 @@
 
 [t , f , chi distribution](t_f_chi_distribution.md)
 
-### Bayesian Statistics
+## Bayesian Statistics
 
 [How_Bayesian_inference_works](How_Bayesian_inference_works.md)
 
@@ -68,13 +82,13 @@
 
 [Price Dynamic in airbnb](Price_Dynamic_in_airbnb.md)
 
-### Statistical Regression Analysis
+## Statistical Regression Analysis
 
 [Generalized_Additive_Models(Non Linear)](Generalized_Additive_Models.md)
 
 [Linear regression analysis](regression.md)
 
-### Probabilistic_Graphical_Models
+## Probabilistic_Graphical_Models
 
 [Plane Notation for Directive Graph Model](plane_notation.md)
 
@@ -90,13 +104,11 @@
 
 [From_Markov_Chain_to_LSTM](From_Markov_Chain_to_LSTM.md)
 
-
 # Machine Learning
 
 ## Regular ML Implementation
 
 [implementation_survey](ml_imp.md)
-
 
 ## Learning Theorem(Optimization and Generalization)
 
@@ -110,23 +122,37 @@
 
 [EM_algorithm](EM_algorithm.md)
 
+## Information Theory
+
+[ShannonEntroy_to_KL_divergence](ShannonEntroy_to_KL_divergence.md)
+
+[from KL_divergence_to_conditional_entropy](Conditional_Entropy.md)
+
 ## Tree-based Model
 
 [XGBoost theorem and code thumb up 700+](Review_XGBoost.md)
 
-## Deep Learning
+## Unsupervised Learning
 
-### Framework
+### Clustering
 
-[DL software](L8_DeepLearning_Software.md)
+[Introduction](clustering_introduction.md)
 
-[tensorflow-note](https://github.com/YLTsai0609/tensorflow_101)
+[cs229_11_GMM](cs229_em_algortihms.md)
 
-[keras-note](https://github.com/YLTsai0609/keras_101)
+[ML_13_Unsupervised_Learning_HungYi_Lee](ML_13_Unsupervised_Learning_HungYi_Lee.md)
 
-[pytorch-note](https://github.com/YLTsai0609/pytorch_101.git/)
+[ML_14_Unsupervised_Learning_WordEmbedding_HungYiLee](ML_14_Unsupervised_Learning_WordEmbedding_HungYiLee.md)
 
-### research flow
+[ML_15_Unsupervised_Learning_NeiborhoodEmbedding_HungYiLee](ML_15_Unsupervised_Learning_NeiborhoodEmbedding_HungYiLee.md)
+
+### Self-Supervised Learning
+
+[Introduction](self_supervised_learning_intro.md)
+
+[auto-encoder and it's application](auto_encoder.md)
+
+# Research Flow
 
 [model_size_gpu_resource_estimation](model_gpu_usage.md)
 
@@ -138,7 +164,19 @@
 
 [efficient_research_workflow](reserch_effient_workflow.md)
 
-### Fundamental
+# Deep Learning - Base
+
+## Framework
+
+[DL software](L8_DeepLearning_Software.md)
+
+[tensorflow-note](https://github.com/YLTsai0609/tensorflow_101)
+
+[keras-note](https://github.com/YLTsai0609/keras_101)
+
+[pytorch-note](https://github.com/YLTsai0609/pytorch_101.git/)
+
+## Fundamental
 
 [Practical nn tuning](nn_tuning.md)
 
@@ -162,51 +200,7 @@
 
 [domain_adaptation.md](domain_adaptation_1.md)
 
-## Graph Convolutional Network
-
-[Graph deep learning study matrial](graph.md)
-
-[Graph Neural Networks: Models and Applications AAAI 2020 tutorial](http://cse.msu.edu/~mayao4/tutorials/aaai2020/)
-
-[GCN QAs](GCN_intro.md)
-
-[Stanford_Graph_Representation_Learning](Graph_Representation_Learning_Stanford.md)
-
-[Standord_Properties_of_Network_and_Random_Graph_Models](Properties_of_Network_and_Random_Graph_Models.md)
-
-[Graph Convolution implementation using numpy and MXNet](https://github.com/YLTsai0609/HandOn_ML)
-
-## Information Theory
-
-[ShannonEntroy_to_KL_divergence](ShannonEntroy_to_KL_divergence.md)
-
-[from KL_divergence_to_conditional_entropy](Conditional_Entropy.md)
-
-## RecSys
-
-[recsys_overview](recsys_overview.md)
-
-[The ranking model](the_ranking_model.md)
-
-[recsys architecture](recsys_artc.md)
-
-[collections of top componies](top_comp_recsys.md)
-
-[metrics](rec_metrics.md)
-
-### Product/Industry property analysis
-
-[data property of recommendation system](data_property_recsys.md)
-
-### Sourcing Model
-
-[factorlization machine implementation survey](fm_im.md)
-
-[tffm source code analysis](tffm_analysis.md)
-
-[personal rank](personalrank.md)
-
-## Nature Language Processing (NLP)
+# Nature Language Processing (NLP)
 
 [metirials](nlp_metirials.md)
 
@@ -222,29 +216,29 @@
 
 [Word Embedding with GloVe](GloVe_word_embedding.md)
 
-### Data Diversity / Data Augmentation
+## Data Diversity / Data Augmentation
 
 [Introduction to Text Augmentation](nlp_aug_1.md)
 
-### Contextulized Word Embedding
+## Contextulized Word Embedding
 
 [transformer](transformer.md)
 
 [ELMO, BERT, GPT](ELMO_BERT_GPT.md)
 
-### NER
+## Name Entity Recognition (NER)
 
 [Introduction to NER](ner_intro.md)
 
 [kashgari - production level bert model source code analysis](kashgari_src_analysis.md)
 
-### POS Tagging
+## POS Tagging
 
 [Introduction to POS-Tagging](pos_tagging.md)
 
-## Computer Vision(CV)
+# Computer Vision(CV)
 
-### Introduction
+## Introduction
 
 [metrials](cv_metrials.md)
 
@@ -256,11 +250,11 @@
 
 [CNN Architecture AlexNet, VGG, GoogleLeNet, ResNet, NIN, DenseNet, SqueezeNet](L9_CNN_architechture.md)
 
-### Image Classification
+## Image Classification
 
 [Feature Extraction - Histogram of Oriented Gradient HOG](Histogram_of_Oriented_Gradient.md)
 
-### Object Detection
+## Object Detection
 
 [Data labeling](Data_labeling.md)
 
@@ -290,14 +284,14 @@
 
 [Detection_Localization_Segmentation_Stanford](L11_detection_segmentation_Stanford.md)
 
-### Model compression / Speedup algorithm / hardware
+## Model compression / Speedup algorithm / hardware
 
 [Efficient Methods and hardware for deep learning](L15_Efficient_Methods_and_Hardware_for_Deep_Learning.md)
 
 [Network Compression II by hung yi lee lee](network_compression_hung_yee_lee.md)
 
 
-### All about the faces
+## Faces
 
 [awesome-Face_Recognition](https://github.com/ChanChiChoi/awesome-Face_Recognition?fbclid=IwAR0tTuucePwOD_b4FWyF7CS1xbXqQuM2o4pz0X1R4NW1FvwWs9f5Y1uB7To#face-clustering)
 
@@ -317,33 +311,49 @@
 
 [Introduction](3D_Vision.md)
 
-## Unsupervised Learning
+# Graph Convolutional Network(GCN)
 
-### Clustering
+[Graph deep learning study matrial](graph.md)
 
-[Introduction](clustering_introduction.md)
+[Graph Neural Networks: Models and Applications AAAI 2020 tutorial](http://cse.msu.edu/~mayao4/tutorials/aaai2020/)
 
-[cs229_11_GMM](cs229_em_algortihms.md)
+[GCN QAs](GCN_intro.md)
 
-[ML_13_Unsupervised_Learning_HungYi_Lee](ML_13_Unsupervised_Learning_HungYi_Lee.md)
+[Stanford_Graph_Representation_Learning](Graph_Representation_Learning_Stanford.md)
 
-[ML_14_Unsupervised_Learning_WordEmbedding_HungYiLee](ML_14_Unsupervised_Learning_WordEmbedding_HungYiLee.md)
+[Standord_Properties_of_Network_and_Random_Graph_Models](Properties_of_Network_and_Random_Graph_Models.md)
 
-[ML_15_Unsupervised_Learning_NeiborhoodEmbedding_HungYiLee](ML_15_Unsupervised_Learning_NeiborhoodEmbedding_HungYiLee.md)
+[Graph Convolution implementation using numpy and MXNet](https://github.com/YLTsai0609/HandOn_ML)
 
-### Self-Supervised Learning
+# Recommendation System (RecSys)
 
-[Introduction](self_supervised_learning_intro.md)
+## Introduction
 
-[auto-encoder and it's application](auto_encoder.md)
+[recsys_overview](recsys_overview.md)
 
-## Geospatial Analysis
+[The ranking model](the_ranking_model.md)
 
-[Kaggle Learn All Mash Up](https://github.com/YLTsai0609/Geospatial_Analysis.git)
+[recsys architecture](recsys_artc.md)
 
-## DevOps/Computer Science
+[collections of top componies](top_comp_recsys.md)
 
-### Course
+[metrics](rec_metrics.md)
+
+## Product/Industry property analysis
+
+[data property of recommendation system](data_property_recsys.md)
+
+## Sourcing Model
+
+[factorlization machine implementation survey](fm_im.md)
+
+[tffm source code analysis](tffm_analysis.md)
+
+[personal rank](personalrank.md)
+
+# DevOps/Computer Science
+
+## Course
 
 [Missing_Semester_of_Your_CS_Education](https://github.com/YLTsai0609/Missing_Semester_of_Your_CS_Education)
 
@@ -357,9 +367,9 @@
 
 [Deployment of Machine Learning Models](https://github.com/trainindata/deploying-machine-learning-models)
 
+### Practical hints
 
-
-### Other pieces of DevOps
+[hardware_introduction](hardware_introduction.md)
 
 [Tech Estimation](tech_estimation_template.md)
 
@@ -368,7 +378,6 @@
 [How to read a big repository](How_to_read_a_big_respository.md)
 
 [garbage collection, shallow copy, deep copy](garbage_collection.md)
-
 
 [Standard Data Science project template](ds_prj_template.md)
 
@@ -406,7 +415,8 @@
 
 [Rasperry pi 4 hints](rasperry_pi_4.md)
 
-### Deployment and maintaining
+
+## Deployment and maintaining
 
 [API_doctring_generator](api_doc.md)
 
@@ -414,7 +424,7 @@
 
 [packaging_your_code](packaging_your_code.md)
 
-### Coding style
+## Coding style
 
 [code formatter](ide_auto_formatter.md)
 
@@ -422,31 +432,7 @@
 
 [pep 498 f_string](f_string.md)
 
-## DataBase and SQL
-
-[MySQL install and python connector](mysql_install_python_connector.md)
-
-[database wrapper sqlalchemy, pymysql, pyodbc](database_wrapper.md)
-
-[Basic sql injection](sql_injection_intro.md)
-
-[sql hint](sql_hint.md)
-
-## Distributed Computing
-
-[Spark - standalone](spark.md)
-
-[Spark - cluster](spark_cluster.md)
-
-[pyspark 101](https://github.com/YLTsai0609/pyspark_101)
-
-[RAPIDS for spark](rapids_spark.md)
-
-## BigData Tech
-
-[LSH open source survey](lsh_open_source.md)
-
-## Math
+# Math Stuff
 
 [sympy : use python to caculate Calculus](sympy.md)
 
@@ -458,22 +444,10 @@
 
 [lemma_theorem_proposition](lemma_theorem_proposition.md)
 
-## Physics
+# Physics
 
 [Polorization by reflection 鏡片反光原理](Polorization_by_Reflection.md)
 
-
-## Hardware
-
-[hardware_introduction](hardware_introduction.md)
-
-## Consultant Things
-
-[CaseStudy Template](CaseStudy_Template.md)
-
-[How to do desktop reasearch well?](desktop_research.md)
-
-[baby product Desktop Research](baby_product_desktop_research.md)
 
 ## Data Culture Building
 
@@ -487,9 +461,11 @@
 
 # MLOps and ML System Design
 
-## Course
+## Course & papers
 
 [Machine Learning System Design Stanford CS329S](ml_system_design.md)
+
+[martials](mlops_martials.md)
 
 ## Concept and Best Practice
 [mlops from gcp introduction](mlpops_gcp.md)
@@ -504,36 +480,6 @@
 
 [overview](mlops_framework.md)
 
-
-## Data Engineering
-
-[martials](de_martials.md)
-
-[data_engineering_brief_intro_by_google](data_engineering_describe_by_google.md)
-
-# Google Cloud Platform
-
-[GCP command](gcp_command.md)
-
-[GCP data_lake_warehouse](gcp_data_lake_warehouse.md)
-
-[GCP streamming](gcp_streamming.md)
-
-[Google App Engine](gae.md)
-
-[Google Kubernetes Engine Introduction](gke_intro.md)
-
-[Google Kubernetes Getting Start](gke_getting_start.md)
-
-## MLOps Framework
-
-[martials](mlops_martials.md)
-
-[overview](mlops_framework.md)
-
-# Use Case survey
-
-[eBay-User-Journey](ebay_user_journey.md)
 # Others
 
 [Question Asking Guide](qa_guide.md)
