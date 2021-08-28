@@ -449,11 +449,13 @@
 [Polorization by reflection 鏡片反光原理](Polorization_by_Reflection.md)
 
 
-## Data Culture Building
+## Data Culture Building / Management
 
 [Introduction](data_culture.md)
 
 [Science vs Analytics vs Engineering vs Product](sci_ana_egn_pro.md)
+
+[Scaling knowledge / lab](scaling_knowledge.md)
 
 ## Align for Software development
 
