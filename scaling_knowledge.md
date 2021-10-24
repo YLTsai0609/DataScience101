@@ -34,7 +34,8 @@ cons:
 1. 顯示上不容易 : rendering尚有問題
 2. 尚無法Getting start : docker image support
    * https://github.com/airbnb/knowledge-repo/issues/521 To be tested
-
+   * 目前 docker 還有點問題，應該是要從docker image調整，或是等待官方docker image 釋出
+   * `/Users/yulongtsai/Desktop/Working_Area/knowledge-repo-docker`
 ## Breakdown
 
 1. [GitPython - github trigger](https://github.com/gitpython-developers/GitPython) - pull sutff to servering server when anyone push something.

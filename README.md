@@ -339,6 +339,8 @@
 
 [metrics](rec_metrics.md)
 
+[ml-application on recsys by facebook ml engineer](ml_fb.md)
+
 ## Product/Industry property analysis
 
 [data property of recommendation system](data_property_recsys.md)
