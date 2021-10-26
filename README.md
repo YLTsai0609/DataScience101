@@ -459,9 +459,11 @@
 
 [Scaling knowledge / lab](scaling_knowledge.md)
 
-## Align for Software development
+## agile for Software development
 
 [talk from infuseAI](align_talk_infuseAI.md)
+
+[story point](sp.md)
 
 # MLOps and ML System Design
 
