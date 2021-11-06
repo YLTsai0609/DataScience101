@@ -104,6 +104,10 @@
 
 [From_Markov_Chain_to_LSTM](From_Markov_Chain_to_LSTM.md)
 
+## Casual Inference
+
+[introduction](causal_intro.md)
+
 # Machine Learning
 
 ## Regular ML Implementation
