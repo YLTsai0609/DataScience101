@@ -337,15 +337,18 @@
 
 [The ranking model](the_ranking_model.md)
 
-[recsys architecture](recsys_artc.md)
-
-[collections of top componies](top_comp_recsys.md)
-
 [metrics](rec_metrics.md)
 
 [ml-application on recsys by facebook ml engineer](ml_fb.md)
 
 [benifit of realtime recommender](realtime_benifit.md)
+
+## Case Study
+
+[Netflix](recm_netflix.md)
+
+[Instgram - explore (2019)](recm_case_study.md)
+
 
 ## Product/Industry property analysis
 
