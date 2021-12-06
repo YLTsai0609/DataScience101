@@ -220,6 +220,10 @@
 
 [Word Embedding with GloVe](GloVe_word_embedding.md)
 
+## Tokenization
+
+[algorithm in jieba](jieba.md)
+
 ## Data Diversity / Data Augmentation
 
 [Introduction to Text Augmentation](nlp_aug_1.md)
