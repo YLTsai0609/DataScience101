@@ -351,6 +351,7 @@
 
 [benifit of realtime recommender](realtime_benifit.md)
 
+[recommender from product persperctive](recm_product.md)
 ## Case Study
 
 [Netflix](recm_netflix.md)
