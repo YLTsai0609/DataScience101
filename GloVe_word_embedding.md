@@ -96,7 +96,8 @@ J = \sum_{ik}(w_{i}^{T}w_{k} + b_{i} + b_{k} - logX_{ik})^{2}
 $$
 
 8. 根據經驗，兩個詞共現的次數越多，那麼這兩個詞在cost function中的影響就應該要越大，所以根據兩個詞共同出現的次數可以設計一個權重項
-   $$
+
+$$
 J = \sum_{ik}f(X_{ik})(w_{i}^{T}w_{k} + b_{i} + b_{k} - logX_{ik})^{2}
 $$
 
@@ -114,10 +115,21 @@ $$p(x) = \left\{
     (\frac{x}{x_{max}})^{\alpha} &  if~x < x_{max}\\
     1 &, otherwise
   \end{array}
-\right.$$
+\right$$
+
+
 * 拿實驗來調參，作者認為，$x_{max}~100, \alpha=\frac{3}{4}$模型能夠有不錯的表現
 # word2vec
 [check here, 2.6k+ upvote](https://zhuanlan.zhihu.com/p/26306795)
 
 
 # Compare word2vec and Glove
+
+# Ref
+
+[Is Word2vec a supervised/unsupervised learning algorithm?](https://www.quora.com/Is-Word2vec-a-supervised-unsupervised-learning-algorithm)
+
+[Learn Word2Vec by implementing it in tensorflow](https://towardsdatascience.com/learn-word2vec-by-implementing-it-in-tensorflow-45641adaf2ac)
+
+
+

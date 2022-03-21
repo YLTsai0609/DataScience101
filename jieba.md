@@ -62,16 +62,29 @@ video 27:00
 
 <img src='./assets/jieba_7.png'></img>
 
-一個我幻想的 Naive approach
-
-* 每個 node 的 array 都放入全部的 token (一個字形成的token)
-* 對於整個字典，每個字做 groupby ，計算下個字是什麼的機率值，產出對於 node = 1 的 node = 2 (也是 array) 的機率值
 * 大致上是這樣的過程，長出一個 trie，每個 node 是一個 array， array element 中有字以及機率值
 * Trie 中，根據給定辭典，可能會長出如下 trie :  `在 (0.3)`, `在 -> 野 (0.3)`, `物 (0.1)`, `園(0.1)`, `動 -> 物 -> 園(0.3)`, `生 -> 動(0.3)`, `生 -> 活(0.2)`, `野 -> 生(0.4)`
 * 有了給定句子 (Query) 在野生動物園玩，根據 trie 樹可以舉例出 DAG
   * 在 (斷1) --> 野 (0.3) --> 生 (斷2) --> 動 0.3 --> 物 0.2 --> 園 0.1 (prob = 0.3 x 0.3 x 0.2 x 0.1 = 18 x 10-4)
   * 在 (斷1) --> 野 (斷2) --> 生 (0.4) --> 動  --> 物  --> 園 0.3 (prob = 0.4 x 0.3 = 12 x 10-2)
   * N 組路線中，找機率最大的路線 (窮舉 / search / 動態規劃 ...)
+
+#### Source code example
+
+implementation in python jieba
+
+* 根據給定的字典
+
+```
+我是一個詞 100 N
+烤肉      1   Vt
+...
+```
+產生一個Trie-tree，每個 node 都是一個字，node上為從根節點一路到葉節點所形成的字，在字典中被記錄的詞頻
+
+* 使用一個自定義字典作為範例
+
+<img src='./assets/jieba_8.png'></img>
 
 ### HMM
 
