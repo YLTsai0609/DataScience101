@@ -357,7 +357,7 @@
 
 [Netflix](recm_netflix.md)
 
-[Instgram - explore (2019)](recm_ig_explore.md.md)
+[Instgram - explore (2019)](recm_ig_explore.md)
 
 
 ## Product/Industry property analysis
