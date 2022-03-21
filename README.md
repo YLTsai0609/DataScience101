@@ -366,6 +366,10 @@
 
 [personal rank](personalrank.md)
 
+## Search
+
+[google search guideline](google_search_guideline.md)
+
 # DevOps/Computer Science
 
 ## Course
