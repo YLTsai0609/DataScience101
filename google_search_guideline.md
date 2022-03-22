@@ -4,6 +4,8 @@
 
 [introduction in chinese](https://www.wpandseo.tw/2856/seo-google-quality-rater-guideline/)
 
+* NOTE: 基本上是 google 透過全球各地找來的人進行網頁排序的標注，Quality Rater Guideline 就是一份標註指南 (Crowd Sourcing)
+
 # Introducttion to Search Quality Rating
 
 1. Search engines exist to help people find what they are looking for. To do that, search engines must provide a diverse set of helpful, high quality search results, presented in the most helpful order.
@@ -71,12 +73,66 @@ high PQ(page quality) score rating YMYL pages.
 important factor:
 
 1. the purpose of the page(evaluated by human)
-2. Expertise, Authoritativeness, Trustworthness
+2. Expertise, Authoritativeness, Trustworthness(E-A-T)
 3. Main Content Quality and Amount
 4. Website information / who is responseible for the MC
 5. Website reputation / reputation about who is responseible for the MC
 
-## E-A-T
+## EAT
 
-how to measure E, A, T for us?
+pass
 
+## Highest Quality Page
+
+pass
+
+## Low Quality Page
+
+pass
+
+## Lowest Quality Page
+
+pass
+
+## Medium Quality Page
+
+pass
+
+
+# Understanding Mobile User Needs
+
+Query : iphone
+Locale : English (US)
+User Location : New York
+What's the intent? - he/she want to know about iphone(maybe buy it?)
+
+definitions:
+
+* query
+* user
+* user intent
+* locale(language and location for the task)
+* user location
+* search engine result page(SERP)
+  * result
+    * result block - which display information of items
+    * landing page(LP) - the page you see after click a link
+
+
+<img src='./assets/gsg_3.png'></img>
+
+## Query with explicit location
+
+<img src='./assets/gsg_4.png'></img>
+
+* if user query with an explicit location, do not use user locale information
+
+## Query with multiple meanings
+
+<img src='./assets/gsg_5.png'></img>
+
+1. Dominant interpretation - `most user mean` when they type the query - `use keyword impressions as proxy`
+   1. in guideline - the dominant interpretation should be clear to you(labeller), especially after the labeller doing a little web research.
+2. common interpretation -   `many or some user mean` 
+   1. a query can have multiple common interpretation
+3. minor interpretation - `few users have in mind`
