@@ -40,38 +40,41 @@ user - item interaction
 
 1. user 互動紀錄多，興趣變化速度不快，item內容解析成本高，從 u2u2i 下手是好的起手式
 2. user cold start 需要關注(找你可能認識的人，你可能喜歡的貼文 - 個人化)
-3. user 行為經常屬於長期偏好而不是當下需求 --> latent factor / tagging 效果會很好
+3. user 行為經常屬於長期偏好而不是當下需求 
 
-# Exlore
+# Explore
 
 功能特性 : 讓 user 挖掘更多他喜歡的、但是不是他有關注的帳號，進而提升使用者黏著度，最終可以提昇貼文 PV 以及廣告收入
 
 metrics : 
 1. explore DAU
-2. explore PV per user
+2. explore PV per user(reading depth)
 3. user total time on instgram app
 
 # Candidate Generation (Ig2Vec)
 
 * 1G posts --> 500 posts
-* Cross country, race content(images and videos)
+* hard to scale domain knowledge -  
+  * cross country, race 
+  * complex content(images and videos)
 
 1. 走 UserCF
 3. 貼文url 以及 user 行為作為 token (word)
 2. 每個 user 的行為 (for each session) - sentence
 3. 每一個 user 在不同 session 可能關注的話題不一樣，所以以session來做切分
+4. features : behavior sequence 
+5. output : word2vec embedding(account similarity)
+   * 相似的 account 會擁有較近的 L2 distance(而非較相似的物件(圖片、影片))
+6. 直接用人標記來快速迭代
 
-4. labels : 人類手標主題
-5. features : behavior sequence 
-6. output : classification report, word2vec embedding
-   1. 相似的 account 會擁有較近的 L2 distance(而非較相似的物件(圖片、影片))
-7. 直接用人標記來快速迭代
-
-* NOTE: `word2vec`,embedding 是從自定義文本所訓練(unsupervised)，但為了快速迭代相似帳號的效果，需要 label data(可抽樣，可以控制在 label data < 1K for each `sprint`)
+* NOTE: `word2vec`,embedding 是從自定義文本所訓練(unsupervised)，但為了快速迭代相似帳號的效果，需要 label data(可抽樣，可能可以控制在 label data < 1K for each `sprint`)
 
 <img src='./assets/recmig_1.png'></img>
 
-8. approx nearest neighbor (FAISS) to select Top500，similar topic users for each users.
+* 怎麼選標記資料?
+  * sol 1 : item tags --> account tfidf tags, filter 出相似 tags 作為相似的 account groud truth
+
+* approx nearest neighbor (FAISS) to select Top500，similar topic users for each users.
 
 * NOTE: why not content-based?
   * IG上有圖片和影音，考慮到如何標記圖片和影音的方法
@@ -87,6 +90,8 @@ metrics :
    3.  `Embedding Vec` --> `Similar account like Bob, Joe, Alisasa, ...` 
    4. `Collect Bob's content` --> filters(such as Not Safe for Work content) 
    5. `Candidates content`
+
+10. candidates generation as fine-grained relevance item sets.
 
 # Ranking
 
