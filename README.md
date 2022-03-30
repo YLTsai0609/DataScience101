@@ -20,6 +20,8 @@
 
 [Information Quality (II)](infoQ_2.md)
 
+[In-House EDA guideline](eda_guideline.md)
+
 [Case_Study_Questionnaire_analysis_improve_website_UIUX](case_study_website_UIUX.md)
 
 ## Business model
@@ -358,6 +360,8 @@
 [Netflix](recm_netflix.md)
 
 [Instgram - explore (2019)](recm_ig_explore.md)
+
+[airbnb - search ranking(2018)](airbnb_search_ranking.md)
 
 
 ## Product/Industry property analysis
