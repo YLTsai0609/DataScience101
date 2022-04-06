@@ -56,9 +56,11 @@
 
 [eBay-User-Journey](ebay_user_journey.md)
 
-## Geospatial Analysis
+## Geospatial Analysis (Location-Based Service)
 
 [Kaggle Learn All Mash Up](https://github.com/YLTsai0609/Geospatial_Analysis.git)
+
+[LineSpot - GeoHashing, KD-Tree](https://engineering.linecorp.com/zh-hant/blog/serving-location-based-data/)
 
 # Statistics
 
