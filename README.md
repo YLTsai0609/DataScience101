@@ -520,6 +520,10 @@
 
 [overview](mlops_framework.md)
 
+# Data Career
+
+[Jobs and Companies](jobs_companies.md)
+
 # Others
 
 [Question Asking Guide](qa_guide.md)
