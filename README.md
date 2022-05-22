@@ -347,7 +347,7 @@
 
 [recsys_overview](recsys_overview.md)
 
-[The ranking model](the_ranking_model.md)
+[learning to rank](the_ranking_model.md)
 
 [metrics](rec_metrics.md)
 
