@@ -493,6 +493,12 @@
 
 [Scaling knowledge / lab](scaling_knowledge.md)
 
+### Google Code Review Guideline
+
+[001 - The Standard of Code Review](google_code_review_1.md)
+
+[002 - What to Look for in a Code Review](google_code_review_2.md)
+
 ## agile for Software development
 
 [talk from infuseAI](align_talk_infuseAI.md)
