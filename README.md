@@ -383,6 +383,8 @@
 
 [google search guideline](google_search_guideline.md)
 
+[Search Survey](search_survey.md)
+
 # DevOps/Computer Science
 
 ## Course
