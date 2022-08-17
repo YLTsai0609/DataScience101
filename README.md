@@ -499,6 +499,11 @@
 
 [002 - What to Look for in a Code Review](google_code_review_2.md)
 
+[003 - Navigating a CL in review](google_code_review_3.md)
+
+[004 - Speed of Code Reviews](google_code_review_4.md)
+
+
 ## agile for Software development
 
 [talk from infuseAI](align_talk_infuseAI.md)
