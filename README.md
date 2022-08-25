@@ -378,6 +378,8 @@
 
 [google search guideline](google_search_guideline.md)
 
+[Search Survey](search_survey.md)
+
 # DevOps/Computer Science
 
 ## Course
@@ -487,6 +489,17 @@
 [Science vs Analytics vs Engineering vs Product](sci_ana_egn_pro.md)
 
 [Scaling knowledge / lab](scaling_knowledge.md)
+
+### Google Code Review Guideline
+
+[001 - The Standard of Code Review](google_code_review_1.md)
+
+[002 - What to Look for in a Code Review](google_code_review_2.md)
+
+[003 - Navigating a CL in review](google_code_review_3.md)
+
+[004 - Speed of Code Reviews](google_code_review_4.md)
+
 
 ## agile for Software development
 

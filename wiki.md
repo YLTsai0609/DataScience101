@@ -16,7 +16,6 @@
 
 [the schema of table in database - an overview](https://www.mediawiki.org/w/index.php?title=Manual:Database_layout/diagram&action=render)
 
-
 # categorylinks table
 
 1. table stores entries corresponding to links of the form [[Category:Title]] or [[Category:Title|sortkey]]
