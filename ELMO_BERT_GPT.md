@@ -306,3 +306,10 @@ Normal BERT有24層，Large BERT有48層，每一層做了什麼事情!?
 # Papers
 
 [Deep contextualized word representations - ELMO 2018](https://arxiv.org/pdf/1802.05365.pdf)
+
+# 其他觀點
+
+QA : BERT 是否可直接拿詞語來做 Cosine Sim 找尋相似詞彙? 
+* [100+ 讚](https://zhuanlan.zhihu.com/p/374230720)
+* [packages](https://hxhen.com/archives/598)
+

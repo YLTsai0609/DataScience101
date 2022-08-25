@@ -91,11 +91,12 @@ $$
 其中$b_{i}$包含了$logX_k$，所以公式中沒有寫明這一項(這個部分就是細到要看論文了)
 
 7. 上面公式只是理想情況下，在實際實驗中左右兩邊只要求相近即可，因此就可以產生cost function
-   $$
+8. 
+$$
 J = \sum_{ik}(w_{i}^{T}w_{k} + b_{i} + b_{k} - logX_{ik})^{2}
 $$
 
-8. 根據經驗，兩個詞共現的次數越多，那麼這兩個詞在cost function中的影響就應該要越大，所以根據兩個詞共同出現的次數可以設計一個權重項
+1. 根據經驗，兩個詞共現的次數越多，那麼這兩個詞在cost function中的影響就應該要越大，所以根據兩個詞共同出現的次數可以設計一個權重項
 
 $$
 J = \sum_{ik}f(X_{ik})(w_{i}^{T}w_{k} + b_{i} + b_{k} - logX_{ik})^{2}
@@ -110,20 +111,72 @@ $$
 
 結合以上3點，其實可以有很多函數可以選擇，作者最後選用這樣的分段函數
 
-$$p(x) = \left\{
+$$
+p(x) = \left\{
   \begin{array}{lr}
     (\frac{x}{x_{max}})^{\alpha} &  if~x < x_{max}\\
     1 &, otherwise
   \end{array}
-\right$$
+\right
+$$
 
 
-* 拿實驗來調參，作者認為，$x_{max}~100, \alpha=\frac{3}{4}$模型能夠有不錯的表現
+* 拿實驗來調參，作者認為，$x_{max}~100, \alpha=\frac{3}{4}$ 模型能夠有不錯的表現
+
 # word2vec
+
 [check here, 2.6k+ upvote](https://zhuanlan.zhihu.com/p/26306795)
 
+* 語言模型 : f(x) = y, --> x, y 是否是人話?
+* 句子 1 --> 她们 夸 吴彦祖 帅 到 没朋友 --> x --> 吳彥祖 , y --> 她們、誇、帥、沒朋友
+* 句子 2 --> 她们 夸 我 帅 到 没朋友 --> x --> 我 , y --> 她們、誇、帥、沒朋友 
+* f(吳彥祖) = f(我) --> 我 == 吳彥祖 (好喔)
 
-# Compare word2vec and Glove
+## Ski-gram vs CBOW
+
+* 一個詞(x) 預測上下文 (y) --> Skip-gram
+* 一個詞的上下文(x) 預測一個詞 (y) --> CBOW 
+* 以上兩點其實就是克漏字練習
+* 以上是 positve label, 需要 negtive sampling，基本上可以做一些排列組合，組出非人話的句子作為 negtive sample
+
+### ONEHOT to WordEmbedding
+
+<img src='images/gloveem_1.png'></img>
+
+$x_1 : [0,0,0,1,0,0....]$ 
+
+$x_2 : [0,0,0,0,0,1....]$ 
+
+...
+
+$x_V : [0,0,0,1,0,0,...]$
+
+
+x, y 皆是 $V$ 個節點
+
+a.k.a. 任意詞彙 `吳彥祖`，`我`，都會有 onehot 以及 embedding 兩種形式表示，而此訓練結果的embedding是表達，`我`, `吳彥祖` 經常出現在同樣的上下文當中
+
+## SkipGram 架構 vs CBOW 架構
+
+<img src='images/gloveem_2.png'></img>
+
+<img src='images/gloveem_3.png'></img>
+
+## 訓練
+
+1. x, y 從語料庫中的順序關係可以生成大量 positive pair (端看語料庫的多樣性及詞條數量)
+2. negtive sampling - 將詞條做隨機 shuffle(我自己想的)，讓他變成不像人話，可作為 negtive pair
+3. 預測類別太多了，有 $V$ 個詞語，需要做特殊處理才好訓練，所以有 hierarchical softmax (N分類 --> $logN$分類)
+
+## 小節
+
+1. Word2Vec 是訓練語言模型的副產物，語言模型是希望輸入 x ，得到 y ，而 x, y 從人類角度來看是一句人話
+2. Word2Vec 這個副產物是 單詞的 dense representation，在訓練語料中，上下文將近的詞彙會有接近的 embedding. --> 因此使得 Word2Vec 可用於尋找類似語意的詞(這裡的語意指的是經常有相似的上下文)
+3. CBOW是將目標詞雨蓋住，用上下文預測他，等同於克漏字測驗，這個思想在 BERT 中繼續沿用
+4. CBOW, SkipGram, GloVe 都是基於語言的上下文特性，所設計出來的模型
+5. 克漏字做法在成效上，容易表達 `多字一意` --> 例如 背包 ~ 後背包 ~ 登山包，而在 `一字多意` 上則表現得不好，例如 `蘋果` --> `我買了一隻蘋果`, `頻果真得很好吃`, `蘋果日報今天的頭條很瞎`，而 BERT 解這個問題解得比較好
+6. 使用者閱讀序列，也可理解為一個語句，在此場景下使用者閱讀序列的語料可以訓練出 user embedding，進而找到相近的 user (基於閱讀序列)，相近 user 可做 u2u2i 的 item 推薦 (推薦系統)
+
 
 # Ref
 

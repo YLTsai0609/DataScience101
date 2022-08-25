@@ -226,7 +226,7 @@
 
 [Ngram](ngram.md)
 
-[Word Embedding with GloVe](GloVe_word_embedding.md)
+[Word Embedding](GloVe_word_embedding.md)
 
 ## Tokenization
 
@@ -353,9 +353,9 @@
 
 [ml-application on recsys by facebook ml engineer](ml_fb.md)
 
-[benifit of realtime recommender](realtime_benifit.md)
+[recommender from product persperctive](rec_product.md)
 
-[recommender from product persperctive](recm_product.md)
+[data property of recommendation system](data_property_recsys.md)
 
 ## Case Study
 
@@ -364,11 +364,6 @@
 [Instgram - explore (2019)](recm_ig_explore.md)
 
 [airbnb - search ranking(2018)](airbnb_search_ranking.md)
-
-
-## Product/Industry property analysis
-
-[data property of recommendation system](data_property_recsys.md)
 
 
 ## Sourcing Model
