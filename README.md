@@ -515,6 +515,8 @@
 
 [martials](mlops_martials.md)
 
+[Scale Up ML Lifecycle](scaleup_ml.md)
+
 ## Concept and Best Practice
 [mlops from gcp introduction](mlpops_gcp.md)
 
