@@ -33,8 +33,18 @@ offline 機制必須非常有信心，才能讓整個產品運轉跑的這麼快
 **一個好得現下指標要跟線上指標的成長對的上來，這個 offline metrics 酒能夠確實加速模型推進，因為如果每次都要線上實驗，等個好幾天，才能收集到足夠的統計數據，那麼整個開發進程就會很慢，而且做起來也很像在瞎猜，2020年 dcard 只做了 10 來個線上模型，而在 2021年就做了超過 150 個線上模型相關的實驗，就是這個原因**
 
    1. testing set 的主指標以及次指標(例如兩個)，必須在統計檢定上一致 (一致性檢驗，確保 offline testing set 和 online 的資料是一模一樣的)，如此一來可以得知，testing比較好，上線一定會比較好
-      1. Q : 直接拿上線後的歷史資料作為 Testing set 不行嗎 ?
+      * Q : 直接拿上線後的歷史資料作為 Testing set 不行嗎 ?
+      * A : 那麼第一波模型上線之前呢?
+
+
+<img src='assets/sml_2.jpeg'></img>
+
+<img src='assets/sml_3.jpeg'></img>
 
 # Ref
 
 [Dcard 機器學習指南 (II) — 機器學習專案的技術規劃](https://medium.com/dcardlab/dcard-%E6%A9%9F%E5%99%A8%E5%AD%B8%E7%BF%92%E6%8C%87%E5%8D%97-ii-%E6%A9%9F%E5%99%A8%E5%AD%B8%E7%BF%92%E5%B0%88%E6%A1%88%E7%9A%84%E6%8A%80%E8%A1%93%E8%A6%8F%E5%8A%83-536081dcb245)
+
+
+
+`
