@@ -46,5 +46,3 @@ offline 機制必須非常有信心，才能讓整個產品運轉跑的這麼快
 [Dcard 機器學習指南 (II) — 機器學習專案的技術規劃](https://medium.com/dcardlab/dcard-%E6%A9%9F%E5%99%A8%E5%AD%B8%E7%BF%92%E6%8C%87%E5%8D%97-ii-%E6%A9%9F%E5%99%A8%E5%AD%B8%E7%BF%92%E5%B0%88%E6%A1%88%E7%9A%84%E6%8A%80%E8%A1%93%E8%A6%8F%E5%8A%83-536081dcb245)
 
 
-
-`

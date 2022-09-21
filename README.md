@@ -118,7 +118,7 @@
 
 # Machine Learning
 
-## Regular ML Implementation
+## ML Implementation
 
 [implementation_survey](ml_imp.md)
 
@@ -140,9 +140,11 @@
 
 [from KL_divergence_to_conditional_entropy](Conditional_Entropy.md)
 
-## Tree-based Model
+## Supervised Learning
 
 [XGBoost theorem and code thumb up 700+](Review_XGBoost.md)
+
+[Naive Bayes and how it work when features are dependent](nb.md)
 
 ## Unsupervised Learning
 
