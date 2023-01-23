@@ -432,7 +432,7 @@
 
 [Manage_package_by_Conda](Manage_package_by_Conda.md)
 
-[python and poetry package management](py_poetry.md)
+[Python Versioning & Package Management (python + virtualenv vs pipenv vs poetry)](py_pkg.md)
 
 [python command line](python_cmd.md)
 

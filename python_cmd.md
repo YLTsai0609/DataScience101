@@ -51,3 +51,4 @@ ipykernel通常會隨著ipython一起裝，所以不用再裝了
     1. python -m ipykernel install --name pixlake --user 安裝 ipykernel，使用現在的給定的python直譯器環境，產生一個叫做pixlake的kernel
     2. 會return Install kernelspec pixlake in `home/user/.local/share/jupyter/kernels/pixlake`
     3. 接著jupyter就看得到要使用哪個直譯器了!
+    4. 隨著不同版本的 jupyter， 會裝在不同的地方 e.g. `/Users/username/Library/Jupyter/kernels/`
