@@ -1,3 +1,17 @@
+# Before Poetry - pipenv
+
+[相比 Pipenv，Poetry 是一个更好的选择](https://zhuanlan.zhihu.com/p/81025311)
+
+[不要用 Pipenv @ 2019](https://greyli.com/do-not-use-pipenv/)
+
+pipenv 
+
+* 管理 python 版本 & package - once，而且不會有某些頻道沒有套件的狀況(conda的痛)
+* 當初在計算套件 conflicts 時，做的不算好，2019年時會更新其他不相干且已經鎖定版本的套件(即使已經使用 --keep-outdated)
+* Lock 很慢(conda 也有這個問題，NP hard problem)
+
+
+
 # python venv + poetry
 
 why not conda? 
