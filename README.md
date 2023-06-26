@@ -355,7 +355,7 @@
 
 [ml-application on recsys by facebook ml engineer](ml_fb.md)
 
-[recommender from product persperctive](rec_product.md)
+[recommender from product persperctive](recm_product.md)
 
 [data property of recommendation system](data_property_recsys.md)
 
@@ -492,16 +492,17 @@
 
 [Scaling knowledge / lab](scaling_knowledge.md)
 
-### Google Code Review Guideline
+### Code Review Guideline
 
-[001 - The Standard of Code Review](google_code_review_1.md)
+[001 - Google The Standard of Code Review](google_code_review_1.md)
 
-[002 - What to Look for in a Code Review](google_code_review_2.md)
+[002 - Google What to Look for in a Code Review](google_code_review_2.md)
 
-[003 - Navigating a CL in review](google_code_review_3.md)
+[003 - Google Navigating a CL in review](google_code_review_3.md)
 
-[004 - Speed of Code Reviews](google_code_review_4.md)
+[004 - Google Speed of Code Reviews](google_code_review_4.md)
 
+[summary_deds_code_review](deds_codereview.md)
 
 ## agile for Software development
 

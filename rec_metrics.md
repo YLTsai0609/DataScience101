@@ -28,7 +28,6 @@ from : 推薦系統實踐
 
 # Hit Ratio
 
-
 $$
 \frac{\#~hits}{\#~users}
 $$
@@ -39,3 +38,19 @@ $\#~users$ : 使用者數量
 同Recall，但以使用者數量作為評估基準，單個使用者就算有30個點擊且系統推薦出5個，hits不會是5，仍然是1
 
 [slim 2011](http://glaros.dtc.umn.edu/gkhome/fetch/papers/SLIM2011icdm.pdf)
+
+# AUC
+[乱弹机器学习评估指标AUC 570+](https://zhuanlan.zhihu.com/p/52930683)
+[【技术分享】六：搜索排序—指标介绍与选择](https://zhuanlan.zhihu.com/p/99268184)
+
+* 幾何觀點 - ROC 曲線下的面積 (True Positive Rate vs False Positive Rate)
+* 機率 & 組合觀點 - 給定一個正樣本和副樣本對，在 x % 的比例下，模型對於正樣本的預測分數會高於負樣本的預測分數
+  * 實際分數不重要，相對關係比較重要
+  * 通常點擊模型的 AUC 低於 購買轉化的 AUC，正負樣本之間的平均 GAP 越大， AUC 就會越大
+* 所有的 postive-negtive pair 在計算上是等價的，這可能不實際，例如 userA 和 userB, or sessionA 和 sessionB，解決方案是 group normalized AUC
+
+# 線上線下指標對齊何校正
+
+1. 線下指標要對應到線上指標，產生高相關係數，才可繼續優化 offline metrics
+2. 審慎 review training, val dataset，沒有考慮時間時，容易造成穿越
+3. 排除 bug，線上線下預測要符合預期
