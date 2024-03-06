@@ -14,6 +14,9 @@ from : 推薦系統實踐
 
 ## different version coverage
 
+by category - category coverage.
+
+by - popularity level - popularity level coverage.
 
 # Recall & Precision
 
