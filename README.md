@@ -355,6 +355,8 @@
 
 [ml-application on recsys by facebook ml engineer](ml_fb.md)
 
+## Recommendation against to Product
+
 [recommender from product persperctive](recm_product.md)
 
 [data property of recommendation system](data_property_recsys.md)
@@ -368,6 +370,7 @@
 
 [airbnb - search ranking(2018)](airbnb_search_ranking.md)
 
+[Youtube - 2016](yt_2016.md)
 
 ## Sourcing Model
 

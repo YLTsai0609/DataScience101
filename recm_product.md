@@ -1,10 +1,12 @@
 # Ref
 
-[數據 PM 從零開始實刻推薦系統 — ALPHA Camp 資料人才種子計畫](https://medium.com/@peggy.peiying.li/alphacamp-recommendation-system-f5017ca62410)
+1. [數據 PM 從零開始實刻推薦系統 — ALPHA Camp 資料人才種子計畫](https://medium.com/@peggy.peiying.li/alphacamp-recommendation-system-f5017ca62410)
 
 [0525 Designing Recommender System for Your Application/Industry](https://www.youtube.com/watch?v=06apCo2JSig)
 
-# 熱門推薦
+# [數據 PM 從零開始實刻推薦系統 — ALPHA Camp 資料人才種子計畫](https://medium.com/@peggy.peiying.li/alphacamp-recommendation-system-f5017ca62410)
+
+## 熱門推薦
 
 適用商業場景 : 
 
@@ -19,7 +21,7 @@
 
 1. 技術實作容易
 
-# 協同過濾 - i2i
+## 協同過濾 - i2i
 
 適用商業場景
 
@@ -32,7 +34,7 @@
 
 1. user數量遠大於item數量時計算量較低
 
-# 協同過濾 - u2i2i 
+## 協同過濾 - u2i2i 
 
 適用商業場景
 
@@ -46,14 +48,13 @@
 
 1. 商品數量 >> user 數量時，計算量較低
 
-# 對應商業問題
+## 對應商業問題
 
 1. 提升長尾商品業績 --> i2i
 2. 培養高忠誠度 user --> UX 問題 --> 請先定義怎樣叫做高忠誠度
 3. 提升客單價(popularity, u2i2i, i2i)
 
-# Stackholders
-
+## Stackholders
 
 範例：要不要在過幾天的大促上最新版本的推薦系統？
 
@@ -65,7 +66,9 @@ c. 客服部門：用戶最喜歡的就是在平台上可以輕易找到喜愛�
 
 * TBD
 
-# 0525 Designing Recommender System for Your Application/Industry
+# [MLDM Monday @ 三創育成 | item-to-item 推薦系統 NOTE](https://github.com/YLTsai0609/Meetups/blob/master/1228_item2item_pinkoi/note.md)
+
+# [0525 Designing Recommender System for Your Application/Industry](https://www.youtube.com/watch?v=06apCo2JSig)
 
 * 從產品角度思考如何設計推薦系統
 
@@ -125,7 +128,6 @@ c. 客服部門：用戶最喜歡的就是在平台上可以輕易找到喜愛�
 <img src='./images/recmp_13.png'></img>
 
 * Why?
-
 
 <img src='./images/recmp_14.png'></img>
 

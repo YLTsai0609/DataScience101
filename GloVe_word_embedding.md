@@ -178,6 +178,194 @@ a.k.a. 任意詞彙 `吳彥祖`，`我`，都會有 onehot 以及 embedding 兩�
 6. 使用者閱讀序列，也可理解為一個語句，在此場景下使用者閱讀序列的語料可以訓練出 user embedding，進而找到相近的 user (基於閱讀序列)，相近 user 可做 u2u2i 的 item 推薦 (推薦系統)
 
 
+# word2vec - review 
+
+[ML Lecture 14: Unsupervised Learning - Word Embedding](https://www.youtube.com/watch?v=X7PH3NuYW0Q&t=475s)
+
+* As a unsupervised algorithm, word2vec is a dimension reduction tech.
+
+* 用 Vector 表示文字， one-hot encoding
+* 可用，但資訊量不足
+* cat, dog 都是動物，但 one hot 看不出來
+  * 建立 word class
+  * 不足之處 - 沒辦法知道， cat, dog elephant 都是動物，更高階層的樹狀關係是未知的
+
+<img src='images/word2vec_2.png'></img>
+
+
+## **word embedding**
+
+<img src='images/word2vec_3.png'></img>
+
+* 為什麼說是 dimension reduction，因為給定的 copus ， 整個展開通常有 10萬維， embedding 通常只有 100維或更少
+  * 語意相似的比較近 (run / jump) (dog, rabbit), (tree, flower)
+  * axis 可能有意義，例如 y 軸可能展現移動性 x 軸展現生物性 (待考查)
+
+
+### How about auto-encoder? (Failed)
+
+1-of-N --> NN --> 1-of-N (沒有資訊量可以學習)
+
+### Insights in algorithm 
+
+* Context will define the word
+* 馬英九 520 宣誓就職
+* 蔡英文 520 宣誓就職
+  * 馬英九、蔡英文 --> 可能是同樣地位的詞彙
+
+### How to exploit the context
+
+* Counting based - co-occur matrix (共現) 
+  - Glove Vector 
+  - 關聯規則 / 機率方法
+
+* Prediction based -
+
+* 通常資料量少 / sparse, counting based 會做得更好 (經驗法則)
+
+<img src='images/word2vec_4.png'></img>
+
+#### Prediction based ， 預測下個字是什麼
+  * 給你 $w_{i-1}$ , 預測 $w_{i}$
+  * input 1-of-N encoding of **$w_{i-1}$**
+  * classifier - NN - MLP
+  * output 1-of-N encoding of **$w_{i}$**
+  * 訓練完之後，拿出 NN 裡面的 hidden layer
+
+
+<img src='images/word2vec_5.png'></img>
+
+
+<img src='images/word2vec_6.png'></img>
+
+* why can we do this?
+* 回到馬英九 & 蔡英文，他們會經常對應到通常的 Target (下文) - 宣誓就職，也因此，他們的 hidden layer 的數值會非常近
+
+#### Prediction based, 給 $w_{i-k}$ ~ $w_{i-1}$ ， 預測下一個字
+
+* 從人類直覺來看，給定一個 word window，更能夠猜測下個 字 / 詞 是什麼
+* MLP 要做一點調整
+
+
+<img src='images/word2vec_7.png'></img>
+
+* $w_{i-2}$ ~ $w_{i-1}$ ， 直接 concat 行不行呢?
+  * 實做的時候會 tie 在一起 
+  * 1 of N 的第一個 wij 要一樣， 第2個也要一樣，如同一樣顏色的線
+
+<img src='images/word2vec_9.png'></img>
+
+* 理由1 - ~~同樣一個字 - 馬英九在 $w_{i-2}$ 或者 $w_{i-1}$ 必須是同樣的 word-embedding~~ --> 應該是求計算上方便
+* 理由2 - word-window 很大，中間的 weights matrix 會是一個很大的矩陣 (k * V)，直接變成 V ， 作 regularization
+
+<img src='images/word2vec_11.png'></img>
+
+* 實做的時候，直接加在一起，乘上一個 weight matrix
+* 實作時，怎麼 back-propergation?
+
+<img src='images/word2vec_12.png'></img>
+
+#### Training
+
+1. Unsupervised 
+2. 建立 window & targets (1 of V targets)
+3. minimizing cross entropy (因為語言結構的關係，實際上人類文字就可以變成 labelled data，所以看起來還是 supervised learning，且 targets 的量很巨大，所以會衍生如何訓練好的問題)
+   1. hierarchical softmax - classifier N --> classifier logN
+   2. 怎麼產生 negtive sample? - 把 Target random sample from next words (?)
+
+<img src='images/word2vec_13.png'></img>
+
+#### Prediction-based Various Architectures
+
+* Continuous bag of words (CBOW) - 拿前面愈後面 --> 變成挖空格， aka 克漏字測驗
+* Skip-gram - 拿中間字，預測旁邊字
+
+<img src='images/word2vec_14.png'></img>
+
+#### word2vec is not a deep layer 
+
+  * 其實 word2vec - 只有一層 hidden layer (不是 DNN)，老師問了原作者
+    * 在作者之前，就有很多人做過 word2vec，該作者的文章表示
+      * 不用 deep，用各種 engineering tips，就可以把 shallow layer network 訓練出來 (e.g. negtive sampling, hierarchical softmax)
+      * 不用 deep，運算量很低，可以跑非常巨量的資料，也因此可以得很好的結果
+      * 李老師大學時，就看過 DNN 預測下個字，但是實驗跑了三週還跑不出來
+      * 在語音界， 2010 年就紅起來的方法
+      * Thomas 第一次投這篇論文時，頭到一個很小很小的期刊，接受率有 70% ，然後還被 reject，結果現在他有超過 10000 次 cite
+
+#### Building Structure Tree in WordEmbedding
+
+* city - captial or 詞彙三態 (由於經常 share 相同的上下文結構，因此距離很近)
+* 能夠發現從屬 & 階層關係 (semantic hierarchies via word embeddings)
+  * word vec 兩兩相減
+
+
+<img src='images/word2vec_15.png'></img>
+
+<img src='images/word2vec_16.png'></img>
+
+* 類比問題可以被解決 - Rome : Italy = Berlin : **Germany**
+
+<img src='images/word2vec_17.png'></img>
+
+* Multi-lingual Embedding
+* 中文英文個自訓練 wordvec，並建立部分的對應關係 (實心顏色) (label-pair)
+  * 學一個模型
+  * 該模型可以做到類似翻譯的蕭果
+
+<img src='images/word2vec_18.png'></img>
+
+
+* Multi-Domain (Image)
+
+<img src='images/word2vec_19.png'></img>
+
+* used for zero-shot (similarity based) - 新增加的類別
+
+#### Document Embedding
+
+<img src='images/word2vec_20.png'></img>
+
+* 主要應用點在於 - 句子是不同長度，但是 vector 是同樣長度
+
+<img src='images/word2vec_21.png'></img>
+
+* 將 documents --> bags of word (1 of N)，透過 AutoEncoder，可以得到中間的 documeny embeddings
+
+* 然而 Bags of word 的順序資訊被丟失了
+
+<img src='images/word2vec_22.png'></img>
+
+
+<img src='images/word2vec_23.png'></img>
+
+* Word2Vec 很好的解決了 **多字一意** (e.g. 背包 ~ 書包 ~ 登山包, 烤肉 ~ 燒肉 ~ 燒烤)
+* 然而，沒有解決一字多義
+
+<img src='./images/bertsecond_2.png'></img>
+
+* Next - BERT Family [ELMO_BERT_GPT](ELMO_BERT_GPT.md)
+
+## Meaning of Recommendation / Search
+
+### Recommendation 
+1. similarity items from user (user intent as a sequence)
+   1. note : be careful that we need to bucket a sentense as an EDA (something similar)
+
+
+<img src='images/word2vec_24.png'></img>
+
+* User / User-Session as `bucket`, word(item) in between
+* learning wordvec ~ itemvec - could be used in realtime.
+
+### Search
+
+[airbnb_search_ranking - KDD2018](airbnb_search_ranking.md)
+
+* Frame word as listing (word)
+* Frame sentense (sentense)
+* SkipGram Model
+  * go through the detail
+
 # Ref
 
 [Is Word2vec a supervised/unsupervised learning algorithm?](https://www.quora.com/Is-Word2vec-a-supervised-unsupervised-learning-algorithm)
@@ -185,4 +373,5 @@ a.k.a. 任意詞彙 `吳彥祖`，`我`，都會有 onehot 以及 embedding 兩�
 [Learn Word2Vec by implementing it in tensorflow](https://towardsdatascience.com/learn-word2vec-by-implementing-it-in-tensorflow-45641adaf2ac)
 
 
+[ML Lecture 14: Unsupervised Learning - Word Embedding](https://www.youtube.com/watch?v=X7PH3NuYW0Q&t=475s)
 
