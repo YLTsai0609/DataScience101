@@ -40,12 +40,17 @@ WWW
 
 ### 推薦系統實踐
 
-    - [x] [pdf](https://cdn-1253764997.cos.ap-chongqing.myqcloud.com//download/%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F%E5%AE%9E%E8%B7%B5.pdf)
-    - [x] [implementation](https://github.com/qcymkxyc/RecSys) 
+- [x] [pdf](https://cdn-1253764997.cos.ap-chongqing.myqcloud.com//download/%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F%E5%AE%9E%E8%B7%B5.pdf)
+- [x] [implementation](https://github.com/qcymkxyc/RecSys) 
 
-### 推薦系與深度學習
+### 推薦系統與深度學習
 
 [book](https://www.books.com.tw/products/CN11608396)
+
+### 深度學習推薦系統
+
+- [x] [book](https://www.tenlong.com.tw/products/9787121384646)
+
 
 ## Course
 

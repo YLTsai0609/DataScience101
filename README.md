@@ -238,11 +238,14 @@
 
 [Introduction to Text Augmentation](nlp_aug_1.md)
 
-## Contextulized Word Embedding
+## Contextulized Word Embedding & Transformer
 
-[transformer](transformer.md)
+[transformer - optimize sequential data in parallel ](transformer.md)
 
 [ELMO, BERT, GPT](ELMO_BERT_GPT.md)
+
+[ChatGPT](chatgpt.md)
+
 
 ## Name Entity Recognition (NER)
 
@@ -361,7 +364,6 @@
 
 [data property of recommendation system](data_property_recsys.md)
 
-[offline online metrics dismatch]()
 ## Case Study
 
 [Netflix](recm_netflix.md)
@@ -370,7 +372,7 @@
 
 [airbnb - search ranking(2018)](airbnb_search_ranking.md)
 
-[Youtube - 2016](yt_2016.md)
+[YoutubeDNN for Video - 2016](yt_2016.md)
 
 ## Sourcing Model
 

@@ -6,6 +6,10 @@
 
 Airbnb use embedding approach to increase 21% CTR.
 
+[TODO : tech report slides](https://github.com/wzhe06/Reco-papers/blob/master/Industry%20Recommender%20System/%5BAirbnb%5D%20Search%20Ranking%20and%20Personalization%20at%20Airbnb%20Slides%20(Airbnb%202018).pdf)
+
+[知乎](https://zhuanlan.zhihu.com/p/43295545)
+
 # 產業特性
 
 訂房網站
