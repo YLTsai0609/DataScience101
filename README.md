@@ -24,9 +24,9 @@
 
 [Case_Study_Questionnaire_analysis_improve_website_UIUX](case_study_website_UIUX.md)
 
-## Business model
+[yelp business model](yelp.md)
 
-[yelp](yelp.md)
+[eBay-User-Journey](ebay_user_journey.md)
 
 ## Experiment Design
 
@@ -52,9 +52,6 @@
 
 [Using Decision Tree for decision making 1, 2, 3, 4, 5](dt_123.md)
 
-## Use Case survey
-
-[eBay-User-Journey](ebay_user_journey.md)
 
 ## Geospatial Analysis (Location-Based Service)
 
@@ -178,19 +175,9 @@
 
 [efficient_research_workflow](reserch_effient_workflow.md)
 
-# Deep Learning - Base
+# Deep Learning
 
-## Framework
-
-[DL software](L8_DeepLearning_Software.md)
-
-[tensorflow-note](https://github.com/YLTsai0609/tensorflow_101)
-
-[keras-note](https://github.com/YLTsai0609/keras_101)
-
-[pytorch-note](https://github.com/YLTsai0609/pytorch_101.git/)
-
-## Fundamental
+## Network Components
 
 [Practical nn tuning](nn_tuning.md)
 
@@ -486,6 +473,17 @@
 [variance_distance_correlation](variance_distance_correlation.md)
 
 [lemma_theorem_proposition](lemma_theorem_proposition.md)
+
+## Deep Learning Python Framework
+
+[DL software](L8_DeepLearning_Software.md)
+
+[tensorflow-note](https://github.com/YLTsai0609/tensorflow_101)
+
+[keras-note](https://github.com/YLTsai0609/keras_101)
+
+[pytorch-note](https://github.com/YLTsai0609/pytorch_101.git/)
+
 
 # Open dataset
 
