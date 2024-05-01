@@ -206,7 +206,10 @@
 
 [Brief_Introduction_of_4_well-known_CNN Architecture](Brief_Introduction_of_4_well-known_CNN_Architecture.md)
 
+[Attention, Self-Attention](sa.md)
+
 [Affine_tranformation_bilinear_interpretation](Affine_tranformation_bilinear_interpretation.md)
+
 
 ## Transfer Learning / Domain Adaptation
 
@@ -240,7 +243,6 @@
 
 ## Contextulized Word Embedding & Transformer
 
-[attention, self-attention](sa.md)
 
 [transformer - optimize sequential data in parallel ](transformer.md)
 
