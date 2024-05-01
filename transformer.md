@@ -10,6 +10,15 @@
 3. attention的定義是給予兩個向量，輸出一個分數，廣義來說，內積就是一種attention，self attention使用的是 scaled dot product attention，會多除以一個normalization contant
 
 4. 用一句話來表達self-attention的精神就是**天涯若比鄰**，遠的和近的對self-attention是一樣的，可以平行運算
+
+5. [seq2seq - 如翻譯，語音轉文字，一坨 asequence 的輸出可以看這裡](sa.md)
+
+6. Transformer 是什麼?
+   1. attension - 是一種廣義的數學定義，輸入兩個向量，輸出一個數值
+   2. self-attention
+   3. cross-attention
+   4. positional encoder
+   5. layer normalization
 # Introduction
 
 * 英文意思就是變形金剛
@@ -69,8 +78,8 @@ k稱作key，會被其他人match
 v則是information，會被抽取出來
 ```
 
-* attention 吃兩個向量 - output一個分數
-* 有幾百種做法，inner product廣義上來說就是一種attension
+* **attention 吃兩個向量 - output一個分數**
+* 有幾百種做法，inner product 廣義上來說就是一種 attension (cosine 也是)
 * self attention使用的是 scaled dot product attention - 為了讓分數之間能夠被比較，必須做normalization，這裡採用$d$ = dimension of q and k(因為q和k兩個向量的dimension越大，內積出來的variance就會越大)
 * 老師提到你也可以做其他的attention方法，看看會怎樣，老師自己也沒做過實驗XD
 
@@ -145,12 +154,22 @@ $$
 
 你會發現全部都是矩陣乘法，拿去GPU裡面加速吧!
 
+Attention Matrix (A) = Keys * Query
+
+Output Layers = Values * A
+
+Output Layers = W * Inputs * A
+
+* Attention = weights per token
+
+
 # Multi-head Self-attention
 
 * 一種變形
 * $q, k, v$分裂成兩個，最後再接起來
 * 有可能不同的head會關注不同的$\alpha$，可能一個關注短期，一個關注長期等，你想做幾個head都可以
 * Multi-head的好處是在現行架構下，每一個attention幾乎就只會關注到一個值，如果你希望他關注到多個值，你就可以使用Multi-head的self attention
+* 理由是 Keys * Query 時，使用的是 Softmax ， 如果使用其他種 Normalization ， 也可能同時關注多個 Token
 
 <img src='./images/tf_25.png'></img>
 
@@ -176,8 +195,6 @@ $$
 * 李老師這邊提供了一個直觀的觀點，對於原本的X我們都給訂一個p，採用one-hot的編碼來表達位置資訊，是一個column vector，concat，然後在乘上$W$，於是乎就會發現需要一個$W^{I}, W^{P}$
 
 <img src='./images/tf_27.png'></img>
-
-<img src='./images/tf_28.png'></img>
 
 * 然而在$W^{p}$的學習上，原始paper(attention is all you need)中，google團隊有做過嘗試，然而並沒有比較好
 * 所以我們可以看到說，$a^{i}$就是$W^{I}x^{i}$，$e^{i}$就是$W^{P}p^{i}$

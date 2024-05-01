@@ -240,6 +240,8 @@
 
 ## Contextulized Word Embedding & Transformer
 
+[attention, self-attention](sa.md)
+
 [transformer - optimize sequential data in parallel ](transformer.md)
 
 [ELMO, BERT, GPT](ELMO_BERT_GPT.md)

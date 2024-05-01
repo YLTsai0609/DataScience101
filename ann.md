@@ -8,6 +8,7 @@ problem :
 soppose N items need to find most K similar items
 
 tc : $O(N^2)$
+
 sc : $O(1)$
 
 # LSH (Locality Sensitive Hashing)
