@@ -4,6 +4,8 @@
 
 [【機器學習 2022】各式各樣神奇的自注意力機制 (Self-attention) 變型](https://www.youtube.com/watch?v=yHoAq1IT_og)
 
+* 截至 2022 為止
+
 # Complex Sequence (Set of Vectors) Problem Framing
 
 至今為止 
@@ -160,12 +162,133 @@ Graph 的資料結構除了 Node ， 還有 Edges ， 所以 Attention 可以基
 * Edges 往往是透過該 Domain knowledge 得到，如果相當可性，那會是非常好的輸入
 * 而這種應用方式也是 GNN 的子集合
 
-<img src='./assets/sa_30.png'></img>
 
 # Self-Attention 的缺點
 
 
-<img src='./assets/sa_30.png'></img>
+<img src='./assets/sa_31.png'></img>
 
 * Q, K, V 3個矩陣，可能還要 Multi-head，計算量非常大， Training 可能沒有問題，但 Inference 可能有問題，如何降低 Self-Attention 的計算複雜度或者 Pruning ， 是未來的研究重點
 * Self-attention 容易和 Transformer 直接掛鉤，但是其實 Transformer 不等於 Self-attention ，後續的改進也很容易稱作 xx former
+
+# Self-Attention 的其他改進
+
+
+<img src='./assets/sa_32.png'></img>
+
+O = VA
+
+or O = V K^T Q
+
+Attention Matrix 的大小正比於 sequence N^2
+
+**你的 bottleneck 真的在 Self-Attention Layer 嗎**
+
+<img src='./assets/sa_33.png'></img>
+
+Transformer block = (Multi-Head Attention + FeedForward Network) * L次
+
+* 也有可能是 FC 耗費資源過多，或者整體 Block 重複次數太多
+* Self-Attention 運算量和儲存量取決於輸入序列長度，所以第一坡改進都是用在影像上
+
+# Skip Some Calculation with Human Knowledge
+
+* Local Attention / Truncated Attention
+  * 不一定每次都要看 global，可以看鄰近一點就好 (cnn?)
+* Stride Attention
+  * 跳k格看
+* Global Attention 
+  * local attention, 有些 token 要看 global attention (整個 sequence 都要看)
+  * 每個句子會加上 special token，每個句子都會看，都是每個 token 只看 local
+* Different Head use different attention
+  * Longformer = local attention + stride attention + global attention
+  * bigbird = longformer + random attention !?
+
+<img src='./assets/sa_34.png'></img>
+
+<img src='./assets/sa_35.png'></img>
+
+<img src='./assets/sa_36.png'></img>
+
+<img src='./assets/sa_37.png'></img>
+
+<img src='./assets/sa_38.png'></img>
+
+# Can we only focus on Critical Parts?
+
+* 很小的值直接給0，哪一些值比較大
+* Clustering - Query, Key 都做 clustering (Reformer / Routing Transformer)
+  * q,k 屬於同個 cluster --> 距離夠近，內積會比較大，需要詳細計算
+  * q, k 屬於不同 cluster --> 距離比較遠，直接設為沒有 attention, 補 0
+  * cluster 透過 ANN， 會比較快
+
+<img src='./assets/sa_39.png'></img>
+
+<img src='./assets/sa_40.png'></img>
+
+<img src='./assets/sa_41.png'></img>
+
+* 有沒有不基於任何前提假設，直接學習 Attention Matrix 的方法?
+  * Sinkhorn sorting network - 直接讓 attention matrix 用學的 (這樣真的有比較快嗎?)
+
+<img src='./assets/sa_42.png'></img>
+
+# Do we need full attention matrix
+
+* 我們真的需要 N * N ? - Attention Martrix 還有 Low Rank - 其他 Column 其實是某些 Column 的 Linear Combination
+* Attention Matrix --> AM - basis
+* 怎麼選出有代表性的 Attention basis
+
+<img src='./assets/sa_43.png'></img>
+
+<img src='./assets/sa_44.png'></img>
+
+<img src='./assets/sa_45.png'></img>
+
+# Change Martrix Multiplication to reduce comeplxity
+
+<img src='./assets/sa_46.png'></img>
+
+<img src='./assets/sa_47.png'></img>
+
+<img src='./assets/sa_48.png'></img>
+
+* 先忽略 softmax， O_d'n = V_d'N * K^T_Nd * Q_dN
+  * 先做 K^T Q - 要做 N d N 次乘法運算，總共是 (d + d') * N ** 2
+  * **先做  V K ^T - 要做 d' N d 次乘法運算，總共是 2d'dN 次乘法，只剩下線性**
+
+<img src='./assets/sa_49.png'></img>
+
+<img src='./assets/sa_50.png'></img>
+
+* sorftmax 要放回來，只要可以解開這個式子就行
+
+<img src='./assets/sa_51.png'></img>
+
+* 看待 Self-Attention 的另一個方式
+* Generate Templates (KV), Query * KV --> Template Selection
+
+<img src='./assets/sa_52.png'></img>
+
+* exp(qk) 怎麼近似成 f(q), f(k) - Efficent attention, Linear Transformer, Random Feature Attention, Performer
+
+<img src='./assets/sa_53.png'></img>
+
+# 一定要 Q & K ? - Synthesizer
+
+* Attention Matrix 直接用學的
+* Input Sequence 和 Attention Matrix 脫鉤，所有的 Sequence 都用一樣的 Attention Matrix
+
+<img src='./assets/sa_54.png'></img>
+
+# Attention - Free ? 
+
+<img src='./assets/sa_55.png'></img>
+
+# Summary
+
+* y軸 - eprformance, x軸，推論速度
+* transformer
+* Linear Transformer, Performer - 線性複雜度，速度最快，但其實會有 Tradeoff
+
+<img src='./assets/sa_56.png'></img>

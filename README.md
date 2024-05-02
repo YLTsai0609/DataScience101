@@ -231,7 +231,9 @@
 ## Contextulized Word Embedding & Transformer
 
 
-[transformer - optimize sequential data in parallel ](transformer.md)
+[transformer 2019 - optimize sequential data in parallel ](transformer.md)
+
+[transformer 2021](tsf21.md)
 
 [ELMO, BERT, GPT](ELMO_BERT_GPT.md)
 

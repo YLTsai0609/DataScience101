@@ -15,10 +15,10 @@
 
 6. Transformer 是什麼?
    1. attension - 是一種廣義的數學定義，輸入兩個向量，輸出一個數值
-   2. self-attention
-   3. cross-attention
-   4. positional encoder
-   5. layer normalization
+   2. self-attention - 輸入 sequence ， sequence 每個 token 關注自己
+   3. cross-attention - 輸入 N 個 sequnece，每個 sequence 的 token 關注另一個 sequnence 的 token
+   4. positional encoder - attention 機制並沒有考慮 token 的位置， 需要根據 position 使得 token 的 embedding 不一樣，所加入的設計
+   5. layer normalization - 一種 normalization，如同 Batch normalization / xxx normalization
 # Introduction
 
 * 英文意思就是變形金剛
