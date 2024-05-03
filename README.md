@@ -10,6 +10,274 @@
 
 	[Paper101 - contains - 45+ notes so far](https://github.com/YLTsai0609/paper101)
 
+
+# Machine Learning
+
+## Learning Theorem(Optimization and Generalization)
+
+[Overfitting or Perfect Fitting? Risk Bound for Interpolated Models](risk_bound_for_interpolated_models.md)
+
+[over_parameterization](over_parameterization.md)
+
+[optimization_deep_learning_I (gradient decent - liked method)](optimization_dl_I.md)
+
+[Explaining the Success of AdaBoost and Random Forests as Interpolating Classifiers](success_of_adaboost_and_random_forest.md)
+
+[EM_algorithm](EM_algorithm.md)
+
+[implementation_survey](ml_imp.md)
+
+## Information Theory
+
+[ShannonEntroy_to_KL_divergence](ShannonEntroy_to_KL_divergence.md)
+
+[from KL_divergence_to_conditional_entropy](Conditional_Entropy.md)
+
+## Supervised Learning
+
+[XGBoost theorem and code thumb up 700+](Review_XGBoost.md)
+
+[Naive Bayes and how it work when features are dependent](nb.md)
+
+## Unsupervised Learning
+
+### Clustering
+
+[Introduction](clustering_introduction.md)
+
+[cs229_11_GMM](cs229_em_algortihms.md)
+
+[ML_13_Unsupervised_Learning_HungYi_Lee](ML_13_Unsupervised_Learning_HungYi_Lee.md)
+
+[ML_14_Unsupervised_Learning_WordEmbedding_HungYiLee](ML_14_Unsupervised_Learning_WordEmbedding_HungYiLee.md)
+
+[ML_15_Unsupervised_Learning_NeiborhoodEmbedding_HungYiLee](ML_15_Unsupervised_Learning_NeiborhoodEmbedding_HungYiLee.md)
+
+### Self-Supervised Learning
+
+[Introduction](self_supervised_learning_intro.md)
+
+[auto-encoder and it's application](auto_encoder.md)
+
+# Research Flow
+
+[model_size_gpu_resource_estimation](model_gpu_usage.md)
+
+[YuLong's paper note](https://github.com/YLTsai0609/paper_summary)
+
+[PaperReading_Hints](PaperReading_Hints.md)
+
+[Paper development](paper_development.md)
+
+[efficient_research_workflow](reserch_effient_workflow.md)
+
+# Deep Learning
+
+## Network Components
+
+[Practical nn tuning](nn_tuning.md)
+
+[Batch Normalization](batch_normalization.md)
+
+[layer, instance, group normalization](layer_ins_group_normalization.md)
+
+[CNN hung yee lee](CNN_lee.md)
+
+[Convolution, dot, and Cross-correlation](Convolution_dot_and_Cross-correlation.md)
+
+[all about the convolutions](all_about_the_convolutions.md)
+
+[Brief_Introduction_of_4_well-known_CNN Architecture](Brief_Introduction_of_4_well-known_CNN_Architecture.md)
+
+[Attention, Self-Attention](sa.md)
+
+[Affine_tranformation_bilinear_interpretation](Affine_tranformation_bilinear_interpretation.md)
+
+
+## Transfer Learning / Domain Adaptation
+
+[Transfer Learning](transfer_learning.md)
+
+[domain_adaptation.md](domain_adaptation_1.md)
+
+# Nature Language Processing (NLP)
+
+[metirials](nlp_metirials.md)
+
+[NLP_Model_evalution_metric](NLP_Model_evaluation_metrics.md)
+
+[KeyWord_Extrcaction_TFIDF_RAKE_Garph_TextRank](KeyWord_Extrcaction_TFIDF_RAKE_Garph_TextRank.md)
+
+[Topic_Modeling_LDA](Topic_Modeling_LDA.md)
+
+[LDA source code survey](lda_src.md)
+
+[Ngram](ngram.md)
+
+[Word Embedding](GloVe_word_embedding.md)
+
+## Tokenization
+
+[algorithm in jieba](jieba.md)
+
+## Data Diversity / Data Augmentation
+
+[Introduction to Text Augmentation](nlp_aug_1.md)
+
+## Contextulized Word Embedding & Transformer
+
+[transformer 2019 - optimize sequential data in parallel ](transformer.md)
+
+[transformer 2021](tsf21.md)
+
+[ELMO, BERT, GPT](ELMO_BERT_GPT.md)
+
+[ChatGPT](chatgpt.md)
+
+## Name Entity Recognition (NER)
+
+[Introduction to NER](ner_intro.md)
+
+[kashgari - production level bert model source code analysis](kashgari_src_analysis.md)
+
+## POS Tagging
+
+[Introduction to POS-Tagging](pos_tagging.md)
+)
+
+# Graph Convolutional Network(GCN)
+
+[Graph deep learning study matrial](graph.md)
+
+[Graph Neural Networks: Models and Applications AAAI 2020 tutorial](http://cse.msu.edu/~mayao4/tutorials/aaai2020/)
+
+[GCN QAs](GCN_intro.md)
+
+[Stanford_Graph_Representation_Learning](Graph_Representation_Learning_Stanford.md)
+
+[Standord_Properties_of_Network_and_Random_Graph_Models](Properties_of_Network_and_Random_Graph_Models.md)
+
+[Graph Convolution implementation using numpy and MXNet](https://github.com/YLTsai0609/HandOn_ML)
+
+# Recommendation System (RecSys)
+
+## Introduction
+
+[recsys_overview](recsys_overview.md)
+
+[learning to rank](the_ranking_model.md)
+
+[metrics](rec_metrics.md)
+
+[ml-application on recsys by facebook ml engineer](ml_fb.md)
+
+[ANN Introduction](ann.md)
+
+## Recommendation against to Product
+
+[recommender from product persperctive](recm_product.md)
+
+[data property of recommendation system](data_property_recsys.md)
+
+## Case Study
+
+[Netflix](recm_netflix.md)
+
+[Instgram - explore (2019)](recm_ig_explore.md)
+
+[airbnb - search ranking(2018)](airbnb_search_ranking.md)
+
+[YoutubeDNN for Video - 2016](yt_2016.md)
+
+## Sourcing Model
+
+[factorlization machine implementation survey](fm_im.md)
+
+[tffm source code analysis](tffm_analysis.md)
+
+[personal rank](personalrank.md)
+
+## Search
+
+[google search guideline](google_search_guideline.md)
+
+[Search Survey](search_survey.md)
+
+# Computer Vision(CV)
+
+## Introduction
+
+[metrials](cv_metrials.md)
+
+[Object Detection History (SVM, HOG, SlidingWindow CNN, R-CNN, YOLO) from Kaggle Notebook]([Kaggle]object_detection_histroy.md)
+
+[The 5 Computer Vision Techniques That Will Change How You See The World from medium post](Five_CV_Techniques.md)
+
+[CV_SomeKeyword](CV_SomeKeyword.md)
+
+[CNN Architecture AlexNet, VGG, GoogleLeNet, ResNet, NIN, DenseNet, SqueezeNet](L9_CNN_architechture.md)
+
+## Image Classification
+
+[Feature Extraction - Histogram of Oriented Gradient HOG](Histogram_of_Oriented_Gradient.md)
+
+## Object Detection
+
+[Data labeling](Data_labeling.md)
+
+[Selective Search](Selective_Search.md)
+
+[MTCNN](MTCNN.md)
+
+[YOLO](YOLO.md)
+
+[How to design a system like yolo](yolo_design.md)
+
+[YOLO source code](yolo_src.md)
+
+[Object Detection Evaluation Metric](Object_Detection_Evaluation_Metric.md)
+
+[focal_loss_for_dense_object_detection](focal_loss_for_dense_object_detection.md)
+
+[The Diversity of Images in Object Detection](diversity_of_image.md)
+
+[image_attributes](image_attributes.md)
+
+[Make_Object_Detection_Algorithm_Useful](Make_Object_Detection_Algorithm_Useful.md)
+
+[[Topic survey]chop_object_with_different_background_to_boost_robustness]([Topic]chop_object_with_different_background_to_boost_robustness.md)
+
+[Multiple_object_tracking_sort_deep_sort_survey](Multiple_object_tracking_tmp.md)
+
+[Detection_Localization_Segmentation_Stanford](L11_detection_segmentation_Stanford.md)
+
+## Model compression / Speedup algorithm / hardware
+
+[Efficient Methods and hardware for deep learning](L15_Efficient_Methods_and_Hardware_for_Deep_Learning.md)
+
+[Network Compression II by hung yi lee lee](network_compression_hung_yee_lee.md)
+
+
+## Faces
+
+[awesome-Face_Recognition](https://github.com/ChanChiChoi/awesome-Face_Recognition?fbclid=IwAR0tTuucePwOD_b4FWyF7CS1xbXqQuM2o4pz0X1R4NW1FvwWs9f5Y1uB7To#face-clustering)
+
+[facenet practical usage](facenet.md)
+
+[Face3D](Face3D.md)
+
+[face_clustering](face_cluster.md)
+
+[facial_landmark_detection](facial_landmark_detection.md)
+
+## Image Search
+
+[KD-Tree with cnn](kd_tree_cnn.md)
+
+### 3D Vision
+
+[Introduction](3D_Vision.md)
+
 # Business Analysis
 
 [資料科學中的商業分析 1：定義問題，不做沒有用的專案](problem_define.md)
@@ -112,276 +380,6 @@
 ## Casual Inference
 
 [introduction](causal_intro.md)
-
-# Machine Learning
-
-## ML Implementation
-
-[implementation_survey](ml_imp.md)
-
-## Learning Theorem(Optimization and Generalization)
-
-[Overfitting or Perfect Fitting? Risk Bound for Interpolated Models](risk_bound_for_interpolated_models.md)
-
-[over_parameterization](over_parameterization.md)
-
-[optimization_deep_learning_I (gradient decent - liked method)](optimization_dl_I.md)
-
-[Explaining the Success of AdaBoost and Random Forests as Interpolating Classifiers](success_of_adaboost_and_random_forest.md)
-
-[EM_algorithm](EM_algorithm.md)
-
-## Information Theory
-
-[ShannonEntroy_to_KL_divergence](ShannonEntroy_to_KL_divergence.md)
-
-[from KL_divergence_to_conditional_entropy](Conditional_Entropy.md)
-
-## Supervised Learning
-
-[XGBoost theorem and code thumb up 700+](Review_XGBoost.md)
-
-[Naive Bayes and how it work when features are dependent](nb.md)
-
-## Unsupervised Learning
-
-### Clustering
-
-[Introduction](clustering_introduction.md)
-
-[cs229_11_GMM](cs229_em_algortihms.md)
-
-[ML_13_Unsupervised_Learning_HungYi_Lee](ML_13_Unsupervised_Learning_HungYi_Lee.md)
-
-[ML_14_Unsupervised_Learning_WordEmbedding_HungYiLee](ML_14_Unsupervised_Learning_WordEmbedding_HungYiLee.md)
-
-[ML_15_Unsupervised_Learning_NeiborhoodEmbedding_HungYiLee](ML_15_Unsupervised_Learning_NeiborhoodEmbedding_HungYiLee.md)
-
-### Self-Supervised Learning
-
-[Introduction](self_supervised_learning_intro.md)
-
-[auto-encoder and it's application](auto_encoder.md)
-
-# Research Flow
-
-[model_size_gpu_resource_estimation](model_gpu_usage.md)
-
-[YuLong's paper note](https://github.com/YLTsai0609/paper_summary)
-
-[PaperReading_Hints](PaperReading_Hints.md)
-
-[Paper development](paper_development.md)
-
-[efficient_research_workflow](reserch_effient_workflow.md)
-
-# Deep Learning
-
-## Network Components
-
-[Practical nn tuning](nn_tuning.md)
-
-[Batch Normalization](batch_normalization.md)
-
-[layer, instance, group normalization](layer_ins_group_normalization.md)
-
-[CNN hung yee lee](CNN_lee.md)
-
-[Convolution, dot, and Cross-correlation](Convolution_dot_and_Cross-correlation.md)
-
-[all about the convolutions](all_about_the_convolutions.md)
-
-[Brief_Introduction_of_4_well-known_CNN Architecture](Brief_Introduction_of_4_well-known_CNN_Architecture.md)
-
-[Attention, Self-Attention](sa.md)
-
-[Affine_tranformation_bilinear_interpretation](Affine_tranformation_bilinear_interpretation.md)
-
-
-## Transfer Learning / Domain Adaptation
-
-[Transfer Learning](transfer_learning.md)
-
-[domain_adaptation.md](domain_adaptation_1.md)
-
-# Nature Language Processing (NLP)
-
-[metirials](nlp_metirials.md)
-
-[NLP_Model_evalution_metric](NLP_Model_evaluation_metrics.md)
-
-[KeyWord_Extrcaction_TFIDF_RAKE_Garph_TextRank](KeyWord_Extrcaction_TFIDF_RAKE_Garph_TextRank.md)
-
-[Topic_Modeling_LDA](Topic_Modeling_LDA.md)
-
-[LDA source code survey](lda_src.md)
-
-[Ngram](ngram.md)
-
-[Word Embedding](GloVe_word_embedding.md)
-
-## Tokenization
-
-[algorithm in jieba](jieba.md)
-
-## Data Diversity / Data Augmentation
-
-[Introduction to Text Augmentation](nlp_aug_1.md)
-
-## Contextulized Word Embedding & Transformer
-
-
-[transformer 2019 - optimize sequential data in parallel ](transformer.md)
-
-[transformer 2021](tsf21.md)
-
-[ELMO, BERT, GPT](ELMO_BERT_GPT.md)
-
-[ChatGPT](chatgpt.md)
-
-
-## Name Entity Recognition (NER)
-
-[Introduction to NER](ner_intro.md)
-
-[kashgari - production level bert model source code analysis](kashgari_src_analysis.md)
-
-## POS Tagging
-
-[Introduction to POS-Tagging](pos_tagging.md)
-
-# Computer Vision(CV)
-
-## Introduction
-
-[metrials](cv_metrials.md)
-
-[Object Detection History (SVM, HOG, SlidingWindow CNN, R-CNN, YOLO) from Kaggle Notebook]([Kaggle]object_detection_histroy.md)
-
-[The 5 Computer Vision Techniques That Will Change How You See The World from medium post](Five_CV_Techniques.md)
-
-[CV_SomeKeyword](CV_SomeKeyword.md)
-
-[CNN Architecture AlexNet, VGG, GoogleLeNet, ResNet, NIN, DenseNet, SqueezeNet](L9_CNN_architechture.md)
-
-## Image Classification
-
-[Feature Extraction - Histogram of Oriented Gradient HOG](Histogram_of_Oriented_Gradient.md)
-
-## Object Detection
-
-[Data labeling](Data_labeling.md)
-
-[Selective Search](Selective_Search.md)
-
-[MTCNN](MTCNN.md)
-
-[YOLO](YOLO.md)
-
-[How to design a system like yolo](yolo_design.md)
-
-[YOLO source code](yolo_src.md)
-
-[Object Detection Evaluation Metric](Object_Detection_Evaluation_Metric.md)
-
-[focal_loss_for_dense_object_detection](focal_loss_for_dense_object_detection.md)
-
-[The Diversity of Images in Object Detection](diversity_of_image.md)
-
-[image_attributes](image_attributes.md)
-
-[Make_Object_Detection_Algorithm_Useful](Make_Object_Detection_Algorithm_Useful.md)
-
-[[Topic survey]chop_object_with_different_background_to_boost_robustness]([Topic]chop_object_with_different_background_to_boost_robustness.md)
-
-[Multiple_object_tracking_sort_deep_sort_survey](Multiple_object_tracking_tmp.md)
-
-[Detection_Localization_Segmentation_Stanford](L11_detection_segmentation_Stanford.md)
-
-## Model compression / Speedup algorithm / hardware
-
-[Efficient Methods and hardware for deep learning](L15_Efficient_Methods_and_Hardware_for_Deep_Learning.md)
-
-[Network Compression II by hung yi lee lee](network_compression_hung_yee_lee.md)
-
-
-## Faces
-
-[awesome-Face_Recognition](https://github.com/ChanChiChoi/awesome-Face_Recognition?fbclid=IwAR0tTuucePwOD_b4FWyF7CS1xbXqQuM2o4pz0X1R4NW1FvwWs9f5Y1uB7To#face-clustering)
-
-[facenet practical usage](facenet.md)
-
-[Face3D](Face3D.md)
-
-[face_clustering](face_cluster.md)
-
-[facial_landmark_detection](facial_landmark_detection.md)
-
-## Image Search
-
-[KD-Tree with cnn](kd_tree_cnn.md)
-
-### 3D Vision
-
-[Introduction](3D_Vision.md)
-
-# Graph Convolutional Network(GCN)
-
-[Graph deep learning study matrial](graph.md)
-
-[Graph Neural Networks: Models and Applications AAAI 2020 tutorial](http://cse.msu.edu/~mayao4/tutorials/aaai2020/)
-
-[GCN QAs](GCN_intro.md)
-
-[Stanford_Graph_Representation_Learning](Graph_Representation_Learning_Stanford.md)
-
-[Standord_Properties_of_Network_and_Random_Graph_Models](Properties_of_Network_and_Random_Graph_Models.md)
-
-[Graph Convolution implementation using numpy and MXNet](https://github.com/YLTsai0609/HandOn_ML)
-
-# Recommendation System (RecSys)
-
-## Introduction
-
-[recsys_overview](recsys_overview.md)
-
-[learning to rank](the_ranking_model.md)
-
-[metrics](rec_metrics.md)
-
-[ml-application on recsys by facebook ml engineer](ml_fb.md)
-
-[ANN Introduction](ann.md)
-
-## Recommendation against to Product
-
-[recommender from product persperctive](recm_product.md)
-
-[data property of recommendation system](data_property_recsys.md)
-
-## Case Study
-
-[Netflix](recm_netflix.md)
-
-[Instgram - explore (2019)](recm_ig_explore.md)
-
-[airbnb - search ranking(2018)](airbnb_search_ranking.md)
-
-[YoutubeDNN for Video - 2016](yt_2016.md)
-
-## Sourcing Model
-
-[factorlization machine implementation survey](fm_im.md)
-
-[tffm source code analysis](tffm_analysis.md)
-
-[personal rank](personalrank.md)
-
-## Search
-
-[google search guideline](google_search_guideline.md)
-
-[Search Survey](search_survey.md)
 
 # DevOps/Computer Science
 
