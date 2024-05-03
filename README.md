@@ -75,12 +75,6 @@
 
 ## Network Components
 
-[Practical nn tuning](nn_tuning.md)
-
-[Batch Normalization](batch_normalization.md)
-
-[layer, instance, group normalization](layer_ins_group_normalization.md)
-
 [CNN hung yee lee](CNN_lee.md)
 
 [Convolution, dot, and Cross-correlation](Convolution_dot_and_Cross-correlation.md)
@@ -89,9 +83,15 @@
 
 [Brief_Introduction_of_4_well-known_CNN Architecture](Brief_Introduction_of_4_well-known_CNN_Architecture.md)
 
+[Affine_tranformation_bilinear_interpretation](Affine_tranformation_bilinear_interpretation.md)
+
 [Attention, Self-Attention](sa.md)
 
-[Affine_tranformation_bilinear_interpretation](Affine_tranformation_bilinear_interpretation.md)
+[Practical nn tuning](nn_tuning.md)
+
+[Batch Normalization](batch_normalization.md)
+
+[layer, instance, group normalization](layer_ins_group_normalization.md)
 
 
 ## Transfer Learning / Domain Adaptation
