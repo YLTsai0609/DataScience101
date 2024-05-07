@@ -27,3 +27,12 @@
 5. 同一份code不應該因為hyperparameter改動一點點而有顯著差異，這表示資料太少或是基礎設置不當
 6. 訓練時間很長時，要隨時可以將參數存擋，就跟打遊戲一樣
 7. object detection可能遇到batch size沒辦法很大，因為網路參數太多了，這時候在框架允許的情況下，可以採用fp16來進行實驗
+
+# Reference
+
+[機器學習 2021 類神經網路訓練不起來怎麼辦 1~5](https://www.youtube.com/watch?v=QW6uINn7uGk)
+* local minimum
+* batch and momentum
+* auto-learning rate
+* loss functions
+* natch normalization

@@ -1,8 +1,90 @@
+# 2021
+
+* 一種難以訓練的情況 - Feature Scaling 不一致，這使得每個方向的 Gradient 有的很大有的很小
+
+<img src='./assets/bn21_1.png'></img>
+
+## Feature Normalization
+
+<img src='./assets/bn21_2.png'></img>
+
+* 橫的是總共有的特徵 $x^1$ to $x^R$
+* 縱的是 Instance 的數量，姑且稱作 $n_{1}$ to $n_{n}$
+* 從單個 instance - $n_{i}$ 針對 feature level 做 normalization (平均為 0 ，標準差為 1 )，可以使得 Feature Scaling 一致，消除 Gradient 有的很大有的很小的狀況
+* 調整後通常 loss 更快收斂
+* 整個 dataset 做 normalization， $m$, $\sigma$ 向量長度為 $N$ (資料筆數)
+
+## Consider Deep Learning ( Batch Normalization )
+
+<img src='./assets/bn21_3.png'></img>
+
+* 每一次經過轉換，這裡是 DNN，其實也可以想成 feature transform， $z^1$ to $z^R$ 也是一種特徵，輸入接下來的網路，因此也需要做 normalization
+* activation 之前或之後，其實差不多，都可以試試看，但如果用的是 sigmoid，0附近的 gradient 會比較大
+
+<img src='./assets/bn21_4.png'></img>
+
+<img src='./assets/bn21_5.png'></img>
+
+* 和 Input Feature Normalization 不相同的是， $\mu$, $\sigma$ depends on $z$，所以$\mu$, $\sigma$ 也會改變，也是 network 參數的一部分
+
+* 然而， Network 沒辦法一次吃全部的資料進行訓練 (GPU) ，必定是吃一個 batch, 一個 batch 的資料
+* 所以， Netowrk 一次只會吃進一個 batch 的資料，對 64 筆 data 的 feature dimension 做 normalization
+* **因為是 Batch normalization，所以如果你的 batch 是 1，就沒有意義，適用於 batch 較大的時候**
+* $\mu$, $\sigma$ 都是一個 vector，長度是 batch size
+  * $\mu$ - 代表每一個 instance 中 feature component 的平均值
+  * $\sigma$ - 代表每一個 instance 中 feature component 的標準差
+* **64 個 examples 怎麼做 - 因為 GPU 的限制，所以沒有辦法做整個 dataset 的 feature normalization，只能以 batch 做抽樣作為近似**
+
+## Linear Transform for normalized features
+
+<img src='./assets/bn21_6.png'></img>
+
+* feature 經過 normalize ， 設計上也怕實際資料分布並非 mean = 0, std = 1，所以設定 $\gamma$, $\beta$，做線性組合，初始值會是 1 vector & 0 vector
+
+## Infernece on Testing data (Production)
+
+<img src='./assets/bn21_7.png'></img>
+
+
+* Production 沒辦法累積到一個 batch 才做計算 (如果是 realtime service)
+* 每一次 batch 都會得到一個 $\mu$, $\sigma$，訓練完成後會把 $\mu_{t}$, $\sigma_{t}$ 存起來，基本上是 moving average，視為訓練資料的整理分佈，給 inference 的時候使用
+
+## Performance
+
+<img src='./assets/bn21_8.png'></img>
+
+* 收斂更快，同樣的 Accuracy
+
+## Why? - Internal Covariate Shift OR Smooth Error Surface?
+
+
+<img src='./assets/bn21_9.png'></img>
+
+* 原論文 - 2015 - 觀點被打臉
+
+* 新論文 - How Does Batch Normalization Help Optimization?
+  * Error Surface 變得更平緩 - 有理論的支持以及實驗的支持
+* 讓 Error Surface 變得更平緩，也可以有其他方法，論文又提到，可以再去看
+
+# A lot of normalization
+
+<img src='./assets/bn21_10.png'></img>
+
+# Batch Normalization vs Layer Normalization
+
+-----
+-----
+
+# 2019
+
+# Batch Normalization
+
 * [Lee](https://www.youtube.com/watch?v=BZh1ltr5Rkg)
 * Feature Scaling 不同得feature，會需要不同的learning rate，變得較不好訓練
 * [Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift](https://arxiv.org/pdf/1502.03167.pdf)
   + 2015
   + 18008 citations
+
 
 # Hidden Layer?
 
@@ -91,3 +173,5 @@ $x^{1}$ -> $z^{1}$ -> $a^{1}$
 
 * [Resource](https://medium.com/towards-artificial-intelligence/batchnorm-for-transfer-learning-df17d2897db6)
 * 照理來說，BN的$\mu, \sigma$是用於估計training dataset的，transfer learning會apply在不同的dataset上，因此$\mu, \sigma$也需要適應到新的資料集上，合理的做法是fine-tune時$\mu, \sigma$可以繼續更新，並使用moving average的方式update，這個功能在tensorflow 1.x之中並沒有實作，在tensorflow 2裡面才有實作，因此除了Alexnet, VGG之外，其他有BN層的network要fine tune要記得在tensorflow 2裡面操作
+
+# Layer Normalization

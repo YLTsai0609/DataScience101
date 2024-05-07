@@ -87,7 +87,7 @@
 
 [Attention, Self-Attention](sa.md)
 
-[Practical nn tuning](nn_tuning.md)
+[Training Tips](nn_tuning.md)
 
 [Batch Normalization](batch_normalization.md)
 
