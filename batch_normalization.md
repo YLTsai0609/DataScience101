@@ -72,7 +72,34 @@
 
 # Batch Normalization vs Layer Normalization
 
------
+[NLP中 batch normalization与 layer normalization
+](https://zhuanlan.zhihu.com/p/74516930)
+
+
+<img src='./assets/bn21_11.png'></img>
+
+$N$ : batch size
+
+$C$ : sequence length (including padding with zero vectors)
+
+$H$ : emdedding vector size 
+
+BN : $\mu_{N*1}$, $\sigma_{N*1}$
+
+* 發展背景 (MLP, CV), 2015
+* batch size 夠大 (64, 128)，且資料集有做 shuufle，效果比較顯著，反之 batch size 小，就沒什麼用
+* BN 有效的一個原因，特徵值域會被拉成靠近 0 ， 許多 activation 的 func 在 0 附近的 gradient 都比較大(例如 sigmoid, tanh)，且原始資料 (未做過) BN，當數值過大，進入 activation func 的飽和域，會產生梯度消失
+* seqeutial data 表現得不好，探究原因是，輸入一個 cube，BN 物理意義 是在每一個 Sequence 中的不同 instance 中做 normalization，硬是把 Sequence 中的 Token 切成不同的群體了
+
+<img src='./assets/bn21_12.png'></img>
+
+LN : $\mu_{C*1}$, $\sigma_{C*1}$
+* 發展背景(NLP), 2016
+* 拿 BN 做 NLP，發現效果奇爛，改成 LN，在一個句子中做 Normalization
+* 後續 NLP NN 並沒有調整這個架構，持續用到 Attention Model (Transformer)
+* NLP 的 inputs 會對不同 instance (句子) 做 padding，因此會有一些句子的 token padding 成 zero vector，估計也是 BN 玩壞掉的原因
+
+
 -----
 
 # 2019

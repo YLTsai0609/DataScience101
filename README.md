@@ -89,7 +89,7 @@
 
 [Training Tips](nn_tuning.md)
 
-[Batch Normalization](batch_normalization.md)
+[Batch Normalization & Layer Normalization](batch_normalization.md)
 
 [layer, instance, group normalization](layer_ins_group_normalization.md)
 
