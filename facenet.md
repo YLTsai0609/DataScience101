@@ -28,7 +28,7 @@ pass
 
 # Triplet Loss
 2015 
-<img src='/images/facenet_1.png'></img>
+<img src='/assets/facenet_1.png'></img>
 
 2015年的論文中提出了一個能夠有效學習的Loss function
 
