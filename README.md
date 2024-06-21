@@ -316,6 +316,8 @@
 
 [A/B Testing：「偷看結果」將成為最大的錯誤](do_not_peaking_ab_test.md)
 
+[Speed up A/B Testing - Infra and MAB Testing](dynamic_ab_aws.md)
+
 ## Decision Analysis
 
 [Using Decision Tree for decision making 1, 2, 3, 4, 5](dt_123.md)
