@@ -574,3 +574,5 @@
 [Solving Coding Problem Guideline](Solving_Coding_Problem_Guideline.md)
 
 [Data Science and Robots by Brandon Rohrer](https://brohrer.mcknote.com/zh-Hant/)
+
+[Daily GPT](daily_gpt.md)
